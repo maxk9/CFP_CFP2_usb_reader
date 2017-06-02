@@ -1,0 +1,4017 @@
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"MDIO_Interface_REG.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.global	MDIO_Interface_pageInfoPtr
+  19              		.global	MDIO_Interface_registerConfig_6
+  20              		.global	MDIO_Interface_registerConfig_5
+  21              		.global	MDIO_Interface_registerConfig_4
+  22              		.global	MDIO_Interface_registerConfig_3
+  23              		.global	MDIO_Interface_registerConfig_2
+  24              		.global	MDIO_Interface_registerConfig_1
+  25              		.comm	MDIO_Interface_registerPage_6,256,4
+  26              		.global	MDIO_Interface_registerPage_5
+  27              		.comm	MDIO_Interface_registerPage_4,256,4
+  28              		.comm	MDIO_Interface_registerPage_3,512,4
+  29              		.comm	MDIO_Interface_registerPage_2,512,4
+  30              		.global	MDIO_Interface_registerPage_1
+  31              		.section	.rodata
+  32              		.align	2
+  33              		.type	MDIO_Interface_pageInfoPtr, %object
+  34              		.size	MDIO_Interface_pageInfoPtr, 48
+  35              	MDIO_Interface_pageInfoPtr:
+  36 0000 00000000 		.word	MDIO_Interface_registerPage_1
+  37 0004 00000000 		.word	MDIO_Interface_registerConfig_1
+  38 0008 00000000 		.word	MDIO_Interface_registerPage_2
+  39 000c 00000000 		.word	MDIO_Interface_registerConfig_2
+  40 0010 00000000 		.word	MDIO_Interface_registerPage_3
+  41 0014 00000000 		.word	MDIO_Interface_registerConfig_3
+  42 0018 00000000 		.word	MDIO_Interface_registerPage_4
+  43 001c 00000000 		.word	MDIO_Interface_registerConfig_4
+  44 0020 00000000 		.word	MDIO_Interface_registerPage_5
+  45 0024 00000000 		.word	MDIO_Interface_registerConfig_5
+  46 0028 00000000 		.word	MDIO_Interface_registerPage_6
+  47 002c 00000000 		.word	MDIO_Interface_registerConfig_6
+  48              		.type	MDIO_Interface_registerConfig_4, %object
+  49              		.size	MDIO_Interface_registerConfig_4, 512
+  50              	MDIO_Interface_registerConfig_4:
+  51 0030 0000     		.short	0
+  52 0032 08       		.byte	8
+  53 0033 00       		.byte	0
+  54 0034 FF00     		.short	255
+  55 0036 02       		.byte	2
+  56 0037 00       		.byte	0
+  57 0038 FF00     		.short	255
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 2
+
+
+  58 003a 02       		.byte	2
+  59 003b 00       		.byte	0
+  60 003c FFFF     		.short	-1
+  61 003e 02       		.byte	2
+  62 003f 00       		.byte	0
+  63 0040 FF00     		.short	255
+  64 0042 02       		.byte	2
+  65 0043 00       		.byte	0
+  66 0044 FF00     		.short	255
+  67 0046 02       		.byte	2
+  68 0047 00       		.byte	0
+  69 0048 FF00     		.short	255
+  70 004a 02       		.byte	2
+  71 004b 00       		.byte	0
+  72 004c FF00     		.short	255
+  73 004e 02       		.byte	2
+  74 004f 00       		.byte	0
+  75 0050 FF00     		.short	255
+  76 0052 02       		.byte	2
+  77 0053 00       		.byte	0
+  78 0054 FF00     		.short	255
+  79 0056 02       		.byte	2
+  80 0057 00       		.byte	0
+  81 0058 FF00     		.short	255
+  82 005a 02       		.byte	2
+  83 005b 00       		.byte	0
+  84 005c FF00     		.short	255
+  85 005e 02       		.byte	2
+  86 005f 00       		.byte	0
+  87 0060 FF00     		.short	255
+  88 0062 02       		.byte	2
+  89 0063 00       		.byte	0
+  90 0064 FF00     		.short	255
+  91 0066 02       		.byte	2
+  92 0067 00       		.byte	0
+  93 0068 FF00     		.short	255
+  94 006a 02       		.byte	2
+  95 006b 00       		.byte	0
+  96 006c FF00     		.short	255
+  97 006e 02       		.byte	2
+  98 006f 00       		.byte	0
+  99 0070 FF00     		.short	255
+ 100 0072 02       		.byte	2
+ 101 0073 00       		.byte	0
+ 102 0074 FF00     		.short	255
+ 103 0076 02       		.byte	2
+ 104 0077 00       		.byte	0
+ 105 0078 FF00     		.short	255
+ 106 007a 02       		.byte	2
+ 107 007b 00       		.byte	0
+ 108 007c FF00     		.short	255
+ 109 007e 02       		.byte	2
+ 110 007f 00       		.byte	0
+ 111 0080 FF00     		.short	255
+ 112 0082 02       		.byte	2
+ 113 0083 00       		.byte	0
+ 114 0084 FF00     		.short	255
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 3
+
+
+ 115 0086 02       		.byte	2
+ 116 0087 00       		.byte	0
+ 117 0088 FF00     		.short	255
+ 118 008a 02       		.byte	2
+ 119 008b 00       		.byte	0
+ 120 008c FF00     		.short	255
+ 121 008e 02       		.byte	2
+ 122 008f 00       		.byte	0
+ 123 0090 FF00     		.short	255
+ 124 0092 02       		.byte	2
+ 125 0093 00       		.byte	0
+ 126 0094 FF00     		.short	255
+ 127 0096 02       		.byte	2
+ 128 0097 00       		.byte	0
+ 129 0098 FF00     		.short	255
+ 130 009a 02       		.byte	2
+ 131 009b 00       		.byte	0
+ 132 009c FF00     		.short	255
+ 133 009e 02       		.byte	2
+ 134 009f 00       		.byte	0
+ 135 00a0 FF00     		.short	255
+ 136 00a2 02       		.byte	2
+ 137 00a3 00       		.byte	0
+ 138 00a4 FF00     		.short	255
+ 139 00a6 02       		.byte	2
+ 140 00a7 00       		.byte	0
+ 141 00a8 FF00     		.short	255
+ 142 00aa 02       		.byte	2
+ 143 00ab 00       		.byte	0
+ 144 00ac FF00     		.short	255
+ 145 00ae 02       		.byte	2
+ 146 00af 00       		.byte	0
+ 147 00b0 FF00     		.short	255
+ 148 00b2 02       		.byte	2
+ 149 00b3 00       		.byte	0
+ 150 00b4 FF00     		.short	255
+ 151 00b6 02       		.byte	2
+ 152 00b7 00       		.byte	0
+ 153 00b8 FF00     		.short	255
+ 154 00ba 02       		.byte	2
+ 155 00bb 00       		.byte	0
+ 156 00bc FF00     		.short	255
+ 157 00be 02       		.byte	2
+ 158 00bf 00       		.byte	0
+ 159 00c0 FF00     		.short	255
+ 160 00c2 02       		.byte	2
+ 161 00c3 00       		.byte	0
+ 162 00c4 FF00     		.short	255
+ 163 00c6 02       		.byte	2
+ 164 00c7 00       		.byte	0
+ 165 00c8 FF00     		.short	255
+ 166 00ca 02       		.byte	2
+ 167 00cb 00       		.byte	0
+ 168 00cc FF00     		.short	255
+ 169 00ce 02       		.byte	2
+ 170 00cf 00       		.byte	0
+ 171 00d0 FF00     		.short	255
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 4
+
+
+ 172 00d2 02       		.byte	2
+ 173 00d3 00       		.byte	0
+ 174 00d4 FF00     		.short	255
+ 175 00d6 02       		.byte	2
+ 176 00d7 00       		.byte	0
+ 177 00d8 FF00     		.short	255
+ 178 00da 02       		.byte	2
+ 179 00db 00       		.byte	0
+ 180 00dc FF00     		.short	255
+ 181 00de 02       		.byte	2
+ 182 00df 00       		.byte	0
+ 183 00e0 FF00     		.short	255
+ 184 00e2 02       		.byte	2
+ 185 00e3 00       		.byte	0
+ 186 00e4 FF00     		.short	255
+ 187 00e6 02       		.byte	2
+ 188 00e7 00       		.byte	0
+ 189 00e8 FF00     		.short	255
+ 190 00ea 02       		.byte	2
+ 191 00eb 00       		.byte	0
+ 192 00ec FF00     		.short	255
+ 193 00ee 02       		.byte	2
+ 194 00ef 00       		.byte	0
+ 195 00f0 FF00     		.short	255
+ 196 00f2 02       		.byte	2
+ 197 00f3 00       		.byte	0
+ 198 00f4 FF00     		.short	255
+ 199 00f6 02       		.byte	2
+ 200 00f7 00       		.byte	0
+ 201 00f8 FF00     		.short	255
+ 202 00fa 02       		.byte	2
+ 203 00fb 00       		.byte	0
+ 204 00fc FF00     		.short	255
+ 205 00fe 02       		.byte	2
+ 206 00ff 00       		.byte	0
+ 207 0100 FF00     		.short	255
+ 208 0102 02       		.byte	2
+ 209 0103 00       		.byte	0
+ 210 0104 FF00     		.short	255
+ 211 0106 02       		.byte	2
+ 212 0107 00       		.byte	0
+ 213 0108 FF00     		.short	255
+ 214 010a 02       		.byte	2
+ 215 010b 00       		.byte	0
+ 216 010c FF00     		.short	255
+ 217 010e 02       		.byte	2
+ 218 010f 00       		.byte	0
+ 219 0110 FF00     		.short	255
+ 220 0112 02       		.byte	2
+ 221 0113 00       		.byte	0
+ 222 0114 FF00     		.short	255
+ 223 0116 02       		.byte	2
+ 224 0117 00       		.byte	0
+ 225 0118 FF00     		.short	255
+ 226 011a 02       		.byte	2
+ 227 011b 00       		.byte	0
+ 228 011c FF00     		.short	255
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 5
+
+
+ 229 011e 02       		.byte	2
+ 230 011f 00       		.byte	0
+ 231 0120 FF00     		.short	255
+ 232 0122 02       		.byte	2
+ 233 0123 00       		.byte	0
+ 234 0124 FF00     		.short	255
+ 235 0126 02       		.byte	2
+ 236 0127 00       		.byte	0
+ 237 0128 FF00     		.short	255
+ 238 012a 02       		.byte	2
+ 239 012b 00       		.byte	0
+ 240 012c FF00     		.short	255
+ 241 012e 02       		.byte	2
+ 242 012f 00       		.byte	0
+ 243 0130 FF00     		.short	255
+ 244 0132 02       		.byte	2
+ 245 0133 00       		.byte	0
+ 246 0134 FF00     		.short	255
+ 247 0136 02       		.byte	2
+ 248 0137 00       		.byte	0
+ 249 0138 FF00     		.short	255
+ 250 013a 02       		.byte	2
+ 251 013b 00       		.byte	0
+ 252 013c FF00     		.short	255
+ 253 013e 02       		.byte	2
+ 254 013f 00       		.byte	0
+ 255 0140 FF00     		.short	255
+ 256 0142 02       		.byte	2
+ 257 0143 00       		.byte	0
+ 258 0144 FF00     		.short	255
+ 259 0146 02       		.byte	2
+ 260 0147 00       		.byte	0
+ 261 0148 FF00     		.short	255
+ 262 014a 02       		.byte	2
+ 263 014b 00       		.byte	0
+ 264 014c FF00     		.short	255
+ 265 014e 02       		.byte	2
+ 266 014f 00       		.byte	0
+ 267 0150 FF00     		.short	255
+ 268 0152 02       		.byte	2
+ 269 0153 00       		.byte	0
+ 270 0154 FF00     		.short	255
+ 271 0156 02       		.byte	2
+ 272 0157 00       		.byte	0
+ 273 0158 FF00     		.short	255
+ 274 015a 02       		.byte	2
+ 275 015b 00       		.byte	0
+ 276 015c FF00     		.short	255
+ 277 015e 02       		.byte	2
+ 278 015f 00       		.byte	0
+ 279 0160 FF00     		.short	255
+ 280 0162 02       		.byte	2
+ 281 0163 00       		.byte	0
+ 282 0164 FF00     		.short	255
+ 283 0166 02       		.byte	2
+ 284 0167 00       		.byte	0
+ 285 0168 FF00     		.short	255
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 6
+
+
+ 286 016a 02       		.byte	2
+ 287 016b 00       		.byte	0
+ 288 016c FF00     		.short	255
+ 289 016e 02       		.byte	2
+ 290 016f 00       		.byte	0
+ 291 0170 FF00     		.short	255
+ 292 0172 02       		.byte	2
+ 293 0173 00       		.byte	0
+ 294 0174 FF00     		.short	255
+ 295 0176 02       		.byte	2
+ 296 0177 00       		.byte	0
+ 297 0178 FF00     		.short	255
+ 298 017a 02       		.byte	2
+ 299 017b 00       		.byte	0
+ 300 017c FF00     		.short	255
+ 301 017e 02       		.byte	2
+ 302 017f 00       		.byte	0
+ 303 0180 FF00     		.short	255
+ 304 0182 02       		.byte	2
+ 305 0183 00       		.byte	0
+ 306 0184 FF00     		.short	255
+ 307 0186 02       		.byte	2
+ 308 0187 00       		.byte	0
+ 309 0188 FF00     		.short	255
+ 310 018a 02       		.byte	2
+ 311 018b 00       		.byte	0
+ 312 018c FF00     		.short	255
+ 313 018e 02       		.byte	2
+ 314 018f 00       		.byte	0
+ 315 0190 FF00     		.short	255
+ 316 0192 02       		.byte	2
+ 317 0193 00       		.byte	0
+ 318 0194 FF00     		.short	255
+ 319 0196 02       		.byte	2
+ 320 0197 00       		.byte	0
+ 321 0198 FF00     		.short	255
+ 322 019a 02       		.byte	2
+ 323 019b 00       		.byte	0
+ 324 019c FF00     		.short	255
+ 325 019e 02       		.byte	2
+ 326 019f 00       		.byte	0
+ 327 01a0 FF00     		.short	255
+ 328 01a2 02       		.byte	2
+ 329 01a3 00       		.byte	0
+ 330 01a4 FF00     		.short	255
+ 331 01a6 02       		.byte	2
+ 332 01a7 00       		.byte	0
+ 333 01a8 FF00     		.short	255
+ 334 01aa 02       		.byte	2
+ 335 01ab 00       		.byte	0
+ 336 01ac FF00     		.short	255
+ 337 01ae 02       		.byte	2
+ 338 01af 00       		.byte	0
+ 339 01b0 FF00     		.short	255
+ 340 01b2 02       		.byte	2
+ 341 01b3 00       		.byte	0
+ 342 01b4 FF00     		.short	255
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 7
+
+
+ 343 01b6 02       		.byte	2
+ 344 01b7 00       		.byte	0
+ 345 01b8 FF00     		.short	255
+ 346 01ba 02       		.byte	2
+ 347 01bb 00       		.byte	0
+ 348 01bc FF00     		.short	255
+ 349 01be 02       		.byte	2
+ 350 01bf 00       		.byte	0
+ 351 01c0 FF00     		.short	255
+ 352 01c2 02       		.byte	2
+ 353 01c3 00       		.byte	0
+ 354 01c4 FF00     		.short	255
+ 355 01c6 02       		.byte	2
+ 356 01c7 00       		.byte	0
+ 357 01c8 FF00     		.short	255
+ 358 01ca 02       		.byte	2
+ 359 01cb 00       		.byte	0
+ 360 01cc FF00     		.short	255
+ 361 01ce 02       		.byte	2
+ 362 01cf 00       		.byte	0
+ 363 01d0 FF00     		.short	255
+ 364 01d2 02       		.byte	2
+ 365 01d3 00       		.byte	0
+ 366 01d4 FF00     		.short	255
+ 367 01d6 02       		.byte	2
+ 368 01d7 00       		.byte	0
+ 369 01d8 FF00     		.short	255
+ 370 01da 02       		.byte	2
+ 371 01db 00       		.byte	0
+ 372 01dc FF00     		.short	255
+ 373 01de 02       		.byte	2
+ 374 01df 00       		.byte	0
+ 375 01e0 FF00     		.short	255
+ 376 01e2 02       		.byte	2
+ 377 01e3 00       		.byte	0
+ 378 01e4 FF00     		.short	255
+ 379 01e6 02       		.byte	2
+ 380 01e7 00       		.byte	0
+ 381 01e8 FF00     		.short	255
+ 382 01ea 02       		.byte	2
+ 383 01eb 00       		.byte	0
+ 384 01ec FF00     		.short	255
+ 385 01ee 02       		.byte	2
+ 386 01ef 00       		.byte	0
+ 387 01f0 FF00     		.short	255
+ 388 01f2 02       		.byte	2
+ 389 01f3 00       		.byte	0
+ 390 01f4 FF00     		.short	255
+ 391 01f6 02       		.byte	2
+ 392 01f7 00       		.byte	0
+ 393 01f8 FF00     		.short	255
+ 394 01fa 02       		.byte	2
+ 395 01fb 00       		.byte	0
+ 396 01fc FF00     		.short	255
+ 397 01fe 02       		.byte	2
+ 398 01ff 00       		.byte	0
+ 399 0200 FF00     		.short	255
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 8
+
+
+ 400 0202 02       		.byte	2
+ 401 0203 00       		.byte	0
+ 402 0204 FF00     		.short	255
+ 403 0206 02       		.byte	2
+ 404 0207 00       		.byte	0
+ 405 0208 FF00     		.short	255
+ 406 020a 02       		.byte	2
+ 407 020b 00       		.byte	0
+ 408 020c FF00     		.short	255
+ 409 020e 02       		.byte	2
+ 410 020f 00       		.byte	0
+ 411 0210 FF00     		.short	255
+ 412 0212 02       		.byte	2
+ 413 0213 00       		.byte	0
+ 414 0214 FF00     		.short	255
+ 415 0216 02       		.byte	2
+ 416 0217 00       		.byte	0
+ 417 0218 FF00     		.short	255
+ 418 021a 02       		.byte	2
+ 419 021b 00       		.byte	0
+ 420 021c FF00     		.short	255
+ 421 021e 02       		.byte	2
+ 422 021f 00       		.byte	0
+ 423 0220 FF00     		.short	255
+ 424 0222 02       		.byte	2
+ 425 0223 00       		.byte	0
+ 426 0224 FF00     		.short	255
+ 427 0226 02       		.byte	2
+ 428 0227 00       		.byte	0
+ 429 0228 FF00     		.short	255
+ 430 022a 02       		.byte	2
+ 431 022b 00       		.byte	0
+ 432 022c FF00     		.short	255
+ 433 022e 02       		.byte	2
+ 434 022f 00       		.byte	0
+ 435              		.type	MDIO_Interface_registerConfig_3, %object
+ 436              		.size	MDIO_Interface_registerConfig_3, 1024
+ 437              	MDIO_Interface_registerConfig_3:
+ 438 0230 FF00     		.short	255
+ 439 0232 02       		.byte	2
+ 440 0233 00       		.byte	0
+ 441 0234 FF00     		.short	255
+ 442 0236 02       		.byte	2
+ 443 0237 00       		.byte	0
+ 444 0238 FF00     		.short	255
+ 445 023a 02       		.byte	2
+ 446 023b 00       		.byte	0
+ 447 023c FF00     		.short	255
+ 448 023e 02       		.byte	2
+ 449 023f 00       		.byte	0
+ 450 0240 FF00     		.short	255
+ 451 0242 02       		.byte	2
+ 452 0243 00       		.byte	0
+ 453 0244 FF00     		.short	255
+ 454 0246 02       		.byte	2
+ 455 0247 00       		.byte	0
+ 456 0248 FF00     		.short	255
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 9
+
+
+ 457 024a 02       		.byte	2
+ 458 024b 00       		.byte	0
+ 459 024c FF00     		.short	255
+ 460 024e 02       		.byte	2
+ 461 024f 00       		.byte	0
+ 462 0250 FF00     		.short	255
+ 463 0252 02       		.byte	2
+ 464 0253 00       		.byte	0
+ 465 0254 FF00     		.short	255
+ 466 0256 02       		.byte	2
+ 467 0257 00       		.byte	0
+ 468 0258 FF00     		.short	255
+ 469 025a 02       		.byte	2
+ 470 025b 00       		.byte	0
+ 471 025c FF00     		.short	255
+ 472 025e 02       		.byte	2
+ 473 025f 00       		.byte	0
+ 474 0260 FF00     		.short	255
+ 475 0262 02       		.byte	2
+ 476 0263 00       		.byte	0
+ 477 0264 FF00     		.short	255
+ 478 0266 02       		.byte	2
+ 479 0267 00       		.byte	0
+ 480 0268 FF00     		.short	255
+ 481 026a 02       		.byte	2
+ 482 026b 00       		.byte	0
+ 483 026c FF00     		.short	255
+ 484 026e 02       		.byte	2
+ 485 026f 00       		.byte	0
+ 486 0270 FF00     		.short	255
+ 487 0272 02       		.byte	2
+ 488 0273 00       		.byte	0
+ 489 0274 FF00     		.short	255
+ 490 0276 02       		.byte	2
+ 491 0277 00       		.byte	0
+ 492 0278 FF00     		.short	255
+ 493 027a 02       		.byte	2
+ 494 027b 00       		.byte	0
+ 495 027c FF00     		.short	255
+ 496 027e 02       		.byte	2
+ 497 027f 00       		.byte	0
+ 498 0280 FF00     		.short	255
+ 499 0282 02       		.byte	2
+ 500 0283 00       		.byte	0
+ 501 0284 FF00     		.short	255
+ 502 0286 02       		.byte	2
+ 503 0287 00       		.byte	0
+ 504 0288 FF00     		.short	255
+ 505 028a 02       		.byte	2
+ 506 028b 00       		.byte	0
+ 507 028c FF00     		.short	255
+ 508 028e 02       		.byte	2
+ 509 028f 00       		.byte	0
+ 510 0290 FF00     		.short	255
+ 511 0292 02       		.byte	2
+ 512 0293 00       		.byte	0
+ 513 0294 FF00     		.short	255
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 10
+
+
+ 514 0296 02       		.byte	2
+ 515 0297 00       		.byte	0
+ 516 0298 FF00     		.short	255
+ 517 029a 02       		.byte	2
+ 518 029b 00       		.byte	0
+ 519 029c FF00     		.short	255
+ 520 029e 02       		.byte	2
+ 521 029f 00       		.byte	0
+ 522 02a0 FF00     		.short	255
+ 523 02a2 02       		.byte	2
+ 524 02a3 00       		.byte	0
+ 525 02a4 FF00     		.short	255
+ 526 02a6 02       		.byte	2
+ 527 02a7 00       		.byte	0
+ 528 02a8 FF00     		.short	255
+ 529 02aa 02       		.byte	2
+ 530 02ab 00       		.byte	0
+ 531 02ac FF00     		.short	255
+ 532 02ae 02       		.byte	2
+ 533 02af 00       		.byte	0
+ 534 02b0 FF00     		.short	255
+ 535 02b2 02       		.byte	2
+ 536 02b3 00       		.byte	0
+ 537 02b4 FF00     		.short	255
+ 538 02b6 02       		.byte	2
+ 539 02b7 00       		.byte	0
+ 540 02b8 FF00     		.short	255
+ 541 02ba 02       		.byte	2
+ 542 02bb 00       		.byte	0
+ 543 02bc FF00     		.short	255
+ 544 02be 02       		.byte	2
+ 545 02bf 00       		.byte	0
+ 546 02c0 FF00     		.short	255
+ 547 02c2 02       		.byte	2
+ 548 02c3 00       		.byte	0
+ 549 02c4 FF00     		.short	255
+ 550 02c6 02       		.byte	2
+ 551 02c7 00       		.byte	0
+ 552 02c8 FF00     		.short	255
+ 553 02ca 02       		.byte	2
+ 554 02cb 00       		.byte	0
+ 555 02cc FF00     		.short	255
+ 556 02ce 02       		.byte	2
+ 557 02cf 00       		.byte	0
+ 558 02d0 FF00     		.short	255
+ 559 02d2 02       		.byte	2
+ 560 02d3 00       		.byte	0
+ 561 02d4 FF00     		.short	255
+ 562 02d6 02       		.byte	2
+ 563 02d7 00       		.byte	0
+ 564 02d8 FF00     		.short	255
+ 565 02da 02       		.byte	2
+ 566 02db 00       		.byte	0
+ 567 02dc FF00     		.short	255
+ 568 02de 02       		.byte	2
+ 569 02df 00       		.byte	0
+ 570 02e0 FF00     		.short	255
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 11
+
+
+ 571 02e2 02       		.byte	2
+ 572 02e3 00       		.byte	0
+ 573 02e4 FF00     		.short	255
+ 574 02e6 02       		.byte	2
+ 575 02e7 00       		.byte	0
+ 576 02e8 FF00     		.short	255
+ 577 02ea 02       		.byte	2
+ 578 02eb 00       		.byte	0
+ 579 02ec FF00     		.short	255
+ 580 02ee 02       		.byte	2
+ 581 02ef 00       		.byte	0
+ 582 02f0 FF00     		.short	255
+ 583 02f2 02       		.byte	2
+ 584 02f3 00       		.byte	0
+ 585 02f4 FF00     		.short	255
+ 586 02f6 02       		.byte	2
+ 587 02f7 00       		.byte	0
+ 588 02f8 FF00     		.short	255
+ 589 02fa 02       		.byte	2
+ 590 02fb 00       		.byte	0
+ 591 02fc FF00     		.short	255
+ 592 02fe 02       		.byte	2
+ 593 02ff 00       		.byte	0
+ 594 0300 FF00     		.short	255
+ 595 0302 02       		.byte	2
+ 596 0303 00       		.byte	0
+ 597 0304 FF00     		.short	255
+ 598 0306 02       		.byte	2
+ 599 0307 00       		.byte	0
+ 600 0308 FF00     		.short	255
+ 601 030a 02       		.byte	2
+ 602 030b 00       		.byte	0
+ 603 030c FF00     		.short	255
+ 604 030e 02       		.byte	2
+ 605 030f 00       		.byte	0
+ 606 0310 FF00     		.short	255
+ 607 0312 02       		.byte	2
+ 608 0313 00       		.byte	0
+ 609 0314 FF00     		.short	255
+ 610 0316 02       		.byte	2
+ 611 0317 00       		.byte	0
+ 612 0318 FF00     		.short	255
+ 613 031a 02       		.byte	2
+ 614 031b 00       		.byte	0
+ 615 031c FF00     		.short	255
+ 616 031e 02       		.byte	2
+ 617 031f 00       		.byte	0
+ 618 0320 FF00     		.short	255
+ 619 0322 02       		.byte	2
+ 620 0323 00       		.byte	0
+ 621 0324 FF00     		.short	255
+ 622 0326 02       		.byte	2
+ 623 0327 00       		.byte	0
+ 624 0328 FF00     		.short	255
+ 625 032a 02       		.byte	2
+ 626 032b 00       		.byte	0
+ 627 032c FF00     		.short	255
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 12
+
+
+ 628 032e 02       		.byte	2
+ 629 032f 00       		.byte	0
+ 630 0330 FF00     		.short	255
+ 631 0332 02       		.byte	2
+ 632 0333 00       		.byte	0
+ 633 0334 FF00     		.short	255
+ 634 0336 02       		.byte	2
+ 635 0337 00       		.byte	0
+ 636 0338 FF00     		.short	255
+ 637 033a 02       		.byte	2
+ 638 033b 00       		.byte	0
+ 639 033c FF00     		.short	255
+ 640 033e 02       		.byte	2
+ 641 033f 00       		.byte	0
+ 642 0340 FF00     		.short	255
+ 643 0342 02       		.byte	2
+ 644 0343 00       		.byte	0
+ 645 0344 FF00     		.short	255
+ 646 0346 02       		.byte	2
+ 647 0347 00       		.byte	0
+ 648 0348 FF00     		.short	255
+ 649 034a 02       		.byte	2
+ 650 034b 00       		.byte	0
+ 651 034c FF00     		.short	255
+ 652 034e 02       		.byte	2
+ 653 034f 00       		.byte	0
+ 654 0350 FF00     		.short	255
+ 655 0352 02       		.byte	2
+ 656 0353 00       		.byte	0
+ 657 0354 FF00     		.short	255
+ 658 0356 02       		.byte	2
+ 659 0357 00       		.byte	0
+ 660 0358 FF00     		.short	255
+ 661 035a 02       		.byte	2
+ 662 035b 00       		.byte	0
+ 663 035c FF00     		.short	255
+ 664 035e 02       		.byte	2
+ 665 035f 00       		.byte	0
+ 666 0360 FF00     		.short	255
+ 667 0362 02       		.byte	2
+ 668 0363 00       		.byte	0
+ 669 0364 FF00     		.short	255
+ 670 0366 02       		.byte	2
+ 671 0367 00       		.byte	0
+ 672 0368 FF00     		.short	255
+ 673 036a 02       		.byte	2
+ 674 036b 00       		.byte	0
+ 675 036c FF00     		.short	255
+ 676 036e 02       		.byte	2
+ 677 036f 00       		.byte	0
+ 678 0370 FF00     		.short	255
+ 679 0372 02       		.byte	2
+ 680 0373 00       		.byte	0
+ 681 0374 FF00     		.short	255
+ 682 0376 02       		.byte	2
+ 683 0377 00       		.byte	0
+ 684 0378 FF00     		.short	255
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 13
+
+
+ 685 037a 02       		.byte	2
+ 686 037b 00       		.byte	0
+ 687 037c FF00     		.short	255
+ 688 037e 02       		.byte	2
+ 689 037f 00       		.byte	0
+ 690 0380 FF00     		.short	255
+ 691 0382 02       		.byte	2
+ 692 0383 00       		.byte	0
+ 693 0384 FF00     		.short	255
+ 694 0386 02       		.byte	2
+ 695 0387 00       		.byte	0
+ 696 0388 FF00     		.short	255
+ 697 038a 02       		.byte	2
+ 698 038b 00       		.byte	0
+ 699 038c FF00     		.short	255
+ 700 038e 02       		.byte	2
+ 701 038f 00       		.byte	0
+ 702 0390 FF00     		.short	255
+ 703 0392 02       		.byte	2
+ 704 0393 00       		.byte	0
+ 705 0394 FF00     		.short	255
+ 706 0396 02       		.byte	2
+ 707 0397 00       		.byte	0
+ 708 0398 FF00     		.short	255
+ 709 039a 02       		.byte	2
+ 710 039b 00       		.byte	0
+ 711 039c FF00     		.short	255
+ 712 039e 02       		.byte	2
+ 713 039f 00       		.byte	0
+ 714 03a0 FF00     		.short	255
+ 715 03a2 02       		.byte	2
+ 716 03a3 00       		.byte	0
+ 717 03a4 FF00     		.short	255
+ 718 03a6 02       		.byte	2
+ 719 03a7 00       		.byte	0
+ 720 03a8 FF00     		.short	255
+ 721 03aa 02       		.byte	2
+ 722 03ab 00       		.byte	0
+ 723 03ac FF00     		.short	255
+ 724 03ae 02       		.byte	2
+ 725 03af 00       		.byte	0
+ 726 03b0 FF00     		.short	255
+ 727 03b2 02       		.byte	2
+ 728 03b3 00       		.byte	0
+ 729 03b4 FF00     		.short	255
+ 730 03b6 02       		.byte	2
+ 731 03b7 00       		.byte	0
+ 732 03b8 FF00     		.short	255
+ 733 03ba 02       		.byte	2
+ 734 03bb 00       		.byte	0
+ 735 03bc FF00     		.short	255
+ 736 03be 02       		.byte	2
+ 737 03bf 00       		.byte	0
+ 738 03c0 FF00     		.short	255
+ 739 03c2 02       		.byte	2
+ 740 03c3 00       		.byte	0
+ 741 03c4 FF00     		.short	255
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 14
+
+
+ 742 03c6 02       		.byte	2
+ 743 03c7 00       		.byte	0
+ 744 03c8 FF00     		.short	255
+ 745 03ca 02       		.byte	2
+ 746 03cb 00       		.byte	0
+ 747 03cc FF00     		.short	255
+ 748 03ce 02       		.byte	2
+ 749 03cf 00       		.byte	0
+ 750 03d0 FF00     		.short	255
+ 751 03d2 02       		.byte	2
+ 752 03d3 00       		.byte	0
+ 753 03d4 FF00     		.short	255
+ 754 03d6 02       		.byte	2
+ 755 03d7 00       		.byte	0
+ 756 03d8 FF00     		.short	255
+ 757 03da 02       		.byte	2
+ 758 03db 00       		.byte	0
+ 759 03dc FF00     		.short	255
+ 760 03de 02       		.byte	2
+ 761 03df 00       		.byte	0
+ 762 03e0 FF00     		.short	255
+ 763 03e2 02       		.byte	2
+ 764 03e3 00       		.byte	0
+ 765 03e4 FF00     		.short	255
+ 766 03e6 02       		.byte	2
+ 767 03e7 00       		.byte	0
+ 768 03e8 FF00     		.short	255
+ 769 03ea 02       		.byte	2
+ 770 03eb 00       		.byte	0
+ 771 03ec FF00     		.short	255
+ 772 03ee 02       		.byte	2
+ 773 03ef 00       		.byte	0
+ 774 03f0 FF00     		.short	255
+ 775 03f2 02       		.byte	2
+ 776 03f3 00       		.byte	0
+ 777 03f4 FF00     		.short	255
+ 778 03f6 02       		.byte	2
+ 779 03f7 00       		.byte	0
+ 780 03f8 FF00     		.short	255
+ 781 03fa 02       		.byte	2
+ 782 03fb 00       		.byte	0
+ 783 03fc FF00     		.short	255
+ 784 03fe 02       		.byte	2
+ 785 03ff 00       		.byte	0
+ 786 0400 FF00     		.short	255
+ 787 0402 02       		.byte	2
+ 788 0403 00       		.byte	0
+ 789 0404 FF00     		.short	255
+ 790 0406 02       		.byte	2
+ 791 0407 00       		.byte	0
+ 792 0408 FF00     		.short	255
+ 793 040a 02       		.byte	2
+ 794 040b 00       		.byte	0
+ 795 040c FF00     		.short	255
+ 796 040e 02       		.byte	2
+ 797 040f 00       		.byte	0
+ 798 0410 FF00     		.short	255
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 15
+
+
+ 799 0412 02       		.byte	2
+ 800 0413 00       		.byte	0
+ 801 0414 FF00     		.short	255
+ 802 0416 02       		.byte	2
+ 803 0417 00       		.byte	0
+ 804 0418 FF00     		.short	255
+ 805 041a 02       		.byte	2
+ 806 041b 00       		.byte	0
+ 807 041c FF00     		.short	255
+ 808 041e 02       		.byte	2
+ 809 041f 00       		.byte	0
+ 810 0420 FF00     		.short	255
+ 811 0422 02       		.byte	2
+ 812 0423 00       		.byte	0
+ 813 0424 FF00     		.short	255
+ 814 0426 02       		.byte	2
+ 815 0427 00       		.byte	0
+ 816 0428 FF00     		.short	255
+ 817 042a 02       		.byte	2
+ 818 042b 00       		.byte	0
+ 819 042c FF00     		.short	255
+ 820 042e 02       		.byte	2
+ 821 042f 00       		.byte	0
+ 822 0430 FF00     		.short	255
+ 823 0432 02       		.byte	2
+ 824 0433 00       		.byte	0
+ 825 0434 FF00     		.short	255
+ 826 0436 02       		.byte	2
+ 827 0437 00       		.byte	0
+ 828 0438 FF00     		.short	255
+ 829 043a 02       		.byte	2
+ 830 043b 00       		.byte	0
+ 831 043c FF00     		.short	255
+ 832 043e 02       		.byte	2
+ 833 043f 00       		.byte	0
+ 834 0440 FF00     		.short	255
+ 835 0442 02       		.byte	2
+ 836 0443 00       		.byte	0
+ 837 0444 FF00     		.short	255
+ 838 0446 02       		.byte	2
+ 839 0447 00       		.byte	0
+ 840 0448 FF00     		.short	255
+ 841 044a 02       		.byte	2
+ 842 044b 00       		.byte	0
+ 843 044c FF00     		.short	255
+ 844 044e 02       		.byte	2
+ 845 044f 00       		.byte	0
+ 846 0450 FF00     		.short	255
+ 847 0452 02       		.byte	2
+ 848 0453 00       		.byte	0
+ 849 0454 FF00     		.short	255
+ 850 0456 02       		.byte	2
+ 851 0457 00       		.byte	0
+ 852 0458 FF00     		.short	255
+ 853 045a 02       		.byte	2
+ 854 045b 00       		.byte	0
+ 855 045c FF00     		.short	255
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 16
+
+
+ 856 045e 02       		.byte	2
+ 857 045f 00       		.byte	0
+ 858 0460 FF00     		.short	255
+ 859 0462 02       		.byte	2
+ 860 0463 00       		.byte	0
+ 861 0464 FF00     		.short	255
+ 862 0466 02       		.byte	2
+ 863 0467 00       		.byte	0
+ 864 0468 FF00     		.short	255
+ 865 046a 02       		.byte	2
+ 866 046b 00       		.byte	0
+ 867 046c FF00     		.short	255
+ 868 046e 02       		.byte	2
+ 869 046f 00       		.byte	0
+ 870 0470 FF00     		.short	255
+ 871 0472 02       		.byte	2
+ 872 0473 00       		.byte	0
+ 873 0474 FF00     		.short	255
+ 874 0476 02       		.byte	2
+ 875 0477 00       		.byte	0
+ 876 0478 FF00     		.short	255
+ 877 047a 02       		.byte	2
+ 878 047b 00       		.byte	0
+ 879 047c FF00     		.short	255
+ 880 047e 02       		.byte	2
+ 881 047f 00       		.byte	0
+ 882 0480 FF00     		.short	255
+ 883 0482 02       		.byte	2
+ 884 0483 00       		.byte	0
+ 885 0484 FF00     		.short	255
+ 886 0486 02       		.byte	2
+ 887 0487 00       		.byte	0
+ 888 0488 FF00     		.short	255
+ 889 048a 02       		.byte	2
+ 890 048b 00       		.byte	0
+ 891 048c FF00     		.short	255
+ 892 048e 02       		.byte	2
+ 893 048f 00       		.byte	0
+ 894 0490 FF00     		.short	255
+ 895 0492 02       		.byte	2
+ 896 0493 00       		.byte	0
+ 897 0494 FF00     		.short	255
+ 898 0496 02       		.byte	2
+ 899 0497 00       		.byte	0
+ 900 0498 FF00     		.short	255
+ 901 049a 02       		.byte	2
+ 902 049b 00       		.byte	0
+ 903 049c FF00     		.short	255
+ 904 049e 02       		.byte	2
+ 905 049f 00       		.byte	0
+ 906 04a0 FF00     		.short	255
+ 907 04a2 02       		.byte	2
+ 908 04a3 00       		.byte	0
+ 909 04a4 FF00     		.short	255
+ 910 04a6 02       		.byte	2
+ 911 04a7 00       		.byte	0
+ 912 04a8 FF00     		.short	255
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 17
+
+
+ 913 04aa 02       		.byte	2
+ 914 04ab 00       		.byte	0
+ 915 04ac FF00     		.short	255
+ 916 04ae 02       		.byte	2
+ 917 04af 00       		.byte	0
+ 918 04b0 FF00     		.short	255
+ 919 04b2 02       		.byte	2
+ 920 04b3 00       		.byte	0
+ 921 04b4 FF00     		.short	255
+ 922 04b6 02       		.byte	2
+ 923 04b7 00       		.byte	0
+ 924 04b8 FF00     		.short	255
+ 925 04ba 02       		.byte	2
+ 926 04bb 00       		.byte	0
+ 927 04bc FF00     		.short	255
+ 928 04be 02       		.byte	2
+ 929 04bf 00       		.byte	0
+ 930 04c0 FF00     		.short	255
+ 931 04c2 02       		.byte	2
+ 932 04c3 00       		.byte	0
+ 933 04c4 FF00     		.short	255
+ 934 04c6 02       		.byte	2
+ 935 04c7 00       		.byte	0
+ 936 04c8 FF00     		.short	255
+ 937 04ca 02       		.byte	2
+ 938 04cb 00       		.byte	0
+ 939 04cc FF00     		.short	255
+ 940 04ce 02       		.byte	2
+ 941 04cf 00       		.byte	0
+ 942 04d0 FF00     		.short	255
+ 943 04d2 02       		.byte	2
+ 944 04d3 00       		.byte	0
+ 945 04d4 FF00     		.short	255
+ 946 04d6 02       		.byte	2
+ 947 04d7 00       		.byte	0
+ 948 04d8 FF00     		.short	255
+ 949 04da 02       		.byte	2
+ 950 04db 00       		.byte	0
+ 951 04dc FF00     		.short	255
+ 952 04de 02       		.byte	2
+ 953 04df 00       		.byte	0
+ 954 04e0 FF00     		.short	255
+ 955 04e2 02       		.byte	2
+ 956 04e3 00       		.byte	0
+ 957 04e4 FF00     		.short	255
+ 958 04e6 02       		.byte	2
+ 959 04e7 00       		.byte	0
+ 960 04e8 FF00     		.short	255
+ 961 04ea 02       		.byte	2
+ 962 04eb 00       		.byte	0
+ 963 04ec FF00     		.short	255
+ 964 04ee 02       		.byte	2
+ 965 04ef 00       		.byte	0
+ 966 04f0 FF00     		.short	255
+ 967 04f2 02       		.byte	2
+ 968 04f3 00       		.byte	0
+ 969 04f4 FF00     		.short	255
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 18
+
+
+ 970 04f6 02       		.byte	2
+ 971 04f7 00       		.byte	0
+ 972 04f8 FF00     		.short	255
+ 973 04fa 02       		.byte	2
+ 974 04fb 00       		.byte	0
+ 975 04fc FF00     		.short	255
+ 976 04fe 02       		.byte	2
+ 977 04ff 00       		.byte	0
+ 978 0500 FF00     		.short	255
+ 979 0502 02       		.byte	2
+ 980 0503 00       		.byte	0
+ 981 0504 FF00     		.short	255
+ 982 0506 02       		.byte	2
+ 983 0507 00       		.byte	0
+ 984 0508 FF00     		.short	255
+ 985 050a 02       		.byte	2
+ 986 050b 00       		.byte	0
+ 987 050c FF00     		.short	255
+ 988 050e 02       		.byte	2
+ 989 050f 00       		.byte	0
+ 990 0510 FF00     		.short	255
+ 991 0512 02       		.byte	2
+ 992 0513 00       		.byte	0
+ 993 0514 FF00     		.short	255
+ 994 0516 02       		.byte	2
+ 995 0517 00       		.byte	0
+ 996 0518 FF00     		.short	255
+ 997 051a 02       		.byte	2
+ 998 051b 00       		.byte	0
+ 999 051c FF00     		.short	255
+ 1000 051e 02       		.byte	2
+ 1001 051f 00       		.byte	0
+ 1002 0520 FF00     		.short	255
+ 1003 0522 02       		.byte	2
+ 1004 0523 00       		.byte	0
+ 1005 0524 FF00     		.short	255
+ 1006 0526 02       		.byte	2
+ 1007 0527 00       		.byte	0
+ 1008 0528 FF00     		.short	255
+ 1009 052a 02       		.byte	2
+ 1010 052b 00       		.byte	0
+ 1011 052c FF00     		.short	255
+ 1012 052e 02       		.byte	2
+ 1013 052f 00       		.byte	0
+ 1014 0530 FF00     		.short	255
+ 1015 0532 02       		.byte	2
+ 1016 0533 00       		.byte	0
+ 1017 0534 FF00     		.short	255
+ 1018 0536 02       		.byte	2
+ 1019 0537 00       		.byte	0
+ 1020 0538 FF00     		.short	255
+ 1021 053a 02       		.byte	2
+ 1022 053b 00       		.byte	0
+ 1023 053c FF00     		.short	255
+ 1024 053e 02       		.byte	2
+ 1025 053f 00       		.byte	0
+ 1026 0540 FF00     		.short	255
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 19
+
+
+ 1027 0542 02       		.byte	2
+ 1028 0543 00       		.byte	0
+ 1029 0544 FF00     		.short	255
+ 1030 0546 02       		.byte	2
+ 1031 0547 00       		.byte	0
+ 1032 0548 FF00     		.short	255
+ 1033 054a 02       		.byte	2
+ 1034 054b 00       		.byte	0
+ 1035 054c FF00     		.short	255
+ 1036 054e 02       		.byte	2
+ 1037 054f 00       		.byte	0
+ 1038 0550 FF00     		.short	255
+ 1039 0552 02       		.byte	2
+ 1040 0553 00       		.byte	0
+ 1041 0554 FF00     		.short	255
+ 1042 0556 02       		.byte	2
+ 1043 0557 00       		.byte	0
+ 1044 0558 FF00     		.short	255
+ 1045 055a 02       		.byte	2
+ 1046 055b 00       		.byte	0
+ 1047 055c FF00     		.short	255
+ 1048 055e 02       		.byte	2
+ 1049 055f 00       		.byte	0
+ 1050 0560 FF00     		.short	255
+ 1051 0562 02       		.byte	2
+ 1052 0563 00       		.byte	0
+ 1053 0564 FF00     		.short	255
+ 1054 0566 02       		.byte	2
+ 1055 0567 00       		.byte	0
+ 1056 0568 FF00     		.short	255
+ 1057 056a 02       		.byte	2
+ 1058 056b 00       		.byte	0
+ 1059 056c FF00     		.short	255
+ 1060 056e 02       		.byte	2
+ 1061 056f 00       		.byte	0
+ 1062 0570 FF00     		.short	255
+ 1063 0572 02       		.byte	2
+ 1064 0573 00       		.byte	0
+ 1065 0574 FF00     		.short	255
+ 1066 0576 02       		.byte	2
+ 1067 0577 00       		.byte	0
+ 1068 0578 FF00     		.short	255
+ 1069 057a 02       		.byte	2
+ 1070 057b 00       		.byte	0
+ 1071 057c FF00     		.short	255
+ 1072 057e 02       		.byte	2
+ 1073 057f 00       		.byte	0
+ 1074 0580 FF00     		.short	255
+ 1075 0582 02       		.byte	2
+ 1076 0583 00       		.byte	0
+ 1077 0584 FF00     		.short	255
+ 1078 0586 02       		.byte	2
+ 1079 0587 00       		.byte	0
+ 1080 0588 FF00     		.short	255
+ 1081 058a 02       		.byte	2
+ 1082 058b 00       		.byte	0
+ 1083 058c FF00     		.short	255
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 20
+
+
+ 1084 058e 02       		.byte	2
+ 1085 058f 00       		.byte	0
+ 1086 0590 FF00     		.short	255
+ 1087 0592 02       		.byte	2
+ 1088 0593 00       		.byte	0
+ 1089 0594 FF00     		.short	255
+ 1090 0596 02       		.byte	2
+ 1091 0597 00       		.byte	0
+ 1092 0598 FF00     		.short	255
+ 1093 059a 02       		.byte	2
+ 1094 059b 00       		.byte	0
+ 1095 059c FF00     		.short	255
+ 1096 059e 02       		.byte	2
+ 1097 059f 00       		.byte	0
+ 1098 05a0 FF00     		.short	255
+ 1099 05a2 02       		.byte	2
+ 1100 05a3 00       		.byte	0
+ 1101 05a4 FF00     		.short	255
+ 1102 05a6 02       		.byte	2
+ 1103 05a7 00       		.byte	0
+ 1104 05a8 FF00     		.short	255
+ 1105 05aa 02       		.byte	2
+ 1106 05ab 00       		.byte	0
+ 1107 05ac FF00     		.short	255
+ 1108 05ae 02       		.byte	2
+ 1109 05af 00       		.byte	0
+ 1110 05b0 FF00     		.short	255
+ 1111 05b2 02       		.byte	2
+ 1112 05b3 00       		.byte	0
+ 1113 05b4 FF00     		.short	255
+ 1114 05b6 02       		.byte	2
+ 1115 05b7 00       		.byte	0
+ 1116 05b8 FF00     		.short	255
+ 1117 05ba 02       		.byte	2
+ 1118 05bb 00       		.byte	0
+ 1119 05bc FF00     		.short	255
+ 1120 05be 02       		.byte	2
+ 1121 05bf 00       		.byte	0
+ 1122 05c0 FF00     		.short	255
+ 1123 05c2 02       		.byte	2
+ 1124 05c3 00       		.byte	0
+ 1125 05c4 FF00     		.short	255
+ 1126 05c6 02       		.byte	2
+ 1127 05c7 00       		.byte	0
+ 1128 05c8 FF00     		.short	255
+ 1129 05ca 02       		.byte	2
+ 1130 05cb 00       		.byte	0
+ 1131 05cc FF00     		.short	255
+ 1132 05ce 02       		.byte	2
+ 1133 05cf 00       		.byte	0
+ 1134 05d0 FF00     		.short	255
+ 1135 05d2 02       		.byte	2
+ 1136 05d3 00       		.byte	0
+ 1137 05d4 FF00     		.short	255
+ 1138 05d6 02       		.byte	2
+ 1139 05d7 00       		.byte	0
+ 1140 05d8 FF00     		.short	255
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 21
+
+
+ 1141 05da 02       		.byte	2
+ 1142 05db 00       		.byte	0
+ 1143 05dc FF00     		.short	255
+ 1144 05de 02       		.byte	2
+ 1145 05df 00       		.byte	0
+ 1146 05e0 FF00     		.short	255
+ 1147 05e2 02       		.byte	2
+ 1148 05e3 00       		.byte	0
+ 1149 05e4 FF00     		.short	255
+ 1150 05e6 02       		.byte	2
+ 1151 05e7 00       		.byte	0
+ 1152 05e8 FF00     		.short	255
+ 1153 05ea 02       		.byte	2
+ 1154 05eb 00       		.byte	0
+ 1155 05ec FF00     		.short	255
+ 1156 05ee 02       		.byte	2
+ 1157 05ef 00       		.byte	0
+ 1158 05f0 FF00     		.short	255
+ 1159 05f2 02       		.byte	2
+ 1160 05f3 00       		.byte	0
+ 1161 05f4 FF00     		.short	255
+ 1162 05f6 02       		.byte	2
+ 1163 05f7 00       		.byte	0
+ 1164 05f8 FF00     		.short	255
+ 1165 05fa 02       		.byte	2
+ 1166 05fb 00       		.byte	0
+ 1167 05fc FF00     		.short	255
+ 1168 05fe 02       		.byte	2
+ 1169 05ff 00       		.byte	0
+ 1170 0600 FF00     		.short	255
+ 1171 0602 02       		.byte	2
+ 1172 0603 00       		.byte	0
+ 1173 0604 FF00     		.short	255
+ 1174 0606 02       		.byte	2
+ 1175 0607 00       		.byte	0
+ 1176 0608 FF00     		.short	255
+ 1177 060a 02       		.byte	2
+ 1178 060b 00       		.byte	0
+ 1179 060c FF00     		.short	255
+ 1180 060e 02       		.byte	2
+ 1181 060f 00       		.byte	0
+ 1182 0610 FF00     		.short	255
+ 1183 0612 02       		.byte	2
+ 1184 0613 00       		.byte	0
+ 1185 0614 FF00     		.short	255
+ 1186 0616 02       		.byte	2
+ 1187 0617 00       		.byte	0
+ 1188 0618 FF00     		.short	255
+ 1189 061a 02       		.byte	2
+ 1190 061b 00       		.byte	0
+ 1191 061c FF00     		.short	255
+ 1192 061e 02       		.byte	2
+ 1193 061f 00       		.byte	0
+ 1194 0620 FF00     		.short	255
+ 1195 0622 02       		.byte	2
+ 1196 0623 00       		.byte	0
+ 1197 0624 FF00     		.short	255
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 22
+
+
+ 1198 0626 02       		.byte	2
+ 1199 0627 00       		.byte	0
+ 1200 0628 FF00     		.short	255
+ 1201 062a 02       		.byte	2
+ 1202 062b 00       		.byte	0
+ 1203 062c FF00     		.short	255
+ 1204 062e 02       		.byte	2
+ 1205 062f 00       		.byte	0
+ 1206              		.type	MDIO_Interface_registerConfig_2, %object
+ 1207              		.size	MDIO_Interface_registerConfig_2, 1024
+ 1208              	MDIO_Interface_registerConfig_2:
+ 1209 0630 00000000 		.space	1024
+ 1209      00000000 
+ 1209      00000000 
+ 1209      00000000 
+ 1209      00000000 
+ 1210              		.type	MDIO_Interface_registerConfig_1, %object
+ 1211              		.size	MDIO_Interface_registerConfig_1, 2048
+ 1212              	MDIO_Interface_registerConfig_1:
+ 1213 0a30 00000000 		.space	2048
+ 1213      00000000 
+ 1213      00000000 
+ 1213      00000000 
+ 1213      00000000 
+ 1214              		.data
+ 1215              		.align	2
+ 1216              		.type	MDIO_Interface_registerConfig_6, %object
+ 1217              		.size	MDIO_Interface_registerConfig_6, 512
+ 1218              	MDIO_Interface_registerConfig_6:
+ 1219 0000 FFFF     		.short	-1
+ 1220 0002 02       		.byte	2
+ 1221 0003 00       		.byte	0
+ 1222 0004 FFFF     		.short	-1
+ 1223 0006 02       		.byte	2
+ 1224 0007 00       		.byte	0
+ 1225 0008 FFFF     		.short	-1
+ 1226 000a 02       		.byte	2
+ 1227 000b 00       		.byte	0
+ 1228 000c FFFF     		.short	-1
+ 1229 000e 02       		.byte	2
+ 1230 000f 00       		.byte	0
+ 1231 0010 FFFF     		.short	-1
+ 1232 0012 02       		.byte	2
+ 1233 0013 00       		.byte	0
+ 1234 0014 FFFF     		.short	-1
+ 1235 0016 02       		.byte	2
+ 1236 0017 00       		.byte	0
+ 1237 0018 FFFF     		.short	-1
+ 1238 001a 02       		.byte	2
+ 1239 001b 00       		.byte	0
+ 1240 001c FFFF     		.short	-1
+ 1241 001e 02       		.byte	2
+ 1242 001f 00       		.byte	0
+ 1243 0020 FFFF     		.short	-1
+ 1244 0022 02       		.byte	2
+ 1245 0023 00       		.byte	0
+ 1246 0024 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 23
+
+
+ 1247 0026 02       		.byte	2
+ 1248 0027 00       		.byte	0
+ 1249 0028 FFFF     		.short	-1
+ 1250 002a 02       		.byte	2
+ 1251 002b 00       		.byte	0
+ 1252 002c FFFF     		.short	-1
+ 1253 002e 02       		.byte	2
+ 1254 002f 00       		.byte	0
+ 1255 0030 FFFF     		.short	-1
+ 1256 0032 02       		.byte	2
+ 1257 0033 00       		.byte	0
+ 1258 0034 FFFF     		.short	-1
+ 1259 0036 02       		.byte	2
+ 1260 0037 00       		.byte	0
+ 1261 0038 FFFF     		.short	-1
+ 1262 003a 02       		.byte	2
+ 1263 003b 00       		.byte	0
+ 1264 003c FFFF     		.short	-1
+ 1265 003e 02       		.byte	2
+ 1266 003f 00       		.byte	0
+ 1267 0040 FFFF     		.short	-1
+ 1268 0042 02       		.byte	2
+ 1269 0043 00       		.byte	0
+ 1270 0044 FFFF     		.short	-1
+ 1271 0046 02       		.byte	2
+ 1272 0047 00       		.byte	0
+ 1273 0048 FFFF     		.short	-1
+ 1274 004a 02       		.byte	2
+ 1275 004b 00       		.byte	0
+ 1276 004c FFFF     		.short	-1
+ 1277 004e 02       		.byte	2
+ 1278 004f 00       		.byte	0
+ 1279 0050 FFFF     		.short	-1
+ 1280 0052 02       		.byte	2
+ 1281 0053 00       		.byte	0
+ 1282 0054 FFFF     		.short	-1
+ 1283 0056 02       		.byte	2
+ 1284 0057 00       		.byte	0
+ 1285 0058 FFFF     		.short	-1
+ 1286 005a 02       		.byte	2
+ 1287 005b 00       		.byte	0
+ 1288 005c FFFF     		.short	-1
+ 1289 005e 02       		.byte	2
+ 1290 005f 00       		.byte	0
+ 1291 0060 FFFF     		.short	-1
+ 1292 0062 02       		.byte	2
+ 1293 0063 00       		.byte	0
+ 1294 0064 FFFF     		.short	-1
+ 1295 0066 02       		.byte	2
+ 1296 0067 00       		.byte	0
+ 1297 0068 FFFF     		.short	-1
+ 1298 006a 02       		.byte	2
+ 1299 006b 00       		.byte	0
+ 1300 006c FFFF     		.short	-1
+ 1301 006e 02       		.byte	2
+ 1302 006f 00       		.byte	0
+ 1303 0070 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 24
+
+
+ 1304 0072 02       		.byte	2
+ 1305 0073 00       		.byte	0
+ 1306 0074 FFFF     		.short	-1
+ 1307 0076 02       		.byte	2
+ 1308 0077 00       		.byte	0
+ 1309 0078 FFFF     		.short	-1
+ 1310 007a 02       		.byte	2
+ 1311 007b 00       		.byte	0
+ 1312 007c FFFF     		.short	-1
+ 1313 007e 02       		.byte	2
+ 1314 007f 00       		.byte	0
+ 1315 0080 FFFF     		.short	-1
+ 1316 0082 02       		.byte	2
+ 1317 0083 00       		.byte	0
+ 1318 0084 FFFF     		.short	-1
+ 1319 0086 02       		.byte	2
+ 1320 0087 00       		.byte	0
+ 1321 0088 FFFF     		.short	-1
+ 1322 008a 02       		.byte	2
+ 1323 008b 00       		.byte	0
+ 1324 008c FFFF     		.short	-1
+ 1325 008e 02       		.byte	2
+ 1326 008f 00       		.byte	0
+ 1327 0090 FFFF     		.short	-1
+ 1328 0092 02       		.byte	2
+ 1329 0093 00       		.byte	0
+ 1330 0094 FFFF     		.short	-1
+ 1331 0096 02       		.byte	2
+ 1332 0097 00       		.byte	0
+ 1333 0098 FFFF     		.short	-1
+ 1334 009a 02       		.byte	2
+ 1335 009b 00       		.byte	0
+ 1336 009c FFFF     		.short	-1
+ 1337 009e 02       		.byte	2
+ 1338 009f 00       		.byte	0
+ 1339 00a0 FFFF     		.short	-1
+ 1340 00a2 02       		.byte	2
+ 1341 00a3 00       		.byte	0
+ 1342 00a4 FFFF     		.short	-1
+ 1343 00a6 02       		.byte	2
+ 1344 00a7 00       		.byte	0
+ 1345 00a8 FFFF     		.short	-1
+ 1346 00aa 02       		.byte	2
+ 1347 00ab 00       		.byte	0
+ 1348 00ac FFFF     		.short	-1
+ 1349 00ae 02       		.byte	2
+ 1350 00af 00       		.byte	0
+ 1351 00b0 FFFF     		.short	-1
+ 1352 00b2 02       		.byte	2
+ 1353 00b3 00       		.byte	0
+ 1354 00b4 FFFF     		.short	-1
+ 1355 00b6 02       		.byte	2
+ 1356 00b7 00       		.byte	0
+ 1357 00b8 FFFF     		.short	-1
+ 1358 00ba 02       		.byte	2
+ 1359 00bb 00       		.byte	0
+ 1360 00bc FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 25
+
+
+ 1361 00be 02       		.byte	2
+ 1362 00bf 00       		.byte	0
+ 1363 00c0 FFFF     		.short	-1
+ 1364 00c2 02       		.byte	2
+ 1365 00c3 00       		.byte	0
+ 1366 00c4 FFFF     		.short	-1
+ 1367 00c6 02       		.byte	2
+ 1368 00c7 00       		.byte	0
+ 1369 00c8 FFFF     		.short	-1
+ 1370 00ca 02       		.byte	2
+ 1371 00cb 00       		.byte	0
+ 1372 00cc FFFF     		.short	-1
+ 1373 00ce 02       		.byte	2
+ 1374 00cf 00       		.byte	0
+ 1375 00d0 FFFF     		.short	-1
+ 1376 00d2 02       		.byte	2
+ 1377 00d3 00       		.byte	0
+ 1378 00d4 FFFF     		.short	-1
+ 1379 00d6 02       		.byte	2
+ 1380 00d7 00       		.byte	0
+ 1381 00d8 FFFF     		.short	-1
+ 1382 00da 02       		.byte	2
+ 1383 00db 00       		.byte	0
+ 1384 00dc FFFF     		.short	-1
+ 1385 00de 02       		.byte	2
+ 1386 00df 00       		.byte	0
+ 1387 00e0 FFFF     		.short	-1
+ 1388 00e2 02       		.byte	2
+ 1389 00e3 00       		.byte	0
+ 1390 00e4 FFFF     		.short	-1
+ 1391 00e6 02       		.byte	2
+ 1392 00e7 00       		.byte	0
+ 1393 00e8 FFFF     		.short	-1
+ 1394 00ea 02       		.byte	2
+ 1395 00eb 00       		.byte	0
+ 1396 00ec FFFF     		.short	-1
+ 1397 00ee 02       		.byte	2
+ 1398 00ef 00       		.byte	0
+ 1399 00f0 FFFF     		.short	-1
+ 1400 00f2 02       		.byte	2
+ 1401 00f3 00       		.byte	0
+ 1402 00f4 FFFF     		.short	-1
+ 1403 00f6 02       		.byte	2
+ 1404 00f7 00       		.byte	0
+ 1405 00f8 FFFF     		.short	-1
+ 1406 00fa 02       		.byte	2
+ 1407 00fb 00       		.byte	0
+ 1408 00fc FFFF     		.short	-1
+ 1409 00fe 02       		.byte	2
+ 1410 00ff 00       		.byte	0
+ 1411 0100 FFFF     		.short	-1
+ 1412 0102 02       		.byte	2
+ 1413 0103 00       		.byte	0
+ 1414 0104 FFFF     		.short	-1
+ 1415 0106 02       		.byte	2
+ 1416 0107 00       		.byte	0
+ 1417 0108 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 26
+
+
+ 1418 010a 02       		.byte	2
+ 1419 010b 00       		.byte	0
+ 1420 010c FFFF     		.short	-1
+ 1421 010e 02       		.byte	2
+ 1422 010f 00       		.byte	0
+ 1423 0110 FFFF     		.short	-1
+ 1424 0112 02       		.byte	2
+ 1425 0113 00       		.byte	0
+ 1426 0114 FFFF     		.short	-1
+ 1427 0116 02       		.byte	2
+ 1428 0117 00       		.byte	0
+ 1429 0118 FFFF     		.short	-1
+ 1430 011a 02       		.byte	2
+ 1431 011b 00       		.byte	0
+ 1432 011c FFFF     		.short	-1
+ 1433 011e 02       		.byte	2
+ 1434 011f 00       		.byte	0
+ 1435 0120 FFFF     		.short	-1
+ 1436 0122 02       		.byte	2
+ 1437 0123 00       		.byte	0
+ 1438 0124 FFFF     		.short	-1
+ 1439 0126 02       		.byte	2
+ 1440 0127 00       		.byte	0
+ 1441 0128 FFFF     		.short	-1
+ 1442 012a 02       		.byte	2
+ 1443 012b 00       		.byte	0
+ 1444 012c FFFF     		.short	-1
+ 1445 012e 02       		.byte	2
+ 1446 012f 00       		.byte	0
+ 1447 0130 FFFF     		.short	-1
+ 1448 0132 02       		.byte	2
+ 1449 0133 00       		.byte	0
+ 1450 0134 FFFF     		.short	-1
+ 1451 0136 02       		.byte	2
+ 1452 0137 00       		.byte	0
+ 1453 0138 FFFF     		.short	-1
+ 1454 013a 02       		.byte	2
+ 1455 013b 00       		.byte	0
+ 1456 013c FFFF     		.short	-1
+ 1457 013e 02       		.byte	2
+ 1458 013f 00       		.byte	0
+ 1459 0140 FFFF     		.short	-1
+ 1460 0142 02       		.byte	2
+ 1461 0143 00       		.byte	0
+ 1462 0144 FFFF     		.short	-1
+ 1463 0146 02       		.byte	2
+ 1464 0147 00       		.byte	0
+ 1465 0148 FFFF     		.short	-1
+ 1466 014a 02       		.byte	2
+ 1467 014b 00       		.byte	0
+ 1468 014c FFFF     		.short	-1
+ 1469 014e 02       		.byte	2
+ 1470 014f 00       		.byte	0
+ 1471 0150 FFFF     		.short	-1
+ 1472 0152 02       		.byte	2
+ 1473 0153 00       		.byte	0
+ 1474 0154 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 27
+
+
+ 1475 0156 02       		.byte	2
+ 1476 0157 00       		.byte	0
+ 1477 0158 FFFF     		.short	-1
+ 1478 015a 02       		.byte	2
+ 1479 015b 00       		.byte	0
+ 1480 015c FFFF     		.short	-1
+ 1481 015e 02       		.byte	2
+ 1482 015f 00       		.byte	0
+ 1483 0160 FFFF     		.short	-1
+ 1484 0162 02       		.byte	2
+ 1485 0163 00       		.byte	0
+ 1486 0164 FFFF     		.short	-1
+ 1487 0166 02       		.byte	2
+ 1488 0167 00       		.byte	0
+ 1489 0168 FFFF     		.short	-1
+ 1490 016a 02       		.byte	2
+ 1491 016b 00       		.byte	0
+ 1492 016c FFFF     		.short	-1
+ 1493 016e 02       		.byte	2
+ 1494 016f 00       		.byte	0
+ 1495 0170 FFFF     		.short	-1
+ 1496 0172 02       		.byte	2
+ 1497 0173 00       		.byte	0
+ 1498 0174 FFFF     		.short	-1
+ 1499 0176 02       		.byte	2
+ 1500 0177 00       		.byte	0
+ 1501 0178 FFFF     		.short	-1
+ 1502 017a 02       		.byte	2
+ 1503 017b 00       		.byte	0
+ 1504 017c FFFF     		.short	-1
+ 1505 017e 02       		.byte	2
+ 1506 017f 00       		.byte	0
+ 1507 0180 FFFF     		.short	-1
+ 1508 0182 02       		.byte	2
+ 1509 0183 00       		.byte	0
+ 1510 0184 FFFF     		.short	-1
+ 1511 0186 02       		.byte	2
+ 1512 0187 00       		.byte	0
+ 1513 0188 FFFF     		.short	-1
+ 1514 018a 02       		.byte	2
+ 1515 018b 00       		.byte	0
+ 1516 018c FFFF     		.short	-1
+ 1517 018e 02       		.byte	2
+ 1518 018f 00       		.byte	0
+ 1519 0190 FFFF     		.short	-1
+ 1520 0192 02       		.byte	2
+ 1521 0193 00       		.byte	0
+ 1522 0194 FFFF     		.short	-1
+ 1523 0196 02       		.byte	2
+ 1524 0197 00       		.byte	0
+ 1525 0198 FFFF     		.short	-1
+ 1526 019a 02       		.byte	2
+ 1527 019b 00       		.byte	0
+ 1528 019c FFFF     		.short	-1
+ 1529 019e 02       		.byte	2
+ 1530 019f 00       		.byte	0
+ 1531 01a0 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 28
+
+
+ 1532 01a2 02       		.byte	2
+ 1533 01a3 00       		.byte	0
+ 1534 01a4 FFFF     		.short	-1
+ 1535 01a6 02       		.byte	2
+ 1536 01a7 00       		.byte	0
+ 1537 01a8 FFFF     		.short	-1
+ 1538 01aa 02       		.byte	2
+ 1539 01ab 00       		.byte	0
+ 1540 01ac FFFF     		.short	-1
+ 1541 01ae 02       		.byte	2
+ 1542 01af 00       		.byte	0
+ 1543 01b0 FFFF     		.short	-1
+ 1544 01b2 02       		.byte	2
+ 1545 01b3 00       		.byte	0
+ 1546 01b4 FFFF     		.short	-1
+ 1547 01b6 02       		.byte	2
+ 1548 01b7 00       		.byte	0
+ 1549 01b8 FFFF     		.short	-1
+ 1550 01ba 02       		.byte	2
+ 1551 01bb 00       		.byte	0
+ 1552 01bc FFFF     		.short	-1
+ 1553 01be 02       		.byte	2
+ 1554 01bf 00       		.byte	0
+ 1555 01c0 FFFF     		.short	-1
+ 1556 01c2 02       		.byte	2
+ 1557 01c3 00       		.byte	0
+ 1558 01c4 FFFF     		.short	-1
+ 1559 01c6 02       		.byte	2
+ 1560 01c7 00       		.byte	0
+ 1561 01c8 FFFF     		.short	-1
+ 1562 01ca 02       		.byte	2
+ 1563 01cb 00       		.byte	0
+ 1564 01cc FFFF     		.short	-1
+ 1565 01ce 02       		.byte	2
+ 1566 01cf 00       		.byte	0
+ 1567 01d0 FFFF     		.short	-1
+ 1568 01d2 02       		.byte	2
+ 1569 01d3 00       		.byte	0
+ 1570 01d4 FFFF     		.short	-1
+ 1571 01d6 02       		.byte	2
+ 1572 01d7 00       		.byte	0
+ 1573 01d8 FFFF     		.short	-1
+ 1574 01da 02       		.byte	2
+ 1575 01db 00       		.byte	0
+ 1576 01dc FFFF     		.short	-1
+ 1577 01de 02       		.byte	2
+ 1578 01df 00       		.byte	0
+ 1579 01e0 FFFF     		.short	-1
+ 1580 01e2 02       		.byte	2
+ 1581 01e3 00       		.byte	0
+ 1582 01e4 FFFF     		.short	-1
+ 1583 01e6 02       		.byte	2
+ 1584 01e7 00       		.byte	0
+ 1585 01e8 FFFF     		.short	-1
+ 1586 01ea 02       		.byte	2
+ 1587 01eb 00       		.byte	0
+ 1588 01ec FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 29
+
+
+ 1589 01ee 02       		.byte	2
+ 1590 01ef 00       		.byte	0
+ 1591 01f0 FFFF     		.short	-1
+ 1592 01f2 02       		.byte	2
+ 1593 01f3 00       		.byte	0
+ 1594 01f4 FFFF     		.short	-1
+ 1595 01f6 02       		.byte	2
+ 1596 01f7 00       		.byte	0
+ 1597 01f8 FFFF     		.short	-1
+ 1598 01fa 02       		.byte	2
+ 1599 01fb 00       		.byte	0
+ 1600 01fc FFFF     		.short	-1
+ 1601 01fe 02       		.byte	2
+ 1602 01ff 00       		.byte	0
+ 1603              		.type	MDIO_Interface_registerConfig_5, %object
+ 1604              		.size	MDIO_Interface_registerConfig_5, 1024
+ 1605              	MDIO_Interface_registerConfig_5:
+ 1606 0200 FFFF     		.short	-1
+ 1607 0202 02       		.byte	2
+ 1608 0203 00       		.byte	0
+ 1609 0204 FFFF     		.short	-1
+ 1610 0206 02       		.byte	2
+ 1611 0207 00       		.byte	0
+ 1612 0208 FFFF     		.short	-1
+ 1613 020a 02       		.byte	2
+ 1614 020b 00       		.byte	0
+ 1615 020c FFFF     		.short	-1
+ 1616 020e 02       		.byte	2
+ 1617 020f 00       		.byte	0
+ 1618 0210 FFFF     		.short	-1
+ 1619 0212 02       		.byte	2
+ 1620 0213 00       		.byte	0
+ 1621 0214 FFFF     		.short	-1
+ 1622 0216 02       		.byte	2
+ 1623 0217 00       		.byte	0
+ 1624 0218 FFFF     		.short	-1
+ 1625 021a 02       		.byte	2
+ 1626 021b 00       		.byte	0
+ 1627 021c FFFF     		.short	-1
+ 1628 021e 02       		.byte	2
+ 1629 021f 00       		.byte	0
+ 1630 0220 FFFF     		.short	-1
+ 1631 0222 02       		.byte	2
+ 1632 0223 00       		.byte	0
+ 1633 0224 FFFF     		.short	-1
+ 1634 0226 02       		.byte	2
+ 1635 0227 00       		.byte	0
+ 1636 0228 FFFF     		.short	-1
+ 1637 022a 02       		.byte	2
+ 1638 022b 00       		.byte	0
+ 1639 022c FFFF     		.short	-1
+ 1640 022e 02       		.byte	2
+ 1641 022f 00       		.byte	0
+ 1642 0230 FFFF     		.short	-1
+ 1643 0232 02       		.byte	2
+ 1644 0233 00       		.byte	0
+ 1645 0234 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 30
+
+
+ 1646 0236 02       		.byte	2
+ 1647 0237 00       		.byte	0
+ 1648 0238 FFFF     		.short	-1
+ 1649 023a 02       		.byte	2
+ 1650 023b 00       		.byte	0
+ 1651 023c FFFF     		.short	-1
+ 1652 023e 02       		.byte	2
+ 1653 023f 00       		.byte	0
+ 1654 0240 FFFF     		.short	-1
+ 1655 0242 02       		.byte	2
+ 1656 0243 00       		.byte	0
+ 1657 0244 FFFF     		.short	-1
+ 1658 0246 02       		.byte	2
+ 1659 0247 00       		.byte	0
+ 1660 0248 FFFF     		.short	-1
+ 1661 024a 02       		.byte	2
+ 1662 024b 00       		.byte	0
+ 1663 024c FFFF     		.short	-1
+ 1664 024e 02       		.byte	2
+ 1665 024f 00       		.byte	0
+ 1666 0250 FFFF     		.short	-1
+ 1667 0252 02       		.byte	2
+ 1668 0253 00       		.byte	0
+ 1669 0254 FFFF     		.short	-1
+ 1670 0256 02       		.byte	2
+ 1671 0257 00       		.byte	0
+ 1672 0258 FFFF     		.short	-1
+ 1673 025a 02       		.byte	2
+ 1674 025b 00       		.byte	0
+ 1675 025c FFFF     		.short	-1
+ 1676 025e 02       		.byte	2
+ 1677 025f 00       		.byte	0
+ 1678 0260 FFFF     		.short	-1
+ 1679 0262 02       		.byte	2
+ 1680 0263 00       		.byte	0
+ 1681 0264 FFFF     		.short	-1
+ 1682 0266 02       		.byte	2
+ 1683 0267 00       		.byte	0
+ 1684 0268 FFFF     		.short	-1
+ 1685 026a 02       		.byte	2
+ 1686 026b 00       		.byte	0
+ 1687 026c FFFF     		.short	-1
+ 1688 026e 02       		.byte	2
+ 1689 026f 00       		.byte	0
+ 1690 0270 FFFF     		.short	-1
+ 1691 0272 02       		.byte	2
+ 1692 0273 00       		.byte	0
+ 1693 0274 FFFF     		.short	-1
+ 1694 0276 02       		.byte	2
+ 1695 0277 00       		.byte	0
+ 1696 0278 FFFF     		.short	-1
+ 1697 027a 02       		.byte	2
+ 1698 027b 00       		.byte	0
+ 1699 027c FFFF     		.short	-1
+ 1700 027e 02       		.byte	2
+ 1701 027f 00       		.byte	0
+ 1702 0280 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 31
+
+
+ 1703 0282 02       		.byte	2
+ 1704 0283 00       		.byte	0
+ 1705 0284 FFFF     		.short	-1
+ 1706 0286 02       		.byte	2
+ 1707 0287 00       		.byte	0
+ 1708 0288 FFFF     		.short	-1
+ 1709 028a 02       		.byte	2
+ 1710 028b 00       		.byte	0
+ 1711 028c FFFF     		.short	-1
+ 1712 028e 02       		.byte	2
+ 1713 028f 00       		.byte	0
+ 1714 0290 FFFF     		.short	-1
+ 1715 0292 02       		.byte	2
+ 1716 0293 00       		.byte	0
+ 1717 0294 FFFF     		.short	-1
+ 1718 0296 02       		.byte	2
+ 1719 0297 00       		.byte	0
+ 1720 0298 FFFF     		.short	-1
+ 1721 029a 02       		.byte	2
+ 1722 029b 00       		.byte	0
+ 1723 029c FFFF     		.short	-1
+ 1724 029e 02       		.byte	2
+ 1725 029f 00       		.byte	0
+ 1726 02a0 FFFF     		.short	-1
+ 1727 02a2 02       		.byte	2
+ 1728 02a3 00       		.byte	0
+ 1729 02a4 FFFF     		.short	-1
+ 1730 02a6 02       		.byte	2
+ 1731 02a7 00       		.byte	0
+ 1732 02a8 FFFF     		.short	-1
+ 1733 02aa 02       		.byte	2
+ 1734 02ab 00       		.byte	0
+ 1735 02ac FFFF     		.short	-1
+ 1736 02ae 02       		.byte	2
+ 1737 02af 00       		.byte	0
+ 1738 02b0 FFFF     		.short	-1
+ 1739 02b2 02       		.byte	2
+ 1740 02b3 00       		.byte	0
+ 1741 02b4 FFFF     		.short	-1
+ 1742 02b6 02       		.byte	2
+ 1743 02b7 00       		.byte	0
+ 1744 02b8 FFFF     		.short	-1
+ 1745 02ba 02       		.byte	2
+ 1746 02bb 00       		.byte	0
+ 1747 02bc FFFF     		.short	-1
+ 1748 02be 02       		.byte	2
+ 1749 02bf 00       		.byte	0
+ 1750 02c0 FFFF     		.short	-1
+ 1751 02c2 02       		.byte	2
+ 1752 02c3 00       		.byte	0
+ 1753 02c4 FFFF     		.short	-1
+ 1754 02c6 02       		.byte	2
+ 1755 02c7 00       		.byte	0
+ 1756 02c8 FFFF     		.short	-1
+ 1757 02ca 02       		.byte	2
+ 1758 02cb 00       		.byte	0
+ 1759 02cc FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 32
+
+
+ 1760 02ce 02       		.byte	2
+ 1761 02cf 00       		.byte	0
+ 1762 02d0 FFFF     		.short	-1
+ 1763 02d2 02       		.byte	2
+ 1764 02d3 00       		.byte	0
+ 1765 02d4 FFFF     		.short	-1
+ 1766 02d6 02       		.byte	2
+ 1767 02d7 00       		.byte	0
+ 1768 02d8 FFFF     		.short	-1
+ 1769 02da 02       		.byte	2
+ 1770 02db 00       		.byte	0
+ 1771 02dc FFFF     		.short	-1
+ 1772 02de 02       		.byte	2
+ 1773 02df 00       		.byte	0
+ 1774 02e0 FFFF     		.short	-1
+ 1775 02e2 02       		.byte	2
+ 1776 02e3 00       		.byte	0
+ 1777 02e4 FFFF     		.short	-1
+ 1778 02e6 02       		.byte	2
+ 1779 02e7 00       		.byte	0
+ 1780 02e8 FFFF     		.short	-1
+ 1781 02ea 02       		.byte	2
+ 1782 02eb 00       		.byte	0
+ 1783 02ec FFFF     		.short	-1
+ 1784 02ee 02       		.byte	2
+ 1785 02ef 00       		.byte	0
+ 1786 02f0 FFFF     		.short	-1
+ 1787 02f2 02       		.byte	2
+ 1788 02f3 00       		.byte	0
+ 1789 02f4 FFFF     		.short	-1
+ 1790 02f6 02       		.byte	2
+ 1791 02f7 00       		.byte	0
+ 1792 02f8 FFFF     		.short	-1
+ 1793 02fa 02       		.byte	2
+ 1794 02fb 00       		.byte	0
+ 1795 02fc FFFF     		.short	-1
+ 1796 02fe 02       		.byte	2
+ 1797 02ff 00       		.byte	0
+ 1798 0300 FFFF     		.short	-1
+ 1799 0302 02       		.byte	2
+ 1800 0303 00       		.byte	0
+ 1801 0304 FFFF     		.short	-1
+ 1802 0306 02       		.byte	2
+ 1803 0307 00       		.byte	0
+ 1804 0308 FFFF     		.short	-1
+ 1805 030a 02       		.byte	2
+ 1806 030b 00       		.byte	0
+ 1807 030c FFFF     		.short	-1
+ 1808 030e 02       		.byte	2
+ 1809 030f 00       		.byte	0
+ 1810 0310 FFFF     		.short	-1
+ 1811 0312 02       		.byte	2
+ 1812 0313 00       		.byte	0
+ 1813 0314 FFFF     		.short	-1
+ 1814 0316 02       		.byte	2
+ 1815 0317 00       		.byte	0
+ 1816 0318 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 33
+
+
+ 1817 031a 02       		.byte	2
+ 1818 031b 00       		.byte	0
+ 1819 031c FFFF     		.short	-1
+ 1820 031e 02       		.byte	2
+ 1821 031f 00       		.byte	0
+ 1822 0320 FFFF     		.short	-1
+ 1823 0322 02       		.byte	2
+ 1824 0323 00       		.byte	0
+ 1825 0324 FFFF     		.short	-1
+ 1826 0326 02       		.byte	2
+ 1827 0327 00       		.byte	0
+ 1828 0328 FFFF     		.short	-1
+ 1829 032a 02       		.byte	2
+ 1830 032b 00       		.byte	0
+ 1831 032c FFFF     		.short	-1
+ 1832 032e 02       		.byte	2
+ 1833 032f 00       		.byte	0
+ 1834 0330 FFFF     		.short	-1
+ 1835 0332 02       		.byte	2
+ 1836 0333 00       		.byte	0
+ 1837 0334 FFFF     		.short	-1
+ 1838 0336 02       		.byte	2
+ 1839 0337 00       		.byte	0
+ 1840 0338 FFFF     		.short	-1
+ 1841 033a 02       		.byte	2
+ 1842 033b 00       		.byte	0
+ 1843 033c FFFF     		.short	-1
+ 1844 033e 02       		.byte	2
+ 1845 033f 00       		.byte	0
+ 1846 0340 FFFF     		.short	-1
+ 1847 0342 02       		.byte	2
+ 1848 0343 00       		.byte	0
+ 1849 0344 FFFF     		.short	-1
+ 1850 0346 02       		.byte	2
+ 1851 0347 00       		.byte	0
+ 1852 0348 FFFF     		.short	-1
+ 1853 034a 02       		.byte	2
+ 1854 034b 00       		.byte	0
+ 1855 034c FFFF     		.short	-1
+ 1856 034e 02       		.byte	2
+ 1857 034f 00       		.byte	0
+ 1858 0350 FFFF     		.short	-1
+ 1859 0352 02       		.byte	2
+ 1860 0353 00       		.byte	0
+ 1861 0354 FFFF     		.short	-1
+ 1862 0356 02       		.byte	2
+ 1863 0357 00       		.byte	0
+ 1864 0358 FFFF     		.short	-1
+ 1865 035a 02       		.byte	2
+ 1866 035b 00       		.byte	0
+ 1867 035c FFFF     		.short	-1
+ 1868 035e 02       		.byte	2
+ 1869 035f 00       		.byte	0
+ 1870 0360 FFFF     		.short	-1
+ 1871 0362 02       		.byte	2
+ 1872 0363 00       		.byte	0
+ 1873 0364 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 34
+
+
+ 1874 0366 02       		.byte	2
+ 1875 0367 00       		.byte	0
+ 1876 0368 FFFF     		.short	-1
+ 1877 036a 02       		.byte	2
+ 1878 036b 00       		.byte	0
+ 1879 036c FFFF     		.short	-1
+ 1880 036e 02       		.byte	2
+ 1881 036f 00       		.byte	0
+ 1882 0370 FFFF     		.short	-1
+ 1883 0372 02       		.byte	2
+ 1884 0373 00       		.byte	0
+ 1885 0374 FFFF     		.short	-1
+ 1886 0376 02       		.byte	2
+ 1887 0377 00       		.byte	0
+ 1888 0378 FFFF     		.short	-1
+ 1889 037a 02       		.byte	2
+ 1890 037b 00       		.byte	0
+ 1891 037c FFFF     		.short	-1
+ 1892 037e 02       		.byte	2
+ 1893 037f 00       		.byte	0
+ 1894 0380 FFFF     		.short	-1
+ 1895 0382 02       		.byte	2
+ 1896 0383 00       		.byte	0
+ 1897 0384 FFFF     		.short	-1
+ 1898 0386 02       		.byte	2
+ 1899 0387 00       		.byte	0
+ 1900 0388 FFFF     		.short	-1
+ 1901 038a 02       		.byte	2
+ 1902 038b 00       		.byte	0
+ 1903 038c FFFF     		.short	-1
+ 1904 038e 02       		.byte	2
+ 1905 038f 00       		.byte	0
+ 1906 0390 FFFF     		.short	-1
+ 1907 0392 02       		.byte	2
+ 1908 0393 00       		.byte	0
+ 1909 0394 FFFF     		.short	-1
+ 1910 0396 02       		.byte	2
+ 1911 0397 00       		.byte	0
+ 1912 0398 FFFF     		.short	-1
+ 1913 039a 02       		.byte	2
+ 1914 039b 00       		.byte	0
+ 1915 039c FFFF     		.short	-1
+ 1916 039e 02       		.byte	2
+ 1917 039f 00       		.byte	0
+ 1918 03a0 FFFF     		.short	-1
+ 1919 03a2 02       		.byte	2
+ 1920 03a3 00       		.byte	0
+ 1921 03a4 FFFF     		.short	-1
+ 1922 03a6 02       		.byte	2
+ 1923 03a7 00       		.byte	0
+ 1924 03a8 FFFF     		.short	-1
+ 1925 03aa 02       		.byte	2
+ 1926 03ab 00       		.byte	0
+ 1927 03ac FFFF     		.short	-1
+ 1928 03ae 02       		.byte	2
+ 1929 03af 00       		.byte	0
+ 1930 03b0 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 35
+
+
+ 1931 03b2 02       		.byte	2
+ 1932 03b3 00       		.byte	0
+ 1933 03b4 FFFF     		.short	-1
+ 1934 03b6 02       		.byte	2
+ 1935 03b7 00       		.byte	0
+ 1936 03b8 FFFF     		.short	-1
+ 1937 03ba 02       		.byte	2
+ 1938 03bb 00       		.byte	0
+ 1939 03bc FFFF     		.short	-1
+ 1940 03be 02       		.byte	2
+ 1941 03bf 00       		.byte	0
+ 1942 03c0 FFFF     		.short	-1
+ 1943 03c2 02       		.byte	2
+ 1944 03c3 00       		.byte	0
+ 1945 03c4 FFFF     		.short	-1
+ 1946 03c6 02       		.byte	2
+ 1947 03c7 00       		.byte	0
+ 1948 03c8 FFFF     		.short	-1
+ 1949 03ca 02       		.byte	2
+ 1950 03cb 00       		.byte	0
+ 1951 03cc FFFF     		.short	-1
+ 1952 03ce 02       		.byte	2
+ 1953 03cf 00       		.byte	0
+ 1954 03d0 FFFF     		.short	-1
+ 1955 03d2 02       		.byte	2
+ 1956 03d3 00       		.byte	0
+ 1957 03d4 FFFF     		.short	-1
+ 1958 03d6 02       		.byte	2
+ 1959 03d7 00       		.byte	0
+ 1960 03d8 FFFF     		.short	-1
+ 1961 03da 02       		.byte	2
+ 1962 03db 00       		.byte	0
+ 1963 03dc FFFF     		.short	-1
+ 1964 03de 02       		.byte	2
+ 1965 03df 00       		.byte	0
+ 1966 03e0 FFFF     		.short	-1
+ 1967 03e2 02       		.byte	2
+ 1968 03e3 00       		.byte	0
+ 1969 03e4 FFFF     		.short	-1
+ 1970 03e6 02       		.byte	2
+ 1971 03e7 00       		.byte	0
+ 1972 03e8 FFFF     		.short	-1
+ 1973 03ea 02       		.byte	2
+ 1974 03eb 00       		.byte	0
+ 1975 03ec FFFF     		.short	-1
+ 1976 03ee 02       		.byte	2
+ 1977 03ef 00       		.byte	0
+ 1978 03f0 FFFF     		.short	-1
+ 1979 03f2 02       		.byte	2
+ 1980 03f3 00       		.byte	0
+ 1981 03f4 FFFF     		.short	-1
+ 1982 03f6 02       		.byte	2
+ 1983 03f7 00       		.byte	0
+ 1984 03f8 FFFF     		.short	-1
+ 1985 03fa 02       		.byte	2
+ 1986 03fb 00       		.byte	0
+ 1987 03fc FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 36
+
+
+ 1988 03fe 02       		.byte	2
+ 1989 03ff 00       		.byte	0
+ 1990 0400 FFFF     		.short	-1
+ 1991 0402 02       		.byte	2
+ 1992 0403 00       		.byte	0
+ 1993 0404 FFFF     		.short	-1
+ 1994 0406 02       		.byte	2
+ 1995 0407 00       		.byte	0
+ 1996 0408 FFFF     		.short	-1
+ 1997 040a 02       		.byte	2
+ 1998 040b 00       		.byte	0
+ 1999 040c FFFF     		.short	-1
+ 2000 040e 02       		.byte	2
+ 2001 040f 00       		.byte	0
+ 2002 0410 FFFF     		.short	-1
+ 2003 0412 02       		.byte	2
+ 2004 0413 00       		.byte	0
+ 2005 0414 FFFF     		.short	-1
+ 2006 0416 02       		.byte	2
+ 2007 0417 00       		.byte	0
+ 2008 0418 FFFF     		.short	-1
+ 2009 041a 02       		.byte	2
+ 2010 041b 00       		.byte	0
+ 2011 041c FFFF     		.short	-1
+ 2012 041e 02       		.byte	2
+ 2013 041f 00       		.byte	0
+ 2014 0420 FFFF     		.short	-1
+ 2015 0422 02       		.byte	2
+ 2016 0423 00       		.byte	0
+ 2017 0424 FFFF     		.short	-1
+ 2018 0426 02       		.byte	2
+ 2019 0427 00       		.byte	0
+ 2020 0428 FFFF     		.short	-1
+ 2021 042a 02       		.byte	2
+ 2022 042b 00       		.byte	0
+ 2023 042c FFFF     		.short	-1
+ 2024 042e 02       		.byte	2
+ 2025 042f 00       		.byte	0
+ 2026 0430 FFFF     		.short	-1
+ 2027 0432 02       		.byte	2
+ 2028 0433 00       		.byte	0
+ 2029 0434 FFFF     		.short	-1
+ 2030 0436 02       		.byte	2
+ 2031 0437 00       		.byte	0
+ 2032 0438 FFFF     		.short	-1
+ 2033 043a 02       		.byte	2
+ 2034 043b 00       		.byte	0
+ 2035 043c FFFF     		.short	-1
+ 2036 043e 02       		.byte	2
+ 2037 043f 00       		.byte	0
+ 2038 0440 FFFF     		.short	-1
+ 2039 0442 02       		.byte	2
+ 2040 0443 00       		.byte	0
+ 2041 0444 FFFF     		.short	-1
+ 2042 0446 02       		.byte	2
+ 2043 0447 00       		.byte	0
+ 2044 0448 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 37
+
+
+ 2045 044a 02       		.byte	2
+ 2046 044b 00       		.byte	0
+ 2047 044c FFFF     		.short	-1
+ 2048 044e 02       		.byte	2
+ 2049 044f 00       		.byte	0
+ 2050 0450 FFFF     		.short	-1
+ 2051 0452 02       		.byte	2
+ 2052 0453 00       		.byte	0
+ 2053 0454 FFFF     		.short	-1
+ 2054 0456 02       		.byte	2
+ 2055 0457 00       		.byte	0
+ 2056 0458 FFFF     		.short	-1
+ 2057 045a 02       		.byte	2
+ 2058 045b 00       		.byte	0
+ 2059 045c FFFF     		.short	-1
+ 2060 045e 02       		.byte	2
+ 2061 045f 00       		.byte	0
+ 2062 0460 FFFF     		.short	-1
+ 2063 0462 02       		.byte	2
+ 2064 0463 00       		.byte	0
+ 2065 0464 FFFF     		.short	-1
+ 2066 0466 02       		.byte	2
+ 2067 0467 00       		.byte	0
+ 2068 0468 FFFF     		.short	-1
+ 2069 046a 02       		.byte	2
+ 2070 046b 00       		.byte	0
+ 2071 046c FFFF     		.short	-1
+ 2072 046e 02       		.byte	2
+ 2073 046f 00       		.byte	0
+ 2074 0470 FFFF     		.short	-1
+ 2075 0472 02       		.byte	2
+ 2076 0473 00       		.byte	0
+ 2077 0474 FFFF     		.short	-1
+ 2078 0476 02       		.byte	2
+ 2079 0477 00       		.byte	0
+ 2080 0478 FFFF     		.short	-1
+ 2081 047a 02       		.byte	2
+ 2082 047b 00       		.byte	0
+ 2083 047c FFFF     		.short	-1
+ 2084 047e 02       		.byte	2
+ 2085 047f 00       		.byte	0
+ 2086 0480 FFFF     		.short	-1
+ 2087 0482 02       		.byte	2
+ 2088 0483 00       		.byte	0
+ 2089 0484 FFFF     		.short	-1
+ 2090 0486 02       		.byte	2
+ 2091 0487 00       		.byte	0
+ 2092 0488 FFFF     		.short	-1
+ 2093 048a 02       		.byte	2
+ 2094 048b 00       		.byte	0
+ 2095 048c FFFF     		.short	-1
+ 2096 048e 02       		.byte	2
+ 2097 048f 00       		.byte	0
+ 2098 0490 FFFF     		.short	-1
+ 2099 0492 02       		.byte	2
+ 2100 0493 00       		.byte	0
+ 2101 0494 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 38
+
+
+ 2102 0496 02       		.byte	2
+ 2103 0497 00       		.byte	0
+ 2104 0498 FFFF     		.short	-1
+ 2105 049a 02       		.byte	2
+ 2106 049b 00       		.byte	0
+ 2107 049c FFFF     		.short	-1
+ 2108 049e 02       		.byte	2
+ 2109 049f 00       		.byte	0
+ 2110 04a0 FFFF     		.short	-1
+ 2111 04a2 02       		.byte	2
+ 2112 04a3 00       		.byte	0
+ 2113 04a4 FFFF     		.short	-1
+ 2114 04a6 02       		.byte	2
+ 2115 04a7 00       		.byte	0
+ 2116 04a8 FFFF     		.short	-1
+ 2117 04aa 02       		.byte	2
+ 2118 04ab 00       		.byte	0
+ 2119 04ac FFFF     		.short	-1
+ 2120 04ae 02       		.byte	2
+ 2121 04af 00       		.byte	0
+ 2122 04b0 FFFF     		.short	-1
+ 2123 04b2 02       		.byte	2
+ 2124 04b3 00       		.byte	0
+ 2125 04b4 FFFF     		.short	-1
+ 2126 04b6 02       		.byte	2
+ 2127 04b7 00       		.byte	0
+ 2128 04b8 FFFF     		.short	-1
+ 2129 04ba 02       		.byte	2
+ 2130 04bb 00       		.byte	0
+ 2131 04bc FFFF     		.short	-1
+ 2132 04be 02       		.byte	2
+ 2133 04bf 00       		.byte	0
+ 2134 04c0 FFFF     		.short	-1
+ 2135 04c2 02       		.byte	2
+ 2136 04c3 00       		.byte	0
+ 2137 04c4 FFFF     		.short	-1
+ 2138 04c6 02       		.byte	2
+ 2139 04c7 00       		.byte	0
+ 2140 04c8 FFFF     		.short	-1
+ 2141 04ca 02       		.byte	2
+ 2142 04cb 00       		.byte	0
+ 2143 04cc FFFF     		.short	-1
+ 2144 04ce 02       		.byte	2
+ 2145 04cf 00       		.byte	0
+ 2146 04d0 FFFF     		.short	-1
+ 2147 04d2 02       		.byte	2
+ 2148 04d3 00       		.byte	0
+ 2149 04d4 FFFF     		.short	-1
+ 2150 04d6 02       		.byte	2
+ 2151 04d7 00       		.byte	0
+ 2152 04d8 FFFF     		.short	-1
+ 2153 04da 02       		.byte	2
+ 2154 04db 00       		.byte	0
+ 2155 04dc FFFF     		.short	-1
+ 2156 04de 02       		.byte	2
+ 2157 04df 00       		.byte	0
+ 2158 04e0 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 39
+
+
+ 2159 04e2 02       		.byte	2
+ 2160 04e3 00       		.byte	0
+ 2161 04e4 FFFF     		.short	-1
+ 2162 04e6 02       		.byte	2
+ 2163 04e7 00       		.byte	0
+ 2164 04e8 FFFF     		.short	-1
+ 2165 04ea 02       		.byte	2
+ 2166 04eb 00       		.byte	0
+ 2167 04ec FFFF     		.short	-1
+ 2168 04ee 02       		.byte	2
+ 2169 04ef 00       		.byte	0
+ 2170 04f0 FFFF     		.short	-1
+ 2171 04f2 02       		.byte	2
+ 2172 04f3 00       		.byte	0
+ 2173 04f4 FFFF     		.short	-1
+ 2174 04f6 02       		.byte	2
+ 2175 04f7 00       		.byte	0
+ 2176 04f8 FFFF     		.short	-1
+ 2177 04fa 02       		.byte	2
+ 2178 04fb 00       		.byte	0
+ 2179 04fc FFFF     		.short	-1
+ 2180 04fe 02       		.byte	2
+ 2181 04ff 00       		.byte	0
+ 2182 0500 FFFF     		.short	-1
+ 2183 0502 02       		.byte	2
+ 2184 0503 00       		.byte	0
+ 2185 0504 FFFF     		.short	-1
+ 2186 0506 02       		.byte	2
+ 2187 0507 00       		.byte	0
+ 2188 0508 FFFF     		.short	-1
+ 2189 050a 02       		.byte	2
+ 2190 050b 00       		.byte	0
+ 2191 050c FFFF     		.short	-1
+ 2192 050e 02       		.byte	2
+ 2193 050f 00       		.byte	0
+ 2194 0510 FFFF     		.short	-1
+ 2195 0512 02       		.byte	2
+ 2196 0513 00       		.byte	0
+ 2197 0514 FFFF     		.short	-1
+ 2198 0516 02       		.byte	2
+ 2199 0517 00       		.byte	0
+ 2200 0518 FFFF     		.short	-1
+ 2201 051a 02       		.byte	2
+ 2202 051b 00       		.byte	0
+ 2203 051c FFFF     		.short	-1
+ 2204 051e 02       		.byte	2
+ 2205 051f 00       		.byte	0
+ 2206 0520 FFFF     		.short	-1
+ 2207 0522 02       		.byte	2
+ 2208 0523 00       		.byte	0
+ 2209 0524 FFFF     		.short	-1
+ 2210 0526 02       		.byte	2
+ 2211 0527 00       		.byte	0
+ 2212 0528 FFFF     		.short	-1
+ 2213 052a 02       		.byte	2
+ 2214 052b 00       		.byte	0
+ 2215 052c FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 40
+
+
+ 2216 052e 02       		.byte	2
+ 2217 052f 00       		.byte	0
+ 2218 0530 FFFF     		.short	-1
+ 2219 0532 02       		.byte	2
+ 2220 0533 00       		.byte	0
+ 2221 0534 FFFF     		.short	-1
+ 2222 0536 02       		.byte	2
+ 2223 0537 00       		.byte	0
+ 2224 0538 FFFF     		.short	-1
+ 2225 053a 02       		.byte	2
+ 2226 053b 00       		.byte	0
+ 2227 053c FFFF     		.short	-1
+ 2228 053e 02       		.byte	2
+ 2229 053f 00       		.byte	0
+ 2230 0540 FFFF     		.short	-1
+ 2231 0542 02       		.byte	2
+ 2232 0543 00       		.byte	0
+ 2233 0544 FFFF     		.short	-1
+ 2234 0546 02       		.byte	2
+ 2235 0547 00       		.byte	0
+ 2236 0548 FFFF     		.short	-1
+ 2237 054a 02       		.byte	2
+ 2238 054b 00       		.byte	0
+ 2239 054c FFFF     		.short	-1
+ 2240 054e 02       		.byte	2
+ 2241 054f 00       		.byte	0
+ 2242 0550 FFFF     		.short	-1
+ 2243 0552 02       		.byte	2
+ 2244 0553 00       		.byte	0
+ 2245 0554 FFFF     		.short	-1
+ 2246 0556 02       		.byte	2
+ 2247 0557 00       		.byte	0
+ 2248 0558 FFFF     		.short	-1
+ 2249 055a 02       		.byte	2
+ 2250 055b 00       		.byte	0
+ 2251 055c FFFF     		.short	-1
+ 2252 055e 02       		.byte	2
+ 2253 055f 00       		.byte	0
+ 2254 0560 FFFF     		.short	-1
+ 2255 0562 02       		.byte	2
+ 2256 0563 00       		.byte	0
+ 2257 0564 FFFF     		.short	-1
+ 2258 0566 02       		.byte	2
+ 2259 0567 00       		.byte	0
+ 2260 0568 FFFF     		.short	-1
+ 2261 056a 02       		.byte	2
+ 2262 056b 00       		.byte	0
+ 2263 056c FFFF     		.short	-1
+ 2264 056e 02       		.byte	2
+ 2265 056f 00       		.byte	0
+ 2266 0570 FFFF     		.short	-1
+ 2267 0572 02       		.byte	2
+ 2268 0573 00       		.byte	0
+ 2269 0574 FFFF     		.short	-1
+ 2270 0576 02       		.byte	2
+ 2271 0577 00       		.byte	0
+ 2272 0578 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 41
+
+
+ 2273 057a 02       		.byte	2
+ 2274 057b 00       		.byte	0
+ 2275 057c FFFF     		.short	-1
+ 2276 057e 02       		.byte	2
+ 2277 057f 00       		.byte	0
+ 2278 0580 FFFF     		.short	-1
+ 2279 0582 02       		.byte	2
+ 2280 0583 00       		.byte	0
+ 2281 0584 FFFF     		.short	-1
+ 2282 0586 02       		.byte	2
+ 2283 0587 00       		.byte	0
+ 2284 0588 FFFF     		.short	-1
+ 2285 058a 02       		.byte	2
+ 2286 058b 00       		.byte	0
+ 2287 058c FFFF     		.short	-1
+ 2288 058e 02       		.byte	2
+ 2289 058f 00       		.byte	0
+ 2290 0590 FFFF     		.short	-1
+ 2291 0592 02       		.byte	2
+ 2292 0593 00       		.byte	0
+ 2293 0594 FFFF     		.short	-1
+ 2294 0596 02       		.byte	2
+ 2295 0597 00       		.byte	0
+ 2296 0598 FFFF     		.short	-1
+ 2297 059a 02       		.byte	2
+ 2298 059b 00       		.byte	0
+ 2299 059c FFFF     		.short	-1
+ 2300 059e 02       		.byte	2
+ 2301 059f 00       		.byte	0
+ 2302 05a0 FFFF     		.short	-1
+ 2303 05a2 02       		.byte	2
+ 2304 05a3 00       		.byte	0
+ 2305 05a4 FFFF     		.short	-1
+ 2306 05a6 02       		.byte	2
+ 2307 05a7 00       		.byte	0
+ 2308 05a8 FFFF     		.short	-1
+ 2309 05aa 02       		.byte	2
+ 2310 05ab 00       		.byte	0
+ 2311 05ac FFFF     		.short	-1
+ 2312 05ae 02       		.byte	2
+ 2313 05af 00       		.byte	0
+ 2314 05b0 FFFF     		.short	-1
+ 2315 05b2 02       		.byte	2
+ 2316 05b3 00       		.byte	0
+ 2317 05b4 FFFF     		.short	-1
+ 2318 05b6 02       		.byte	2
+ 2319 05b7 00       		.byte	0
+ 2320 05b8 FFFF     		.short	-1
+ 2321 05ba 02       		.byte	2
+ 2322 05bb 00       		.byte	0
+ 2323 05bc FFFF     		.short	-1
+ 2324 05be 02       		.byte	2
+ 2325 05bf 00       		.byte	0
+ 2326 05c0 FFFF     		.short	-1
+ 2327 05c2 02       		.byte	2
+ 2328 05c3 00       		.byte	0
+ 2329 05c4 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 42
+
+
+ 2330 05c6 02       		.byte	2
+ 2331 05c7 00       		.byte	0
+ 2332 05c8 FFFF     		.short	-1
+ 2333 05ca 02       		.byte	2
+ 2334 05cb 00       		.byte	0
+ 2335 05cc FFFF     		.short	-1
+ 2336 05ce 02       		.byte	2
+ 2337 05cf 00       		.byte	0
+ 2338 05d0 FFFF     		.short	-1
+ 2339 05d2 02       		.byte	2
+ 2340 05d3 00       		.byte	0
+ 2341 05d4 FFFF     		.short	-1
+ 2342 05d6 02       		.byte	2
+ 2343 05d7 00       		.byte	0
+ 2344 05d8 FFFF     		.short	-1
+ 2345 05da 02       		.byte	2
+ 2346 05db 00       		.byte	0
+ 2347 05dc FFFF     		.short	-1
+ 2348 05de 02       		.byte	2
+ 2349 05df 00       		.byte	0
+ 2350 05e0 FFFF     		.short	-1
+ 2351 05e2 02       		.byte	2
+ 2352 05e3 00       		.byte	0
+ 2353 05e4 FFFF     		.short	-1
+ 2354 05e6 02       		.byte	2
+ 2355 05e7 00       		.byte	0
+ 2356 05e8 FFFF     		.short	-1
+ 2357 05ea 02       		.byte	2
+ 2358 05eb 00       		.byte	0
+ 2359 05ec FFFF     		.short	-1
+ 2360 05ee 02       		.byte	2
+ 2361 05ef 00       		.byte	0
+ 2362 05f0 FFFF     		.short	-1
+ 2363 05f2 02       		.byte	2
+ 2364 05f3 00       		.byte	0
+ 2365 05f4 FFFF     		.short	-1
+ 2366 05f6 02       		.byte	2
+ 2367 05f7 00       		.byte	0
+ 2368 05f8 FFFF     		.short	-1
+ 2369 05fa 02       		.byte	2
+ 2370 05fb 00       		.byte	0
+ 2371 05fc FFFF     		.short	-1
+ 2372 05fe 02       		.byte	2
+ 2373 05ff 00       		.byte	0
+ 2374              		.type	MDIO_Interface_registerPage_5, %object
+ 2375              		.size	MDIO_Interface_registerPage_5, 512
+ 2376              	MDIO_Interface_registerPage_5:
+ 2377 0600 1234     		.short	13330
+ 2378 0602 5678     		.short	30806
+ 2379 0604 0000     		.short	0
+ 2380 0606 0000     		.short	0
+ 2381 0608 0000     		.short	0
+ 2382 060a 0000     		.short	0
+ 2383 060c 0000     		.short	0
+ 2384 060e 0000     		.short	0
+ 2385 0610 0000     		.short	0
+ 2386 0612 0000     		.short	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 43
+
+
+ 2387 0614 0000     		.short	0
+ 2388 0616 0000     		.short	0
+ 2389 0618 0000     		.short	0
+ 2390 061a 0000     		.short	0
+ 2391 061c 0000     		.short	0
+ 2392 061e 0000     		.short	0
+ 2393 0620 0000     		.short	0
+ 2394 0622 0000     		.short	0
+ 2395 0624 0000     		.short	0
+ 2396 0626 0000     		.short	0
+ 2397 0628 0000     		.short	0
+ 2398 062a 0000     		.short	0
+ 2399 062c 0000     		.short	0
+ 2400 062e 0000     		.short	0
+ 2401 0630 0000     		.short	0
+ 2402 0632 0000     		.short	0
+ 2403 0634 0000     		.short	0
+ 2404 0636 0000     		.short	0
+ 2405 0638 0000     		.short	0
+ 2406 063a 0000     		.short	0
+ 2407 063c 0000     		.short	0
+ 2408 063e 0000     		.short	0
+ 2409 0640 0000     		.short	0
+ 2410 0642 0000     		.short	0
+ 2411 0644 0000     		.short	0
+ 2412 0646 0000     		.short	0
+ 2413 0648 0000     		.short	0
+ 2414 064a 0000     		.short	0
+ 2415 064c 0000     		.short	0
+ 2416 064e 0000     		.short	0
+ 2417 0650 0000     		.short	0
+ 2418 0652 0000     		.short	0
+ 2419 0654 0000     		.short	0
+ 2420 0656 0000     		.short	0
+ 2421 0658 0000     		.short	0
+ 2422 065a 0000     		.short	0
+ 2423 065c 0000     		.short	0
+ 2424 065e 0000     		.short	0
+ 2425 0660 0000     		.short	0
+ 2426 0662 0000     		.short	0
+ 2427 0664 0000     		.short	0
+ 2428 0666 0000     		.short	0
+ 2429 0668 0000     		.short	0
+ 2430 066a 0000     		.short	0
+ 2431 066c 0000     		.short	0
+ 2432 066e 0000     		.short	0
+ 2433 0670 0000     		.short	0
+ 2434 0672 0000     		.short	0
+ 2435 0674 0000     		.short	0
+ 2436 0676 0000     		.short	0
+ 2437 0678 0000     		.short	0
+ 2438 067a 0000     		.short	0
+ 2439 067c 0000     		.short	0
+ 2440 067e 0000     		.short	0
+ 2441 0680 0000     		.short	0
+ 2442 0682 0000     		.short	0
+ 2443 0684 0000     		.short	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 44
+
+
+ 2444 0686 0000     		.short	0
+ 2445 0688 0000     		.short	0
+ 2446 068a 0000     		.short	0
+ 2447 068c 0000     		.short	0
+ 2448 068e 0000     		.short	0
+ 2449 0690 0000     		.short	0
+ 2450 0692 0000     		.short	0
+ 2451 0694 0000     		.short	0
+ 2452 0696 0000     		.short	0
+ 2453 0698 0000     		.short	0
+ 2454 069a 0000     		.short	0
+ 2455 069c 0000     		.short	0
+ 2456 069e 0000     		.short	0
+ 2457 06a0 0000     		.short	0
+ 2458 06a2 0000     		.short	0
+ 2459 06a4 0000     		.short	0
+ 2460 06a6 0000     		.short	0
+ 2461 06a8 0000     		.short	0
+ 2462 06aa 0000     		.short	0
+ 2463 06ac 0000     		.short	0
+ 2464 06ae 0000     		.short	0
+ 2465 06b0 0000     		.short	0
+ 2466 06b2 0000     		.short	0
+ 2467 06b4 0000     		.short	0
+ 2468 06b6 0000     		.short	0
+ 2469 06b8 0000     		.short	0
+ 2470 06ba 0000     		.short	0
+ 2471 06bc 0000     		.short	0
+ 2472 06be 0000     		.short	0
+ 2473 06c0 0000     		.short	0
+ 2474 06c2 0000     		.short	0
+ 2475 06c4 0000     		.short	0
+ 2476 06c6 0000     		.short	0
+ 2477 06c8 0000     		.short	0
+ 2478 06ca 0000     		.short	0
+ 2479 06cc 0000     		.short	0
+ 2480 06ce 0000     		.short	0
+ 2481 06d0 0000     		.short	0
+ 2482 06d2 0000     		.short	0
+ 2483 06d4 0000     		.short	0
+ 2484 06d6 0000     		.short	0
+ 2485 06d8 0000     		.short	0
+ 2486 06da 0000     		.short	0
+ 2487 06dc 0000     		.short	0
+ 2488 06de 0000     		.short	0
+ 2489 06e0 0000     		.short	0
+ 2490 06e2 0000     		.short	0
+ 2491 06e4 0000     		.short	0
+ 2492 06e6 0000     		.short	0
+ 2493 06e8 0000     		.short	0
+ 2494 06ea 0000     		.short	0
+ 2495 06ec 0000     		.short	0
+ 2496 06ee 0000     		.short	0
+ 2497 06f0 0000     		.short	0
+ 2498 06f2 0000     		.short	0
+ 2499 06f4 0000     		.short	0
+ 2500 06f6 0000     		.short	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 45
+
+
+ 2501 06f8 0000     		.short	0
+ 2502 06fa 0000     		.short	0
+ 2503 06fc 0000     		.short	0
+ 2504 06fe 0000     		.short	0
+ 2505 0700 0000     		.short	0
+ 2506 0702 0000     		.short	0
+ 2507 0704 0000     		.short	0
+ 2508 0706 0000     		.short	0
+ 2509 0708 0000     		.short	0
+ 2510 070a 0000     		.short	0
+ 2511 070c 0000     		.short	0
+ 2512 070e 0000     		.short	0
+ 2513 0710 0000     		.short	0
+ 2514 0712 0000     		.short	0
+ 2515 0714 0000     		.short	0
+ 2516 0716 0000     		.short	0
+ 2517 0718 0000     		.short	0
+ 2518 071a 0000     		.short	0
+ 2519 071c 0000     		.short	0
+ 2520 071e 0000     		.short	0
+ 2521 0720 0000     		.short	0
+ 2522 0722 0000     		.short	0
+ 2523 0724 0000     		.short	0
+ 2524 0726 0000     		.short	0
+ 2525 0728 0000     		.short	0
+ 2526 072a 0000     		.short	0
+ 2527 072c 0000     		.short	0
+ 2528 072e 0000     		.short	0
+ 2529 0730 0000     		.short	0
+ 2530 0732 0000     		.short	0
+ 2531 0734 0000     		.short	0
+ 2532 0736 0000     		.short	0
+ 2533 0738 0000     		.short	0
+ 2534 073a 0000     		.short	0
+ 2535 073c 0000     		.short	0
+ 2536 073e 0000     		.short	0
+ 2537 0740 0000     		.short	0
+ 2538 0742 0000     		.short	0
+ 2539 0744 0000     		.short	0
+ 2540 0746 0000     		.short	0
+ 2541 0748 0000     		.short	0
+ 2542 074a 0000     		.short	0
+ 2543 074c 0000     		.short	0
+ 2544 074e 0000     		.short	0
+ 2545 0750 0000     		.short	0
+ 2546 0752 0000     		.short	0
+ 2547 0754 0000     		.short	0
+ 2548 0756 0000     		.short	0
+ 2549 0758 0000     		.short	0
+ 2550 075a 0000     		.short	0
+ 2551 075c 0000     		.short	0
+ 2552 075e 0000     		.short	0
+ 2553 0760 0000     		.short	0
+ 2554 0762 0000     		.short	0
+ 2555 0764 0000     		.short	0
+ 2556 0766 0000     		.short	0
+ 2557 0768 0000     		.short	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 46
+
+
+ 2558 076a 0000     		.short	0
+ 2559 076c 0000     		.short	0
+ 2560 076e 0000     		.short	0
+ 2561 0770 0000     		.short	0
+ 2562 0772 0000     		.short	0
+ 2563 0774 0000     		.short	0
+ 2564 0776 0000     		.short	0
+ 2565 0778 0000     		.short	0
+ 2566 077a 0000     		.short	0
+ 2567 077c 0000     		.short	0
+ 2568 077e 0000     		.short	0
+ 2569 0780 0000     		.short	0
+ 2570 0782 0000     		.short	0
+ 2571 0784 0000     		.short	0
+ 2572 0786 0000     		.short	0
+ 2573 0788 0000     		.short	0
+ 2574 078a 0000     		.short	0
+ 2575 078c 0000     		.short	0
+ 2576 078e 0000     		.short	0
+ 2577 0790 0000     		.short	0
+ 2578 0792 0000     		.short	0
+ 2579 0794 0000     		.short	0
+ 2580 0796 0000     		.short	0
+ 2581 0798 0000     		.short	0
+ 2582 079a 0000     		.short	0
+ 2583 079c 0000     		.short	0
+ 2584 079e 0000     		.short	0
+ 2585 07a0 0000     		.short	0
+ 2586 07a2 0000     		.short	0
+ 2587 07a4 0000     		.short	0
+ 2588 07a6 0000     		.short	0
+ 2589 07a8 0000     		.short	0
+ 2590 07aa 0000     		.short	0
+ 2591 07ac 0000     		.short	0
+ 2592 07ae 0000     		.short	0
+ 2593 07b0 0000     		.short	0
+ 2594 07b2 0000     		.short	0
+ 2595 07b4 0000     		.short	0
+ 2596 07b6 0000     		.short	0
+ 2597 07b8 0000     		.short	0
+ 2598 07ba 0000     		.short	0
+ 2599 07bc 0000     		.short	0
+ 2600 07be 0000     		.short	0
+ 2601 07c0 0000     		.short	0
+ 2602 07c2 0000     		.short	0
+ 2603 07c4 0000     		.short	0
+ 2604 07c6 0000     		.short	0
+ 2605 07c8 0000     		.short	0
+ 2606 07ca 0000     		.short	0
+ 2607 07cc 0000     		.short	0
+ 2608 07ce 0000     		.short	0
+ 2609 07d0 0000     		.short	0
+ 2610 07d2 0000     		.short	0
+ 2611 07d4 0000     		.short	0
+ 2612 07d6 0000     		.short	0
+ 2613 07d8 0000     		.short	0
+ 2614 07da 0000     		.short	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 47
+
+
+ 2615 07dc 0000     		.short	0
+ 2616 07de 0000     		.short	0
+ 2617 07e0 0000     		.short	0
+ 2618 07e2 0000     		.short	0
+ 2619 07e4 0000     		.short	0
+ 2620 07e6 0000     		.short	0
+ 2621 07e8 0000     		.short	0
+ 2622 07ea 0000     		.short	0
+ 2623 07ec 0000     		.short	0
+ 2624 07ee 0000     		.short	0
+ 2625 07f0 0000     		.short	0
+ 2626 07f2 0000     		.short	0
+ 2627 07f4 0000     		.short	0
+ 2628 07f6 0000     		.short	0
+ 2629 07f8 0000     		.short	0
+ 2630 07fa 0000     		.short	0
+ 2631 07fc 0000     		.short	0
+ 2632 07fe 0000     		.short	0
+ 2633              		.type	MDIO_Interface_registerPage_1, %object
+ 2634              		.size	MDIO_Interface_registerPage_1, 1024
+ 2635              	MDIO_Interface_registerPage_1:
+ 2636 0800 000F     		.short	3840
+ 2637 0802 0003     		.short	768
+ 2638 0804 0080     		.short	-32768
+ 2639 0806 0001     		.short	256
+ 2640 0808 0005     		.short	1280
+ 2641 080a 0006     		.short	1536
+ 2642 080c 0007     		.short	1792
+ 2643 080e 0008     		.short	2048
+ 2644 0810 0009     		.short	2304
+ 2645 0812 000A     		.short	2560
+ 2646 0814 000B     		.short	2816
+ 2647 0816 000C     		.short	3072
+ 2648 0818 000D     		.short	3328
+ 2649 081a 000E     		.short	3584
+ 2650 081c 000F     		.short	3840
+ 2651 081e 0010     		.short	4096
+ 2652 0820 0020     		.short	8192
+ 2653 0822 0030     		.short	12288
+ 2654 0824 0040     		.short	16384
+ 2655 0826 0050     		.short	20480
+ 2656 0828 0060     		.short	24576
+ 2657 082a 0070     		.short	28672
+ 2658 082c 0080     		.short	-32768
+ 2659 082e 0090     		.short	-28672
+ 2660 0830 0010     		.short	4096
+ 2661 0832 0000     		.short	0
+ 2662 0834 0010     		.short	4096
+ 2663 0836 0001     		.short	256
+ 2664 0838 0010     		.short	4096
+ 2665 083a 0002     		.short	512
+ 2666 083c 0010     		.short	4096
+ 2667 083e 0003     		.short	768
+ 2668 0840 0010     		.short	4096
+ 2669 0842 0004     		.short	1024
+ 2670 0844 0010     		.short	4096
+ 2671 0846 0005     		.short	1280
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 48
+
+
+ 2672 0848 0010     		.short	4096
+ 2673 084a 0006     		.short	1536
+ 2674 084c 0010     		.short	4096
+ 2675 084e 0007     		.short	1792
+ 2676 0850 0010     		.short	4096
+ 2677 0852 0008     		.short	2048
+ 2678 0854 0010     		.short	4096
+ 2679 0856 0009     		.short	2304
+ 2680 0858 0010     		.short	4096
+ 2681 085a 000A     		.short	2560
+ 2682 085c 0010     		.short	4096
+ 2683 085e 000B     		.short	2816
+ 2684 0860 0000     		.short	0
+ 2685 0862 0000     		.short	0
+ 2686 0864 0000     		.short	0
+ 2687 0866 0000     		.short	0
+ 2688 0868 0000     		.short	0
+ 2689 086a 0000     		.short	0
+ 2690 086c 0000     		.short	0
+ 2691 086e 0000     		.short	0
+ 2692 0870 0000     		.short	0
+ 2693 0872 0000     		.short	0
+ 2694 0874 0000     		.short	0
+ 2695 0876 0000     		.short	0
+ 2696 0878 0000     		.short	0
+ 2697 087a 0000     		.short	0
+ 2698 087c 0000     		.short	0
+ 2699 087e 0000     		.short	0
+ 2700 0880 0000     		.short	0
+ 2701 0882 0000     		.short	0
+ 2702 0884 0000     		.short	0
+ 2703 0886 0000     		.short	0
+ 2704 0888 0000     		.short	0
+ 2705 088a 0000     		.short	0
+ 2706 088c 0000     		.short	0
+ 2707 088e 0000     		.short	0
+ 2708 0890 0000     		.short	0
+ 2709 0892 0000     		.short	0
+ 2710 0894 0000     		.short	0
+ 2711 0896 0000     		.short	0
+ 2712 0898 0000     		.short	0
+ 2713 089a 0000     		.short	0
+ 2714 089c 0000     		.short	0
+ 2715 089e 0000     		.short	0
+ 2716 08a0 0000     		.short	0
+ 2717 08a2 0000     		.short	0
+ 2718 08a4 0000     		.short	0
+ 2719 08a6 0000     		.short	0
+ 2720 08a8 0000     		.short	0
+ 2721 08aa 0000     		.short	0
+ 2722 08ac 0000     		.short	0
+ 2723 08ae 0000     		.short	0
+ 2724 08b0 0000     		.short	0
+ 2725 08b2 0000     		.short	0
+ 2726 08b4 0000     		.short	0
+ 2727 08b6 0000     		.short	0
+ 2728 08b8 0000     		.short	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 49
+
+
+ 2729 08ba 0000     		.short	0
+ 2730 08bc 0000     		.short	0
+ 2731 08be 0000     		.short	0
+ 2732 08c0 0000     		.short	0
+ 2733 08c2 0000     		.short	0
+ 2734 08c4 0000     		.short	0
+ 2735 08c6 0000     		.short	0
+ 2736 08c8 0000     		.short	0
+ 2737 08ca 0000     		.short	0
+ 2738 08cc 0000     		.short	0
+ 2739 08ce 0000     		.short	0
+ 2740 08d0 0000     		.short	0
+ 2741 08d2 0000     		.short	0
+ 2742 08d4 0000     		.short	0
+ 2743 08d6 0000     		.short	0
+ 2744 08d8 0000     		.short	0
+ 2745 08da 0000     		.short	0
+ 2746 08dc 0000     		.short	0
+ 2747 08de 0000     		.short	0
+ 2748 08e0 0000     		.short	0
+ 2749 08e2 0000     		.short	0
+ 2750 08e4 0000     		.short	0
+ 2751 08e6 0000     		.short	0
+ 2752 08e8 0000     		.short	0
+ 2753 08ea 0000     		.short	0
+ 2754 08ec 0000     		.short	0
+ 2755 08ee 0000     		.short	0
+ 2756 08f0 0000     		.short	0
+ 2757 08f2 0000     		.short	0
+ 2758 08f4 0000     		.short	0
+ 2759 08f6 0000     		.short	0
+ 2760 08f8 0000     		.short	0
+ 2761 08fa 0000     		.short	0
+ 2762 08fc 0000     		.short	0
+ 2763 08fe 0000     		.short	0
+ 2764 0900 0000     		.short	0
+ 2765 0902 0000     		.short	0
+ 2766 0904 0000     		.short	0
+ 2767 0906 0000     		.short	0
+ 2768 0908 0000     		.short	0
+ 2769 090a 0000     		.short	0
+ 2770 090c 0000     		.short	0
+ 2771 090e 0000     		.short	0
+ 2772 0910 0000     		.short	0
+ 2773 0912 0000     		.short	0
+ 2774 0914 0000     		.short	0
+ 2775 0916 0000     		.short	0
+ 2776 0918 0000     		.short	0
+ 2777 091a 0000     		.short	0
+ 2778 091c 0000     		.short	0
+ 2779 091e 0000     		.short	0
+ 2780 0920 0000     		.short	0
+ 2781 0922 0000     		.short	0
+ 2782 0924 0000     		.short	0
+ 2783 0926 0000     		.short	0
+ 2784 0928 0000     		.short	0
+ 2785 092a 0000     		.short	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 50
+
+
+ 2786 092c 0000     		.short	0
+ 2787 092e 0000     		.short	0
+ 2788 0930 0000     		.short	0
+ 2789 0932 0000     		.short	0
+ 2790 0934 0000     		.short	0
+ 2791 0936 0000     		.short	0
+ 2792 0938 0000     		.short	0
+ 2793 093a 0000     		.short	0
+ 2794 093c 0000     		.short	0
+ 2795 093e 0000     		.short	0
+ 2796 0940 0000     		.short	0
+ 2797 0942 0000     		.short	0
+ 2798 0944 0000     		.short	0
+ 2799 0946 0000     		.short	0
+ 2800 0948 0000     		.short	0
+ 2801 094a 0000     		.short	0
+ 2802 094c 0000     		.short	0
+ 2803 094e 0000     		.short	0
+ 2804 0950 0000     		.short	0
+ 2805 0952 0000     		.short	0
+ 2806 0954 0000     		.short	0
+ 2807 0956 0000     		.short	0
+ 2808 0958 0000     		.short	0
+ 2809 095a 0000     		.short	0
+ 2810 095c 0000     		.short	0
+ 2811 095e 0000     		.short	0
+ 2812 0960 0000     		.short	0
+ 2813 0962 0000     		.short	0
+ 2814 0964 0000     		.short	0
+ 2815 0966 0000     		.short	0
+ 2816 0968 0000     		.short	0
+ 2817 096a 0000     		.short	0
+ 2818 096c 0000     		.short	0
+ 2819 096e 0000     		.short	0
+ 2820 0970 0000     		.short	0
+ 2821 0972 0000     		.short	0
+ 2822 0974 0000     		.short	0
+ 2823 0976 0000     		.short	0
+ 2824 0978 0000     		.short	0
+ 2825 097a 0000     		.short	0
+ 2826 097c 0000     		.short	0
+ 2827 097e 0000     		.short	0
+ 2828 0980 0000     		.short	0
+ 2829 0982 0000     		.short	0
+ 2830 0984 0000     		.short	0
+ 2831 0986 0000     		.short	0
+ 2832 0988 0000     		.short	0
+ 2833 098a 0000     		.short	0
+ 2834 098c 0000     		.short	0
+ 2835 098e 0000     		.short	0
+ 2836 0990 0000     		.short	0
+ 2837 0992 0000     		.short	0
+ 2838 0994 0000     		.short	0
+ 2839 0996 0000     		.short	0
+ 2840 0998 0000     		.short	0
+ 2841 099a 0000     		.short	0
+ 2842 099c 0000     		.short	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 51
+
+
+ 2843 099e 0000     		.short	0
+ 2844 09a0 0000     		.short	0
+ 2845 09a2 0000     		.short	0
+ 2846 09a4 0000     		.short	0
+ 2847 09a6 0000     		.short	0
+ 2848 09a8 0000     		.short	0
+ 2849 09aa 0000     		.short	0
+ 2850 09ac 0000     		.short	0
+ 2851 09ae 0000     		.short	0
+ 2852 09b0 0000     		.short	0
+ 2853 09b2 0000     		.short	0
+ 2854 09b4 0000     		.short	0
+ 2855 09b6 0000     		.short	0
+ 2856 09b8 0000     		.short	0
+ 2857 09ba 0000     		.short	0
+ 2858 09bc 0000     		.short	0
+ 2859 09be 0000     		.short	0
+ 2860 09c0 0000     		.short	0
+ 2861 09c2 0000     		.short	0
+ 2862 09c4 0000     		.short	0
+ 2863 09c6 0000     		.short	0
+ 2864 09c8 0000     		.short	0
+ 2865 09ca 0000     		.short	0
+ 2866 09cc 0000     		.short	0
+ 2867 09ce 0000     		.short	0
+ 2868 09d0 0000     		.short	0
+ 2869 09d2 0000     		.short	0
+ 2870 09d4 0000     		.short	0
+ 2871 09d6 0000     		.short	0
+ 2872 09d8 0000     		.short	0
+ 2873 09da 0000     		.short	0
+ 2874 09dc 0000     		.short	0
+ 2875 09de 0000     		.short	0
+ 2876 09e0 0000     		.short	0
+ 2877 09e2 0000     		.short	0
+ 2878 09e4 0000     		.short	0
+ 2879 09e6 0000     		.short	0
+ 2880 09e8 0000     		.short	0
+ 2881 09ea 0000     		.short	0
+ 2882 09ec 0000     		.short	0
+ 2883 09ee 0000     		.short	0
+ 2884 09f0 0000     		.short	0
+ 2885 09f2 0000     		.short	0
+ 2886 09f4 0000     		.short	0
+ 2887 09f6 0000     		.short	0
+ 2888 09f8 0000     		.short	0
+ 2889 09fa 0000     		.short	0
+ 2890 09fc 0000     		.short	0
+ 2891 09fe 0000     		.short	0
+ 2892 0a00 0000     		.short	0
+ 2893 0a02 0000     		.short	0
+ 2894 0a04 0000     		.short	0
+ 2895 0a06 0000     		.short	0
+ 2896 0a08 0000     		.short	0
+ 2897 0a0a 0000     		.short	0
+ 2898 0a0c 0000     		.short	0
+ 2899 0a0e 0000     		.short	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 52
+
+
+ 2900 0a10 0000     		.short	0
+ 2901 0a12 0000     		.short	0
+ 2902 0a14 0000     		.short	0
+ 2903 0a16 0000     		.short	0
+ 2904 0a18 0000     		.short	0
+ 2905 0a1a 0000     		.short	0
+ 2906 0a1c 0000     		.short	0
+ 2907 0a1e 0000     		.short	0
+ 2908 0a20 0000     		.short	0
+ 2909 0a22 0000     		.short	0
+ 2910 0a24 0000     		.short	0
+ 2911 0a26 0000     		.short	0
+ 2912 0a28 0000     		.short	0
+ 2913 0a2a 0000     		.short	0
+ 2914 0a2c 0000     		.short	0
+ 2915 0a2e 0000     		.short	0
+ 2916 0a30 0000     		.short	0
+ 2917 0a32 0000     		.short	0
+ 2918 0a34 0000     		.short	0
+ 2919 0a36 0000     		.short	0
+ 2920 0a38 0000     		.short	0
+ 2921 0a3a 0000     		.short	0
+ 2922 0a3c 0000     		.short	0
+ 2923 0a3e 0000     		.short	0
+ 2924 0a40 0000     		.short	0
+ 2925 0a42 0000     		.short	0
+ 2926 0a44 0000     		.short	0
+ 2927 0a46 0000     		.short	0
+ 2928 0a48 0000     		.short	0
+ 2929 0a4a 0000     		.short	0
+ 2930 0a4c 0000     		.short	0
+ 2931 0a4e 0000     		.short	0
+ 2932 0a50 0000     		.short	0
+ 2933 0a52 0000     		.short	0
+ 2934 0a54 0000     		.short	0
+ 2935 0a56 0000     		.short	0
+ 2936 0a58 0000     		.short	0
+ 2937 0a5a 0000     		.short	0
+ 2938 0a5c 0000     		.short	0
+ 2939 0a5e 0000     		.short	0
+ 2940 0a60 0000     		.short	0
+ 2941 0a62 0000     		.short	0
+ 2942 0a64 0000     		.short	0
+ 2943 0a66 0000     		.short	0
+ 2944 0a68 0000     		.short	0
+ 2945 0a6a 0000     		.short	0
+ 2946 0a6c 0000     		.short	0
+ 2947 0a6e 0000     		.short	0
+ 2948 0a70 0000     		.short	0
+ 2949 0a72 0000     		.short	0
+ 2950 0a74 0000     		.short	0
+ 2951 0a76 0000     		.short	0
+ 2952 0a78 0000     		.short	0
+ 2953 0a7a 0000     		.short	0
+ 2954 0a7c 0000     		.short	0
+ 2955 0a7e 0000     		.short	0
+ 2956 0a80 0000     		.short	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 53
+
+
+ 2957 0a82 0000     		.short	0
+ 2958 0a84 0000     		.short	0
+ 2959 0a86 0000     		.short	0
+ 2960 0a88 0000     		.short	0
+ 2961 0a8a 0000     		.short	0
+ 2962 0a8c 0000     		.short	0
+ 2963 0a8e 0000     		.short	0
+ 2964 0a90 0000     		.short	0
+ 2965 0a92 0000     		.short	0
+ 2966 0a94 0000     		.short	0
+ 2967 0a96 0000     		.short	0
+ 2968 0a98 0000     		.short	0
+ 2969 0a9a 0000     		.short	0
+ 2970 0a9c 0000     		.short	0
+ 2971 0a9e 0000     		.short	0
+ 2972 0aa0 0000     		.short	0
+ 2973 0aa2 0000     		.short	0
+ 2974 0aa4 0000     		.short	0
+ 2975 0aa6 0000     		.short	0
+ 2976 0aa8 0000     		.short	0
+ 2977 0aaa 0000     		.short	0
+ 2978 0aac 0000     		.short	0
+ 2979 0aae 0000     		.short	0
+ 2980 0ab0 0000     		.short	0
+ 2981 0ab2 0000     		.short	0
+ 2982 0ab4 0000     		.short	0
+ 2983 0ab6 0000     		.short	0
+ 2984 0ab8 0000     		.short	0
+ 2985 0aba 0000     		.short	0
+ 2986 0abc 0000     		.short	0
+ 2987 0abe 0000     		.short	0
+ 2988 0ac0 0000     		.short	0
+ 2989 0ac2 0000     		.short	0
+ 2990 0ac4 0000     		.short	0
+ 2991 0ac6 0000     		.short	0
+ 2992 0ac8 0000     		.short	0
+ 2993 0aca 0000     		.short	0
+ 2994 0acc 0000     		.short	0
+ 2995 0ace 0000     		.short	0
+ 2996 0ad0 0000     		.short	0
+ 2997 0ad2 0000     		.short	0
+ 2998 0ad4 0000     		.short	0
+ 2999 0ad6 0000     		.short	0
+ 3000 0ad8 0000     		.short	0
+ 3001 0ada 0000     		.short	0
+ 3002 0adc 0000     		.short	0
+ 3003 0ade 0000     		.short	0
+ 3004 0ae0 0000     		.short	0
+ 3005 0ae2 0000     		.short	0
+ 3006 0ae4 0000     		.short	0
+ 3007 0ae6 0000     		.short	0
+ 3008 0ae8 0000     		.short	0
+ 3009 0aea 0000     		.short	0
+ 3010 0aec 0000     		.short	0
+ 3011 0aee 0000     		.short	0
+ 3012 0af0 0000     		.short	0
+ 3013 0af2 0000     		.short	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 54
+
+
+ 3014 0af4 0000     		.short	0
+ 3015 0af6 0000     		.short	0
+ 3016 0af8 0000     		.short	0
+ 3017 0afa 0000     		.short	0
+ 3018 0afc 0000     		.short	0
+ 3019 0afe 0000     		.short	0
+ 3020 0b00 0000     		.short	0
+ 3021 0b02 0000     		.short	0
+ 3022 0b04 0000     		.short	0
+ 3023 0b06 0000     		.short	0
+ 3024 0b08 0000     		.short	0
+ 3025 0b0a 0000     		.short	0
+ 3026 0b0c 0000     		.short	0
+ 3027 0b0e 0000     		.short	0
+ 3028 0b10 0000     		.short	0
+ 3029 0b12 0000     		.short	0
+ 3030 0b14 0000     		.short	0
+ 3031 0b16 0000     		.short	0
+ 3032 0b18 0000     		.short	0
+ 3033 0b1a 0000     		.short	0
+ 3034 0b1c 0000     		.short	0
+ 3035 0b1e 0000     		.short	0
+ 3036 0b20 0000     		.short	0
+ 3037 0b22 0000     		.short	0
+ 3038 0b24 0000     		.short	0
+ 3039 0b26 0000     		.short	0
+ 3040 0b28 0000     		.short	0
+ 3041 0b2a 0000     		.short	0
+ 3042 0b2c 0000     		.short	0
+ 3043 0b2e 0000     		.short	0
+ 3044 0b30 0000     		.short	0
+ 3045 0b32 0000     		.short	0
+ 3046 0b34 0000     		.short	0
+ 3047 0b36 0000     		.short	0
+ 3048 0b38 0000     		.short	0
+ 3049 0b3a 0000     		.short	0
+ 3050 0b3c 0000     		.short	0
+ 3051 0b3e 0000     		.short	0
+ 3052 0b40 0000     		.short	0
+ 3053 0b42 0000     		.short	0
+ 3054 0b44 0000     		.short	0
+ 3055 0b46 0000     		.short	0
+ 3056 0b48 0000     		.short	0
+ 3057 0b4a 0000     		.short	0
+ 3058 0b4c 0000     		.short	0
+ 3059 0b4e 0000     		.short	0
+ 3060 0b50 0000     		.short	0
+ 3061 0b52 0000     		.short	0
+ 3062 0b54 0000     		.short	0
+ 3063 0b56 0000     		.short	0
+ 3064 0b58 0000     		.short	0
+ 3065 0b5a 0000     		.short	0
+ 3066 0b5c 0000     		.short	0
+ 3067 0b5e 0000     		.short	0
+ 3068 0b60 0000     		.short	0
+ 3069 0b62 0000     		.short	0
+ 3070 0b64 0000     		.short	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 55
+
+
+ 3071 0b66 0000     		.short	0
+ 3072 0b68 0000     		.short	0
+ 3073 0b6a 0000     		.short	0
+ 3074 0b6c 0000     		.short	0
+ 3075 0b6e 0000     		.short	0
+ 3076 0b70 0000     		.short	0
+ 3077 0b72 0000     		.short	0
+ 3078 0b74 0000     		.short	0
+ 3079 0b76 0000     		.short	0
+ 3080 0b78 0000     		.short	0
+ 3081 0b7a 0000     		.short	0
+ 3082 0b7c 0000     		.short	0
+ 3083 0b7e 0000     		.short	0
+ 3084 0b80 0000     		.short	0
+ 3085 0b82 0000     		.short	0
+ 3086 0b84 0000     		.short	0
+ 3087 0b86 0000     		.short	0
+ 3088 0b88 0000     		.short	0
+ 3089 0b8a 0000     		.short	0
+ 3090 0b8c 0000     		.short	0
+ 3091 0b8e 0000     		.short	0
+ 3092 0b90 0000     		.short	0
+ 3093 0b92 0000     		.short	0
+ 3094 0b94 0000     		.short	0
+ 3095 0b96 0000     		.short	0
+ 3096 0b98 0000     		.short	0
+ 3097 0b9a 0000     		.short	0
+ 3098 0b9c 0000     		.short	0
+ 3099 0b9e 0000     		.short	0
+ 3100 0ba0 0000     		.short	0
+ 3101 0ba2 0000     		.short	0
+ 3102 0ba4 0000     		.short	0
+ 3103 0ba6 0000     		.short	0
+ 3104 0ba8 0000     		.short	0
+ 3105 0baa 0000     		.short	0
+ 3106 0bac 0000     		.short	0
+ 3107 0bae 0000     		.short	0
+ 3108 0bb0 0000     		.short	0
+ 3109 0bb2 0000     		.short	0
+ 3110 0bb4 0000     		.short	0
+ 3111 0bb6 0000     		.short	0
+ 3112 0bb8 0000     		.short	0
+ 3113 0bba 0000     		.short	0
+ 3114 0bbc 0000     		.short	0
+ 3115 0bbe 0000     		.short	0
+ 3116 0bc0 0000     		.short	0
+ 3117 0bc2 0000     		.short	0
+ 3118 0bc4 0000     		.short	0
+ 3119 0bc6 0000     		.short	0
+ 3120 0bc8 0000     		.short	0
+ 3121 0bca 0000     		.short	0
+ 3122 0bcc 0000     		.short	0
+ 3123 0bce 0000     		.short	0
+ 3124 0bd0 0000     		.short	0
+ 3125 0bd2 0000     		.short	0
+ 3126 0bd4 0000     		.short	0
+ 3127 0bd6 0000     		.short	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 56
+
+
+ 3128 0bd8 0000     		.short	0
+ 3129 0bda 0000     		.short	0
+ 3130 0bdc 0000     		.short	0
+ 3131 0bde 0000     		.short	0
+ 3132 0be0 0000     		.short	0
+ 3133 0be2 0000     		.short	0
+ 3134 0be4 0000     		.short	0
+ 3135 0be6 0000     		.short	0
+ 3136 0be8 0000     		.short	0
+ 3137 0bea 0000     		.short	0
+ 3138 0bec 0000     		.short	0
+ 3139 0bee 0000     		.short	0
+ 3140 0bf0 0000     		.short	0
+ 3141 0bf2 0000     		.short	0
+ 3142 0bf4 00FF     		.short	-256
+ 3143 0bf6 00FD     		.short	-768
+ 3144 0bf8 00FF     		.short	-256
+ 3145 0bfa 00FE     		.short	-512
+ 3146 0bfc 00FF     		.short	-256
+ 3147 0bfe 00FF     		.short	-256
+ 3148              		.text
+ 3149              	.Letext0:
+ 3150              		.file 1 "Generated_Source\\PSoC5\\cytypes.h"
+ 3151              		.file 2 "Generated_Source\\PSoC5\\MDIO_Interface.h"
+ 3152              		.file 3 "Generated_Source\\PSoC5\\MDIO_Interface_REG.c"
+ 3153              		.section	.debug_info,"",%progbits
+ 3154              	.Ldebug_info0:
+ 3155 0000 44020000 		.4byte	0x244
+ 3156 0004 0400     		.2byte	0x4
+ 3157 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 3158 000a 04       		.byte	0x4
+ 3159 000b 01       		.uleb128 0x1
+ 3160 000c 46010000 		.4byte	.LASF32
+ 3161 0010 01       		.byte	0x1
+ 3162 0011 14020000 		.4byte	.LASF33
+ 3163 0015 2C030000 		.4byte	.LASF34
+ 3164 0019 00000000 		.4byte	.Ldebug_line0
+ 3165 001d 02       		.uleb128 0x2
+ 3166 001e 01       		.byte	0x1
+ 3167 001f 06       		.byte	0x6
+ 3168 0020 20030000 		.4byte	.LASF0
+ 3169 0024 02       		.uleb128 0x2
+ 3170 0025 01       		.byte	0x1
+ 3171 0026 08       		.byte	0x8
+ 3172 0027 5B000000 		.4byte	.LASF1
+ 3173 002b 02       		.uleb128 0x2
+ 3174 002c 02       		.byte	0x2
+ 3175 002d 05       		.byte	0x5
+ 3176 002e 48020000 		.4byte	.LASF2
+ 3177 0032 02       		.uleb128 0x2
+ 3178 0033 02       		.byte	0x2
+ 3179 0034 07       		.byte	0x7
+ 3180 0035 24000000 		.4byte	.LASF3
+ 3181 0039 02       		.uleb128 0x2
+ 3182 003a 04       		.byte	0x4
+ 3183 003b 05       		.byte	0x5
+ 3184 003c 12030000 		.4byte	.LASF4
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 57
+
+
+ 3185 0040 02       		.uleb128 0x2
+ 3186 0041 04       		.byte	0x4
+ 3187 0042 07       		.byte	0x7
+ 3188 0043 69000000 		.4byte	.LASF5
+ 3189 0047 02       		.uleb128 0x2
+ 3190 0048 08       		.byte	0x8
+ 3191 0049 05       		.byte	0x5
+ 3192 004a 01020000 		.4byte	.LASF6
+ 3193 004e 02       		.uleb128 0x2
+ 3194 004f 08       		.byte	0x8
+ 3195 0050 07       		.byte	0x7
+ 3196 0051 E1010000 		.4byte	.LASF7
+ 3197 0055 03       		.uleb128 0x3
+ 3198 0056 04       		.byte	0x4
+ 3199 0057 05       		.byte	0x5
+ 3200 0058 696E7400 		.ascii	"int\000"
+ 3201 005c 02       		.uleb128 0x2
+ 3202 005d 04       		.byte	0x4
+ 3203 005e 07       		.byte	0x7
+ 3204 005f D4010000 		.4byte	.LASF8
+ 3205 0063 04       		.uleb128 0x4
+ 3206 0064 7B000000 		.4byte	.LASF9
+ 3207 0068 01       		.byte	0x1
+ 3208 0069 9201     		.2byte	0x192
+ 3209 006b 24000000 		.4byte	0x24
+ 3210 006f 04       		.uleb128 0x4
+ 3211 0070 03010000 		.4byte	.LASF10
+ 3212 0074 01       		.byte	0x1
+ 3213 0075 9301     		.2byte	0x193
+ 3214 0077 32000000 		.4byte	0x32
+ 3215 007b 02       		.uleb128 0x2
+ 3216 007c 04       		.byte	0x4
+ 3217 007d 04       		.byte	0x4
+ 3218 007e 37000000 		.4byte	.LASF11
+ 3219 0082 02       		.uleb128 0x2
+ 3220 0083 08       		.byte	0x8
+ 3221 0084 04       		.byte	0x4
+ 3222 0085 A2000000 		.4byte	.LASF12
+ 3223 0089 02       		.uleb128 0x2
+ 3224 008a 01       		.byte	0x1
+ 3225 008b 08       		.byte	0x8
+ 3226 008c 1B030000 		.4byte	.LASF13
+ 3227 0090 02       		.uleb128 0x2
+ 3228 0091 04       		.byte	0x4
+ 3229 0092 07       		.byte	0x7
+ 3230 0093 F8010000 		.4byte	.LASF14
+ 3231 0097 05       		.uleb128 0x5
+ 3232 0098 04       		.byte	0x4
+ 3233 0099 02       		.byte	0x2
+ 3234 009a 38       		.byte	0x38
+ 3235 009b C4000000 		.4byte	0xc4
+ 3236 009f 06       		.uleb128 0x6
+ 3237 00a0 0F020000 		.4byte	.LASF15
+ 3238 00a4 02       		.byte	0x2
+ 3239 00a5 3A       		.byte	0x3a
+ 3240 00a6 6F000000 		.4byte	0x6f
+ 3241 00aa 00       		.byte	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 58
+
+
+ 3242 00ab 06       		.uleb128 0x6
+ 3243 00ac 40020000 		.4byte	.LASF16
+ 3244 00b0 02       		.byte	0x2
+ 3245 00b1 3B       		.byte	0x3b
+ 3246 00b2 63000000 		.4byte	0x63
+ 3247 00b6 02       		.byte	0x2
+ 3248 00b7 06       		.uleb128 0x6
+ 3249 00b8 00000000 		.4byte	.LASF17
+ 3250 00bc 02       		.byte	0x2
+ 3251 00bd 3C       		.byte	0x3c
+ 3252 00be 63000000 		.4byte	0x63
+ 3253 00c2 03       		.byte	0x3
+ 3254 00c3 00       		.byte	0
+ 3255 00c4 07       		.uleb128 0x7
+ 3256 00c5 81000000 		.4byte	.LASF18
+ 3257 00c9 02       		.byte	0x2
+ 3258 00ca 3E       		.byte	0x3e
+ 3259 00cb 97000000 		.4byte	0x97
+ 3260 00cf 08       		.uleb128 0x8
+ 3261 00d0 6F000000 		.4byte	0x6f
+ 3262 00d4 E0000000 		.4byte	0xe0
+ 3263 00d8 09       		.uleb128 0x9
+ 3264 00d9 90000000 		.4byte	0x90
+ 3265 00dd FF01     		.2byte	0x1ff
+ 3266 00df 00       		.byte	0
+ 3267 00e0 0A       		.uleb128 0xa
+ 3268 00e1 A9000000 		.4byte	.LASF19
+ 3269 00e5 03       		.byte	0x3
+ 3270 00e6 1A       		.byte	0x1a
+ 3271 00e7 CF000000 		.4byte	0xcf
+ 3272 00eb 05       		.uleb128 0x5
+ 3273 00ec 03       		.byte	0x3
+ 3274 00ed 00000000 		.4byte	MDIO_Interface_registerPage_1
+ 3275 00f1 08       		.uleb128 0x8
+ 3276 00f2 6F000000 		.4byte	0x6f
+ 3277 00f6 01010000 		.4byte	0x101
+ 3278 00fa 0B       		.uleb128 0xb
+ 3279 00fb 90000000 		.4byte	0x90
+ 3280 00ff FF       		.byte	0xff
+ 3281 0100 00       		.byte	0
+ 3282 0101 0A       		.uleb128 0xa
+ 3283 0102 C7000000 		.4byte	.LASF20
+ 3284 0106 03       		.byte	0x3
+ 3285 0107 4A       		.byte	0x4a
+ 3286 0108 F1000000 		.4byte	0xf1
+ 3287 010c 05       		.uleb128 0x5
+ 3288 010d 03       		.byte	0x3
+ 3289 010e 00000000 		.4byte	MDIO_Interface_registerPage_2
+ 3290 0112 0A       		.uleb128 0xa
+ 3291 0113 E5000000 		.4byte	.LASF21
+ 3292 0117 03       		.byte	0x3
+ 3293 0118 4D       		.byte	0x4d
+ 3294 0119 F1000000 		.4byte	0xf1
+ 3295 011d 05       		.uleb128 0x5
+ 3296 011e 03       		.byte	0x3
+ 3297 011f 00000000 		.4byte	MDIO_Interface_registerPage_3
+ 3298 0123 08       		.uleb128 0x8
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 59
+
+
+ 3299 0124 6F000000 		.4byte	0x6f
+ 3300 0128 33010000 		.4byte	0x133
+ 3301 012c 0B       		.uleb128 0xb
+ 3302 012d 90000000 		.4byte	0x90
+ 3303 0131 7F       		.byte	0x7f
+ 3304 0132 00       		.byte	0
+ 3305 0133 0A       		.uleb128 0xa
+ 3306 0134 3D000000 		.4byte	.LASF22
+ 3307 0138 03       		.byte	0x3
+ 3308 0139 50       		.byte	0x50
+ 3309 013a 23010000 		.4byte	0x123
+ 3310 013e 05       		.uleb128 0x5
+ 3311 013f 03       		.byte	0x3
+ 3312 0140 00000000 		.4byte	MDIO_Interface_registerPage_4
+ 3313 0144 0A       		.uleb128 0xa
+ 3314 0145 0A010000 		.4byte	.LASF23
+ 3315 0149 03       		.byte	0x3
+ 3316 014a 53       		.byte	0x53
+ 3317 014b F1000000 		.4byte	0xf1
+ 3318 014f 05       		.uleb128 0x5
+ 3319 0150 03       		.byte	0x3
+ 3320 0151 00000000 		.4byte	MDIO_Interface_registerPage_5
+ 3321 0155 0A       		.uleb128 0xa
+ 3322 0156 28010000 		.4byte	.LASF24
+ 3323 015a 03       		.byte	0x3
+ 3324 015b 6E       		.byte	0x6e
+ 3325 015c 23010000 		.4byte	0x123
+ 3326 0160 05       		.uleb128 0x5
+ 3327 0161 03       		.byte	0x3
+ 3328 0162 00000000 		.4byte	MDIO_Interface_registerPage_6
+ 3329 0166 08       		.uleb128 0x8
+ 3330 0167 C4000000 		.4byte	0xc4
+ 3331 016b 77010000 		.4byte	0x177
+ 3332 016f 09       		.uleb128 0x9
+ 3333 0170 90000000 		.4byte	0x90
+ 3334 0174 FF01     		.2byte	0x1ff
+ 3335 0176 00       		.byte	0
+ 3336 0177 0A       		.uleb128 0xa
+ 3337 0178 52020000 		.4byte	.LASF25
+ 3338 017c 03       		.byte	0x3
+ 3339 017d 71       		.byte	0x71
+ 3340 017e 88010000 		.4byte	0x188
+ 3341 0182 05       		.uleb128 0x5
+ 3342 0183 03       		.byte	0x3
+ 3343 0184 00000000 		.4byte	MDIO_Interface_registerConfig_1
+ 3344 0188 0C       		.uleb128 0xc
+ 3345 0189 66010000 		.4byte	0x166
+ 3346 018d 08       		.uleb128 0x8
+ 3347 018e C4000000 		.4byte	0xc4
+ 3348 0192 9D010000 		.4byte	0x19d
+ 3349 0196 0B       		.uleb128 0xb
+ 3350 0197 90000000 		.4byte	0x90
+ 3351 019b FF       		.byte	0xff
+ 3352 019c 00       		.byte	0
+ 3353 019d 0A       		.uleb128 0xa
+ 3354 019e 72020000 		.4byte	.LASF26
+ 3355 01a2 03       		.byte	0x3
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 60
+
+
+ 3356 01a3 F5       		.byte	0xf5
+ 3357 01a4 AE010000 		.4byte	0x1ae
+ 3358 01a8 05       		.uleb128 0x5
+ 3359 01a9 03       		.byte	0x3
+ 3360 01aa 00000000 		.4byte	MDIO_Interface_registerConfig_2
+ 3361 01ae 0C       		.uleb128 0xc
+ 3362 01af 8D010000 		.4byte	0x18d
+ 3363 01b3 0D       		.uleb128 0xd
+ 3364 01b4 92020000 		.4byte	.LASF27
+ 3365 01b8 03       		.byte	0x3
+ 3366 01b9 3901     		.2byte	0x139
+ 3367 01bb C5010000 		.4byte	0x1c5
+ 3368 01bf 05       		.uleb128 0x5
+ 3369 01c0 03       		.byte	0x3
+ 3370 01c1 00000000 		.4byte	MDIO_Interface_registerConfig_3
+ 3371 01c5 0C       		.uleb128 0xc
+ 3372 01c6 8D010000 		.4byte	0x18d
+ 3373 01ca 08       		.uleb128 0x8
+ 3374 01cb C4000000 		.4byte	0xc4
+ 3375 01cf DA010000 		.4byte	0x1da
+ 3376 01d3 0B       		.uleb128 0xb
+ 3377 01d4 90000000 		.4byte	0x90
+ 3378 01d8 7F       		.byte	0x7f
+ 3379 01d9 00       		.byte	0
+ 3380 01da 0D       		.uleb128 0xd
+ 3381 01db B2020000 		.4byte	.LASF28
+ 3382 01df 03       		.byte	0x3
+ 3383 01e0 7D01     		.2byte	0x17d
+ 3384 01e2 EC010000 		.4byte	0x1ec
+ 3385 01e6 05       		.uleb128 0x5
+ 3386 01e7 03       		.byte	0x3
+ 3387 01e8 00000000 		.4byte	MDIO_Interface_registerConfig_4
+ 3388 01ec 0C       		.uleb128 0xc
+ 3389 01ed CA010000 		.4byte	0x1ca
+ 3390 01f1 0D       		.uleb128 0xd
+ 3391 01f2 D2020000 		.4byte	.LASF29
+ 3392 01f6 03       		.byte	0x3
+ 3393 01f7 A101     		.2byte	0x1a1
+ 3394 01f9 8D010000 		.4byte	0x18d
+ 3395 01fd 05       		.uleb128 0x5
+ 3396 01fe 03       		.byte	0x3
+ 3397 01ff 00000000 		.4byte	MDIO_Interface_registerConfig_5
+ 3398 0203 0D       		.uleb128 0xd
+ 3399 0204 F2020000 		.4byte	.LASF30
+ 3400 0208 03       		.byte	0x3
+ 3401 0209 E501     		.2byte	0x1e5
+ 3402 020b CA010000 		.4byte	0x1ca
+ 3403 020f 05       		.uleb128 0x5
+ 3404 0210 03       		.byte	0x3
+ 3405 0211 00000000 		.4byte	MDIO_Interface_registerConfig_6
+ 3406 0215 08       		.uleb128 0x8
+ 3407 0216 25020000 		.4byte	0x225
+ 3408 021a 25020000 		.4byte	0x225
+ 3409 021e 0B       		.uleb128 0xb
+ 3410 021f 90000000 		.4byte	0x90
+ 3411 0223 0B       		.byte	0xb
+ 3412 0224 00       		.byte	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 61
+
+
+ 3413 0225 0E       		.uleb128 0xe
+ 3414 0226 04       		.byte	0x4
+ 3415 0227 2B020000 		.4byte	0x22b
+ 3416 022b 0C       		.uleb128 0xc
+ 3417 022c 6F000000 		.4byte	0x6f
+ 3418 0230 0D       		.uleb128 0xd
+ 3419 0231 09000000 		.4byte	.LASF31
+ 3420 0235 03       		.byte	0x3
+ 3421 0236 0802     		.2byte	0x208
+ 3422 0238 42020000 		.4byte	0x242
+ 3423 023c 05       		.uleb128 0x5
+ 3424 023d 03       		.byte	0x3
+ 3425 023e 00000000 		.4byte	MDIO_Interface_pageInfoPtr
+ 3426 0242 0C       		.uleb128 0xc
+ 3427 0243 15020000 		.4byte	0x215
+ 3428 0247 00       		.byte	0
+ 3429              		.section	.debug_abbrev,"",%progbits
+ 3430              	.Ldebug_abbrev0:
+ 3431 0000 01       		.uleb128 0x1
+ 3432 0001 11       		.uleb128 0x11
+ 3433 0002 01       		.byte	0x1
+ 3434 0003 25       		.uleb128 0x25
+ 3435 0004 0E       		.uleb128 0xe
+ 3436 0005 13       		.uleb128 0x13
+ 3437 0006 0B       		.uleb128 0xb
+ 3438 0007 03       		.uleb128 0x3
+ 3439 0008 0E       		.uleb128 0xe
+ 3440 0009 1B       		.uleb128 0x1b
+ 3441 000a 0E       		.uleb128 0xe
+ 3442 000b 10       		.uleb128 0x10
+ 3443 000c 17       		.uleb128 0x17
+ 3444 000d 00       		.byte	0
+ 3445 000e 00       		.byte	0
+ 3446 000f 02       		.uleb128 0x2
+ 3447 0010 24       		.uleb128 0x24
+ 3448 0011 00       		.byte	0
+ 3449 0012 0B       		.uleb128 0xb
+ 3450 0013 0B       		.uleb128 0xb
+ 3451 0014 3E       		.uleb128 0x3e
+ 3452 0015 0B       		.uleb128 0xb
+ 3453 0016 03       		.uleb128 0x3
+ 3454 0017 0E       		.uleb128 0xe
+ 3455 0018 00       		.byte	0
+ 3456 0019 00       		.byte	0
+ 3457 001a 03       		.uleb128 0x3
+ 3458 001b 24       		.uleb128 0x24
+ 3459 001c 00       		.byte	0
+ 3460 001d 0B       		.uleb128 0xb
+ 3461 001e 0B       		.uleb128 0xb
+ 3462 001f 3E       		.uleb128 0x3e
+ 3463 0020 0B       		.uleb128 0xb
+ 3464 0021 03       		.uleb128 0x3
+ 3465 0022 08       		.uleb128 0x8
+ 3466 0023 00       		.byte	0
+ 3467 0024 00       		.byte	0
+ 3468 0025 04       		.uleb128 0x4
+ 3469 0026 16       		.uleb128 0x16
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 62
+
+
+ 3470 0027 00       		.byte	0
+ 3471 0028 03       		.uleb128 0x3
+ 3472 0029 0E       		.uleb128 0xe
+ 3473 002a 3A       		.uleb128 0x3a
+ 3474 002b 0B       		.uleb128 0xb
+ 3475 002c 3B       		.uleb128 0x3b
+ 3476 002d 05       		.uleb128 0x5
+ 3477 002e 49       		.uleb128 0x49
+ 3478 002f 13       		.uleb128 0x13
+ 3479 0030 00       		.byte	0
+ 3480 0031 00       		.byte	0
+ 3481 0032 05       		.uleb128 0x5
+ 3482 0033 13       		.uleb128 0x13
+ 3483 0034 01       		.byte	0x1
+ 3484 0035 0B       		.uleb128 0xb
+ 3485 0036 0B       		.uleb128 0xb
+ 3486 0037 3A       		.uleb128 0x3a
+ 3487 0038 0B       		.uleb128 0xb
+ 3488 0039 3B       		.uleb128 0x3b
+ 3489 003a 0B       		.uleb128 0xb
+ 3490 003b 01       		.uleb128 0x1
+ 3491 003c 13       		.uleb128 0x13
+ 3492 003d 00       		.byte	0
+ 3493 003e 00       		.byte	0
+ 3494 003f 06       		.uleb128 0x6
+ 3495 0040 0D       		.uleb128 0xd
+ 3496 0041 00       		.byte	0
+ 3497 0042 03       		.uleb128 0x3
+ 3498 0043 0E       		.uleb128 0xe
+ 3499 0044 3A       		.uleb128 0x3a
+ 3500 0045 0B       		.uleb128 0xb
+ 3501 0046 3B       		.uleb128 0x3b
+ 3502 0047 0B       		.uleb128 0xb
+ 3503 0048 49       		.uleb128 0x49
+ 3504 0049 13       		.uleb128 0x13
+ 3505 004a 38       		.uleb128 0x38
+ 3506 004b 0B       		.uleb128 0xb
+ 3507 004c 00       		.byte	0
+ 3508 004d 00       		.byte	0
+ 3509 004e 07       		.uleb128 0x7
+ 3510 004f 16       		.uleb128 0x16
+ 3511 0050 00       		.byte	0
+ 3512 0051 03       		.uleb128 0x3
+ 3513 0052 0E       		.uleb128 0xe
+ 3514 0053 3A       		.uleb128 0x3a
+ 3515 0054 0B       		.uleb128 0xb
+ 3516 0055 3B       		.uleb128 0x3b
+ 3517 0056 0B       		.uleb128 0xb
+ 3518 0057 49       		.uleb128 0x49
+ 3519 0058 13       		.uleb128 0x13
+ 3520 0059 00       		.byte	0
+ 3521 005a 00       		.byte	0
+ 3522 005b 08       		.uleb128 0x8
+ 3523 005c 01       		.uleb128 0x1
+ 3524 005d 01       		.byte	0x1
+ 3525 005e 49       		.uleb128 0x49
+ 3526 005f 13       		.uleb128 0x13
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 63
+
+
+ 3527 0060 01       		.uleb128 0x1
+ 3528 0061 13       		.uleb128 0x13
+ 3529 0062 00       		.byte	0
+ 3530 0063 00       		.byte	0
+ 3531 0064 09       		.uleb128 0x9
+ 3532 0065 21       		.uleb128 0x21
+ 3533 0066 00       		.byte	0
+ 3534 0067 49       		.uleb128 0x49
+ 3535 0068 13       		.uleb128 0x13
+ 3536 0069 2F       		.uleb128 0x2f
+ 3537 006a 05       		.uleb128 0x5
+ 3538 006b 00       		.byte	0
+ 3539 006c 00       		.byte	0
+ 3540 006d 0A       		.uleb128 0xa
+ 3541 006e 34       		.uleb128 0x34
+ 3542 006f 00       		.byte	0
+ 3543 0070 03       		.uleb128 0x3
+ 3544 0071 0E       		.uleb128 0xe
+ 3545 0072 3A       		.uleb128 0x3a
+ 3546 0073 0B       		.uleb128 0xb
+ 3547 0074 3B       		.uleb128 0x3b
+ 3548 0075 0B       		.uleb128 0xb
+ 3549 0076 49       		.uleb128 0x49
+ 3550 0077 13       		.uleb128 0x13
+ 3551 0078 3F       		.uleb128 0x3f
+ 3552 0079 19       		.uleb128 0x19
+ 3553 007a 02       		.uleb128 0x2
+ 3554 007b 18       		.uleb128 0x18
+ 3555 007c 00       		.byte	0
+ 3556 007d 00       		.byte	0
+ 3557 007e 0B       		.uleb128 0xb
+ 3558 007f 21       		.uleb128 0x21
+ 3559 0080 00       		.byte	0
+ 3560 0081 49       		.uleb128 0x49
+ 3561 0082 13       		.uleb128 0x13
+ 3562 0083 2F       		.uleb128 0x2f
+ 3563 0084 0B       		.uleb128 0xb
+ 3564 0085 00       		.byte	0
+ 3565 0086 00       		.byte	0
+ 3566 0087 0C       		.uleb128 0xc
+ 3567 0088 26       		.uleb128 0x26
+ 3568 0089 00       		.byte	0
+ 3569 008a 49       		.uleb128 0x49
+ 3570 008b 13       		.uleb128 0x13
+ 3571 008c 00       		.byte	0
+ 3572 008d 00       		.byte	0
+ 3573 008e 0D       		.uleb128 0xd
+ 3574 008f 34       		.uleb128 0x34
+ 3575 0090 00       		.byte	0
+ 3576 0091 03       		.uleb128 0x3
+ 3577 0092 0E       		.uleb128 0xe
+ 3578 0093 3A       		.uleb128 0x3a
+ 3579 0094 0B       		.uleb128 0xb
+ 3580 0095 3B       		.uleb128 0x3b
+ 3581 0096 05       		.uleb128 0x5
+ 3582 0097 49       		.uleb128 0x49
+ 3583 0098 13       		.uleb128 0x13
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 64
+
+
+ 3584 0099 3F       		.uleb128 0x3f
+ 3585 009a 19       		.uleb128 0x19
+ 3586 009b 02       		.uleb128 0x2
+ 3587 009c 18       		.uleb128 0x18
+ 3588 009d 00       		.byte	0
+ 3589 009e 00       		.byte	0
+ 3590 009f 0E       		.uleb128 0xe
+ 3591 00a0 0F       		.uleb128 0xf
+ 3592 00a1 00       		.byte	0
+ 3593 00a2 0B       		.uleb128 0xb
+ 3594 00a3 0B       		.uleb128 0xb
+ 3595 00a4 49       		.uleb128 0x49
+ 3596 00a5 13       		.uleb128 0x13
+ 3597 00a6 00       		.byte	0
+ 3598 00a7 00       		.byte	0
+ 3599 00a8 00       		.byte	0
+ 3600              		.section	.debug_aranges,"",%progbits
+ 3601 0000 14000000 		.4byte	0x14
+ 3602 0004 0200     		.2byte	0x2
+ 3603 0006 00000000 		.4byte	.Ldebug_info0
+ 3604 000a 04       		.byte	0x4
+ 3605 000b 00       		.byte	0
+ 3606 000c 0000     		.2byte	0
+ 3607 000e 0000     		.2byte	0
+ 3608 0010 00000000 		.4byte	0
+ 3609 0014 00000000 		.4byte	0
+ 3610              		.section	.debug_line,"",%progbits
+ 3611              	.Ldebug_line0:
+ 3612 0000 69000000 		.section	.debug_str,"MS",%progbits,1
+ 3612      02006300 
+ 3612      00000201 
+ 3612      FB0E0D00 
+ 3612      01010101 
+ 3613              	.LASF17:
+ 3614 0000 72657365 		.ascii	"reserved\000"
+ 3614      72766564 
+ 3614      00
+ 3615              	.LASF31:
+ 3616 0009 4D44494F 		.ascii	"MDIO_Interface_pageInfoPtr\000"
+ 3616      5F496E74 
+ 3616      65726661 
+ 3616      63655F70 
+ 3616      61676549 
+ 3617              	.LASF3:
+ 3618 0024 73686F72 		.ascii	"short unsigned int\000"
+ 3618      7420756E 
+ 3618      7369676E 
+ 3618      65642069 
+ 3618      6E7400
+ 3619              	.LASF11:
+ 3620 0037 666C6F61 		.ascii	"float\000"
+ 3620      7400
+ 3621              	.LASF22:
+ 3622 003d 4D44494F 		.ascii	"MDIO_Interface_registerPage_4\000"
+ 3622      5F496E74 
+ 3622      65726661 
+ 3622      63655F72 
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 65
+
+
+ 3622      65676973 
+ 3623              	.LASF1:
+ 3624 005b 756E7369 		.ascii	"unsigned char\000"
+ 3624      676E6564 
+ 3624      20636861 
+ 3624      7200
+ 3625              	.LASF5:
+ 3626 0069 6C6F6E67 		.ascii	"long unsigned int\000"
+ 3626      20756E73 
+ 3626      69676E65 
+ 3626      6420696E 
+ 3626      7400
+ 3627              	.LASF9:
+ 3628 007b 75696E74 		.ascii	"uint8\000"
+ 3628      3800
+ 3629              	.LASF18:
+ 3630 0081 4D44494F 		.ascii	"MDIO_Interface_REG_CONFIG_STRUCT\000"
+ 3630      5F496E74 
+ 3630      65726661 
+ 3630      63655F52 
+ 3630      45475F43 
+ 3631              	.LASF12:
+ 3632 00a2 646F7562 		.ascii	"double\000"
+ 3632      6C6500
+ 3633              	.LASF19:
+ 3634 00a9 4D44494F 		.ascii	"MDIO_Interface_registerPage_1\000"
+ 3634      5F496E74 
+ 3634      65726661 
+ 3634      63655F72 
+ 3634      65676973 
+ 3635              	.LASF20:
+ 3636 00c7 4D44494F 		.ascii	"MDIO_Interface_registerPage_2\000"
+ 3636      5F496E74 
+ 3636      65726661 
+ 3636      63655F72 
+ 3636      65676973 
+ 3637              	.LASF21:
+ 3638 00e5 4D44494F 		.ascii	"MDIO_Interface_registerPage_3\000"
+ 3638      5F496E74 
+ 3638      65726661 
+ 3638      63655F72 
+ 3638      65676973 
+ 3639              	.LASF10:
+ 3640 0103 75696E74 		.ascii	"uint16\000"
+ 3640      313600
+ 3641              	.LASF23:
+ 3642 010a 4D44494F 		.ascii	"MDIO_Interface_registerPage_5\000"
+ 3642      5F496E74 
+ 3642      65726661 
+ 3642      63655F72 
+ 3642      65676973 
+ 3643              	.LASF24:
+ 3644 0128 4D44494F 		.ascii	"MDIO_Interface_registerPage_6\000"
+ 3644      5F496E74 
+ 3644      65726661 
+ 3644      63655F72 
+ 3644      65676973 
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 66
+
+
+ 3645              	.LASF32:
+ 3646 0146 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 3646      4320342E 
+ 3646      392E3320 
+ 3646      32303135 
+ 3646      30333033 
+ 3647 0179 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 3647      20726576 
+ 3647      6973696F 
+ 3647      6E203232 
+ 3647      31323230 
+ 3648 01ac 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 3648      66756E63 
+ 3648      74696F6E 
+ 3648      2D736563 
+ 3648      74696F6E 
+ 3649              	.LASF8:
+ 3650 01d4 756E7369 		.ascii	"unsigned int\000"
+ 3650      676E6564 
+ 3650      20696E74 
+ 3650      00
+ 3651              	.LASF7:
+ 3652 01e1 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 3652      206C6F6E 
+ 3652      6720756E 
+ 3652      7369676E 
+ 3652      65642069 
+ 3653              	.LASF14:
+ 3654 01f8 73697A65 		.ascii	"sizetype\000"
+ 3654      74797065 
+ 3654      00
+ 3655              	.LASF6:
+ 3656 0201 6C6F6E67 		.ascii	"long long int\000"
+ 3656      206C6F6E 
+ 3656      6720696E 
+ 3656      7400
+ 3657              	.LASF15:
+ 3658 020f 6D61736B 		.ascii	"mask\000"
+ 3658      00
+ 3659              	.LASF33:
+ 3660 0214 47656E65 		.ascii	"Generated_Source\\PSoC5\\MDIO_Interface_REG.c\000"
+ 3660      72617465 
+ 3660      645F536F 
+ 3660      75726365 
+ 3660      5C50536F 
+ 3661              	.LASF16:
+ 3662 0240 6374726C 		.ascii	"ctrlReg\000"
+ 3662      52656700 
+ 3663              	.LASF2:
+ 3664 0248 73686F72 		.ascii	"short int\000"
+ 3664      7420696E 
+ 3664      7400
+ 3665              	.LASF25:
+ 3666 0252 4D44494F 		.ascii	"MDIO_Interface_registerConfig_1\000"
+ 3666      5F496E74 
+ 3666      65726661 
+ 3666      63655F72 
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccMjAfIK.s 			page 67
+
+
+ 3666      65676973 
+ 3667              	.LASF26:
+ 3668 0272 4D44494F 		.ascii	"MDIO_Interface_registerConfig_2\000"
+ 3668      5F496E74 
+ 3668      65726661 
+ 3668      63655F72 
+ 3668      65676973 
+ 3669              	.LASF27:
+ 3670 0292 4D44494F 		.ascii	"MDIO_Interface_registerConfig_3\000"
+ 3670      5F496E74 
+ 3670      65726661 
+ 3670      63655F72 
+ 3670      65676973 
+ 3671              	.LASF28:
+ 3672 02b2 4D44494F 		.ascii	"MDIO_Interface_registerConfig_4\000"
+ 3672      5F496E74 
+ 3672      65726661 
+ 3672      63655F72 
+ 3672      65676973 
+ 3673              	.LASF29:
+ 3674 02d2 4D44494F 		.ascii	"MDIO_Interface_registerConfig_5\000"
+ 3674      5F496E74 
+ 3674      65726661 
+ 3674      63655F72 
+ 3674      65676973 
+ 3675              	.LASF30:
+ 3676 02f2 4D44494F 		.ascii	"MDIO_Interface_registerConfig_6\000"
+ 3676      5F496E74 
+ 3676      65726661 
+ 3676      63655F72 
+ 3676      65676973 
+ 3677              	.LASF4:
+ 3678 0312 6C6F6E67 		.ascii	"long int\000"
+ 3678      20696E74 
+ 3678      00
+ 3679              	.LASF13:
+ 3680 031b 63686172 		.ascii	"char\000"
+ 3680      00
+ 3681              	.LASF0:
+ 3682 0320 7369676E 		.ascii	"signed char\000"
+ 3682      65642063 
+ 3682      68617200 
+ 3683              	.LASF34:
+ 3684 032c 443A5C70 		.ascii	"D:\\pgm\\Cypress_dem_board\\CFP_reader\\cfp_reader\\"
+ 3684      676D5C43 
+ 3684      79707265 
+ 3684      73735F64 
+ 3684      656D5F62 
+ 3685 035b 575F6366 		.ascii	"W_cfp_reader\\cfp_reader.cydsn\000"
+ 3685      705F7265 
+ 3685      61646572 
+ 3685      5C636670 
+ 3685      5F726561 
+ 3686              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

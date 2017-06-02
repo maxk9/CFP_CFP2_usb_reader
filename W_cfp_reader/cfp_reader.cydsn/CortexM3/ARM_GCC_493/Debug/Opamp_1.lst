@@ -1,0 +1,930 @@
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccKCSMxK.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"Opamp_1.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.Opamp_1_Enable,"ax",%progbits
+  19              		.align	2
+  20              		.global	Opamp_1_Enable
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	Opamp_1_Enable, %function
+  24              	Opamp_1_Enable:
+  25              	.LFB1:
+  26              		.file 1 "Generated_Source\\PSoC5\\Opamp_1.c"
+   1:Generated_Source\PSoC5/Opamp_1.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/Opamp_1.c **** * File Name: Opamp_1.c
+   3:Generated_Source\PSoC5/Opamp_1.c **** * Version 1.90
+   4:Generated_Source\PSoC5/Opamp_1.c **** *
+   5:Generated_Source\PSoC5/Opamp_1.c **** * Description:
+   6:Generated_Source\PSoC5/Opamp_1.c **** *  This file provides the source code to the API for OpAmp (Analog Buffer) 
+   7:Generated_Source\PSoC5/Opamp_1.c **** *  Component.
+   8:Generated_Source\PSoC5/Opamp_1.c **** *
+   9:Generated_Source\PSoC5/Opamp_1.c **** * Note:
+  10:Generated_Source\PSoC5/Opamp_1.c **** *
+  11:Generated_Source\PSoC5/Opamp_1.c **** ********************************************************************************
+  12:Generated_Source\PSoC5/Opamp_1.c **** * Copyright 2008-2012, Cypress Semiconductor Corporation.  All rights reserved.
+  13:Generated_Source\PSoC5/Opamp_1.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  14:Generated_Source\PSoC5/Opamp_1.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  15:Generated_Source\PSoC5/Opamp_1.c **** * the software package with which this file was provided.
+  16:Generated_Source\PSoC5/Opamp_1.c **** *******************************************************************************/
+  17:Generated_Source\PSoC5/Opamp_1.c **** 
+  18:Generated_Source\PSoC5/Opamp_1.c **** #include "Opamp_1.h"
+  19:Generated_Source\PSoC5/Opamp_1.c **** 
+  20:Generated_Source\PSoC5/Opamp_1.c **** uint8 Opamp_1_initVar = 0u;
+  21:Generated_Source\PSoC5/Opamp_1.c **** 
+  22:Generated_Source\PSoC5/Opamp_1.c **** 
+  23:Generated_Source\PSoC5/Opamp_1.c **** /*******************************************************************************   
+  24:Generated_Source\PSoC5/Opamp_1.c **** * Function Name: Opamp_1_Init
+  25:Generated_Source\PSoC5/Opamp_1.c **** ********************************************************************************
+  26:Generated_Source\PSoC5/Opamp_1.c **** *
+  27:Generated_Source\PSoC5/Opamp_1.c **** * Summary:
+  28:Generated_Source\PSoC5/Opamp_1.c **** *  Initialize component's parameters to the parameters set by user in the 
+  29:Generated_Source\PSoC5/Opamp_1.c **** *  customizer of the component placed onto schematic. Usually called in 
+  30:Generated_Source\PSoC5/Opamp_1.c **** *  Opamp_1_Start().
+  31:Generated_Source\PSoC5/Opamp_1.c **** *
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccKCSMxK.s 			page 2
+
+
+  32:Generated_Source\PSoC5/Opamp_1.c **** * Parameters:
+  33:Generated_Source\PSoC5/Opamp_1.c **** *  void
+  34:Generated_Source\PSoC5/Opamp_1.c **** *
+  35:Generated_Source\PSoC5/Opamp_1.c **** * Return:
+  36:Generated_Source\PSoC5/Opamp_1.c **** *  void
+  37:Generated_Source\PSoC5/Opamp_1.c **** *
+  38:Generated_Source\PSoC5/Opamp_1.c **** *******************************************************************************/
+  39:Generated_Source\PSoC5/Opamp_1.c **** void Opamp_1_Init(void) 
+  40:Generated_Source\PSoC5/Opamp_1.c **** {
+  41:Generated_Source\PSoC5/Opamp_1.c ****     Opamp_1_SetPower(Opamp_1_DEFAULT_POWER);
+  42:Generated_Source\PSoC5/Opamp_1.c **** }
+  43:Generated_Source\PSoC5/Opamp_1.c **** 
+  44:Generated_Source\PSoC5/Opamp_1.c **** 
+  45:Generated_Source\PSoC5/Opamp_1.c **** /*******************************************************************************   
+  46:Generated_Source\PSoC5/Opamp_1.c **** * Function Name: Opamp_1_Enable
+  47:Generated_Source\PSoC5/Opamp_1.c **** ********************************************************************************
+  48:Generated_Source\PSoC5/Opamp_1.c **** *
+  49:Generated_Source\PSoC5/Opamp_1.c **** * Summary:
+  50:Generated_Source\PSoC5/Opamp_1.c **** *  Enables the OpAmp block operation
+  51:Generated_Source\PSoC5/Opamp_1.c **** *
+  52:Generated_Source\PSoC5/Opamp_1.c **** * Parameters:
+  53:Generated_Source\PSoC5/Opamp_1.c **** *  void
+  54:Generated_Source\PSoC5/Opamp_1.c **** *
+  55:Generated_Source\PSoC5/Opamp_1.c **** * Return:
+  56:Generated_Source\PSoC5/Opamp_1.c **** *  void
+  57:Generated_Source\PSoC5/Opamp_1.c **** *
+  58:Generated_Source\PSoC5/Opamp_1.c **** *******************************************************************************/
+  59:Generated_Source\PSoC5/Opamp_1.c **** void Opamp_1_Enable(void) 
+  60:Generated_Source\PSoC5/Opamp_1.c **** {
+  27              		.loc 1 60 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              		@ link register save eliminated.
+  61:Generated_Source\PSoC5/Opamp_1.c ****     /* Enable negative charge pumps in ANIF */
+  62:Generated_Source\PSoC5/Opamp_1.c ****     Opamp_1_PUMP_CR1_REG  |= (Opamp_1_PUMP_CR1_CLKSEL | Opamp_1_PUMP_CR1_FORCE);
+  32              		.loc 1 62 0
+  33 0000 084A     		ldr	r2, .L2
+  34 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  35 0004 43F06003 		orr	r3, r3, #96
+  36 0008 1370     		strb	r3, [r2]
+  63:Generated_Source\PSoC5/Opamp_1.c **** 
+  64:Generated_Source\PSoC5/Opamp_1.c ****     /* Enable power to buffer in active mode */
+  65:Generated_Source\PSoC5/Opamp_1.c ****     Opamp_1_PM_ACT_CFG_REG |= Opamp_1_ACT_PWR_EN;
+  37              		.loc 1 65 0
+  38 000a A2F5A652 		sub	r2, r2, #5312
+  39 000e 133A     		subs	r2, r2, #19
+  40 0010 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  41 0012 43F00403 		orr	r3, r3, #4
+  42 0016 1370     		strb	r3, [r2]
+  66:Generated_Source\PSoC5/Opamp_1.c **** 
+  67:Generated_Source\PSoC5/Opamp_1.c ****     /* Enable power to buffer in alternative active mode */
+  68:Generated_Source\PSoC5/Opamp_1.c ****     Opamp_1_PM_STBY_CFG_REG |= Opamp_1_STBY_PWR_EN;
+  43              		.loc 1 68 0
+  44 0018 1032     		adds	r2, r2, #16
+  45 001a 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  46 001c 43F00403 		orr	r3, r3, #4
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccKCSMxK.s 			page 3
+
+
+  47 0020 1370     		strb	r3, [r2]
+  48 0022 7047     		bx	lr
+  49              	.L3:
+  50              		.align	2
+  51              	.L2:
+  52 0024 77580040 		.word	1073764471
+  53              		.cfi_endproc
+  54              	.LFE1:
+  55              		.size	Opamp_1_Enable, .-Opamp_1_Enable
+  56              		.section	.text.Opamp_1_Stop,"ax",%progbits
+  57              		.align	2
+  58              		.global	Opamp_1_Stop
+  59              		.thumb
+  60              		.thumb_func
+  61              		.type	Opamp_1_Stop, %function
+  62              	Opamp_1_Stop:
+  63              	.LFB3:
+  69:Generated_Source\PSoC5/Opamp_1.c **** }
+  70:Generated_Source\PSoC5/Opamp_1.c **** 
+  71:Generated_Source\PSoC5/Opamp_1.c **** 
+  72:Generated_Source\PSoC5/Opamp_1.c **** /*******************************************************************************
+  73:Generated_Source\PSoC5/Opamp_1.c **** * Function Name:   Opamp_1_Start
+  74:Generated_Source\PSoC5/Opamp_1.c **** ********************************************************************************
+  75:Generated_Source\PSoC5/Opamp_1.c **** *
+  76:Generated_Source\PSoC5/Opamp_1.c **** * Summary:
+  77:Generated_Source\PSoC5/Opamp_1.c **** *  The start function initializes the Analog Buffer with the default values and 
+  78:Generated_Source\PSoC5/Opamp_1.c **** *  sets the power to the given level. A power level of 0, is same as 
+  79:Generated_Source\PSoC5/Opamp_1.c **** *  executing the stop function.
+  80:Generated_Source\PSoC5/Opamp_1.c **** *
+  81:Generated_Source\PSoC5/Opamp_1.c **** * Parameters:
+  82:Generated_Source\PSoC5/Opamp_1.c **** *  void
+  83:Generated_Source\PSoC5/Opamp_1.c **** *
+  84:Generated_Source\PSoC5/Opamp_1.c **** * Return:
+  85:Generated_Source\PSoC5/Opamp_1.c **** *  void
+  86:Generated_Source\PSoC5/Opamp_1.c **** *
+  87:Generated_Source\PSoC5/Opamp_1.c **** * Global variables:
+  88:Generated_Source\PSoC5/Opamp_1.c **** *  Opamp_1_initVar: Used to check the initial configuration, modified 
+  89:Generated_Source\PSoC5/Opamp_1.c **** *  when this function is called for the first time.
+  90:Generated_Source\PSoC5/Opamp_1.c **** *
+  91:Generated_Source\PSoC5/Opamp_1.c **** *******************************************************************************/
+  92:Generated_Source\PSoC5/Opamp_1.c **** void Opamp_1_Start(void) 
+  93:Generated_Source\PSoC5/Opamp_1.c **** {
+  94:Generated_Source\PSoC5/Opamp_1.c ****     if(Opamp_1_initVar == 0u)
+  95:Generated_Source\PSoC5/Opamp_1.c ****     {
+  96:Generated_Source\PSoC5/Opamp_1.c ****         Opamp_1_initVar = 1u;
+  97:Generated_Source\PSoC5/Opamp_1.c ****         Opamp_1_Init();
+  98:Generated_Source\PSoC5/Opamp_1.c ****     }
+  99:Generated_Source\PSoC5/Opamp_1.c **** 
+ 100:Generated_Source\PSoC5/Opamp_1.c ****     Opamp_1_Enable();
+ 101:Generated_Source\PSoC5/Opamp_1.c **** }
+ 102:Generated_Source\PSoC5/Opamp_1.c **** 
+ 103:Generated_Source\PSoC5/Opamp_1.c **** 
+ 104:Generated_Source\PSoC5/Opamp_1.c **** /*******************************************************************************
+ 105:Generated_Source\PSoC5/Opamp_1.c **** * Function Name: Opamp_1_Stop
+ 106:Generated_Source\PSoC5/Opamp_1.c **** ********************************************************************************
+ 107:Generated_Source\PSoC5/Opamp_1.c **** *
+ 108:Generated_Source\PSoC5/Opamp_1.c **** * Summary:
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccKCSMxK.s 			page 4
+
+
+ 109:Generated_Source\PSoC5/Opamp_1.c **** *  Powers down amplifier to lowest power state.
+ 110:Generated_Source\PSoC5/Opamp_1.c **** *
+ 111:Generated_Source\PSoC5/Opamp_1.c **** * Parameters:
+ 112:Generated_Source\PSoC5/Opamp_1.c **** *  void
+ 113:Generated_Source\PSoC5/Opamp_1.c **** *
+ 114:Generated_Source\PSoC5/Opamp_1.c **** * Return:
+ 115:Generated_Source\PSoC5/Opamp_1.c **** *  void
+ 116:Generated_Source\PSoC5/Opamp_1.c **** *
+ 117:Generated_Source\PSoC5/Opamp_1.c **** *******************************************************************************/
+ 118:Generated_Source\PSoC5/Opamp_1.c **** void Opamp_1_Stop(void) 
+ 119:Generated_Source\PSoC5/Opamp_1.c **** {
+  64              		.loc 1 119 0
+  65              		.cfi_startproc
+  66              		@ args = 0, pretend = 0, frame = 0
+  67              		@ frame_needed = 0, uses_anonymous_args = 0
+  68              		@ link register save eliminated.
+ 120:Generated_Source\PSoC5/Opamp_1.c ****     /* Disable power to buffer in active mode template */
+ 121:Generated_Source\PSoC5/Opamp_1.c ****     Opamp_1_PM_ACT_CFG_REG &= (uint8)(~Opamp_1_ACT_PWR_EN);
+  69              		.loc 1 121 0
+  70 0000 094B     		ldr	r3, .L6
+  71 0002 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+  72 0004 02F0FB02 		and	r2, r2, #251
+  73 0008 1A70     		strb	r2, [r3]
+ 122:Generated_Source\PSoC5/Opamp_1.c **** 
+ 123:Generated_Source\PSoC5/Opamp_1.c ****     /* Disable power to buffer in alternative active mode template */
+ 124:Generated_Source\PSoC5/Opamp_1.c ****     Opamp_1_PM_STBY_CFG_REG &= (uint8)(~Opamp_1_STBY_PWR_EN);
+  74              		.loc 1 124 0
+  75 000a 0849     		ldr	r1, .L6+4
+  76 000c 0A78     		ldrb	r2, [r1]	@ zero_extendqisi2
+  77 000e 02F0FB02 		and	r2, r2, #251
+  78 0012 0A70     		strb	r2, [r1]
+ 125:Generated_Source\PSoC5/Opamp_1.c ****     
+ 126:Generated_Source\PSoC5/Opamp_1.c ****     /* Disable negative charge pumps for ANIF only if all ABuf is turned OFF */
+ 127:Generated_Source\PSoC5/Opamp_1.c ****     if(Opamp_1_PM_ACT_CFG_REG == 0u)
+  79              		.loc 1 127 0
+  80 0014 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+  81 0016 13F0FF0F 		tst	r3, #255
+  82 001a 04D1     		bne	.L4
+ 128:Generated_Source\PSoC5/Opamp_1.c ****     {
+ 129:Generated_Source\PSoC5/Opamp_1.c ****         Opamp_1_PUMP_CR1_REG &= (uint8)(~(Opamp_1_PUMP_CR1_CLKSEL | Opamp_1_PUMP_CR1_FORCE));
+  83              		.loc 1 129 0
+  84 001c 044A     		ldr	r2, .L6+8
+  85 001e 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  86 0020 03F09F03 		and	r3, r3, #159
+  87 0024 1370     		strb	r3, [r2]
+  88              	.L4:
+  89 0026 7047     		bx	lr
+  90              	.L7:
+  91              		.align	2
+  92              	.L6:
+  93 0028 A4430040 		.word	1073759140
+  94 002c B4430040 		.word	1073759156
+  95 0030 77580040 		.word	1073764471
+  96              		.cfi_endproc
+  97              	.LFE3:
+  98              		.size	Opamp_1_Stop, .-Opamp_1_Stop
+  99              		.section	.text.Opamp_1_SetPower,"ax",%progbits
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccKCSMxK.s 			page 5
+
+
+ 100              		.align	2
+ 101              		.global	Opamp_1_SetPower
+ 102              		.thumb
+ 103              		.thumb_func
+ 104              		.type	Opamp_1_SetPower, %function
+ 105              	Opamp_1_SetPower:
+ 106              	.LFB4:
+ 130:Generated_Source\PSoC5/Opamp_1.c ****     }
+ 131:Generated_Source\PSoC5/Opamp_1.c **** }
+ 132:Generated_Source\PSoC5/Opamp_1.c **** 
+ 133:Generated_Source\PSoC5/Opamp_1.c **** 
+ 134:Generated_Source\PSoC5/Opamp_1.c **** /*******************************************************************************
+ 135:Generated_Source\PSoC5/Opamp_1.c **** * Function Name: Opamp_1_SetPower
+ 136:Generated_Source\PSoC5/Opamp_1.c **** ********************************************************************************
+ 137:Generated_Source\PSoC5/Opamp_1.c **** *
+ 138:Generated_Source\PSoC5/Opamp_1.c **** * Summary:
+ 139:Generated_Source\PSoC5/Opamp_1.c **** *  Sets power level of Analog buffer.
+ 140:Generated_Source\PSoC5/Opamp_1.c **** *
+ 141:Generated_Source\PSoC5/Opamp_1.c **** * Parameters: 
+ 142:Generated_Source\PSoC5/Opamp_1.c **** *  power: PSoC3: Sets power level between low (1) and high power (3).
+ 143:Generated_Source\PSoC5/Opamp_1.c **** *         PSoC5: Sets power level High (0)
+ 144:Generated_Source\PSoC5/Opamp_1.c **** *
+ 145:Generated_Source\PSoC5/Opamp_1.c **** * Return:
+ 146:Generated_Source\PSoC5/Opamp_1.c **** *  void
+ 147:Generated_Source\PSoC5/Opamp_1.c **** *
+ 148:Generated_Source\PSoC5/Opamp_1.c **** **********************************************************************************/
+ 149:Generated_Source\PSoC5/Opamp_1.c **** void Opamp_1_SetPower(uint8 power) 
+ 150:Generated_Source\PSoC5/Opamp_1.c **** {
+ 107              		.loc 1 150 0
+ 108              		.cfi_startproc
+ 109              		@ args = 0, pretend = 0, frame = 0
+ 110              		@ frame_needed = 0, uses_anonymous_args = 0
+ 111              		@ link register save eliminated.
+ 112              	.LVL0:
+ 151:Generated_Source\PSoC5/Opamp_1.c ****     #if (CY_PSOC3 || CY_PSOC5LP)
+ 152:Generated_Source\PSoC5/Opamp_1.c ****         Opamp_1_CR_REG &= (uint8)(~Opamp_1_PWR_MASK);
+ 113              		.loc 1 152 0
+ 114 0000 054B     		ldr	r3, .L9
+ 115 0002 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 116 0004 02F0FC02 		and	r2, r2, #252
+ 117 0008 1A70     		strb	r2, [r3]
+ 153:Generated_Source\PSoC5/Opamp_1.c ****         Opamp_1_CR_REG |= power & Opamp_1_PWR_MASK;      /* Set device power */
+ 118              		.loc 1 153 0
+ 119 000a 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 120 000c 00F00300 		and	r0, r0, #3
+ 121              	.LVL1:
+ 122 0010 1043     		orrs	r0, r0, r2
+ 123 0012 1870     		strb	r0, [r3]
+ 124 0014 7047     		bx	lr
+ 125              	.L10:
+ 126 0016 00BF     		.align	2
+ 127              	.L9:
+ 128 0018 5C580040 		.word	1073764444
+ 129              		.cfi_endproc
+ 130              	.LFE4:
+ 131              		.size	Opamp_1_SetPower, .-Opamp_1_SetPower
+ 132              		.section	.text.Opamp_1_Init,"ax",%progbits
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccKCSMxK.s 			page 6
+
+
+ 133              		.align	2
+ 134              		.global	Opamp_1_Init
+ 135              		.thumb
+ 136              		.thumb_func
+ 137              		.type	Opamp_1_Init, %function
+ 138              	Opamp_1_Init:
+ 139              	.LFB0:
+  40:Generated_Source\PSoC5/Opamp_1.c ****     Opamp_1_SetPower(Opamp_1_DEFAULT_POWER);
+ 140              		.loc 1 40 0
+ 141              		.cfi_startproc
+ 142              		@ args = 0, pretend = 0, frame = 0
+ 143              		@ frame_needed = 0, uses_anonymous_args = 0
+ 144 0000 08B5     		push	{r3, lr}
+ 145              		.cfi_def_cfa_offset 8
+ 146              		.cfi_offset 3, -8
+ 147              		.cfi_offset 14, -4
+  41:Generated_Source\PSoC5/Opamp_1.c **** }
+ 148              		.loc 1 41 0
+ 149 0002 0320     		movs	r0, #3
+ 150 0004 FFF7FEFF 		bl	Opamp_1_SetPower
+ 151              	.LVL2:
+ 152 0008 08BD     		pop	{r3, pc}
+ 153              		.cfi_endproc
+ 154              	.LFE0:
+ 155              		.size	Opamp_1_Init, .-Opamp_1_Init
+ 156 000a 00BF     		.section	.text.Opamp_1_Start,"ax",%progbits
+ 157              		.align	2
+ 158              		.global	Opamp_1_Start
+ 159              		.thumb
+ 160              		.thumb_func
+ 161              		.type	Opamp_1_Start, %function
+ 162              	Opamp_1_Start:
+ 163              	.LFB2:
+  93:Generated_Source\PSoC5/Opamp_1.c ****     if(Opamp_1_initVar == 0u)
+ 164              		.loc 1 93 0
+ 165              		.cfi_startproc
+ 166              		@ args = 0, pretend = 0, frame = 0
+ 167              		@ frame_needed = 0, uses_anonymous_args = 0
+ 168 0000 08B5     		push	{r3, lr}
+ 169              		.cfi_def_cfa_offset 8
+ 170              		.cfi_offset 3, -8
+ 171              		.cfi_offset 14, -4
+  94:Generated_Source\PSoC5/Opamp_1.c ****     {
+ 172              		.loc 1 94 0
+ 173 0002 054B     		ldr	r3, .L16
+ 174 0004 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 175 0006 23B9     		cbnz	r3, .L14
+  96:Generated_Source\PSoC5/Opamp_1.c ****         Opamp_1_Init();
+ 176              		.loc 1 96 0
+ 177 0008 0122     		movs	r2, #1
+ 178 000a 034B     		ldr	r3, .L16
+ 179 000c 1A70     		strb	r2, [r3]
+  97:Generated_Source\PSoC5/Opamp_1.c ****     }
+ 180              		.loc 1 97 0
+ 181 000e FFF7FEFF 		bl	Opamp_1_Init
+ 182              	.LVL3:
+ 183              	.L14:
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccKCSMxK.s 			page 7
+
+
+ 100:Generated_Source\PSoC5/Opamp_1.c **** }
+ 184              		.loc 1 100 0
+ 185 0012 FFF7FEFF 		bl	Opamp_1_Enable
+ 186              	.LVL4:
+ 187 0016 08BD     		pop	{r3, pc}
+ 188              	.L17:
+ 189              		.align	2
+ 190              	.L16:
+ 191 0018 00000000 		.word	.LANCHOR0
+ 192              		.cfi_endproc
+ 193              	.LFE2:
+ 194              		.size	Opamp_1_Start, .-Opamp_1_Start
+ 195              		.global	Opamp_1_initVar
+ 196              		.bss
+ 197              		.set	.LANCHOR0,. + 0
+ 198              		.type	Opamp_1_initVar, %object
+ 199              		.size	Opamp_1_initVar, 1
+ 200              	Opamp_1_initVar:
+ 201 0000 00       		.space	1
+ 202              		.text
+ 203              	.Letext0:
+ 204              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 205              		.section	.debug_info,"",%progbits
+ 206              	.Ldebug_info0:
+ 207 0000 46010000 		.4byte	0x146
+ 208 0004 0400     		.2byte	0x4
+ 209 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 210 000a 04       		.byte	0x4
+ 211 000b 01       		.uleb128 0x1
+ 212 000c 57000000 		.4byte	.LASF20
+ 213 0010 01       		.byte	0x1
+ 214 0011 15010000 		.4byte	.LASF21
+ 215 0015 99010000 		.4byte	.LASF22
+ 216 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 217 001d 00000000 		.4byte	0
+ 218 0021 00000000 		.4byte	.Ldebug_line0
+ 219 0025 02       		.uleb128 0x2
+ 220 0026 01       		.byte	0x1
+ 221 0027 06       		.byte	0x6
+ 222 0028 6A010000 		.4byte	.LASF0
+ 223 002c 02       		.uleb128 0x2
+ 224 002d 01       		.byte	0x1
+ 225 002e 08       		.byte	0x8
+ 226 002f 02010000 		.4byte	.LASF1
+ 227 0033 02       		.uleb128 0x2
+ 228 0034 02       		.byte	0x2
+ 229 0035 05       		.byte	0x5
+ 230 0036 8A010000 		.4byte	.LASF2
+ 231 003a 02       		.uleb128 0x2
+ 232 003b 02       		.byte	0x2
+ 233 003c 07       		.byte	0x7
+ 234 003d 57010000 		.4byte	.LASF3
+ 235 0041 02       		.uleb128 0x2
+ 236 0042 04       		.byte	0x4
+ 237 0043 05       		.byte	0x5
+ 238 0044 36010000 		.4byte	.LASF4
+ 239 0048 02       		.uleb128 0x2
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccKCSMxK.s 			page 8
+
+
+ 240 0049 04       		.byte	0x4
+ 241 004a 07       		.byte	0x7
+ 242 004b 2E000000 		.4byte	.LASF5
+ 243 004f 02       		.uleb128 0x2
+ 244 0050 08       		.byte	0x8
+ 245 0051 05       		.byte	0x5
+ 246 0052 00000000 		.4byte	.LASF6
+ 247 0056 02       		.uleb128 0x2
+ 248 0057 08       		.byte	0x8
+ 249 0058 07       		.byte	0x7
+ 250 0059 40000000 		.4byte	.LASF7
+ 251 005d 03       		.uleb128 0x3
+ 252 005e 04       		.byte	0x4
+ 253 005f 05       		.byte	0x5
+ 254 0060 696E7400 		.ascii	"int\000"
+ 255 0064 02       		.uleb128 0x2
+ 256 0065 04       		.byte	0x4
+ 257 0066 07       		.byte	0x7
+ 258 0067 0E000000 		.4byte	.LASF8
+ 259 006b 04       		.uleb128 0x4
+ 260 006c 28000000 		.4byte	.LASF12
+ 261 0070 02       		.byte	0x2
+ 262 0071 9201     		.2byte	0x192
+ 263 0073 2C000000 		.4byte	0x2c
+ 264 0077 02       		.uleb128 0x2
+ 265 0078 04       		.byte	0x4
+ 266 0079 04       		.byte	0x4
+ 267 007a 76010000 		.4byte	.LASF9
+ 268 007e 02       		.uleb128 0x2
+ 269 007f 08       		.byte	0x8
+ 270 0080 04       		.byte	0x4
+ 271 0081 3F010000 		.4byte	.LASF10
+ 272 0085 02       		.uleb128 0x2
+ 273 0086 01       		.byte	0x1
+ 274 0087 08       		.byte	0x8
+ 275 0088 10010000 		.4byte	.LASF11
+ 276 008c 04       		.uleb128 0x4
+ 277 008d 94010000 		.4byte	.LASF13
+ 278 0091 02       		.byte	0x2
+ 279 0092 3C02     		.2byte	0x23c
+ 280 0094 98000000 		.4byte	0x98
+ 281 0098 05       		.uleb128 0x5
+ 282 0099 6B000000 		.4byte	0x6b
+ 283 009d 02       		.uleb128 0x2
+ 284 009e 04       		.byte	0x4
+ 285 009f 07       		.byte	0x7
+ 286 00a0 EC010000 		.4byte	.LASF14
+ 287 00a4 06       		.uleb128 0x6
+ 288 00a5 F5010000 		.4byte	.LASF15
+ 289 00a9 01       		.byte	0x1
+ 290 00aa 3B       		.byte	0x3b
+ 291 00ab 00000000 		.4byte	.LFB1
+ 292 00af 28000000 		.4byte	.LFE1-.LFB1
+ 293 00b3 01       		.uleb128 0x1
+ 294 00b4 9C       		.byte	0x9c
+ 295 00b5 06       		.uleb128 0x6
+ 296 00b6 1B000000 		.4byte	.LASF16
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccKCSMxK.s 			page 9
+
+
+ 297 00ba 01       		.byte	0x1
+ 298 00bb 76       		.byte	0x76
+ 299 00bc 00000000 		.4byte	.LFB3
+ 300 00c0 34000000 		.4byte	.LFE3-.LFB3
+ 301 00c4 01       		.uleb128 0x1
+ 302 00c5 9C       		.byte	0x9c
+ 303 00c6 07       		.uleb128 0x7
+ 304 00c7 46010000 		.4byte	.LASF17
+ 305 00cb 01       		.byte	0x1
+ 306 00cc 95       		.byte	0x95
+ 307 00cd 00000000 		.4byte	.LFB4
+ 308 00d1 1C000000 		.4byte	.LFE4-.LFB4
+ 309 00d5 01       		.uleb128 0x1
+ 310 00d6 9C       		.byte	0x9c
+ 311 00d7 EB000000 		.4byte	0xeb
+ 312 00db 08       		.uleb128 0x8
+ 313 00dc E6010000 		.4byte	.LASF23
+ 314 00e0 01       		.byte	0x1
+ 315 00e1 95       		.byte	0x95
+ 316 00e2 6B000000 		.4byte	0x6b
+ 317 00e6 00000000 		.4byte	.LLST0
+ 318 00ea 00       		.byte	0
+ 319 00eb 07       		.uleb128 0x7
+ 320 00ec F5000000 		.4byte	.LASF18
+ 321 00f0 01       		.byte	0x1
+ 322 00f1 27       		.byte	0x27
+ 323 00f2 00000000 		.4byte	.LFB0
+ 324 00f6 0A000000 		.4byte	.LFE0-.LFB0
+ 325 00fa 01       		.uleb128 0x1
+ 326 00fb 9C       		.byte	0x9c
+ 327 00fc 10010000 		.4byte	0x110
+ 328 0100 09       		.uleb128 0x9
+ 329 0101 08000000 		.4byte	.LVL2
+ 330 0105 C6000000 		.4byte	0xc6
+ 331 0109 0A       		.uleb128 0xa
+ 332 010a 01       		.uleb128 0x1
+ 333 010b 50       		.byte	0x50
+ 334 010c 01       		.uleb128 0x1
+ 335 010d 33       		.byte	0x33
+ 336 010e 00       		.byte	0
+ 337 010f 00       		.byte	0
+ 338 0110 07       		.uleb128 0x7
+ 339 0111 7C010000 		.4byte	.LASF19
+ 340 0115 01       		.byte	0x1
+ 341 0116 5C       		.byte	0x5c
+ 342 0117 00000000 		.4byte	.LFB2
+ 343 011b 1C000000 		.4byte	.LFE2-.LFB2
+ 344 011f 01       		.uleb128 0x1
+ 345 0120 9C       		.byte	0x9c
+ 346 0121 38010000 		.4byte	0x138
+ 347 0125 0B       		.uleb128 0xb
+ 348 0126 12000000 		.4byte	.LVL3
+ 349 012a EB000000 		.4byte	0xeb
+ 350 012e 0B       		.uleb128 0xb
+ 351 012f 16000000 		.4byte	.LVL4
+ 352 0133 A4000000 		.4byte	0xa4
+ 353 0137 00       		.byte	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccKCSMxK.s 			page 10
+
+
+ 354 0138 0C       		.uleb128 0xc
+ 355 0139 E5000000 		.4byte	.LASF24
+ 356 013d 01       		.byte	0x1
+ 357 013e 14       		.byte	0x14
+ 358 013f 6B000000 		.4byte	0x6b
+ 359 0143 05       		.uleb128 0x5
+ 360 0144 03       		.byte	0x3
+ 361 0145 00000000 		.4byte	Opamp_1_initVar
+ 362 0149 00       		.byte	0
+ 363              		.section	.debug_abbrev,"",%progbits
+ 364              	.Ldebug_abbrev0:
+ 365 0000 01       		.uleb128 0x1
+ 366 0001 11       		.uleb128 0x11
+ 367 0002 01       		.byte	0x1
+ 368 0003 25       		.uleb128 0x25
+ 369 0004 0E       		.uleb128 0xe
+ 370 0005 13       		.uleb128 0x13
+ 371 0006 0B       		.uleb128 0xb
+ 372 0007 03       		.uleb128 0x3
+ 373 0008 0E       		.uleb128 0xe
+ 374 0009 1B       		.uleb128 0x1b
+ 375 000a 0E       		.uleb128 0xe
+ 376 000b 55       		.uleb128 0x55
+ 377 000c 17       		.uleb128 0x17
+ 378 000d 11       		.uleb128 0x11
+ 379 000e 01       		.uleb128 0x1
+ 380 000f 10       		.uleb128 0x10
+ 381 0010 17       		.uleb128 0x17
+ 382 0011 00       		.byte	0
+ 383 0012 00       		.byte	0
+ 384 0013 02       		.uleb128 0x2
+ 385 0014 24       		.uleb128 0x24
+ 386 0015 00       		.byte	0
+ 387 0016 0B       		.uleb128 0xb
+ 388 0017 0B       		.uleb128 0xb
+ 389 0018 3E       		.uleb128 0x3e
+ 390 0019 0B       		.uleb128 0xb
+ 391 001a 03       		.uleb128 0x3
+ 392 001b 0E       		.uleb128 0xe
+ 393 001c 00       		.byte	0
+ 394 001d 00       		.byte	0
+ 395 001e 03       		.uleb128 0x3
+ 396 001f 24       		.uleb128 0x24
+ 397 0020 00       		.byte	0
+ 398 0021 0B       		.uleb128 0xb
+ 399 0022 0B       		.uleb128 0xb
+ 400 0023 3E       		.uleb128 0x3e
+ 401 0024 0B       		.uleb128 0xb
+ 402 0025 03       		.uleb128 0x3
+ 403 0026 08       		.uleb128 0x8
+ 404 0027 00       		.byte	0
+ 405 0028 00       		.byte	0
+ 406 0029 04       		.uleb128 0x4
+ 407 002a 16       		.uleb128 0x16
+ 408 002b 00       		.byte	0
+ 409 002c 03       		.uleb128 0x3
+ 410 002d 0E       		.uleb128 0xe
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccKCSMxK.s 			page 11
+
+
+ 411 002e 3A       		.uleb128 0x3a
+ 412 002f 0B       		.uleb128 0xb
+ 413 0030 3B       		.uleb128 0x3b
+ 414 0031 05       		.uleb128 0x5
+ 415 0032 49       		.uleb128 0x49
+ 416 0033 13       		.uleb128 0x13
+ 417 0034 00       		.byte	0
+ 418 0035 00       		.byte	0
+ 419 0036 05       		.uleb128 0x5
+ 420 0037 35       		.uleb128 0x35
+ 421 0038 00       		.byte	0
+ 422 0039 49       		.uleb128 0x49
+ 423 003a 13       		.uleb128 0x13
+ 424 003b 00       		.byte	0
+ 425 003c 00       		.byte	0
+ 426 003d 06       		.uleb128 0x6
+ 427 003e 2E       		.uleb128 0x2e
+ 428 003f 00       		.byte	0
+ 429 0040 3F       		.uleb128 0x3f
+ 430 0041 19       		.uleb128 0x19
+ 431 0042 03       		.uleb128 0x3
+ 432 0043 0E       		.uleb128 0xe
+ 433 0044 3A       		.uleb128 0x3a
+ 434 0045 0B       		.uleb128 0xb
+ 435 0046 3B       		.uleb128 0x3b
+ 436 0047 0B       		.uleb128 0xb
+ 437 0048 27       		.uleb128 0x27
+ 438 0049 19       		.uleb128 0x19
+ 439 004a 11       		.uleb128 0x11
+ 440 004b 01       		.uleb128 0x1
+ 441 004c 12       		.uleb128 0x12
+ 442 004d 06       		.uleb128 0x6
+ 443 004e 40       		.uleb128 0x40
+ 444 004f 18       		.uleb128 0x18
+ 445 0050 9742     		.uleb128 0x2117
+ 446 0052 19       		.uleb128 0x19
+ 447 0053 00       		.byte	0
+ 448 0054 00       		.byte	0
+ 449 0055 07       		.uleb128 0x7
+ 450 0056 2E       		.uleb128 0x2e
+ 451 0057 01       		.byte	0x1
+ 452 0058 3F       		.uleb128 0x3f
+ 453 0059 19       		.uleb128 0x19
+ 454 005a 03       		.uleb128 0x3
+ 455 005b 0E       		.uleb128 0xe
+ 456 005c 3A       		.uleb128 0x3a
+ 457 005d 0B       		.uleb128 0xb
+ 458 005e 3B       		.uleb128 0x3b
+ 459 005f 0B       		.uleb128 0xb
+ 460 0060 27       		.uleb128 0x27
+ 461 0061 19       		.uleb128 0x19
+ 462 0062 11       		.uleb128 0x11
+ 463 0063 01       		.uleb128 0x1
+ 464 0064 12       		.uleb128 0x12
+ 465 0065 06       		.uleb128 0x6
+ 466 0066 40       		.uleb128 0x40
+ 467 0067 18       		.uleb128 0x18
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccKCSMxK.s 			page 12
+
+
+ 468 0068 9742     		.uleb128 0x2117
+ 469 006a 19       		.uleb128 0x19
+ 470 006b 01       		.uleb128 0x1
+ 471 006c 13       		.uleb128 0x13
+ 472 006d 00       		.byte	0
+ 473 006e 00       		.byte	0
+ 474 006f 08       		.uleb128 0x8
+ 475 0070 05       		.uleb128 0x5
+ 476 0071 00       		.byte	0
+ 477 0072 03       		.uleb128 0x3
+ 478 0073 0E       		.uleb128 0xe
+ 479 0074 3A       		.uleb128 0x3a
+ 480 0075 0B       		.uleb128 0xb
+ 481 0076 3B       		.uleb128 0x3b
+ 482 0077 0B       		.uleb128 0xb
+ 483 0078 49       		.uleb128 0x49
+ 484 0079 13       		.uleb128 0x13
+ 485 007a 02       		.uleb128 0x2
+ 486 007b 17       		.uleb128 0x17
+ 487 007c 00       		.byte	0
+ 488 007d 00       		.byte	0
+ 489 007e 09       		.uleb128 0x9
+ 490 007f 898201   		.uleb128 0x4109
+ 491 0082 01       		.byte	0x1
+ 492 0083 11       		.uleb128 0x11
+ 493 0084 01       		.uleb128 0x1
+ 494 0085 31       		.uleb128 0x31
+ 495 0086 13       		.uleb128 0x13
+ 496 0087 00       		.byte	0
+ 497 0088 00       		.byte	0
+ 498 0089 0A       		.uleb128 0xa
+ 499 008a 8A8201   		.uleb128 0x410a
+ 500 008d 00       		.byte	0
+ 501 008e 02       		.uleb128 0x2
+ 502 008f 18       		.uleb128 0x18
+ 503 0090 9142     		.uleb128 0x2111
+ 504 0092 18       		.uleb128 0x18
+ 505 0093 00       		.byte	0
+ 506 0094 00       		.byte	0
+ 507 0095 0B       		.uleb128 0xb
+ 508 0096 898201   		.uleb128 0x4109
+ 509 0099 00       		.byte	0
+ 510 009a 11       		.uleb128 0x11
+ 511 009b 01       		.uleb128 0x1
+ 512 009c 31       		.uleb128 0x31
+ 513 009d 13       		.uleb128 0x13
+ 514 009e 00       		.byte	0
+ 515 009f 00       		.byte	0
+ 516 00a0 0C       		.uleb128 0xc
+ 517 00a1 34       		.uleb128 0x34
+ 518 00a2 00       		.byte	0
+ 519 00a3 03       		.uleb128 0x3
+ 520 00a4 0E       		.uleb128 0xe
+ 521 00a5 3A       		.uleb128 0x3a
+ 522 00a6 0B       		.uleb128 0xb
+ 523 00a7 3B       		.uleb128 0x3b
+ 524 00a8 0B       		.uleb128 0xb
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccKCSMxK.s 			page 13
+
+
+ 525 00a9 49       		.uleb128 0x49
+ 526 00aa 13       		.uleb128 0x13
+ 527 00ab 3F       		.uleb128 0x3f
+ 528 00ac 19       		.uleb128 0x19
+ 529 00ad 02       		.uleb128 0x2
+ 530 00ae 18       		.uleb128 0x18
+ 531 00af 00       		.byte	0
+ 532 00b0 00       		.byte	0
+ 533 00b1 00       		.byte	0
+ 534              		.section	.debug_loc,"",%progbits
+ 535              	.Ldebug_loc0:
+ 536              	.LLST0:
+ 537 0000 00000000 		.4byte	.LVL0
+ 538 0004 10000000 		.4byte	.LVL1
+ 539 0008 0100     		.2byte	0x1
+ 540 000a 50       		.byte	0x50
+ 541 000b 10000000 		.4byte	.LVL1
+ 542 000f 1C000000 		.4byte	.LFE4
+ 543 0013 0400     		.2byte	0x4
+ 544 0015 F3       		.byte	0xf3
+ 545 0016 01       		.uleb128 0x1
+ 546 0017 50       		.byte	0x50
+ 547 0018 9F       		.byte	0x9f
+ 548 0019 00000000 		.4byte	0
+ 549 001d 00000000 		.4byte	0
+ 550              		.section	.debug_aranges,"",%progbits
+ 551 0000 3C000000 		.4byte	0x3c
+ 552 0004 0200     		.2byte	0x2
+ 553 0006 00000000 		.4byte	.Ldebug_info0
+ 554 000a 04       		.byte	0x4
+ 555 000b 00       		.byte	0
+ 556 000c 0000     		.2byte	0
+ 557 000e 0000     		.2byte	0
+ 558 0010 00000000 		.4byte	.LFB1
+ 559 0014 28000000 		.4byte	.LFE1-.LFB1
+ 560 0018 00000000 		.4byte	.LFB3
+ 561 001c 34000000 		.4byte	.LFE3-.LFB3
+ 562 0020 00000000 		.4byte	.LFB4
+ 563 0024 1C000000 		.4byte	.LFE4-.LFB4
+ 564 0028 00000000 		.4byte	.LFB0
+ 565 002c 0A000000 		.4byte	.LFE0-.LFB0
+ 566 0030 00000000 		.4byte	.LFB2
+ 567 0034 1C000000 		.4byte	.LFE2-.LFB2
+ 568 0038 00000000 		.4byte	0
+ 569 003c 00000000 		.4byte	0
+ 570              		.section	.debug_ranges,"",%progbits
+ 571              	.Ldebug_ranges0:
+ 572 0000 00000000 		.4byte	.LFB1
+ 573 0004 28000000 		.4byte	.LFE1
+ 574 0008 00000000 		.4byte	.LFB3
+ 575 000c 34000000 		.4byte	.LFE3
+ 576 0010 00000000 		.4byte	.LFB4
+ 577 0014 1C000000 		.4byte	.LFE4
+ 578 0018 00000000 		.4byte	.LFB0
+ 579 001c 0A000000 		.4byte	.LFE0
+ 580 0020 00000000 		.4byte	.LFB2
+ 581 0024 1C000000 		.4byte	.LFE2
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccKCSMxK.s 			page 14
+
+
+ 582 0028 00000000 		.4byte	0
+ 583 002c 00000000 		.4byte	0
+ 584              		.section	.debug_line,"",%progbits
+ 585              	.Ldebug_line0:
+ 586 0000 A6000000 		.section	.debug_str,"MS",%progbits,1
+ 586      02004400 
+ 586      00000201 
+ 586      FB0E0D00 
+ 586      01010101 
+ 587              	.LASF6:
+ 588 0000 6C6F6E67 		.ascii	"long long int\000"
+ 588      206C6F6E 
+ 588      6720696E 
+ 588      7400
+ 589              	.LASF8:
+ 590 000e 756E7369 		.ascii	"unsigned int\000"
+ 590      676E6564 
+ 590      20696E74 
+ 590      00
+ 591              	.LASF16:
+ 592 001b 4F70616D 		.ascii	"Opamp_1_Stop\000"
+ 592      705F315F 
+ 592      53746F70 
+ 592      00
+ 593              	.LASF12:
+ 594 0028 75696E74 		.ascii	"uint8\000"
+ 594      3800
+ 595              	.LASF5:
+ 596 002e 6C6F6E67 		.ascii	"long unsigned int\000"
+ 596      20756E73 
+ 596      69676E65 
+ 596      6420696E 
+ 596      7400
+ 597              	.LASF7:
+ 598 0040 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 598      206C6F6E 
+ 598      6720756E 
+ 598      7369676E 
+ 598      65642069 
+ 599              	.LASF20:
+ 600 0057 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 600      4320342E 
+ 600      392E3320 
+ 600      32303135 
+ 600      30333033 
+ 601 008a 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 601      20726576 
+ 601      6973696F 
+ 601      6E203232 
+ 601      31323230 
+ 602 00bd 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 602      66756E63 
+ 602      74696F6E 
+ 602      2D736563 
+ 602      74696F6E 
+ 603              	.LASF24:
+ 604 00e5 4F70616D 		.ascii	"Opamp_1_initVar\000"
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccKCSMxK.s 			page 15
+
+
+ 604      705F315F 
+ 604      696E6974 
+ 604      56617200 
+ 605              	.LASF18:
+ 606 00f5 4F70616D 		.ascii	"Opamp_1_Init\000"
+ 606      705F315F 
+ 606      496E6974 
+ 606      00
+ 607              	.LASF1:
+ 608 0102 756E7369 		.ascii	"unsigned char\000"
+ 608      676E6564 
+ 608      20636861 
+ 608      7200
+ 609              	.LASF11:
+ 610 0110 63686172 		.ascii	"char\000"
+ 610      00
+ 611              	.LASF21:
+ 612 0115 47656E65 		.ascii	"Generated_Source\\PSoC5\\Opamp_1.c\000"
+ 612      72617465 
+ 612      645F536F 
+ 612      75726365 
+ 612      5C50536F 
+ 613              	.LASF4:
+ 614 0136 6C6F6E67 		.ascii	"long int\000"
+ 614      20696E74 
+ 614      00
+ 615              	.LASF10:
+ 616 013f 646F7562 		.ascii	"double\000"
+ 616      6C6500
+ 617              	.LASF17:
+ 618 0146 4F70616D 		.ascii	"Opamp_1_SetPower\000"
+ 618      705F315F 
+ 618      53657450 
+ 618      6F776572 
+ 618      00
+ 619              	.LASF3:
+ 620 0157 73686F72 		.ascii	"short unsigned int\000"
+ 620      7420756E 
+ 620      7369676E 
+ 620      65642069 
+ 620      6E7400
+ 621              	.LASF0:
+ 622 016a 7369676E 		.ascii	"signed char\000"
+ 622      65642063 
+ 622      68617200 
+ 623              	.LASF9:
+ 624 0176 666C6F61 		.ascii	"float\000"
+ 624      7400
+ 625              	.LASF19:
+ 626 017c 4F70616D 		.ascii	"Opamp_1_Start\000"
+ 626      705F315F 
+ 626      53746172 
+ 626      7400
+ 627              	.LASF2:
+ 628 018a 73686F72 		.ascii	"short int\000"
+ 628      7420696E 
+ 628      7400
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccKCSMxK.s 			page 16
+
+
+ 629              	.LASF13:
+ 630 0194 72656738 		.ascii	"reg8\000"
+ 630      00
+ 631              	.LASF22:
+ 632 0199 443A5C70 		.ascii	"D:\\pgm\\Cypress_dem_board\\CFP_reader\\cfp_reader\\"
+ 632      676D5C43 
+ 632      79707265 
+ 632      73735F64 
+ 632      656D5F62 
+ 633 01c8 575F6366 		.ascii	"W_cfp_reader\\cfp_reader.cydsn\000"
+ 633      705F7265 
+ 633      61646572 
+ 633      5C636670 
+ 633      5F726561 
+ 634              	.LASF23:
+ 635 01e6 706F7765 		.ascii	"power\000"
+ 635      7200
+ 636              	.LASF14:
+ 637 01ec 73697A65 		.ascii	"sizetype\000"
+ 637      74797065 
+ 637      00
+ 638              	.LASF15:
+ 639 01f5 4F70616D 		.ascii	"Opamp_1_Enable\000"
+ 639      705F315F 
+ 639      456E6162 
+ 639      6C6500
+ 640              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

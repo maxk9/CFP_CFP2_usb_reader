@@ -1,0 +1,939 @@
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczw5fdt.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"MDIO_Interface_PM.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.MDIO_Interface_SaveConfig,"ax",%progbits
+  19              		.align	2
+  20              		.global	MDIO_Interface_SaveConfig
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	MDIO_Interface_SaveConfig, %function
+  24              	MDIO_Interface_SaveConfig:
+  25              	.LFB0:
+  26              		.file 1 "Generated_Source\\PSoC5\\MDIO_Interface_PM.c"
+   1:Generated_Source\PSoC5/MDIO_Interface_PM.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * File Name: MDIO_Interface_PM.c
+   3:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * Version 1.20
+   4:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *
+   5:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * Description:
+   6:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *  This file contains the setup, control and status commands to support
+   7:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *  component operations in low power mode.
+   8:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *
+   9:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * Note:
+  10:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *
+  11:Generated_Source\PSoC5/MDIO_Interface_PM.c **** ********************************************************************************
+  12:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * Copyright 2013-2014, Cypress Semiconductor Corporation.  All rights reserved.
+  13:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * You may use this file only in accordance with the license, terms, conditions,
+  14:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  15:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * the software package with which this file was provided.
+  16:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *******************************************************************************/
+  17:Generated_Source\PSoC5/MDIO_Interface_PM.c **** 
+  18:Generated_Source\PSoC5/MDIO_Interface_PM.c **** #include "MDIO_Interface.h"
+  19:Generated_Source\PSoC5/MDIO_Interface_PM.c **** 
+  20:Generated_Source\PSoC5/MDIO_Interface_PM.c **** #if(MDIO_Interface_ADVANCED_MODE)
+  21:Generated_Source\PSoC5/MDIO_Interface_PM.c ****     #include "MDIO_Interface_REG.h"
+  22:Generated_Source\PSoC5/MDIO_Interface_PM.c **** #endif /* MDIO_Interface_ADVANCED_MODE */
+  23:Generated_Source\PSoC5/MDIO_Interface_PM.c **** 
+  24:Generated_Source\PSoC5/MDIO_Interface_PM.c **** static MDIO_Interface_BACKUP_STRUCT MDIO_Interface_backup =
+  25:Generated_Source\PSoC5/MDIO_Interface_PM.c **** {
+  26:Generated_Source\PSoC5/MDIO_Interface_PM.c ****     /* By default the component and interrupts are disabled */
+  27:Generated_Source\PSoC5/MDIO_Interface_PM.c ****     MDIO_Interface_DISABLED,
+  28:Generated_Source\PSoC5/MDIO_Interface_PM.c ****     MDIO_Interface_DISABLED
+  29:Generated_Source\PSoC5/MDIO_Interface_PM.c **** };
+  30:Generated_Source\PSoC5/MDIO_Interface_PM.c **** 
+  31:Generated_Source\PSoC5/MDIO_Interface_PM.c **** 
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczw5fdt.s 			page 2
+
+
+  32:Generated_Source\PSoC5/MDIO_Interface_PM.c **** /*******************************************************************************
+  33:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * Function Name: MDIO_Interface_SaveConfig
+  34:Generated_Source\PSoC5/MDIO_Interface_PM.c **** ********************************************************************************
+  35:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *
+  36:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * Summary:
+  37:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *  Saves MDIO_Interface configuration.
+  38:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *
+  39:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * Parameters:
+  40:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *  None.
+  41:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *
+  42:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * Return:
+  43:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *  None.
+  44:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *
+  45:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * Global Variables:
+  46:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *  MDIO_Interface_backup - modified when non-retention registers are saved.
+  47:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *
+  48:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * Reentrant:
+  49:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *  No.
+  50:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *
+  51:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *******************************************************************************/
+  52:Generated_Source\PSoC5/MDIO_Interface_PM.c **** void MDIO_Interface_SaveConfig(void) 
+  53:Generated_Source\PSoC5/MDIO_Interface_PM.c **** {
+  27              		.loc 1 53 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              		@ link register save eliminated.
+  54:Generated_Source\PSoC5/MDIO_Interface_PM.c ****     MDIO_Interface_backup.interruptState = MDIO_Interface_CONTROL_REG & MDIO_Interface_INT_EN;
+  32              		.loc 1 54 0
+  33 0000 034B     		ldr	r3, .L2
+  34 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+  35 0004 03F00203 		and	r3, r3, #2
+  36 0008 024A     		ldr	r2, .L2+4
+  37 000a 5370     		strb	r3, [r2, #1]
+  38 000c 7047     		bx	lr
+  39              	.L3:
+  40 000e 00BF     		.align	2
+  41              	.L2:
+  42 0010 7B650040 		.word	1073767803
+  43 0014 00000000 		.word	.LANCHOR0
+  44              		.cfi_endproc
+  45              	.LFE0:
+  46              		.size	MDIO_Interface_SaveConfig, .-MDIO_Interface_SaveConfig
+  47              		.section	.text.MDIO_Interface_RestoreConfig,"ax",%progbits
+  48              		.align	2
+  49              		.global	MDIO_Interface_RestoreConfig
+  50              		.thumb
+  51              		.thumb_func
+  52              		.type	MDIO_Interface_RestoreConfig, %function
+  53              	MDIO_Interface_RestoreConfig:
+  54              	.LFB1:
+  55:Generated_Source\PSoC5/MDIO_Interface_PM.c **** }
+  56:Generated_Source\PSoC5/MDIO_Interface_PM.c **** 
+  57:Generated_Source\PSoC5/MDIO_Interface_PM.c **** 
+  58:Generated_Source\PSoC5/MDIO_Interface_PM.c **** /*******************************************************************************
+  59:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * Function Name: MDIO_Interface_RestoreConfig
+  60:Generated_Source\PSoC5/MDIO_Interface_PM.c **** ********************************************************************************
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczw5fdt.s 			page 3
+
+
+  61:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *
+  62:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * Summary:
+  63:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *  Restores MDIO_Interface configuration.
+  64:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *
+  65:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * Parameters:
+  66:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *  None.
+  67:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *
+  68:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * Return:
+  69:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *  None.
+  70:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *
+  71:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * Global Variables:
+  72:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *  MDIO_Interface_backup - used when non-retention registers are restored.
+  73:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *
+  74:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * Reentrant:
+  75:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *  No.
+  76:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *
+  77:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *******************************************************************************/
+  78:Generated_Source\PSoC5/MDIO_Interface_PM.c **** void MDIO_Interface_RestoreConfig(void) 
+  79:Generated_Source\PSoC5/MDIO_Interface_PM.c **** {
+  55              		.loc 1 79 0
+  56              		.cfi_startproc
+  57              		@ args = 0, pretend = 0, frame = 0
+  58              		@ frame_needed = 0, uses_anonymous_args = 0
+  59              		@ link register save eliminated.
+  80:Generated_Source\PSoC5/MDIO_Interface_PM.c ****     #if(MDIO_Interface_ADVANCED_MODE)
+  81:Generated_Source\PSoC5/MDIO_Interface_PM.c ****         /* Set memory type of each register page */
+  82:Generated_Source\PSoC5/MDIO_Interface_PM.c ****         MDIO_Interface_MEM_TYPE_REG   = MDIO_Interface_PAGE_MEM_TYPE;
+  60              		.loc 1 82 0
+  61 0000 3F23     		movs	r3, #63
+  62 0002 044A     		ldr	r2, .L5
+  63 0004 1370     		strb	r3, [r2]
+  83:Generated_Source\PSoC5/MDIO_Interface_PM.c ****         /* Set data width of each register page */
+  84:Generated_Source\PSoC5/MDIO_Interface_PM.c ****         MDIO_Interface_PAGE_WIDTH_REG = MDIO_Interface_PAGE_DATA_WIDTH;
+  64              		.loc 1 84 0
+  65 0006 0132     		adds	r2, r2, #1
+  66 0008 1370     		strb	r3, [r2]
+  85:Generated_Source\PSoC5/MDIO_Interface_PM.c ****     #endif /* MDIO_Interface_ADVANCED_MODE */
+  86:Generated_Source\PSoC5/MDIO_Interface_PM.c **** 
+  87:Generated_Source\PSoC5/MDIO_Interface_PM.c ****     /* Restore interrupt state */
+  88:Generated_Source\PSoC5/MDIO_Interface_PM.c ****     MDIO_Interface_CONTROL_REG = MDIO_Interface_backup.interruptState;
+  67              		.loc 1 88 0
+  68 000a 034B     		ldr	r3, .L5+4
+  69 000c 5A78     		ldrb	r2, [r3, #1]	@ zero_extendqisi2
+  70 000e 034B     		ldr	r3, .L5+8
+  71 0010 1A70     		strb	r2, [r3]
+  72 0012 7047     		bx	lr
+  73              	.L6:
+  74              		.align	2
+  75              	.L5:
+  76 0014 79640040 		.word	1073767545
+  77 0018 00000000 		.word	.LANCHOR0
+  78 001c 7B650040 		.word	1073767803
+  79              		.cfi_endproc
+  80              	.LFE1:
+  81              		.size	MDIO_Interface_RestoreConfig, .-MDIO_Interface_RestoreConfig
+  82              		.section	.text.MDIO_Interface_Sleep,"ax",%progbits
+  83              		.align	2
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczw5fdt.s 			page 4
+
+
+  84              		.global	MDIO_Interface_Sleep
+  85              		.thumb
+  86              		.thumb_func
+  87              		.type	MDIO_Interface_Sleep, %function
+  88              	MDIO_Interface_Sleep:
+  89              	.LFB2:
+  89:Generated_Source\PSoC5/MDIO_Interface_PM.c **** }
+  90:Generated_Source\PSoC5/MDIO_Interface_PM.c **** 
+  91:Generated_Source\PSoC5/MDIO_Interface_PM.c **** 
+  92:Generated_Source\PSoC5/MDIO_Interface_PM.c **** /*******************************************************************************
+  93:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * Function Name: MDIO_Interface_Sleep
+  94:Generated_Source\PSoC5/MDIO_Interface_PM.c **** ********************************************************************************
+  95:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *
+  96:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * Summary:
+  97:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *  Disables block's operation and saves its configuration. Should be called
+  98:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *  prior to entering low power mode.
+  99:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *
+ 100:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * Parameters:
+ 101:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *  None.
+ 102:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *
+ 103:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * Return:
+ 104:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *  None.
+ 105:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *
+ 106:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * Global Variables:
+ 107:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *  MDIO_Interface_backup - modified when non-retention registers are saved.
+ 108:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *
+ 109:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * Reentrant:
+ 110:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *  No.
+ 111:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *
+ 112:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *******************************************************************************/
+ 113:Generated_Source\PSoC5/MDIO_Interface_PM.c **** void MDIO_Interface_Sleep(void) 
+ 114:Generated_Source\PSoC5/MDIO_Interface_PM.c **** {
+  90              		.loc 1 114 0
+  91              		.cfi_startproc
+  92              		@ args = 0, pretend = 0, frame = 0
+  93              		@ frame_needed = 0, uses_anonymous_args = 0
+  94 0000 08B5     		push	{r3, lr}
+  95              		.cfi_def_cfa_offset 8
+  96              		.cfi_offset 3, -8
+  97              		.cfi_offset 14, -4
+ 115:Generated_Source\PSoC5/MDIO_Interface_PM.c ****     if(MDIO_Interface_DISABLED != (MDIO_Interface_CONTROL_REG & MDIO_Interface_EN))
+  98              		.loc 1 115 0
+  99 0002 084B     		ldr	r3, .L11
+ 100 0004 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 101 0006 13F0010F 		tst	r3, #1
+ 102 000a 03D0     		beq	.L8
+ 116:Generated_Source\PSoC5/MDIO_Interface_PM.c ****     {
+ 117:Generated_Source\PSoC5/MDIO_Interface_PM.c ****         MDIO_Interface_backup.enableState = MDIO_Interface_ENABLED;
+ 103              		.loc 1 117 0
+ 104 000c 0122     		movs	r2, #1
+ 105 000e 064B     		ldr	r3, .L11+4
+ 106 0010 1A70     		strb	r2, [r3]
+ 107 0012 02E0     		b	.L9
+ 108              	.L8:
+ 118:Generated_Source\PSoC5/MDIO_Interface_PM.c ****     }
+ 119:Generated_Source\PSoC5/MDIO_Interface_PM.c ****     else /* Component is disabled */
+ 120:Generated_Source\PSoC5/MDIO_Interface_PM.c ****     {
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczw5fdt.s 			page 5
+
+
+ 121:Generated_Source\PSoC5/MDIO_Interface_PM.c ****         MDIO_Interface_backup.enableState = MDIO_Interface_DISABLED;
+ 109              		.loc 1 121 0
+ 110 0014 0022     		movs	r2, #0
+ 111 0016 044B     		ldr	r3, .L11+4
+ 112 0018 1A70     		strb	r2, [r3]
+ 113              	.L9:
+ 122:Generated_Source\PSoC5/MDIO_Interface_PM.c ****     }
+ 123:Generated_Source\PSoC5/MDIO_Interface_PM.c **** 
+ 124:Generated_Source\PSoC5/MDIO_Interface_PM.c ****     /* Save registers configuration */
+ 125:Generated_Source\PSoC5/MDIO_Interface_PM.c ****     MDIO_Interface_SaveConfig();
+ 114              		.loc 1 125 0
+ 115 001a FFF7FEFF 		bl	MDIO_Interface_SaveConfig
+ 116              	.LVL0:
+ 126:Generated_Source\PSoC5/MDIO_Interface_PM.c **** 
+ 127:Generated_Source\PSoC5/MDIO_Interface_PM.c ****     /* Stop component */
+ 128:Generated_Source\PSoC5/MDIO_Interface_PM.c ****     MDIO_Interface_Stop();
+ 117              		.loc 1 128 0
+ 118 001e FFF7FEFF 		bl	MDIO_Interface_Stop
+ 119              	.LVL1:
+ 120 0022 08BD     		pop	{r3, pc}
+ 121              	.L12:
+ 122              		.align	2
+ 123              	.L11:
+ 124 0024 7B650040 		.word	1073767803
+ 125 0028 00000000 		.word	.LANCHOR0
+ 126              		.cfi_endproc
+ 127              	.LFE2:
+ 128              		.size	MDIO_Interface_Sleep, .-MDIO_Interface_Sleep
+ 129              		.section	.text.MDIO_Interface_Wakeup,"ax",%progbits
+ 130              		.align	2
+ 131              		.global	MDIO_Interface_Wakeup
+ 132              		.thumb
+ 133              		.thumb_func
+ 134              		.type	MDIO_Interface_Wakeup, %function
+ 135              	MDIO_Interface_Wakeup:
+ 136              	.LFB3:
+ 129:Generated_Source\PSoC5/MDIO_Interface_PM.c **** }
+ 130:Generated_Source\PSoC5/MDIO_Interface_PM.c **** 
+ 131:Generated_Source\PSoC5/MDIO_Interface_PM.c **** 
+ 132:Generated_Source\PSoC5/MDIO_Interface_PM.c **** /*******************************************************************************
+ 133:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * Function Name: MDIO_Interface_Wakeup
+ 134:Generated_Source\PSoC5/MDIO_Interface_PM.c **** ********************************************************************************
+ 135:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *
+ 136:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * Summary:
+ 137:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *  Enables block's operation and restores its configuration. Should be called
+ 138:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *  after awaking from low power mode.
+ 139:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *
+ 140:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * Parameters:
+ 141:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *  None.
+ 142:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *
+ 143:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * Return:
+ 144:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *  None.
+ 145:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *
+ 146:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * Global Variables:
+ 147:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *  MDIO_Interface_backup - used when non-retention registers are restored.
+ 148:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *
+ 149:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * Reentrant:
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczw5fdt.s 			page 6
+
+
+ 150:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *  No.
+ 151:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *
+ 152:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *******************************************************************************/
+ 153:Generated_Source\PSoC5/MDIO_Interface_PM.c **** void MDIO_Interface_Wakeup(void)  
+ 154:Generated_Source\PSoC5/MDIO_Interface_PM.c **** {
+ 137              		.loc 1 154 0
+ 138              		.cfi_startproc
+ 139              		@ args = 0, pretend = 0, frame = 0
+ 140              		@ frame_needed = 0, uses_anonymous_args = 0
+ 141 0000 08B5     		push	{r3, lr}
+ 142              		.cfi_def_cfa_offset 8
+ 143              		.cfi_offset 3, -8
+ 144              		.cfi_offset 14, -4
+ 155:Generated_Source\PSoC5/MDIO_Interface_PM.c ****     /* Restore registers values */
+ 156:Generated_Source\PSoC5/MDIO_Interface_PM.c ****     MDIO_Interface_RestoreConfig();
+ 145              		.loc 1 156 0
+ 146 0002 FFF7FEFF 		bl	MDIO_Interface_RestoreConfig
+ 147              	.LVL2:
+ 157:Generated_Source\PSoC5/MDIO_Interface_PM.c **** 
+ 158:Generated_Source\PSoC5/MDIO_Interface_PM.c ****     if(MDIO_Interface_DISABLED != MDIO_Interface_backup.enableState)
+ 148              		.loc 1 158 0
+ 149 0006 034B     		ldr	r3, .L16
+ 150 0008 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 151 000a 0BB1     		cbz	r3, .L13
+ 159:Generated_Source\PSoC5/MDIO_Interface_PM.c ****     {
+ 160:Generated_Source\PSoC5/MDIO_Interface_PM.c ****         /* Enable component's operation */
+ 161:Generated_Source\PSoC5/MDIO_Interface_PM.c ****         MDIO_Interface_Enable();
+ 152              		.loc 1 161 0
+ 153 000c FFF7FEFF 		bl	MDIO_Interface_Enable
+ 154              	.LVL3:
+ 155              	.L13:
+ 156 0010 08BD     		pop	{r3, pc}
+ 157              	.L17:
+ 158 0012 00BF     		.align	2
+ 159              	.L16:
+ 160 0014 00000000 		.word	.LANCHOR0
+ 161              		.cfi_endproc
+ 162              	.LFE3:
+ 163              		.size	MDIO_Interface_Wakeup, .-MDIO_Interface_Wakeup
+ 164              		.bss
+ 165              		.align	2
+ 166              		.set	.LANCHOR0,. + 0
+ 167              		.type	MDIO_Interface_backup, %object
+ 168              		.size	MDIO_Interface_backup, 2
+ 169              	MDIO_Interface_backup:
+ 170 0000 0000     		.space	2
+ 171 0002 0000     		.text
+ 172              	.Letext0:
+ 173              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 174              		.file 3 "Generated_Source\\PSoC5\\MDIO_Interface.h"
+ 175              		.section	.debug_info,"",%progbits
+ 176              	.Ldebug_info0:
+ 177 0000 5E010000 		.4byte	0x15e
+ 178 0004 0400     		.2byte	0x4
+ 179 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 180 000a 04       		.byte	0x4
+ 181 000b 01       		.uleb128 0x1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczw5fdt.s 			page 7
+
+
+ 182 000c E2000000 		.4byte	.LASF24
+ 183 0010 01       		.byte	0x1
+ 184 0011 0E000000 		.4byte	.LASF25
+ 185 0015 25020000 		.4byte	.LASF26
+ 186 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 187 001d 00000000 		.4byte	0
+ 188 0021 00000000 		.4byte	.Ldebug_line0
+ 189 0025 02       		.uleb128 0x2
+ 190 0026 01       		.byte	0x1
+ 191 0027 06       		.byte	0x6
+ 192 0028 E7010000 		.4byte	.LASF0
+ 193 002c 02       		.uleb128 0x2
+ 194 002d 01       		.byte	0x1
+ 195 002e 08       		.byte	0x8
+ 196 002f 70010000 		.4byte	.LASF1
+ 197 0033 02       		.uleb128 0x2
+ 198 0034 02       		.byte	0x2
+ 199 0035 05       		.byte	0x5
+ 200 0036 16020000 		.4byte	.LASF2
+ 201 003a 02       		.uleb128 0x2
+ 202 003b 02       		.byte	0x2
+ 203 003c 07       		.byte	0x7
+ 204 003d D4010000 		.4byte	.LASF3
+ 205 0041 02       		.uleb128 0x2
+ 206 0042 04       		.byte	0x4
+ 207 0043 05       		.byte	0x5
+ 208 0044 98010000 		.4byte	.LASF4
+ 209 0048 02       		.uleb128 0x2
+ 210 0049 04       		.byte	0x4
+ 211 004a 07       		.byte	0x7
+ 212 004b 8F000000 		.4byte	.LASF5
+ 213 004f 02       		.uleb128 0x2
+ 214 0050 08       		.byte	0x8
+ 215 0051 05       		.byte	0x5
+ 216 0052 00000000 		.4byte	.LASF6
+ 217 0056 02       		.uleb128 0x2
+ 218 0057 08       		.byte	0x8
+ 219 0058 07       		.byte	0x7
+ 220 0059 A1000000 		.4byte	.LASF7
+ 221 005d 03       		.uleb128 0x3
+ 222 005e 04       		.byte	0x4
+ 223 005f 05       		.byte	0x5
+ 224 0060 696E7400 		.ascii	"int\000"
+ 225 0064 02       		.uleb128 0x2
+ 226 0065 04       		.byte	0x4
+ 227 0066 07       		.byte	0x7
+ 228 0067 45000000 		.4byte	.LASF8
+ 229 006b 04       		.uleb128 0x4
+ 230 006c 89000000 		.4byte	.LASF12
+ 231 0070 02       		.byte	0x2
+ 232 0071 9201     		.2byte	0x192
+ 233 0073 2C000000 		.4byte	0x2c
+ 234 0077 02       		.uleb128 0x2
+ 235 0078 04       		.byte	0x4
+ 236 0079 04       		.byte	0x4
+ 237 007a 10020000 		.4byte	.LASF9
+ 238 007e 02       		.uleb128 0x2
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczw5fdt.s 			page 8
+
+
+ 239 007f 08       		.byte	0x8
+ 240 0080 04       		.byte	0x4
+ 241 0081 A1010000 		.4byte	.LASF10
+ 242 0085 02       		.uleb128 0x2
+ 243 0086 01       		.byte	0x1
+ 244 0087 08       		.byte	0x8
+ 245 0088 7E010000 		.4byte	.LASF11
+ 246 008c 04       		.uleb128 0x4
+ 247 008d 20020000 		.4byte	.LASF13
+ 248 0091 02       		.byte	0x2
+ 249 0092 3C02     		.2byte	0x23c
+ 250 0094 98000000 		.4byte	0x98
+ 251 0098 05       		.uleb128 0x5
+ 252 0099 6B000000 		.4byte	0x6b
+ 253 009d 02       		.uleb128 0x2
+ 254 009e 04       		.byte	0x4
+ 255 009f 07       		.byte	0x7
+ 256 00a0 72020000 		.4byte	.LASF14
+ 257 00a4 06       		.uleb128 0x6
+ 258 00a5 02       		.byte	0x2
+ 259 00a6 03       		.byte	0x3
+ 260 00a7 31       		.byte	0x31
+ 261 00a8 C5000000 		.4byte	0xc5
+ 262 00ac 07       		.uleb128 0x7
+ 263 00ad 39000000 		.4byte	.LASF15
+ 264 00b1 03       		.byte	0x3
+ 265 00b2 33       		.byte	0x33
+ 266 00b3 6B000000 		.4byte	0x6b
+ 267 00b7 00       		.byte	0
+ 268 00b8 07       		.uleb128 0x7
+ 269 00b9 7B020000 		.4byte	.LASF16
+ 270 00bd 03       		.byte	0x3
+ 271 00be 34       		.byte	0x34
+ 272 00bf 6B000000 		.4byte	0x6b
+ 273 00c3 01       		.byte	0x1
+ 274 00c4 00       		.byte	0
+ 275 00c5 08       		.uleb128 0x8
+ 276 00c6 52000000 		.4byte	.LASF17
+ 277 00ca 03       		.byte	0x3
+ 278 00cb 35       		.byte	0x35
+ 279 00cc A4000000 		.4byte	0xa4
+ 280 00d0 09       		.uleb128 0x9
+ 281 00d1 6F000000 		.4byte	.LASF18
+ 282 00d5 01       		.byte	0x1
+ 283 00d6 34       		.byte	0x34
+ 284 00d7 00000000 		.4byte	.LFB0
+ 285 00db 18000000 		.4byte	.LFE0-.LFB0
+ 286 00df 01       		.uleb128 0x1
+ 287 00e0 9C       		.byte	0x9c
+ 288 00e1 09       		.uleb128 0x9
+ 289 00e2 F3010000 		.4byte	.LASF19
+ 290 00e6 01       		.byte	0x1
+ 291 00e7 4E       		.byte	0x4e
+ 292 00e8 00000000 		.4byte	.LFB1
+ 293 00ec 20000000 		.4byte	.LFE1-.LFB1
+ 294 00f0 01       		.uleb128 0x1
+ 295 00f1 9C       		.byte	0x9c
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczw5fdt.s 			page 9
+
+
+ 296 00f2 0A       		.uleb128 0xa
+ 297 00f3 83010000 		.4byte	.LASF20
+ 298 00f7 01       		.byte	0x1
+ 299 00f8 71       		.byte	0x71
+ 300 00f9 00000000 		.4byte	.LFB2
+ 301 00fd 2C000000 		.4byte	.LFE2-.LFB2
+ 302 0101 01       		.uleb128 0x1
+ 303 0102 9C       		.byte	0x9c
+ 304 0103 1A010000 		.4byte	0x11a
+ 305 0107 0B       		.uleb128 0xb
+ 306 0108 1E000000 		.4byte	.LVL0
+ 307 010c D0000000 		.4byte	0xd0
+ 308 0110 0B       		.uleb128 0xb
+ 309 0111 22000000 		.4byte	.LVL1
+ 310 0115 53010000 		.4byte	0x153
+ 311 0119 00       		.byte	0
+ 312 011a 0A       		.uleb128 0xa
+ 313 011b A8010000 		.4byte	.LASF21
+ 314 011f 01       		.byte	0x1
+ 315 0120 99       		.byte	0x99
+ 316 0121 00000000 		.4byte	.LFB3
+ 317 0125 18000000 		.4byte	.LFE3-.LFB3
+ 318 0129 01       		.uleb128 0x1
+ 319 012a 9C       		.byte	0x9c
+ 320 012b 42010000 		.4byte	0x142
+ 321 012f 0B       		.uleb128 0xb
+ 322 0130 06000000 		.4byte	.LVL2
+ 323 0134 E1000000 		.4byte	0xe1
+ 324 0138 0B       		.uleb128 0xb
+ 325 0139 10000000 		.4byte	.LVL3
+ 326 013d 5A010000 		.4byte	0x15a
+ 327 0141 00       		.byte	0
+ 328 0142 0C       		.uleb128 0xc
+ 329 0143 B8000000 		.4byte	.LASF27
+ 330 0147 01       		.byte	0x1
+ 331 0148 18       		.byte	0x18
+ 332 0149 C5000000 		.4byte	0xc5
+ 333 014d 05       		.uleb128 0x5
+ 334 014e 03       		.byte	0x3
+ 335 014f 00000000 		.4byte	MDIO_Interface_backup
+ 336 0153 0D       		.uleb128 0xd
+ 337 0154 CE000000 		.4byte	.LASF22
+ 338 0158 03       		.byte	0x3
+ 339 0159 48       		.byte	0x48
+ 340 015a 0D       		.uleb128 0xd
+ 341 015b BE010000 		.4byte	.LASF23
+ 342 015f 03       		.byte	0x3
+ 343 0160 47       		.byte	0x47
+ 344 0161 00       		.byte	0
+ 345              		.section	.debug_abbrev,"",%progbits
+ 346              	.Ldebug_abbrev0:
+ 347 0000 01       		.uleb128 0x1
+ 348 0001 11       		.uleb128 0x11
+ 349 0002 01       		.byte	0x1
+ 350 0003 25       		.uleb128 0x25
+ 351 0004 0E       		.uleb128 0xe
+ 352 0005 13       		.uleb128 0x13
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczw5fdt.s 			page 10
+
+
+ 353 0006 0B       		.uleb128 0xb
+ 354 0007 03       		.uleb128 0x3
+ 355 0008 0E       		.uleb128 0xe
+ 356 0009 1B       		.uleb128 0x1b
+ 357 000a 0E       		.uleb128 0xe
+ 358 000b 55       		.uleb128 0x55
+ 359 000c 17       		.uleb128 0x17
+ 360 000d 11       		.uleb128 0x11
+ 361 000e 01       		.uleb128 0x1
+ 362 000f 10       		.uleb128 0x10
+ 363 0010 17       		.uleb128 0x17
+ 364 0011 00       		.byte	0
+ 365 0012 00       		.byte	0
+ 366 0013 02       		.uleb128 0x2
+ 367 0014 24       		.uleb128 0x24
+ 368 0015 00       		.byte	0
+ 369 0016 0B       		.uleb128 0xb
+ 370 0017 0B       		.uleb128 0xb
+ 371 0018 3E       		.uleb128 0x3e
+ 372 0019 0B       		.uleb128 0xb
+ 373 001a 03       		.uleb128 0x3
+ 374 001b 0E       		.uleb128 0xe
+ 375 001c 00       		.byte	0
+ 376 001d 00       		.byte	0
+ 377 001e 03       		.uleb128 0x3
+ 378 001f 24       		.uleb128 0x24
+ 379 0020 00       		.byte	0
+ 380 0021 0B       		.uleb128 0xb
+ 381 0022 0B       		.uleb128 0xb
+ 382 0023 3E       		.uleb128 0x3e
+ 383 0024 0B       		.uleb128 0xb
+ 384 0025 03       		.uleb128 0x3
+ 385 0026 08       		.uleb128 0x8
+ 386 0027 00       		.byte	0
+ 387 0028 00       		.byte	0
+ 388 0029 04       		.uleb128 0x4
+ 389 002a 16       		.uleb128 0x16
+ 390 002b 00       		.byte	0
+ 391 002c 03       		.uleb128 0x3
+ 392 002d 0E       		.uleb128 0xe
+ 393 002e 3A       		.uleb128 0x3a
+ 394 002f 0B       		.uleb128 0xb
+ 395 0030 3B       		.uleb128 0x3b
+ 396 0031 05       		.uleb128 0x5
+ 397 0032 49       		.uleb128 0x49
+ 398 0033 13       		.uleb128 0x13
+ 399 0034 00       		.byte	0
+ 400 0035 00       		.byte	0
+ 401 0036 05       		.uleb128 0x5
+ 402 0037 35       		.uleb128 0x35
+ 403 0038 00       		.byte	0
+ 404 0039 49       		.uleb128 0x49
+ 405 003a 13       		.uleb128 0x13
+ 406 003b 00       		.byte	0
+ 407 003c 00       		.byte	0
+ 408 003d 06       		.uleb128 0x6
+ 409 003e 13       		.uleb128 0x13
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczw5fdt.s 			page 11
+
+
+ 410 003f 01       		.byte	0x1
+ 411 0040 0B       		.uleb128 0xb
+ 412 0041 0B       		.uleb128 0xb
+ 413 0042 3A       		.uleb128 0x3a
+ 414 0043 0B       		.uleb128 0xb
+ 415 0044 3B       		.uleb128 0x3b
+ 416 0045 0B       		.uleb128 0xb
+ 417 0046 01       		.uleb128 0x1
+ 418 0047 13       		.uleb128 0x13
+ 419 0048 00       		.byte	0
+ 420 0049 00       		.byte	0
+ 421 004a 07       		.uleb128 0x7
+ 422 004b 0D       		.uleb128 0xd
+ 423 004c 00       		.byte	0
+ 424 004d 03       		.uleb128 0x3
+ 425 004e 0E       		.uleb128 0xe
+ 426 004f 3A       		.uleb128 0x3a
+ 427 0050 0B       		.uleb128 0xb
+ 428 0051 3B       		.uleb128 0x3b
+ 429 0052 0B       		.uleb128 0xb
+ 430 0053 49       		.uleb128 0x49
+ 431 0054 13       		.uleb128 0x13
+ 432 0055 38       		.uleb128 0x38
+ 433 0056 0B       		.uleb128 0xb
+ 434 0057 00       		.byte	0
+ 435 0058 00       		.byte	0
+ 436 0059 08       		.uleb128 0x8
+ 437 005a 16       		.uleb128 0x16
+ 438 005b 00       		.byte	0
+ 439 005c 03       		.uleb128 0x3
+ 440 005d 0E       		.uleb128 0xe
+ 441 005e 3A       		.uleb128 0x3a
+ 442 005f 0B       		.uleb128 0xb
+ 443 0060 3B       		.uleb128 0x3b
+ 444 0061 0B       		.uleb128 0xb
+ 445 0062 49       		.uleb128 0x49
+ 446 0063 13       		.uleb128 0x13
+ 447 0064 00       		.byte	0
+ 448 0065 00       		.byte	0
+ 449 0066 09       		.uleb128 0x9
+ 450 0067 2E       		.uleb128 0x2e
+ 451 0068 00       		.byte	0
+ 452 0069 3F       		.uleb128 0x3f
+ 453 006a 19       		.uleb128 0x19
+ 454 006b 03       		.uleb128 0x3
+ 455 006c 0E       		.uleb128 0xe
+ 456 006d 3A       		.uleb128 0x3a
+ 457 006e 0B       		.uleb128 0xb
+ 458 006f 3B       		.uleb128 0x3b
+ 459 0070 0B       		.uleb128 0xb
+ 460 0071 27       		.uleb128 0x27
+ 461 0072 19       		.uleb128 0x19
+ 462 0073 11       		.uleb128 0x11
+ 463 0074 01       		.uleb128 0x1
+ 464 0075 12       		.uleb128 0x12
+ 465 0076 06       		.uleb128 0x6
+ 466 0077 40       		.uleb128 0x40
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczw5fdt.s 			page 12
+
+
+ 467 0078 18       		.uleb128 0x18
+ 468 0079 9742     		.uleb128 0x2117
+ 469 007b 19       		.uleb128 0x19
+ 470 007c 00       		.byte	0
+ 471 007d 00       		.byte	0
+ 472 007e 0A       		.uleb128 0xa
+ 473 007f 2E       		.uleb128 0x2e
+ 474 0080 01       		.byte	0x1
+ 475 0081 3F       		.uleb128 0x3f
+ 476 0082 19       		.uleb128 0x19
+ 477 0083 03       		.uleb128 0x3
+ 478 0084 0E       		.uleb128 0xe
+ 479 0085 3A       		.uleb128 0x3a
+ 480 0086 0B       		.uleb128 0xb
+ 481 0087 3B       		.uleb128 0x3b
+ 482 0088 0B       		.uleb128 0xb
+ 483 0089 27       		.uleb128 0x27
+ 484 008a 19       		.uleb128 0x19
+ 485 008b 11       		.uleb128 0x11
+ 486 008c 01       		.uleb128 0x1
+ 487 008d 12       		.uleb128 0x12
+ 488 008e 06       		.uleb128 0x6
+ 489 008f 40       		.uleb128 0x40
+ 490 0090 18       		.uleb128 0x18
+ 491 0091 9742     		.uleb128 0x2117
+ 492 0093 19       		.uleb128 0x19
+ 493 0094 01       		.uleb128 0x1
+ 494 0095 13       		.uleb128 0x13
+ 495 0096 00       		.byte	0
+ 496 0097 00       		.byte	0
+ 497 0098 0B       		.uleb128 0xb
+ 498 0099 898201   		.uleb128 0x4109
+ 499 009c 00       		.byte	0
+ 500 009d 11       		.uleb128 0x11
+ 501 009e 01       		.uleb128 0x1
+ 502 009f 31       		.uleb128 0x31
+ 503 00a0 13       		.uleb128 0x13
+ 504 00a1 00       		.byte	0
+ 505 00a2 00       		.byte	0
+ 506 00a3 0C       		.uleb128 0xc
+ 507 00a4 34       		.uleb128 0x34
+ 508 00a5 00       		.byte	0
+ 509 00a6 03       		.uleb128 0x3
+ 510 00a7 0E       		.uleb128 0xe
+ 511 00a8 3A       		.uleb128 0x3a
+ 512 00a9 0B       		.uleb128 0xb
+ 513 00aa 3B       		.uleb128 0x3b
+ 514 00ab 0B       		.uleb128 0xb
+ 515 00ac 49       		.uleb128 0x49
+ 516 00ad 13       		.uleb128 0x13
+ 517 00ae 02       		.uleb128 0x2
+ 518 00af 18       		.uleb128 0x18
+ 519 00b0 00       		.byte	0
+ 520 00b1 00       		.byte	0
+ 521 00b2 0D       		.uleb128 0xd
+ 522 00b3 2E       		.uleb128 0x2e
+ 523 00b4 00       		.byte	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczw5fdt.s 			page 13
+
+
+ 524 00b5 3F       		.uleb128 0x3f
+ 525 00b6 19       		.uleb128 0x19
+ 526 00b7 03       		.uleb128 0x3
+ 527 00b8 0E       		.uleb128 0xe
+ 528 00b9 3A       		.uleb128 0x3a
+ 529 00ba 0B       		.uleb128 0xb
+ 530 00bb 3B       		.uleb128 0x3b
+ 531 00bc 0B       		.uleb128 0xb
+ 532 00bd 27       		.uleb128 0x27
+ 533 00be 19       		.uleb128 0x19
+ 534 00bf 3C       		.uleb128 0x3c
+ 535 00c0 19       		.uleb128 0x19
+ 536 00c1 00       		.byte	0
+ 537 00c2 00       		.byte	0
+ 538 00c3 00       		.byte	0
+ 539              		.section	.debug_aranges,"",%progbits
+ 540 0000 34000000 		.4byte	0x34
+ 541 0004 0200     		.2byte	0x2
+ 542 0006 00000000 		.4byte	.Ldebug_info0
+ 543 000a 04       		.byte	0x4
+ 544 000b 00       		.byte	0
+ 545 000c 0000     		.2byte	0
+ 546 000e 0000     		.2byte	0
+ 547 0010 00000000 		.4byte	.LFB0
+ 548 0014 18000000 		.4byte	.LFE0-.LFB0
+ 549 0018 00000000 		.4byte	.LFB1
+ 550 001c 20000000 		.4byte	.LFE1-.LFB1
+ 551 0020 00000000 		.4byte	.LFB2
+ 552 0024 2C000000 		.4byte	.LFE2-.LFB2
+ 553 0028 00000000 		.4byte	.LFB3
+ 554 002c 18000000 		.4byte	.LFE3-.LFB3
+ 555 0030 00000000 		.4byte	0
+ 556 0034 00000000 		.4byte	0
+ 557              		.section	.debug_ranges,"",%progbits
+ 558              	.Ldebug_ranges0:
+ 559 0000 00000000 		.4byte	.LFB0
+ 560 0004 18000000 		.4byte	.LFE0
+ 561 0008 00000000 		.4byte	.LFB1
+ 562 000c 20000000 		.4byte	.LFE1
+ 563 0010 00000000 		.4byte	.LFB2
+ 564 0014 2C000000 		.4byte	.LFE2
+ 565 0018 00000000 		.4byte	.LFB3
+ 566 001c 18000000 		.4byte	.LFE3
+ 567 0020 00000000 		.4byte	0
+ 568 0024 00000000 		.4byte	0
+ 569              		.section	.debug_line,"",%progbits
+ 570              	.Ldebug_line0:
+ 571 0000 B3000000 		.section	.debug_str,"MS",%progbits,1
+ 571      02006200 
+ 571      00000201 
+ 571      FB0E0D00 
+ 571      01010101 
+ 572              	.LASF6:
+ 573 0000 6C6F6E67 		.ascii	"long long int\000"
+ 573      206C6F6E 
+ 573      6720696E 
+ 573      7400
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczw5fdt.s 			page 14
+
+
+ 574              	.LASF25:
+ 575 000e 47656E65 		.ascii	"Generated_Source\\PSoC5\\MDIO_Interface_PM.c\000"
+ 575      72617465 
+ 575      645F536F 
+ 575      75726365 
+ 575      5C50536F 
+ 576              	.LASF15:
+ 577 0039 656E6162 		.ascii	"enableState\000"
+ 577      6C655374 
+ 577      61746500 
+ 578              	.LASF8:
+ 579 0045 756E7369 		.ascii	"unsigned int\000"
+ 579      676E6564 
+ 579      20696E74 
+ 579      00
+ 580              	.LASF17:
+ 581 0052 4D44494F 		.ascii	"MDIO_Interface_BACKUP_STRUCT\000"
+ 581      5F496E74 
+ 581      65726661 
+ 581      63655F42 
+ 581      41434B55 
+ 582              	.LASF18:
+ 583 006f 4D44494F 		.ascii	"MDIO_Interface_SaveConfig\000"
+ 583      5F496E74 
+ 583      65726661 
+ 583      63655F53 
+ 583      61766543 
+ 584              	.LASF12:
+ 585 0089 75696E74 		.ascii	"uint8\000"
+ 585      3800
+ 586              	.LASF5:
+ 587 008f 6C6F6E67 		.ascii	"long unsigned int\000"
+ 587      20756E73 
+ 587      69676E65 
+ 587      6420696E 
+ 587      7400
+ 588              	.LASF7:
+ 589 00a1 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 589      206C6F6E 
+ 589      6720756E 
+ 589      7369676E 
+ 589      65642069 
+ 590              	.LASF27:
+ 591 00b8 4D44494F 		.ascii	"MDIO_Interface_backup\000"
+ 591      5F496E74 
+ 591      65726661 
+ 591      63655F62 
+ 591      61636B75 
+ 592              	.LASF22:
+ 593 00ce 4D44494F 		.ascii	"MDIO_Interface_Stop\000"
+ 593      5F496E74 
+ 593      65726661 
+ 593      63655F53 
+ 593      746F7000 
+ 594              	.LASF24:
+ 595 00e2 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 595      4320342E 
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczw5fdt.s 			page 15
+
+
+ 595      392E3320 
+ 595      32303135 
+ 595      30333033 
+ 596 0115 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 596      20726576 
+ 596      6973696F 
+ 596      6E203232 
+ 596      31323230 
+ 597 0148 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 597      66756E63 
+ 597      74696F6E 
+ 597      2D736563 
+ 597      74696F6E 
+ 598              	.LASF1:
+ 599 0170 756E7369 		.ascii	"unsigned char\000"
+ 599      676E6564 
+ 599      20636861 
+ 599      7200
+ 600              	.LASF11:
+ 601 017e 63686172 		.ascii	"char\000"
+ 601      00
+ 602              	.LASF20:
+ 603 0183 4D44494F 		.ascii	"MDIO_Interface_Sleep\000"
+ 603      5F496E74 
+ 603      65726661 
+ 603      63655F53 
+ 603      6C656570 
+ 604              	.LASF4:
+ 605 0198 6C6F6E67 		.ascii	"long int\000"
+ 605      20696E74 
+ 605      00
+ 606              	.LASF10:
+ 607 01a1 646F7562 		.ascii	"double\000"
+ 607      6C6500
+ 608              	.LASF21:
+ 609 01a8 4D44494F 		.ascii	"MDIO_Interface_Wakeup\000"
+ 609      5F496E74 
+ 609      65726661 
+ 609      63655F57 
+ 609      616B6575 
+ 610              	.LASF23:
+ 611 01be 4D44494F 		.ascii	"MDIO_Interface_Enable\000"
+ 611      5F496E74 
+ 611      65726661 
+ 611      63655F45 
+ 611      6E61626C 
+ 612              	.LASF3:
+ 613 01d4 73686F72 		.ascii	"short unsigned int\000"
+ 613      7420756E 
+ 613      7369676E 
+ 613      65642069 
+ 613      6E7400
+ 614              	.LASF0:
+ 615 01e7 7369676E 		.ascii	"signed char\000"
+ 615      65642063 
+ 615      68617200 
+ 616              	.LASF19:
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczw5fdt.s 			page 16
+
+
+ 617 01f3 4D44494F 		.ascii	"MDIO_Interface_RestoreConfig\000"
+ 617      5F496E74 
+ 617      65726661 
+ 617      63655F52 
+ 617      6573746F 
+ 618              	.LASF9:
+ 619 0210 666C6F61 		.ascii	"float\000"
+ 619      7400
+ 620              	.LASF2:
+ 621 0216 73686F72 		.ascii	"short int\000"
+ 621      7420696E 
+ 621      7400
+ 622              	.LASF13:
+ 623 0220 72656738 		.ascii	"reg8\000"
+ 623      00
+ 624              	.LASF26:
+ 625 0225 443A5C70 		.ascii	"D:\\pgm\\Cypress_dem_board\\CFP_reader\\cfp_reader\\"
+ 625      676D5C43 
+ 625      79707265 
+ 625      73735F64 
+ 625      656D5F62 
+ 626 0254 575F6366 		.ascii	"W_cfp_reader\\cfp_reader.cydsn\000"
+ 626      705F7265 
+ 626      61646572 
+ 626      5C636670 
+ 626      5F726561 
+ 627              	.LASF14:
+ 628 0272 73697A65 		.ascii	"sizetype\000"
+ 628      74797065 
+ 628      00
+ 629              	.LASF16:
+ 630 027b 696E7465 		.ascii	"interruptState\000"
+ 630      72727570 
+ 630      74537461 
+ 630      746500
+ 631              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

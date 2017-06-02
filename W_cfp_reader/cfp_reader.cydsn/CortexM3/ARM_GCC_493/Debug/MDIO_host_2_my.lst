@@ -1,0 +1,2190 @@
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"MDIO_host_2_my.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.MDIO_host_2_Stop,"ax",%progbits
+  19              		.align	2
+  20              		.global	MDIO_host_2_Stop
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	MDIO_host_2_Stop, %function
+  24              	MDIO_host_2_Stop:
+  25              	.LFB64:
+  26              		.file 1 "Generated_Source\\PSoC5\\MDIO_host_2_my.c"
+   1:Generated_Source\PSoC5/MDIO_host_2_my.c **** /* ========================================
+   2:Generated_Source\PSoC5/MDIO_host_2_my.c ****  *
+   3:Generated_Source\PSoC5/MDIO_host_2_my.c ****  * Copyright FiberTreid, 2017
+   4:Generated_Source\PSoC5/MDIO_host_2_my.c ****  * All Rights Reserved
+   5:Generated_Source\PSoC5/MDIO_host_2_my.c ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:Generated_Source\PSoC5/MDIO_host_2_my.c ****  *
+   7:Generated_Source\PSoC5/MDIO_host_2_my.c ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:Generated_Source\PSoC5/MDIO_host_2_my.c ****  * WHICH IS THE PROPERTY OF your company.
+   9:Generated_Source\PSoC5/MDIO_host_2_my.c ****  *
+  10:Generated_Source\PSoC5/MDIO_host_2_my.c ****  * ========================================
+  11:Generated_Source\PSoC5/MDIO_host_2_my.c **** */
+  12:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+  13:Generated_Source\PSoC5/MDIO_host_2_my.c **** //#include <device.h>
+  14:Generated_Source\PSoC5/MDIO_host_2_my.c **** #include <project.h>
+  15:Generated_Source\PSoC5/MDIO_host_2_my.c **** #include "cytypes.h"
+  16:Generated_Source\PSoC5/MDIO_host_2_my.c **** #include "cyfitter.h"
+  17:Generated_Source\PSoC5/MDIO_host_2_my.c **** #include "cypins.h"
+  18:Generated_Source\PSoC5/MDIO_host_2_my.c **** #include "MDIO_host_2_my.h"
+  19:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+  20:Generated_Source\PSoC5/MDIO_host_2_my.c **** /*******************************************************************************
+  21:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Variables
+  22:Generated_Source\PSoC5/MDIO_host_2_my.c **** ********************************************************************************/
+  23:Generated_Source\PSoC5/MDIO_host_2_my.c **** uint8 MDIO_host_2_initVar = 0u;
+  24:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+  25:Generated_Source\PSoC5/MDIO_host_2_my.c **** /* Data received MDIO Host */
+  26:Generated_Source\PSoC5/MDIO_host_2_my.c **** volatile uint16 MDIO_host_2_data_bits=0u;	 
+  27:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+  28:Generated_Source\PSoC5/MDIO_host_2_my.c **** /* Internal Status Register */
+  29:Generated_Source\PSoC5/MDIO_host_2_my.c **** volatile uint8  MDIO_host_2_StatusRegister=0u;
+  30:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+  31:Generated_Source\PSoC5/MDIO_host_2_my.c **** /*******************************************************************************
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 2
+
+
+  32:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Function Name: MDIO_host_2_Start
+  33:Generated_Source\PSoC5/MDIO_host_2_my.c **** ********************************************************************************
+  34:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Summary:
+  35:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  Initializes the MDIO Host component.
+  36:Generated_Source\PSoC5/MDIO_host_2_my.c **** * 
+  37:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Parameters:
+  38:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+  39:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+  40:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Return:
+  41:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+  42:Generated_Source\PSoC5/MDIO_host_2_my.c **** * 
+  43:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Side Effects:
+  44:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+  45:Generated_Source\PSoC5/MDIO_host_2_my.c **** ********************************************************************************/
+  46:Generated_Source\PSoC5/MDIO_host_2_my.c **** void MDIO_host_2_Start(void)
+  47:Generated_Source\PSoC5/MDIO_host_2_my.c **** { 
+  48:Generated_Source\PSoC5/MDIO_host_2_my.c ****     /* If not already initialized, then initialize hardware and software */
+  49:Generated_Source\PSoC5/MDIO_host_2_my.c ****     if(MDIO_host_2_initVar == 0u)
+  50:Generated_Source\PSoC5/MDIO_host_2_my.c ****     {
+  51:Generated_Source\PSoC5/MDIO_host_2_my.c ****         MDIO_host_2_Init();
+  52:Generated_Source\PSoC5/MDIO_host_2_my.c ****         MDIO_host_2_initVar = 1u;
+  53:Generated_Source\PSoC5/MDIO_host_2_my.c ****     }
+  54:Generated_Source\PSoC5/MDIO_host_2_my.c ****     MDIO_host_2_Enable();
+  55:Generated_Source\PSoC5/MDIO_host_2_my.c **** }
+  56:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+  57:Generated_Source\PSoC5/MDIO_host_2_my.c **** /*******************************************************************************
+  58:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Function Name: MDIO_host_2_Stop
+  59:Generated_Source\PSoC5/MDIO_host_2_my.c **** ********************************************************************************
+  60:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Summary:
+  61:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  Disable the MDIO Host component and the internal interrupt
+  62:Generated_Source\PSoC5/MDIO_host_2_my.c **** * 
+  63:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Parameters:
+  64:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+  65:Generated_Source\PSoC5/MDIO_host_2_my.c **** * 
+  66:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Return:
+  67:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+  68:Generated_Source\PSoC5/MDIO_host_2_my.c **** * 
+  69:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Side Effects:
+  70:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  
+  71:Generated_Source\PSoC5/MDIO_host_2_my.c **** ********************************************************************************/
+  72:Generated_Source\PSoC5/MDIO_host_2_my.c **** void MDIO_host_2_Stop(void)
+  73:Generated_Source\PSoC5/MDIO_host_2_my.c **** {
+  27              		.loc 1 73 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              		@ link register save eliminated.
+  74:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	/* Disable the hardware component */
+  75:Generated_Source\PSoC5/MDIO_host_2_my.c ****  //   MDIO_host_2_CONTROL_REG = 0u;	// Set Enable and Valid bits to zero
+  76:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	
+  77:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	/* Disable Count7 hardware block */
+  78:Generated_Source\PSoC5/MDIO_host_2_my.c ****     MDIO_host_2_CNT7_AUX_CTL_REG &= ~MDIO_host_2_COUNT7_EN;
+  32              		.loc 1 78 0
+  33 0000 024A     		ldr	r2, .L2
+  34 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  35 0004 03F0DF03 		and	r3, r3, #223
+  36 0008 1370     		strb	r3, [r2]
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 3
+
+
+  37 000a 7047     		bx	lr
+  38              	.L3:
+  39              		.align	2
+  40              	.L2:
+  41 000c 97640040 		.word	1073767575
+  42              		.cfi_endproc
+  43              	.LFE64:
+  44              		.size	MDIO_host_2_Stop, .-MDIO_host_2_Stop
+  45              		.section	.text.MDIO_host_2_Enable,"ax",%progbits
+  46              		.align	2
+  47              		.global	MDIO_host_2_Enable
+  48              		.thumb
+  49              		.thumb_func
+  50              		.type	MDIO_host_2_Enable, %function
+  51              	MDIO_host_2_Enable:
+  52              	.LFB66:
+  79:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	
+  80:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	/* Disable Interrupt */
+  81:Generated_Source\PSoC5/MDIO_host_2_my.c **** //	MDIO_host_2_DisableInt();
+  82:Generated_Source\PSoC5/MDIO_host_2_my.c **** }
+  83:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+  84:Generated_Source\PSoC5/MDIO_host_2_my.c **** /*******************************************************************************
+  85:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Function Name: MDIO_host_2_Init
+  86:Generated_Source\PSoC5/MDIO_host_2_my.c **** ********************************************************************************
+  87:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Summary:
+  88:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  Initializes internal variables and resets the datapath FIFO.
+  89:Generated_Source\PSoC5/MDIO_host_2_my.c **** * 
+  90:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Parameters:
+  91:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+  92:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+  93:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Return:
+  94:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+  95:Generated_Source\PSoC5/MDIO_host_2_my.c **** * 
+  96:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Side Effects:
+  97:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  
+  98:Generated_Source\PSoC5/MDIO_host_2_my.c **** ********************************************************************************/
+  99:Generated_Source\PSoC5/MDIO_host_2_my.c **** void MDIO_host_2_Init(void)
+ 100:Generated_Source\PSoC5/MDIO_host_2_my.c **** { 	
+ 101:Generated_Source\PSoC5/MDIO_host_2_my.c ****     MDIO_host_2_Enable();
+ 102:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	
+ 103:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	/* Reset Internal FIFOs */
+ 104:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	MDIO_host_2_ClearInternalFIFOs();
+ 105:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 106:Generated_Source\PSoC5/MDIO_host_2_my.c ****     /* Initialize interrupts */
+ 107:Generated_Source\PSoC5/MDIO_host_2_my.c **** //	MDIO_host_2_EnableInt();
+ 108:Generated_Source\PSoC5/MDIO_host_2_my.c **** }
+ 109:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 110:Generated_Source\PSoC5/MDIO_host_2_my.c **** /*******************************************************************************
+ 111:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Function Name: MDIO_host_2_Enable()
+ 112:Generated_Source\PSoC5/MDIO_host_2_my.c **** ********************************************************************************
+ 113:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Summary:
+ 114:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  Enables the hardware and internal interrupt.
+ 115:Generated_Source\PSoC5/MDIO_host_2_my.c **** * 
+ 116:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Parameters:
+ 117:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+ 118:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+ 119:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Return:
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 4
+
+
+ 120:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+ 121:Generated_Source\PSoC5/MDIO_host_2_my.c **** * 
+ 122:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Side Effects:
+ 123:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+ 124:Generated_Source\PSoC5/MDIO_host_2_my.c **** ********************************************************************************/
+ 125:Generated_Source\PSoC5/MDIO_host_2_my.c **** void MDIO_host_2_Enable(void) 
+ 126:Generated_Source\PSoC5/MDIO_host_2_my.c **** {
+  53              		.loc 1 126 0
+  54              		.cfi_startproc
+  55              		@ args = 0, pretend = 0, frame = 0
+  56              		@ frame_needed = 0, uses_anonymous_args = 0
+  57              		@ link register save eliminated.
+ 127:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	/* Enable Count7 hardware block */
+ 128:Generated_Source\PSoC5/MDIO_host_2_my.c ****     MDIO_host_2_CNT7_AUX_CTL_REG |= MDIO_host_2_COUNT7_EN;
+  58              		.loc 1 128 0
+  59 0000 044A     		ldr	r2, .L5
+  60 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  61 0004 43F02003 		orr	r3, r3, #32
+  62 0008 1370     		strb	r3, [r2]
+ 129:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 130:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	/* Enable the block */
+ 131:Generated_Source\PSoC5/MDIO_host_2_my.c ****     //  MDIO_host_2_CONTROL_REG = MDIO_host_2_ENABLE;
+ 132:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	
+ 133:Generated_Source\PSoC5/MDIO_host_2_my.c ****     /*Reset counter */
+ 134:Generated_Source\PSoC5/MDIO_host_2_my.c ****     // MDIO_host_2_PERIOD_REG = 127;
+ 135:Generated_Source\PSoC5/MDIO_host_2_my.c ****     MDIO_host_2_COUNT_REG = 61;
+  63              		.loc 1 135 0
+  64 000a 3D22     		movs	r2, #61
+  65 000c 024B     		ldr	r3, .L5+4
+  66 000e 1A70     		strb	r2, [r3]
+  67 0010 7047     		bx	lr
+  68              	.L6:
+  69 0012 00BF     		.align	2
+  70              	.L5:
+  71 0014 97640040 		.word	1073767575
+  72 0018 77640040 		.word	1073767543
+  73              		.cfi_endproc
+  74              	.LFE66:
+  75              		.size	MDIO_host_2_Enable, .-MDIO_host_2_Enable
+  76              		.section	.text.MDIO_host_2_GetStatus,"ax",%progbits
+  77              		.align	2
+  78              		.global	MDIO_host_2_GetStatus
+  79              		.thumb
+  80              		.thumb_func
+  81              		.type	MDIO_host_2_GetStatus, %function
+  82              	MDIO_host_2_GetStatus:
+  83              	.LFB67:
+ 136:Generated_Source\PSoC5/MDIO_host_2_my.c ****     
+ 137:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	/* Enable the interrupt */
+ 138:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	//CyIntEnable(MDIO_host_2_ISR_NUMBER);   
+ 139:Generated_Source\PSoC5/MDIO_host_2_my.c **** }
+ 140:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 141:Generated_Source\PSoC5/MDIO_host_2_my.c **** /*******************************************************************************
+ 142:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Function Name: MDIO_host_2_EnableInt
+ 143:Generated_Source\PSoC5/MDIO_host_2_my.c **** ********************************************************************************
+ 144:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Summary:
+ 145:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  Enables and configure the interrupt from this component. 
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 5
+
+
+ 146:Generated_Source\PSoC5/MDIO_host_2_my.c **** * 
+ 147:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Parameters:
+ 148:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+ 149:Generated_Source\PSoC5/MDIO_host_2_my.c **** * 
+ 150:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Return:
+ 151:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+ 152:Generated_Source\PSoC5/MDIO_host_2_my.c **** * 
+ 153:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Side Effects:
+ 154:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+ 155:Generated_Source\PSoC5/MDIO_host_2_my.c **** ********************************************************************************/
+ 156:Generated_Source\PSoC5/MDIO_host_2_my.c **** //void MDIO_host_2_EnableInt(void)
+ 157:Generated_Source\PSoC5/MDIO_host_2_my.c **** //{   
+ 158:Generated_Source\PSoC5/MDIO_host_2_my.c **** //    /* Enable interrupt handler service routine */
+ 159:Generated_Source\PSoC5/MDIO_host_2_my.c **** //	CyIntDisable(MDIO_host_2_ISR_NUMBER);
+ 160:Generated_Source\PSoC5/MDIO_host_2_my.c **** //	CyIntSetVector(MDIO_host_2_ISR_NUMBER, MDIO_host_2_ISR_InterruptHandler);
+ 161:Generated_Source\PSoC5/MDIO_host_2_my.c **** //	CyIntSetPriority(MDIO_host_2_ISR_NUMBER, MDIO_host_2_ISR_PRIORITY);
+ 162:Generated_Source\PSoC5/MDIO_host_2_my.c **** //	CyIntEnable(MDIO_host_2_ISR_NUMBER);        
+ 163:Generated_Source\PSoC5/MDIO_host_2_my.c **** //}
+ 164:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 165:Generated_Source\PSoC5/MDIO_host_2_my.c **** /*******************************************************************************
+ 166:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Function Name: MDIO_host_2_DisableInt
+ 167:Generated_Source\PSoC5/MDIO_host_2_my.c **** ********************************************************************************
+ 168:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Summary:
+ 169:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  Disables interrupts from this component
+ 170:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+ 171:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Parameters:
+ 172:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+ 173:Generated_Source\PSoC5/MDIO_host_2_my.c **** * 
+ 174:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Return:
+ 175:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+ 176:Generated_Source\PSoC5/MDIO_host_2_my.c **** * 
+ 177:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Side Effects:
+ 178:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+ 179:Generated_Source\PSoC5/MDIO_host_2_my.c **** ********************************************************************************/
+ 180:Generated_Source\PSoC5/MDIO_host_2_my.c **** //void MDIO_host_2_DisableInt(void)
+ 181:Generated_Source\PSoC5/MDIO_host_2_my.c **** //{  
+ 182:Generated_Source\PSoC5/MDIO_host_2_my.c **** //    /* Disable interrupt handler service routine */
+ 183:Generated_Source\PSoC5/MDIO_host_2_my.c **** //	CyIntDisable(MDIO_host_2_ISR_NUMBER);
+ 184:Generated_Source\PSoC5/MDIO_host_2_my.c **** //}
+ 185:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 186:Generated_Source\PSoC5/MDIO_host_2_my.c **** /*******************************************************************************
+ 187:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Function Name: MDIO_host_2_GetStatus
+ 188:Generated_Source\PSoC5/MDIO_host_2_my.c **** ********************************************************************************
+ 189:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Summary:
+ 190:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  Returns the internal status of the hardware.
+ 191:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+ 192:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Parameters:
+ 193:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+ 194:Generated_Source\PSoC5/MDIO_host_2_my.c **** * 
+ 195:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Return:
+ 196:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  uint8
+ 197:Generated_Source\PSoC5/MDIO_host_2_my.c **** *		b0   = Set when component is busy 
+ 198:Generated_Source\PSoC5/MDIO_host_2_my.c **** *		b1 	 = Set when PHY address matches in the right timing 
+ 199:Generated_Source\PSoC5/MDIO_host_2_my.c **** *		b7:2 = Reserved. Returns all zeros
+ 200:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+ 201:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Side Effects:
+ 202:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 6
+
+
+ 203:Generated_Source\PSoC5/MDIO_host_2_my.c **** ********************************************************************************/
+ 204:Generated_Source\PSoC5/MDIO_host_2_my.c **** uint8 MDIO_host_2_GetStatus(void) CYREENTRANT
+ 205:Generated_Source\PSoC5/MDIO_host_2_my.c **** {
+  84              		.loc 1 205 0
+  85              		.cfi_startproc
+  86              		@ args = 0, pretend = 0, frame = 0
+  87              		@ frame_needed = 0, uses_anonymous_args = 0
+  88              		@ link register save eliminated.
+ 206:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	return MDIO_host_2_StatusRegister;
+  89              		.loc 1 206 0
+  90 0000 014B     		ldr	r3, .L8
+  91 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 207:Generated_Source\PSoC5/MDIO_host_2_my.c **** }
+  92              		.loc 1 207 0
+  93 0004 7047     		bx	lr
+  94              	.L9:
+  95 0006 00BF     		.align	2
+  96              	.L8:
+  97 0008 00000000 		.word	.LANCHOR0
+  98              		.cfi_endproc
+  99              	.LFE67:
+ 100              		.size	MDIO_host_2_GetStatus, .-MDIO_host_2_GetStatus
+ 101              		.section	.text.MDIO_host_2_ClearInternalFIFOs,"ax",%progbits
+ 102              		.align	2
+ 103              		.global	MDIO_host_2_ClearInternalFIFOs
+ 104              		.thumb
+ 105              		.thumb_func
+ 106              		.type	MDIO_host_2_ClearInternalFIFOs, %function
+ 107              	MDIO_host_2_ClearInternalFIFOs:
+ 108              	.LFB68:
+ 208:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 209:Generated_Source\PSoC5/MDIO_host_2_my.c **** /*******************************************************************************
+ 210:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Function Name: MDIO_host_2_ClearInternalFIFOs
+ 211:Generated_Source\PSoC5/MDIO_host_2_my.c **** ********************************************************************************
+ 212:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Summary:
+ 213:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  Clear the internal FIFOs from the data path 
+ 214:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+ 215:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Parameters:
+ 216:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  dataPtr: Pointer to the data buffer
+ 217:Generated_Source\PSoC5/MDIO_host_2_my.c **** * 
+ 218:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Return:
+ 219:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+ 220:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+ 221:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Side Effects:
+ 222:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  The size of this buffer should be at least 32 x 16 bits (64 bytes), otherwise
+ 223:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  memory violation may occurs.
+ 224:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+ 225:Generated_Source\PSoC5/MDIO_host_2_my.c **** ********************************************************************************/
+ 226:Generated_Source\PSoC5/MDIO_host_2_my.c **** void MDIO_host_2_ClearInternalFIFOs(void)
+ 227:Generated_Source\PSoC5/MDIO_host_2_my.c **** {
+ 109              		.loc 1 227 0
+ 110              		.cfi_startproc
+ 111              		@ args = 0, pretend = 0, frame = 0
+ 112              		@ frame_needed = 0, uses_anonymous_args = 0
+ 113              		@ link register save eliminated.
+ 228:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	/* Reset F0 FIFO  */
+ 229:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	CY_SET_REG16(MDIO_host_2_DP_AUX_CTL_PTR, (CY_GET_REG16(MDIO_host_2_DP_AUX_CTL_PTR) |  MDIO_host_2_
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 7
+
+
+ 114              		.loc 1 229 0
+ 115 0000 0B4A     		ldr	r2, .L11
+ 116 0002 1388     		ldrh	r3, [r2]
+ 117 0004 9BB2     		uxth	r3, r3
+ 118 0006 43F48073 		orr	r3, r3, #256
+ 119 000a 43F00103 		orr	r3, r3, #1
+ 120 000e 1380     		strh	r3, [r2]	@ movhi
+ 230:Generated_Source\PSoC5/MDIO_host_2_my.c ****     CY_SET_REG16(MDIO_host_2_DP_AUX_CTL_PTR, (CY_GET_REG16(MDIO_host_2_DP_AUX_CTL_PTR) & ~MDIO_host
+ 121              		.loc 1 230 0
+ 122 0010 1388     		ldrh	r3, [r2]
+ 123 0012 9BB2     		uxth	r3, r3
+ 124 0014 23F48073 		bic	r3, r3, #256
+ 125 0018 23F00103 		bic	r3, r3, #1
+ 126 001c 9BB2     		uxth	r3, r3
+ 127 001e 1380     		strh	r3, [r2]	@ movhi
+ 231:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	
+ 232:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	/* Reset F1 FIFO  */
+ 233:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	CY_SET_REG16(MDIO_host_2_DP_AUX_CTL_PTR, (CY_GET_REG16(MDIO_host_2_DP_AUX_CTL_PTR) |  MDIO_host_2_
+ 128              		.loc 1 233 0
+ 129 0020 1388     		ldrh	r3, [r2]
+ 130 0022 9BB2     		uxth	r3, r3
+ 131 0024 43F40073 		orr	r3, r3, #512
+ 132 0028 43F00203 		orr	r3, r3, #2
+ 133 002c 1380     		strh	r3, [r2]	@ movhi
+ 134 002e 7047     		bx	lr
+ 135              	.L12:
+ 136              		.align	2
+ 137              	.L11:
+ 138 0030 96650040 		.word	1073767830
+ 139              		.cfi_endproc
+ 140              	.LFE68:
+ 141              		.size	MDIO_host_2_ClearInternalFIFOs, .-MDIO_host_2_ClearInternalFIFOs
+ 142              		.section	.text.MDIO_host_2_Init,"ax",%progbits
+ 143              		.align	2
+ 144              		.global	MDIO_host_2_Init
+ 145              		.thumb
+ 146              		.thumb_func
+ 147              		.type	MDIO_host_2_Init, %function
+ 148              	MDIO_host_2_Init:
+ 149              	.LFB65:
+ 100:Generated_Source\PSoC5/MDIO_host_2_my.c ****     MDIO_host_2_Enable();
+ 150              		.loc 1 100 0
+ 151              		.cfi_startproc
+ 152              		@ args = 0, pretend = 0, frame = 0
+ 153              		@ frame_needed = 0, uses_anonymous_args = 0
+ 154 0000 08B5     		push	{r3, lr}
+ 155              		.cfi_def_cfa_offset 8
+ 156              		.cfi_offset 3, -8
+ 157              		.cfi_offset 14, -4
+ 101:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	
+ 158              		.loc 1 101 0
+ 159 0002 FFF7FEFF 		bl	MDIO_host_2_Enable
+ 160              	.LVL0:
+ 104:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 161              		.loc 1 104 0
+ 162 0006 FFF7FEFF 		bl	MDIO_host_2_ClearInternalFIFOs
+ 163              	.LVL1:
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 8
+
+
+ 164 000a 08BD     		pop	{r3, pc}
+ 165              		.cfi_endproc
+ 166              	.LFE65:
+ 167              		.size	MDIO_host_2_Init, .-MDIO_host_2_Init
+ 168              		.section	.text.MDIO_host_2_Start,"ax",%progbits
+ 169              		.align	2
+ 170              		.global	MDIO_host_2_Start
+ 171              		.thumb
+ 172              		.thumb_func
+ 173              		.type	MDIO_host_2_Start, %function
+ 174              	MDIO_host_2_Start:
+ 175              	.LFB63:
+  47:Generated_Source\PSoC5/MDIO_host_2_my.c ****     /* If not already initialized, then initialize hardware and software */
+ 176              		.loc 1 47 0
+ 177              		.cfi_startproc
+ 178              		@ args = 0, pretend = 0, frame = 0
+ 179              		@ frame_needed = 0, uses_anonymous_args = 0
+ 180 0000 08B5     		push	{r3, lr}
+ 181              		.cfi_def_cfa_offset 8
+ 182              		.cfi_offset 3, -8
+ 183              		.cfi_offset 14, -4
+  49:Generated_Source\PSoC5/MDIO_host_2_my.c ****     {
+ 184              		.loc 1 49 0
+ 185 0002 054B     		ldr	r3, .L18
+ 186 0004 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
+ 187 0006 23B9     		cbnz	r3, .L16
+  51:Generated_Source\PSoC5/MDIO_host_2_my.c ****         MDIO_host_2_initVar = 1u;
+ 188              		.loc 1 51 0
+ 189 0008 FFF7FEFF 		bl	MDIO_host_2_Init
+ 190              	.LVL2:
+  52:Generated_Source\PSoC5/MDIO_host_2_my.c ****     }
+ 191              		.loc 1 52 0
+ 192 000c 0122     		movs	r2, #1
+ 193 000e 024B     		ldr	r3, .L18
+ 194 0010 5A70     		strb	r2, [r3, #1]
+ 195              	.L16:
+  54:Generated_Source\PSoC5/MDIO_host_2_my.c **** }
+ 196              		.loc 1 54 0
+ 197 0012 FFF7FEFF 		bl	MDIO_host_2_Enable
+ 198              	.LVL3:
+ 199 0016 08BD     		pop	{r3, pc}
+ 200              	.L19:
+ 201              		.align	2
+ 202              	.L18:
+ 203 0018 00000000 		.word	.LANCHOR0
+ 204              		.cfi_endproc
+ 205              	.LFE63:
+ 206              		.size	MDIO_host_2_Start, .-MDIO_host_2_Start
+ 207              		.section	.text.MDIO_host_2_SetAddrC45,"ax",%progbits
+ 208              		.align	2
+ 209              		.global	MDIO_host_2_SetAddrC45
+ 210              		.thumb
+ 211              		.thumb_func
+ 212              		.type	MDIO_host_2_SetAddrC45, %function
+ 213              	MDIO_host_2_SetAddrC45:
+ 214              	.LFB69:
+ 234:Generated_Source\PSoC5/MDIO_host_2_my.c ****     //CY_SET_REG16(MDIO_host_2_DP_AUX_CTL_PTR, (CY_GET_REG16(MDIO_host_2_DP_AUX_CTL_PTR) & ~MDIO_ho
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 9
+
+
+ 235:Generated_Source\PSoC5/MDIO_host_2_my.c **** }
+ 236:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 237:Generated_Source\PSoC5/MDIO_host_2_my.c **** /*******************************************************************************
+ 238:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+ 239:Generated_Source\PSoC5/MDIO_host_2_my.c **** * MDIO_host_2_SetAddr_C45()
+ 240:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+ 241:Generated_Source\PSoC5/MDIO_host_2_my.c **** *******************************************************************************/
+ 242:Generated_Source\PSoC5/MDIO_host_2_my.c **** uint8 MDIO_host_2_SetAddrC45(uint8 phy_addr, uint8 dev_addr, uint16 reg_data) // Set Addr reg
+ 243:Generated_Source\PSoC5/MDIO_host_2_my.c **** {
+ 215              		.loc 1 243 0
+ 216              		.cfi_startproc
+ 217              		@ args = 0, pretend = 0, frame = 0
+ 218              		@ frame_needed = 0, uses_anonymous_args = 0
+ 219              		@ link register save eliminated.
+ 220              	.LVL4:
+ 221 0000 10B4     		push	{r4}
+ 222              		.cfi_def_cfa_offset 4
+ 223              		.cfi_offset 4, -4
+ 244:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	uint16 control_bits;
+ 245:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	uint8 status_reg;
+ 246:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 247:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	/* Clear and Set the control register for writing */
+ 248:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	MDIO_host_2_CONTROL_REG = MDIO_host_2_WRITE;
+ 224              		.loc 1 248 0
+ 225 0002 0024     		movs	r4, #0
+ 226 0004 094B     		ldr	r3, .L22
+ 227 0006 1C70     		strb	r4, [r3]
+ 249:Generated_Source\PSoC5/MDIO_host_2_my.c **** 		
+ 250:Generated_Source\PSoC5/MDIO_host_2_my.c ****     /* Set the control bits and write in the fifo f0 */
+ 251:Generated_Source\PSoC5/MDIO_host_2_my.c ****      control_bits = 0x0002+(((uint16)phy_addr)<<7)+(((uint16)dev_addr)<<2);
+ 228              		.loc 1 251 0
+ 229 0008 8900     		lsls	r1, r1, #2
+ 230              	.LVL5:
+ 231 000a 01EBC010 		add	r0, r1, r0, lsl #7
+ 232              	.LVL6:
+ 233 000e 811C     		adds	r1, r0, #2
+ 234 0010 89B2     		uxth	r1, r1
+ 235              	.LVL7:
+ 252:Generated_Source\PSoC5/MDIO_host_2_my.c ****     MDIO_host_2_FIFO_F0_REG = control_bits;
+ 236              		.loc 1 252 0
+ 237 0012 313B     		subs	r3, r3, #49
+ 238 0014 1980     		strh	r1, [r3]	@ movhi
+ 253:Generated_Source\PSoC5/MDIO_host_2_my.c ****     MDIO_host_2_FIFO_F0_REG = reg_data;
+ 239              		.loc 1 253 0
+ 240 0016 1A80     		strh	r2, [r3]	@ movhi
+ 254:Generated_Source\PSoC5/MDIO_host_2_my.c **** //    MDIO_host_2_FIFO_F0_REG = 0x4002;
+ 255:Generated_Source\PSoC5/MDIO_host_2_my.c **** //    MDIO_host_2_FIFO_F0_REG = 0x8002;
+ 256:Generated_Source\PSoC5/MDIO_host_2_my.c ****    
+ 257:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	/* Clear hardware status register */
+ 258:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	status_reg = MDIO_host_2_STATUS_REG;
+ 241              		.loc 1 258 0
+ 242 0018 2133     		adds	r3, r3, #33
+ 243 001a 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 244              	.LVL8:
+ 259:Generated_Source\PSoC5/MDIO_host_2_my.c ****     
+ 260:Generated_Source\PSoC5/MDIO_host_2_my.c ****     return ((status_reg)? 0 : 1);
+ 245              		.loc 1 260 0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 10
+
+
+ 246 001c 13F0FF0F 		tst	r3, #255
+ 261:Generated_Source\PSoC5/MDIO_host_2_my.c **** }
+ 247              		.loc 1 261 0
+ 248 0020 0CBF     		ite	eq
+ 249 0022 0120     		moveq	r0, #1
+ 250 0024 2046     		movne	r0, r4
+ 251 0026 5DF8044B 		ldr	r4, [sp], #4
+ 252              		.cfi_restore 4
+ 253              		.cfi_def_cfa_offset 0
+ 254 002a 7047     		bx	lr
+ 255              	.L23:
+ 256              		.align	2
+ 257              	.L22:
+ 258 002c 77650040 		.word	1073767799
+ 259              		.cfi_endproc
+ 260              	.LFE69:
+ 261              		.size	MDIO_host_2_SetAddrC45, .-MDIO_host_2_SetAddrC45
+ 262              		.section	.text.MDIO_host_2_WriteDataC45,"ax",%progbits
+ 263              		.align	2
+ 264              		.global	MDIO_host_2_WriteDataC45
+ 265              		.thumb
+ 266              		.thumb_func
+ 267              		.type	MDIO_host_2_WriteDataC45, %function
+ 268              	MDIO_host_2_WriteDataC45:
+ 269              	.LFB70:
+ 262:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 263:Generated_Source\PSoC5/MDIO_host_2_my.c **** /*******************************************************************************
+ 264:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+ 265:Generated_Source\PSoC5/MDIO_host_2_my.c **** * MDIO_host_2_WriteData_C45()
+ 266:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+ 267:Generated_Source\PSoC5/MDIO_host_2_my.c **** *******************************************************************************/
+ 268:Generated_Source\PSoC5/MDIO_host_2_my.c **** uint8 MDIO_host_2_WriteDataC45(uint8 phy_addr, uint8 dev_addr, uint16 reg_data) // Writes data to t
+ 269:Generated_Source\PSoC5/MDIO_host_2_my.c **** {
+ 270              		.loc 1 269 0
+ 271              		.cfi_startproc
+ 272              		@ args = 0, pretend = 0, frame = 0
+ 273              		@ frame_needed = 0, uses_anonymous_args = 0
+ 274              		@ link register save eliminated.
+ 275              	.LVL9:
+ 276 0000 10B4     		push	{r4}
+ 277              		.cfi_def_cfa_offset 4
+ 278              		.cfi_offset 4, -4
+ 270:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	uint16	control_bits;
+ 271:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	uint8   status_reg;
+ 272:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 273:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	/* Clear and Set the control register for writing */
+ 274:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	MDIO_host_2_CONTROL_REG = MDIO_host_2_WRITE;
+ 279              		.loc 1 274 0
+ 280 0002 0024     		movs	r4, #0
+ 281 0004 0A4B     		ldr	r3, .L26
+ 282 0006 1C70     		strb	r4, [r3]
+ 275:Generated_Source\PSoC5/MDIO_host_2_my.c **** 		
+ 276:Generated_Source\PSoC5/MDIO_host_2_my.c ****     /* Set the control bits and write in the fifo f0 */
+ 277:Generated_Source\PSoC5/MDIO_host_2_my.c ****      control_bits = 0x0002+((uint16)1<<12)+(((uint16)phy_addr)<<7)+(((uint16)dev_addr)<<2);
+ 283              		.loc 1 277 0
+ 284 0008 8900     		lsls	r1, r1, #2
+ 285              	.LVL10:
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 11
+
+
+ 286 000a 01EBC010 		add	r0, r1, r0, lsl #7
+ 287              	.LVL11:
+ 288 000e 00F58050 		add	r0, r0, #4096
+ 289 0012 0230     		adds	r0, r0, #2
+ 290 0014 80B2     		uxth	r0, r0
+ 291              	.LVL12:
+ 278:Generated_Source\PSoC5/MDIO_host_2_my.c ****     MDIO_host_2_FIFO_F0_REG = control_bits;
+ 292              		.loc 1 278 0
+ 293 0016 313B     		subs	r3, r3, #49
+ 294 0018 1880     		strh	r0, [r3]	@ movhi
+ 279:Generated_Source\PSoC5/MDIO_host_2_my.c ****     MDIO_host_2_FIFO_F0_REG = reg_data;
+ 295              		.loc 1 279 0
+ 296 001a 1A80     		strh	r2, [r3]	@ movhi
+ 280:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 281:Generated_Source\PSoC5/MDIO_host_2_my.c ****    
+ 282:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	/* Clear hardware status register */
+ 283:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	status_reg = MDIO_host_2_STATUS_REG;
+ 297              		.loc 1 283 0
+ 298 001c 2133     		adds	r3, r3, #33
+ 299 001e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 300              	.LVL13:
+ 284:Generated_Source\PSoC5/MDIO_host_2_my.c ****     
+ 285:Generated_Source\PSoC5/MDIO_host_2_my.c ****     return ((status_reg)? 0 : 1);
+ 301              		.loc 1 285 0
+ 302 0020 13F0FF0F 		tst	r3, #255
+ 286:Generated_Source\PSoC5/MDIO_host_2_my.c **** }
+ 303              		.loc 1 286 0
+ 304 0024 0CBF     		ite	eq
+ 305 0026 0120     		moveq	r0, #1
+ 306              	.LVL14:
+ 307 0028 2046     		movne	r0, r4
+ 308 002a 5DF8044B 		ldr	r4, [sp], #4
+ 309              		.cfi_restore 4
+ 310              		.cfi_def_cfa_offset 0
+ 311 002e 7047     		bx	lr
+ 312              	.L27:
+ 313              		.align	2
+ 314              	.L26:
+ 315 0030 77650040 		.word	1073767799
+ 316              		.cfi_endproc
+ 317              	.LFE70:
+ 318              		.size	MDIO_host_2_WriteDataC45, .-MDIO_host_2_WriteDataC45
+ 319              		.section	.text.MDIO_host_2_ReadDataC45,"ax",%progbits
+ 320              		.align	2
+ 321              		.global	MDIO_host_2_ReadDataC45
+ 322              		.thumb
+ 323              		.thumb_func
+ 324              		.type	MDIO_host_2_ReadDataC45, %function
+ 325              	MDIO_host_2_ReadDataC45:
+ 326              	.LFB71:
+ 287:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 288:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 289:Generated_Source\PSoC5/MDIO_host_2_my.c **** /*******************************************************************************
+ 290:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+ 291:Generated_Source\PSoC5/MDIO_host_2_my.c **** * MDIO_host_2_ReadData_C45()
+ 292:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+ 293:Generated_Source\PSoC5/MDIO_host_2_my.c **** *******************************************************************************/
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 12
+
+
+ 294:Generated_Source\PSoC5/MDIO_host_2_my.c **** uint8 MDIO_host_2_ReadDataC45(uint8 phy_addr, uint8 dev_addr, uint16 *regData) // Read data from th
+ 295:Generated_Source\PSoC5/MDIO_host_2_my.c **** {
+ 327              		.loc 1 295 0
+ 328              		.cfi_startproc
+ 329              		@ args = 0, pretend = 0, frame = 0
+ 330              		@ frame_needed = 0, uses_anonymous_args = 0
+ 331              		@ link register save eliminated.
+ 332              	.LVL15:
+ 333 0000 10B4     		push	{r4}
+ 334              		.cfi_def_cfa_offset 4
+ 335              		.cfi_offset 4, -4
+ 296:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	uint16	control_bits;
+ 297:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	uint8 status_reg;
+ 298:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 299:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	/* Clear and Set the control register for reading */
+ 300:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	MDIO_host_2_CONTROL_REG = MDIO_host_2_READ;
+ 336              		.loc 1 300 0
+ 337 0002 0124     		movs	r4, #1
+ 338 0004 114B     		ldr	r3, .L31
+ 339 0006 1C70     		strb	r4, [r3]
+ 301:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	
+ 302:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	/* Set the control bits and write in the fifo f0 */
+ 303:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	control_bits = 0x0002+((uint16)3<<12)+(((uint16)phy_addr)<<7)+(((uint16)dev_addr)<<2);
+ 340              		.loc 1 303 0
+ 341 0008 8900     		lsls	r1, r1, #2
+ 342              	.LVL16:
+ 343 000a 01EBC010 		add	r0, r1, r0, lsl #7
+ 344              	.LVL17:
+ 345 000e 00F54050 		add	r0, r0, #12288
+ 346 0012 0230     		adds	r0, r0, #2
+ 347 0014 80B2     		uxth	r0, r0
+ 348              	.LVL18:
+ 304:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	MDIO_host_2_FIFO_F0_REG = control_bits;
+ 349              		.loc 1 304 0
+ 350 0016 313B     		subs	r3, r3, #49
+ 351 0018 1880     		strh	r0, [r3]	@ movhi
+ 305:Generated_Source\PSoC5/MDIO_host_2_my.c ****     MDIO_host_2_FIFO_F0_REG = 0xFFFF;
+ 352              		.loc 1 305 0
+ 353 001a 4FF6FF71 		movw	r1, #65535
+ 354 001e 1980     		strh	r1, [r3]	@ movhi
+ 306:Generated_Source\PSoC5/MDIO_host_2_my.c ****     
+ 307:Generated_Source\PSoC5/MDIO_host_2_my.c ****     /* Wait till the transmission is completed */
+ 308:Generated_Source\PSoC5/MDIO_host_2_my.c ****     MDIO_host_2_StatusRegister=0u;
+ 355              		.loc 1 308 0
+ 356 0020 0021     		movs	r1, #0
+ 357 0022 0B4B     		ldr	r3, .L31+4
+ 358 0024 1970     		strb	r1, [r3]
+ 359              	.L29:
+ 309:Generated_Source\PSoC5/MDIO_host_2_my.c ****     
+ 310:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	while( !MDIO_host_2_StatusRegister );
+ 360              		.loc 1 310 0 discriminator 1
+ 361 0026 0A4B     		ldr	r3, .L31+4
+ 362 0028 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 363 002a 13F0FF0F 		tst	r3, #255
+ 364 002e FAD0     		beq	.L29
+ 311:Generated_Source\PSoC5/MDIO_host_2_my.c ****     
+ 312:Generated_Source\PSoC5/MDIO_host_2_my.c ****    /* Get Data from FIFO f1 */
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 13
+
+
+ 313:Generated_Source\PSoC5/MDIO_host_2_my.c ****     //LED_3_Write(1);
+ 314:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	*regData = CY_GET_REG16(MDIO_host_2_A0_PTR);
+ 365              		.loc 1 314 0
+ 366 0030 084B     		ldr	r3, .L31+8
+ 367 0032 1B88     		ldrh	r3, [r3]
+ 368 0034 1380     		strh	r3, [r2]	@ movhi
+ 315:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	//LED_3_Write(0);
+ 316:Generated_Source\PSoC5/MDIO_host_2_my.c ****     /* Clear hardware status register */
+ 317:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	status_reg = MDIO_host_2_STATUS_REG;
+ 369              		.loc 1 317 0
+ 370 0036 084B     		ldr	r3, .L31+12
+ 371 0038 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 372              	.LVL19:
+ 318:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	return ((status_reg)? 0 : 1);
+ 373              		.loc 1 318 0
+ 374 003a 13F0FF0F 		tst	r3, #255
+ 319:Generated_Source\PSoC5/MDIO_host_2_my.c ****     
+ 320:Generated_Source\PSoC5/MDIO_host_2_my.c **** }
+ 375              		.loc 1 320 0
+ 376 003e 0CBF     		ite	eq
+ 377 0040 0120     		moveq	r0, #1
+ 378              	.LVL20:
+ 379 0042 0020     		movne	r0, #0
+ 380 0044 5DF8044B 		ldr	r4, [sp], #4
+ 381              		.cfi_restore 4
+ 382              		.cfi_def_cfa_offset 0
+ 383 0048 7047     		bx	lr
+ 384              	.L32:
+ 385 004a 00BF     		.align	2
+ 386              	.L31:
+ 387 004c 77650040 		.word	1073767799
+ 388 0050 00000000 		.word	.LANCHOR0
+ 389 0054 06650040 		.word	1073767686
+ 390 0058 67650040 		.word	1073767783
+ 391              		.cfi_endproc
+ 392              	.LFE71:
+ 393              		.size	MDIO_host_2_ReadDataC45, .-MDIO_host_2_ReadDataC45
+ 394              		.section	.text.MDIO_host_2_PosReadDataC45,"ax",%progbits
+ 395              		.align	2
+ 396              		.global	MDIO_host_2_PosReadDataC45
+ 397              		.thumb
+ 398              		.thumb_func
+ 399              		.type	MDIO_host_2_PosReadDataC45, %function
+ 400              	MDIO_host_2_PosReadDataC45:
+ 401              	.LFB72:
+ 321:Generated_Source\PSoC5/MDIO_host_2_my.c **** /*******************************************************************************
+ 322:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+ 323:Generated_Source\PSoC5/MDIO_host_2_my.c **** * MDIO_host_2_PosReadData_C45()
+ 324:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+ 325:Generated_Source\PSoC5/MDIO_host_2_my.c **** *******************************************************************************/
+ 326:Generated_Source\PSoC5/MDIO_host_2_my.c **** uint8 MDIO_host_2_PosReadDataC45(uint8 phy_addr, uint8 dev_addr, uint16 *regData) // Post Read Inc 
+ 327:Generated_Source\PSoC5/MDIO_host_2_my.c **** {
+ 402              		.loc 1 327 0
+ 403              		.cfi_startproc
+ 404              		@ args = 0, pretend = 0, frame = 0
+ 405              		@ frame_needed = 0, uses_anonymous_args = 0
+ 406              		@ link register save eliminated.
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 14
+
+
+ 407              	.LVL21:
+ 408 0000 10B4     		push	{r4}
+ 409              		.cfi_def_cfa_offset 4
+ 410              		.cfi_offset 4, -4
+ 328:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	uint16	control_bits;
+ 329:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	uint8 status_reg;
+ 330:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 331:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	/* Clear and Set the control register for reading */
+ 332:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	MDIO_host_2_CONTROL_REG = MDIO_host_2_READ;
+ 411              		.loc 1 332 0
+ 412 0002 0124     		movs	r4, #1
+ 413 0004 114B     		ldr	r3, .L36
+ 414 0006 1C70     		strb	r4, [r3]
+ 333:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	
+ 334:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	/* Set the control bits and write in the fifo f0 */
+ 335:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	control_bits = 0x0002+((uint16)2<<12)+(((uint16)phy_addr)<<7)+(((uint16)dev_addr)<<2);
+ 415              		.loc 1 335 0
+ 416 0008 8900     		lsls	r1, r1, #2
+ 417              	.LVL22:
+ 418 000a 01EBC010 		add	r0, r1, r0, lsl #7
+ 419              	.LVL23:
+ 420 000e 00F50050 		add	r0, r0, #8192
+ 421 0012 0230     		adds	r0, r0, #2
+ 422 0014 80B2     		uxth	r0, r0
+ 423              	.LVL24:
+ 336:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	MDIO_host_2_FIFO_F0_REG = control_bits;
+ 424              		.loc 1 336 0
+ 425 0016 313B     		subs	r3, r3, #49
+ 426 0018 1880     		strh	r0, [r3]	@ movhi
+ 337:Generated_Source\PSoC5/MDIO_host_2_my.c ****     MDIO_host_2_FIFO_F0_REG = 0xFFFF;
+ 427              		.loc 1 337 0
+ 428 001a 4FF6FF71 		movw	r1, #65535
+ 429 001e 1980     		strh	r1, [r3]	@ movhi
+ 338:Generated_Source\PSoC5/MDIO_host_2_my.c ****     
+ 339:Generated_Source\PSoC5/MDIO_host_2_my.c ****     /* Wait till the transmission is completed */
+ 340:Generated_Source\PSoC5/MDIO_host_2_my.c ****     MDIO_host_2_StatusRegister=0u;
+ 430              		.loc 1 340 0
+ 431 0020 0021     		movs	r1, #0
+ 432 0022 0B4B     		ldr	r3, .L36+4
+ 433 0024 1970     		strb	r1, [r3]
+ 434              	.L34:
+ 341:Generated_Source\PSoC5/MDIO_host_2_my.c ****     
+ 342:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	while( !MDIO_host_2_StatusRegister );
+ 435              		.loc 1 342 0 discriminator 1
+ 436 0026 0A4B     		ldr	r3, .L36+4
+ 437 0028 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 438 002a 13F0FF0F 		tst	r3, #255
+ 439 002e FAD0     		beq	.L34
+ 343:Generated_Source\PSoC5/MDIO_host_2_my.c ****     
+ 344:Generated_Source\PSoC5/MDIO_host_2_my.c ****    /* Get Data from FIFO f1 */
+ 345:Generated_Source\PSoC5/MDIO_host_2_my.c ****    // LED_3_Write(1);
+ 346:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	*regData = CY_GET_REG16(MDIO_host_2_A0_PTR);
+ 440              		.loc 1 346 0
+ 441 0030 084B     		ldr	r3, .L36+8
+ 442 0032 1B88     		ldrh	r3, [r3]
+ 443 0034 1380     		strh	r3, [r2]	@ movhi
+ 347:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	//LED_3_Write(0);
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 15
+
+
+ 348:Generated_Source\PSoC5/MDIO_host_2_my.c ****     /* Clear hardware status register */
+ 349:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	status_reg = MDIO_host_2_STATUS_REG;
+ 444              		.loc 1 349 0
+ 445 0036 084B     		ldr	r3, .L36+12
+ 446 0038 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 447              	.LVL25:
+ 350:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	return ((status_reg)? 0 : 1);
+ 448              		.loc 1 350 0
+ 449 003a 13F0FF0F 		tst	r3, #255
+ 351:Generated_Source\PSoC5/MDIO_host_2_my.c ****     
+ 352:Generated_Source\PSoC5/MDIO_host_2_my.c **** }
+ 450              		.loc 1 352 0
+ 451 003e 0CBF     		ite	eq
+ 452 0040 0120     		moveq	r0, #1
+ 453              	.LVL26:
+ 454 0042 0020     		movne	r0, #0
+ 455 0044 5DF8044B 		ldr	r4, [sp], #4
+ 456              		.cfi_restore 4
+ 457              		.cfi_def_cfa_offset 0
+ 458 0048 7047     		bx	lr
+ 459              	.L37:
+ 460 004a 00BF     		.align	2
+ 461              	.L36:
+ 462 004c 77650040 		.word	1073767799
+ 463 0050 00000000 		.word	.LANCHOR0
+ 464 0054 06650040 		.word	1073767686
+ 465 0058 67650040 		.word	1073767783
+ 466              		.cfi_endproc
+ 467              	.LFE72:
+ 468              		.size	MDIO_host_2_PosReadDataC45, .-MDIO_host_2_PosReadDataC45
+ 469              		.section	.text.MDIO_host_2_ClearStatus,"ax",%progbits
+ 470              		.align	2
+ 471              		.global	MDIO_host_2_ClearStatus
+ 472              		.thumb
+ 473              		.thumb_func
+ 474              		.type	MDIO_host_2_ClearStatus, %function
+ 475              	MDIO_host_2_ClearStatus:
+ 476              	.LFB73:
+ 353:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 354:Generated_Source\PSoC5/MDIO_host_2_my.c **** /*******************************************************************************
+ 355:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+ 356:Generated_Source\PSoC5/MDIO_host_2_my.c **** * MDIO_Host__ClearStatus()
+ 357:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+ 358:Generated_Source\PSoC5/MDIO_host_2_my.c **** *******************************************************************************/
+ 359:Generated_Source\PSoC5/MDIO_host_2_my.c **** void  MDIO_host_2_ClearStatus(void)
+ 360:Generated_Source\PSoC5/MDIO_host_2_my.c **** {
+ 477              		.loc 1 360 0
+ 478              		.cfi_startproc
+ 479              		@ args = 0, pretend = 0, frame = 0
+ 480              		@ frame_needed = 0, uses_anonymous_args = 0
+ 481              		@ link register save eliminated.
+ 361:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	MDIO_host_2_StatusRegister = 0x00u;
+ 482              		.loc 1 361 0
+ 483 0000 0022     		movs	r2, #0
+ 484 0002 014B     		ldr	r3, .L39
+ 485 0004 1A70     		strb	r2, [r3]
+ 486 0006 7047     		bx	lr
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 16
+
+
+ 487              	.L40:
+ 488              		.align	2
+ 489              	.L39:
+ 490 0008 00000000 		.word	.LANCHOR0
+ 491              		.cfi_endproc
+ 492              	.LFE73:
+ 493              		.size	MDIO_host_2_ClearStatus, .-MDIO_host_2_ClearStatus
+ 494              		.global	MDIO_host_2_StatusRegister
+ 495              		.global	MDIO_host_2_data_bits
+ 496              		.global	MDIO_host_2_initVar
+ 497              		.bss
+ 498              		.align	1
+ 499              		.set	.LANCHOR0,. + 0
+ 500              		.type	MDIO_host_2_StatusRegister, %object
+ 501              		.size	MDIO_host_2_StatusRegister, 1
+ 502              	MDIO_host_2_StatusRegister:
+ 503 0000 00       		.space	1
+ 504              		.type	MDIO_host_2_initVar, %object
+ 505              		.size	MDIO_host_2_initVar, 1
+ 506              	MDIO_host_2_initVar:
+ 507 0001 00       		.space	1
+ 508              		.type	MDIO_host_2_data_bits, %object
+ 509              		.size	MDIO_host_2_data_bits, 2
+ 510              	MDIO_host_2_data_bits:
+ 511 0002 0000     		.space	2
+ 512              		.text
+ 513              	.Letext0:
+ 514              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
+ 515              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
+ 516              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 517              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+ 518              		.section	.debug_info,"",%progbits
+ 519              	.Ldebug_info0:
+ 520 0000 5C030000 		.4byte	0x35c
+ 521 0004 0400     		.2byte	0x4
+ 522 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 523 000a 04       		.byte	0x4
+ 524 000b 01       		.uleb128 0x1
+ 525 000c D2010000 		.4byte	.LASF39
+ 526 0010 01       		.byte	0x1
+ 527 0011 9D010000 		.4byte	.LASF40
+ 528 0015 CA000000 		.4byte	.LASF41
+ 529 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 530 001d 00000000 		.4byte	0
+ 531 0021 00000000 		.4byte	.Ldebug_line0
+ 532 0025 02       		.uleb128 0x2
+ 533 0026 01       		.byte	0x1
+ 534 0027 06       		.byte	0x6
+ 535 0028 37030000 		.4byte	.LASF0
+ 536 002c 02       		.uleb128 0x2
+ 537 002d 01       		.byte	0x1
+ 538 002e 08       		.byte	0x8
+ 539 002f 4E010000 		.4byte	.LASF1
+ 540 0033 02       		.uleb128 0x2
+ 541 0034 02       		.byte	0x2
+ 542 0035 05       		.byte	0x5
+ 543 0036 FF020000 		.4byte	.LASF2
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 17
+
+
+ 544 003a 02       		.uleb128 0x2
+ 545 003b 02       		.byte	0x2
+ 546 003c 07       		.byte	0x7
+ 547 003d 73010000 		.4byte	.LASF3
+ 548 0041 03       		.uleb128 0x3
+ 549 0042 27000000 		.4byte	.LASF9
+ 550 0046 02       		.byte	0x2
+ 551 0047 3F       		.byte	0x3f
+ 552 0048 4C000000 		.4byte	0x4c
+ 553 004c 02       		.uleb128 0x2
+ 554 004d 04       		.byte	0x4
+ 555 004e 05       		.byte	0x5
+ 556 004f 18030000 		.4byte	.LASF4
+ 557 0053 02       		.uleb128 0x2
+ 558 0054 04       		.byte	0x4
+ 559 0055 07       		.byte	0x7
+ 560 0056 61010000 		.4byte	.LASF5
+ 561 005a 02       		.uleb128 0x2
+ 562 005b 08       		.byte	0x8
+ 563 005c 05       		.byte	0x5
+ 564 005d C1020000 		.4byte	.LASF6
+ 565 0061 02       		.uleb128 0x2
+ 566 0062 08       		.byte	0x8
+ 567 0063 07       		.byte	0x7
+ 568 0064 6D020000 		.4byte	.LASF7
+ 569 0068 04       		.uleb128 0x4
+ 570 0069 04       		.byte	0x4
+ 571 006a 05       		.byte	0x5
+ 572 006b 696E7400 		.ascii	"int\000"
+ 573 006f 02       		.uleb128 0x2
+ 574 0070 04       		.byte	0x4
+ 575 0071 07       		.byte	0x7
+ 576 0072 60020000 		.4byte	.LASF8
+ 577 0076 03       		.uleb128 0x3
+ 578 0077 B0020000 		.4byte	.LASF10
+ 579 007b 03       		.byte	0x3
+ 580 007c 2C       		.byte	0x2c
+ 581 007d 41000000 		.4byte	0x41
+ 582 0081 05       		.uleb128 0x5
+ 583 0082 09030000 		.4byte	.LASF11
+ 584 0086 04       		.byte	0x4
+ 585 0087 9201     		.2byte	0x192
+ 586 0089 2C000000 		.4byte	0x2c
+ 587 008d 05       		.uleb128 0x5
+ 588 008e 96010000 		.4byte	.LASF12
+ 589 0092 04       		.byte	0x4
+ 590 0093 9301     		.2byte	0x193
+ 591 0095 3A000000 		.4byte	0x3a
+ 592 0099 02       		.uleb128 0x2
+ 593 009a 04       		.byte	0x4
+ 594 009b 04       		.byte	0x4
+ 595 009c 36010000 		.4byte	.LASF13
+ 596 00a0 02       		.uleb128 0x2
+ 597 00a1 08       		.byte	0x8
+ 598 00a2 04       		.byte	0x4
+ 599 00a3 8F010000 		.4byte	.LASF14
+ 600 00a7 02       		.uleb128 0x2
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 18
+
+
+ 601 00a8 01       		.byte	0x1
+ 602 00a9 08       		.byte	0x8
+ 603 00aa CF020000 		.4byte	.LASF15
+ 604 00ae 05       		.uleb128 0x5
+ 605 00af 5C010000 		.4byte	.LASF16
+ 606 00b3 04       		.byte	0x4
+ 607 00b4 3C02     		.2byte	0x23c
+ 608 00b6 BA000000 		.4byte	0xba
+ 609 00ba 06       		.uleb128 0x6
+ 610 00bb 81000000 		.4byte	0x81
+ 611 00bf 05       		.uleb128 0x5
+ 612 00c0 00000000 		.4byte	.LASF17
+ 613 00c4 04       		.byte	0x4
+ 614 00c5 3D02     		.2byte	0x23d
+ 615 00c7 CB000000 		.4byte	0xcb
+ 616 00cb 06       		.uleb128 0x6
+ 617 00cc 8D000000 		.4byte	0x8d
+ 618 00d0 02       		.uleb128 0x2
+ 619 00d1 04       		.byte	0x4
+ 620 00d2 07       		.byte	0x7
+ 621 00d3 B8020000 		.4byte	.LASF18
+ 622 00d7 07       		.uleb128 0x7
+ 623 00d8 43030000 		.4byte	.LASF19
+ 624 00dc 01       		.byte	0x1
+ 625 00dd 48       		.byte	0x48
+ 626 00de 00000000 		.4byte	.LFB64
+ 627 00e2 10000000 		.4byte	.LFE64-.LFB64
+ 628 00e6 01       		.uleb128 0x1
+ 629 00e7 9C       		.byte	0x9c
+ 630 00e8 07       		.uleb128 0x7
+ 631 00e9 8C020000 		.4byte	.LASF20
+ 632 00ed 01       		.byte	0x1
+ 633 00ee 7D       		.byte	0x7d
+ 634 00ef 00000000 		.4byte	.LFB66
+ 635 00f3 1C000000 		.4byte	.LFE66-.LFB66
+ 636 00f7 01       		.uleb128 0x1
+ 637 00f8 9C       		.byte	0x9c
+ 638 00f9 08       		.uleb128 0x8
+ 639 00fa 06000000 		.4byte	.LASF42
+ 640 00fe 01       		.byte	0x1
+ 641 00ff CC       		.byte	0xcc
+ 642 0100 81000000 		.4byte	0x81
+ 643 0104 00000000 		.4byte	.LFB67
+ 644 0108 0C000000 		.4byte	.LFE67-.LFB67
+ 645 010c 01       		.uleb128 0x1
+ 646 010d 9C       		.byte	0x9c
+ 647 010e 07       		.uleb128 0x7
+ 648 010f 90000000 		.4byte	.LASF21
+ 649 0113 01       		.byte	0x1
+ 650 0114 E2       		.byte	0xe2
+ 651 0115 00000000 		.4byte	.LFB68
+ 652 0119 34000000 		.4byte	.LFE68-.LFB68
+ 653 011d 01       		.uleb128 0x1
+ 654 011e 9C       		.byte	0x9c
+ 655 011f 09       		.uleb128 0x9
+ 656 0120 9F020000 		.4byte	.LASF22
+ 657 0124 01       		.byte	0x1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 19
+
+
+ 658 0125 63       		.byte	0x63
+ 659 0126 00000000 		.4byte	.LFB65
+ 660 012a 0C000000 		.4byte	.LFE65-.LFB65
+ 661 012e 01       		.uleb128 0x1
+ 662 012f 9C       		.byte	0x9c
+ 663 0130 47010000 		.4byte	0x147
+ 664 0134 0A       		.uleb128 0xa
+ 665 0135 06000000 		.4byte	.LVL0
+ 666 0139 E8000000 		.4byte	0xe8
+ 667 013d 0A       		.uleb128 0xa
+ 668 013e 0A000000 		.4byte	.LVL1
+ 669 0142 0E010000 		.4byte	0x10e
+ 670 0146 00       		.byte	0
+ 671 0147 09       		.uleb128 0x9
+ 672 0148 3C010000 		.4byte	.LASF23
+ 673 014c 01       		.byte	0x1
+ 674 014d 2E       		.byte	0x2e
+ 675 014e 00000000 		.4byte	.LFB63
+ 676 0152 1C000000 		.4byte	.LFE63-.LFB63
+ 677 0156 01       		.uleb128 0x1
+ 678 0157 9C       		.byte	0x9c
+ 679 0158 6F010000 		.4byte	0x16f
+ 680 015c 0A       		.uleb128 0xa
+ 681 015d 0C000000 		.4byte	.LVL2
+ 682 0161 1F010000 		.4byte	0x11f
+ 683 0165 0A       		.uleb128 0xa
+ 684 0166 16000000 		.4byte	.LVL3
+ 685 016a E8000000 		.4byte	0xe8
+ 686 016e 00       		.byte	0
+ 687 016f 0B       		.uleb128 0xb
+ 688 0170 E8020000 		.4byte	.LASF29
+ 689 0174 01       		.byte	0x1
+ 690 0175 F2       		.byte	0xf2
+ 691 0176 81000000 		.4byte	0x81
+ 692 017a 00000000 		.4byte	.LFB69
+ 693 017e 30000000 		.4byte	.LFE69-.LFB69
+ 694 0182 01       		.uleb128 0x1
+ 695 0183 9C       		.byte	0x9c
+ 696 0184 CE010000 		.4byte	0x1ce
+ 697 0188 0C       		.uleb128 0xc
+ 698 0189 21030000 		.4byte	.LASF24
+ 699 018d 01       		.byte	0x1
+ 700 018e F2       		.byte	0xf2
+ 701 018f 81000000 		.4byte	0x81
+ 702 0193 00000000 		.4byte	.LLST0
+ 703 0197 0C       		.uleb128 0xc
+ 704 0198 0F030000 		.4byte	.LASF25
+ 705 019c 01       		.byte	0x1
+ 706 019d F2       		.byte	0xf2
+ 707 019e 81000000 		.4byte	0x81
+ 708 01a2 21000000 		.4byte	.LLST1
+ 709 01a6 0D       		.uleb128 0xd
+ 710 01a7 86010000 		.4byte	.LASF26
+ 711 01ab 01       		.byte	0x1
+ 712 01ac F2       		.byte	0xf2
+ 713 01ad 8D000000 		.4byte	0x8d
+ 714 01b1 01       		.uleb128 0x1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 20
+
+
+ 715 01b2 52       		.byte	0x52
+ 716 01b3 0E       		.uleb128 0xe
+ 717 01b4 2A030000 		.4byte	.LASF27
+ 718 01b8 01       		.byte	0x1
+ 719 01b9 F4       		.byte	0xf4
+ 720 01ba 8D000000 		.4byte	0x8d
+ 721 01be 01       		.uleb128 0x1
+ 722 01bf 51       		.byte	0x51
+ 723 01c0 0E       		.uleb128 0xe
+ 724 01c1 1C000000 		.4byte	.LASF28
+ 725 01c5 01       		.byte	0x1
+ 726 01c6 F5       		.byte	0xf5
+ 727 01c7 81000000 		.4byte	0x81
+ 728 01cb 01       		.uleb128 0x1
+ 729 01cc 53       		.byte	0x53
+ 730 01cd 00       		.byte	0
+ 731 01ce 0F       		.uleb128 0xf
+ 732 01cf 5F000000 		.4byte	.LASF30
+ 733 01d3 01       		.byte	0x1
+ 734 01d4 0C01     		.2byte	0x10c
+ 735 01d6 81000000 		.4byte	0x81
+ 736 01da 00000000 		.4byte	.LFB70
+ 737 01de 34000000 		.4byte	.LFE70-.LFB70
+ 738 01e2 01       		.uleb128 0x1
+ 739 01e3 9C       		.byte	0x9c
+ 740 01e4 35020000 		.4byte	0x235
+ 741 01e8 10       		.uleb128 0x10
+ 742 01e9 21030000 		.4byte	.LASF24
+ 743 01ed 01       		.byte	0x1
+ 744 01ee 0C01     		.2byte	0x10c
+ 745 01f0 81000000 		.4byte	0x81
+ 746 01f4 42000000 		.4byte	.LLST2
+ 747 01f8 10       		.uleb128 0x10
+ 748 01f9 0F030000 		.4byte	.LASF25
+ 749 01fd 01       		.byte	0x1
+ 750 01fe 0C01     		.2byte	0x10c
+ 751 0200 81000000 		.4byte	0x81
+ 752 0204 63000000 		.4byte	.LLST3
+ 753 0208 11       		.uleb128 0x11
+ 754 0209 86010000 		.4byte	.LASF26
+ 755 020d 01       		.byte	0x1
+ 756 020e 0C01     		.2byte	0x10c
+ 757 0210 8D000000 		.4byte	0x8d
+ 758 0214 01       		.uleb128 0x1
+ 759 0215 52       		.byte	0x52
+ 760 0216 12       		.uleb128 0x12
+ 761 0217 2A030000 		.4byte	.LASF27
+ 762 021b 01       		.byte	0x1
+ 763 021c 0E01     		.2byte	0x10e
+ 764 021e 8D000000 		.4byte	0x8d
+ 765 0222 84000000 		.4byte	.LLST4
+ 766 0226 13       		.uleb128 0x13
+ 767 0227 1C000000 		.4byte	.LASF28
+ 768 022b 01       		.byte	0x1
+ 769 022c 0F01     		.2byte	0x10f
+ 770 022e 81000000 		.4byte	0x81
+ 771 0232 01       		.uleb128 0x1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 21
+
+
+ 772 0233 53       		.byte	0x53
+ 773 0234 00       		.byte	0
+ 774 0235 0F       		.uleb128 0xf
+ 775 0236 31000000 		.4byte	.LASF31
+ 776 023a 01       		.byte	0x1
+ 777 023b 2601     		.2byte	0x126
+ 778 023d 81000000 		.4byte	0x81
+ 779 0241 00000000 		.4byte	.LFB71
+ 780 0245 5C000000 		.4byte	.LFE71-.LFB71
+ 781 0249 01       		.uleb128 0x1
+ 782 024a 9C       		.byte	0x9c
+ 783 024b 9C020000 		.4byte	0x29c
+ 784 024f 10       		.uleb128 0x10
+ 785 0250 21030000 		.4byte	.LASF24
+ 786 0254 01       		.byte	0x1
+ 787 0255 2601     		.2byte	0x126
+ 788 0257 81000000 		.4byte	0x81
+ 789 025b 97000000 		.4byte	.LLST5
+ 790 025f 10       		.uleb128 0x10
+ 791 0260 0F030000 		.4byte	.LASF25
+ 792 0264 01       		.byte	0x1
+ 793 0265 2601     		.2byte	0x126
+ 794 0267 81000000 		.4byte	0x81
+ 795 026b B8000000 		.4byte	.LLST6
+ 796 026f 11       		.uleb128 0x11
+ 797 0270 84020000 		.4byte	.LASF32
+ 798 0274 01       		.byte	0x1
+ 799 0275 2601     		.2byte	0x126
+ 800 0277 9C020000 		.4byte	0x29c
+ 801 027b 01       		.uleb128 0x1
+ 802 027c 52       		.byte	0x52
+ 803 027d 12       		.uleb128 0x12
+ 804 027e 2A030000 		.4byte	.LASF27
+ 805 0282 01       		.byte	0x1
+ 806 0283 2801     		.2byte	0x128
+ 807 0285 8D000000 		.4byte	0x8d
+ 808 0289 D9000000 		.4byte	.LLST7
+ 809 028d 13       		.uleb128 0x13
+ 810 028e 1C000000 		.4byte	.LASF28
+ 811 0292 01       		.byte	0x1
+ 812 0293 2901     		.2byte	0x129
+ 813 0295 81000000 		.4byte	0x81
+ 814 0299 01       		.uleb128 0x1
+ 815 029a 53       		.byte	0x53
+ 816 029b 00       		.byte	0
+ 817 029c 14       		.uleb128 0x14
+ 818 029d 04       		.byte	0x4
+ 819 029e 8D000000 		.4byte	0x8d
+ 820 02a2 0F       		.uleb128 0xf
+ 821 02a3 AF000000 		.4byte	.LASF33
+ 822 02a7 01       		.byte	0x1
+ 823 02a8 4601     		.2byte	0x146
+ 824 02aa 81000000 		.4byte	0x81
+ 825 02ae 00000000 		.4byte	.LFB72
+ 826 02b2 5C000000 		.4byte	.LFE72-.LFB72
+ 827 02b6 01       		.uleb128 0x1
+ 828 02b7 9C       		.byte	0x9c
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 22
+
+
+ 829 02b8 09030000 		.4byte	0x309
+ 830 02bc 10       		.uleb128 0x10
+ 831 02bd 21030000 		.4byte	.LASF24
+ 832 02c1 01       		.byte	0x1
+ 833 02c2 4601     		.2byte	0x146
+ 834 02c4 81000000 		.4byte	0x81
+ 835 02c8 EC000000 		.4byte	.LLST8
+ 836 02cc 10       		.uleb128 0x10
+ 837 02cd 0F030000 		.4byte	.LASF25
+ 838 02d1 01       		.byte	0x1
+ 839 02d2 4601     		.2byte	0x146
+ 840 02d4 81000000 		.4byte	0x81
+ 841 02d8 0D010000 		.4byte	.LLST9
+ 842 02dc 11       		.uleb128 0x11
+ 843 02dd 84020000 		.4byte	.LASF32
+ 844 02e1 01       		.byte	0x1
+ 845 02e2 4601     		.2byte	0x146
+ 846 02e4 9C020000 		.4byte	0x29c
+ 847 02e8 01       		.uleb128 0x1
+ 848 02e9 52       		.byte	0x52
+ 849 02ea 12       		.uleb128 0x12
+ 850 02eb 2A030000 		.4byte	.LASF27
+ 851 02ef 01       		.byte	0x1
+ 852 02f0 4801     		.2byte	0x148
+ 853 02f2 8D000000 		.4byte	0x8d
+ 854 02f6 2E010000 		.4byte	.LLST10
+ 855 02fa 13       		.uleb128 0x13
+ 856 02fb 1C000000 		.4byte	.LASF28
+ 857 02ff 01       		.byte	0x1
+ 858 0300 4901     		.2byte	0x149
+ 859 0302 81000000 		.4byte	0x81
+ 860 0306 01       		.uleb128 0x1
+ 861 0307 53       		.byte	0x53
+ 862 0308 00       		.byte	0
+ 863 0309 15       		.uleb128 0x15
+ 864 030a 78000000 		.4byte	.LASF34
+ 865 030e 01       		.byte	0x1
+ 866 030f 6701     		.2byte	0x167
+ 867 0311 00000000 		.4byte	.LFB73
+ 868 0315 0C000000 		.4byte	.LFE73-.LFB73
+ 869 0319 01       		.uleb128 0x1
+ 870 031a 9C       		.byte	0x9c
+ 871 031b 16       		.uleb128 0x16
+ 872 031c C5010000 		.4byte	.LASF35
+ 873 0320 05       		.byte	0x5
+ 874 0321 9606     		.2byte	0x696
+ 875 0323 27030000 		.4byte	0x327
+ 876 0327 06       		.uleb128 0x6
+ 877 0328 76000000 		.4byte	0x76
+ 878 032c 17       		.uleb128 0x17
+ 879 032d D4020000 		.4byte	.LASF36
+ 880 0331 01       		.byte	0x1
+ 881 0332 17       		.byte	0x17
+ 882 0333 81000000 		.4byte	0x81
+ 883 0337 05       		.uleb128 0x5
+ 884 0338 03       		.byte	0x3
+ 885 0339 00000000 		.4byte	MDIO_host_2_initVar
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 23
+
+
+ 886 033d 17       		.uleb128 0x17
+ 887 033e 49000000 		.4byte	.LASF37
+ 888 0342 01       		.byte	0x1
+ 889 0343 1A       		.byte	0x1a
+ 890 0344 CB000000 		.4byte	0xcb
+ 891 0348 05       		.uleb128 0x5
+ 892 0349 03       		.byte	0x3
+ 893 034a 00000000 		.4byte	MDIO_host_2_data_bits
+ 894 034e 17       		.uleb128 0x17
+ 895 034f 1B010000 		.4byte	.LASF38
+ 896 0353 01       		.byte	0x1
+ 897 0354 1D       		.byte	0x1d
+ 898 0355 BA000000 		.4byte	0xba
+ 899 0359 05       		.uleb128 0x5
+ 900 035a 03       		.byte	0x3
+ 901 035b 00000000 		.4byte	MDIO_host_2_StatusRegister
+ 902 035f 00       		.byte	0
+ 903              		.section	.debug_abbrev,"",%progbits
+ 904              	.Ldebug_abbrev0:
+ 905 0000 01       		.uleb128 0x1
+ 906 0001 11       		.uleb128 0x11
+ 907 0002 01       		.byte	0x1
+ 908 0003 25       		.uleb128 0x25
+ 909 0004 0E       		.uleb128 0xe
+ 910 0005 13       		.uleb128 0x13
+ 911 0006 0B       		.uleb128 0xb
+ 912 0007 03       		.uleb128 0x3
+ 913 0008 0E       		.uleb128 0xe
+ 914 0009 1B       		.uleb128 0x1b
+ 915 000a 0E       		.uleb128 0xe
+ 916 000b 55       		.uleb128 0x55
+ 917 000c 17       		.uleb128 0x17
+ 918 000d 11       		.uleb128 0x11
+ 919 000e 01       		.uleb128 0x1
+ 920 000f 10       		.uleb128 0x10
+ 921 0010 17       		.uleb128 0x17
+ 922 0011 00       		.byte	0
+ 923 0012 00       		.byte	0
+ 924 0013 02       		.uleb128 0x2
+ 925 0014 24       		.uleb128 0x24
+ 926 0015 00       		.byte	0
+ 927 0016 0B       		.uleb128 0xb
+ 928 0017 0B       		.uleb128 0xb
+ 929 0018 3E       		.uleb128 0x3e
+ 930 0019 0B       		.uleb128 0xb
+ 931 001a 03       		.uleb128 0x3
+ 932 001b 0E       		.uleb128 0xe
+ 933 001c 00       		.byte	0
+ 934 001d 00       		.byte	0
+ 935 001e 03       		.uleb128 0x3
+ 936 001f 16       		.uleb128 0x16
+ 937 0020 00       		.byte	0
+ 938 0021 03       		.uleb128 0x3
+ 939 0022 0E       		.uleb128 0xe
+ 940 0023 3A       		.uleb128 0x3a
+ 941 0024 0B       		.uleb128 0xb
+ 942 0025 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 24
+
+
+ 943 0026 0B       		.uleb128 0xb
+ 944 0027 49       		.uleb128 0x49
+ 945 0028 13       		.uleb128 0x13
+ 946 0029 00       		.byte	0
+ 947 002a 00       		.byte	0
+ 948 002b 04       		.uleb128 0x4
+ 949 002c 24       		.uleb128 0x24
+ 950 002d 00       		.byte	0
+ 951 002e 0B       		.uleb128 0xb
+ 952 002f 0B       		.uleb128 0xb
+ 953 0030 3E       		.uleb128 0x3e
+ 954 0031 0B       		.uleb128 0xb
+ 955 0032 03       		.uleb128 0x3
+ 956 0033 08       		.uleb128 0x8
+ 957 0034 00       		.byte	0
+ 958 0035 00       		.byte	0
+ 959 0036 05       		.uleb128 0x5
+ 960 0037 16       		.uleb128 0x16
+ 961 0038 00       		.byte	0
+ 962 0039 03       		.uleb128 0x3
+ 963 003a 0E       		.uleb128 0xe
+ 964 003b 3A       		.uleb128 0x3a
+ 965 003c 0B       		.uleb128 0xb
+ 966 003d 3B       		.uleb128 0x3b
+ 967 003e 05       		.uleb128 0x5
+ 968 003f 49       		.uleb128 0x49
+ 969 0040 13       		.uleb128 0x13
+ 970 0041 00       		.byte	0
+ 971 0042 00       		.byte	0
+ 972 0043 06       		.uleb128 0x6
+ 973 0044 35       		.uleb128 0x35
+ 974 0045 00       		.byte	0
+ 975 0046 49       		.uleb128 0x49
+ 976 0047 13       		.uleb128 0x13
+ 977 0048 00       		.byte	0
+ 978 0049 00       		.byte	0
+ 979 004a 07       		.uleb128 0x7
+ 980 004b 2E       		.uleb128 0x2e
+ 981 004c 00       		.byte	0
+ 982 004d 3F       		.uleb128 0x3f
+ 983 004e 19       		.uleb128 0x19
+ 984 004f 03       		.uleb128 0x3
+ 985 0050 0E       		.uleb128 0xe
+ 986 0051 3A       		.uleb128 0x3a
+ 987 0052 0B       		.uleb128 0xb
+ 988 0053 3B       		.uleb128 0x3b
+ 989 0054 0B       		.uleb128 0xb
+ 990 0055 27       		.uleb128 0x27
+ 991 0056 19       		.uleb128 0x19
+ 992 0057 11       		.uleb128 0x11
+ 993 0058 01       		.uleb128 0x1
+ 994 0059 12       		.uleb128 0x12
+ 995 005a 06       		.uleb128 0x6
+ 996 005b 40       		.uleb128 0x40
+ 997 005c 18       		.uleb128 0x18
+ 998 005d 9742     		.uleb128 0x2117
+ 999 005f 19       		.uleb128 0x19
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 25
+
+
+ 1000 0060 00       		.byte	0
+ 1001 0061 00       		.byte	0
+ 1002 0062 08       		.uleb128 0x8
+ 1003 0063 2E       		.uleb128 0x2e
+ 1004 0064 00       		.byte	0
+ 1005 0065 3F       		.uleb128 0x3f
+ 1006 0066 19       		.uleb128 0x19
+ 1007 0067 03       		.uleb128 0x3
+ 1008 0068 0E       		.uleb128 0xe
+ 1009 0069 3A       		.uleb128 0x3a
+ 1010 006a 0B       		.uleb128 0xb
+ 1011 006b 3B       		.uleb128 0x3b
+ 1012 006c 0B       		.uleb128 0xb
+ 1013 006d 27       		.uleb128 0x27
+ 1014 006e 19       		.uleb128 0x19
+ 1015 006f 49       		.uleb128 0x49
+ 1016 0070 13       		.uleb128 0x13
+ 1017 0071 11       		.uleb128 0x11
+ 1018 0072 01       		.uleb128 0x1
+ 1019 0073 12       		.uleb128 0x12
+ 1020 0074 06       		.uleb128 0x6
+ 1021 0075 40       		.uleb128 0x40
+ 1022 0076 18       		.uleb128 0x18
+ 1023 0077 9742     		.uleb128 0x2117
+ 1024 0079 19       		.uleb128 0x19
+ 1025 007a 00       		.byte	0
+ 1026 007b 00       		.byte	0
+ 1027 007c 09       		.uleb128 0x9
+ 1028 007d 2E       		.uleb128 0x2e
+ 1029 007e 01       		.byte	0x1
+ 1030 007f 3F       		.uleb128 0x3f
+ 1031 0080 19       		.uleb128 0x19
+ 1032 0081 03       		.uleb128 0x3
+ 1033 0082 0E       		.uleb128 0xe
+ 1034 0083 3A       		.uleb128 0x3a
+ 1035 0084 0B       		.uleb128 0xb
+ 1036 0085 3B       		.uleb128 0x3b
+ 1037 0086 0B       		.uleb128 0xb
+ 1038 0087 27       		.uleb128 0x27
+ 1039 0088 19       		.uleb128 0x19
+ 1040 0089 11       		.uleb128 0x11
+ 1041 008a 01       		.uleb128 0x1
+ 1042 008b 12       		.uleb128 0x12
+ 1043 008c 06       		.uleb128 0x6
+ 1044 008d 40       		.uleb128 0x40
+ 1045 008e 18       		.uleb128 0x18
+ 1046 008f 9742     		.uleb128 0x2117
+ 1047 0091 19       		.uleb128 0x19
+ 1048 0092 01       		.uleb128 0x1
+ 1049 0093 13       		.uleb128 0x13
+ 1050 0094 00       		.byte	0
+ 1051 0095 00       		.byte	0
+ 1052 0096 0A       		.uleb128 0xa
+ 1053 0097 898201   		.uleb128 0x4109
+ 1054 009a 00       		.byte	0
+ 1055 009b 11       		.uleb128 0x11
+ 1056 009c 01       		.uleb128 0x1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 26
+
+
+ 1057 009d 31       		.uleb128 0x31
+ 1058 009e 13       		.uleb128 0x13
+ 1059 009f 00       		.byte	0
+ 1060 00a0 00       		.byte	0
+ 1061 00a1 0B       		.uleb128 0xb
+ 1062 00a2 2E       		.uleb128 0x2e
+ 1063 00a3 01       		.byte	0x1
+ 1064 00a4 3F       		.uleb128 0x3f
+ 1065 00a5 19       		.uleb128 0x19
+ 1066 00a6 03       		.uleb128 0x3
+ 1067 00a7 0E       		.uleb128 0xe
+ 1068 00a8 3A       		.uleb128 0x3a
+ 1069 00a9 0B       		.uleb128 0xb
+ 1070 00aa 3B       		.uleb128 0x3b
+ 1071 00ab 0B       		.uleb128 0xb
+ 1072 00ac 27       		.uleb128 0x27
+ 1073 00ad 19       		.uleb128 0x19
+ 1074 00ae 49       		.uleb128 0x49
+ 1075 00af 13       		.uleb128 0x13
+ 1076 00b0 11       		.uleb128 0x11
+ 1077 00b1 01       		.uleb128 0x1
+ 1078 00b2 12       		.uleb128 0x12
+ 1079 00b3 06       		.uleb128 0x6
+ 1080 00b4 40       		.uleb128 0x40
+ 1081 00b5 18       		.uleb128 0x18
+ 1082 00b6 9742     		.uleb128 0x2117
+ 1083 00b8 19       		.uleb128 0x19
+ 1084 00b9 01       		.uleb128 0x1
+ 1085 00ba 13       		.uleb128 0x13
+ 1086 00bb 00       		.byte	0
+ 1087 00bc 00       		.byte	0
+ 1088 00bd 0C       		.uleb128 0xc
+ 1089 00be 05       		.uleb128 0x5
+ 1090 00bf 00       		.byte	0
+ 1091 00c0 03       		.uleb128 0x3
+ 1092 00c1 0E       		.uleb128 0xe
+ 1093 00c2 3A       		.uleb128 0x3a
+ 1094 00c3 0B       		.uleb128 0xb
+ 1095 00c4 3B       		.uleb128 0x3b
+ 1096 00c5 0B       		.uleb128 0xb
+ 1097 00c6 49       		.uleb128 0x49
+ 1098 00c7 13       		.uleb128 0x13
+ 1099 00c8 02       		.uleb128 0x2
+ 1100 00c9 17       		.uleb128 0x17
+ 1101 00ca 00       		.byte	0
+ 1102 00cb 00       		.byte	0
+ 1103 00cc 0D       		.uleb128 0xd
+ 1104 00cd 05       		.uleb128 0x5
+ 1105 00ce 00       		.byte	0
+ 1106 00cf 03       		.uleb128 0x3
+ 1107 00d0 0E       		.uleb128 0xe
+ 1108 00d1 3A       		.uleb128 0x3a
+ 1109 00d2 0B       		.uleb128 0xb
+ 1110 00d3 3B       		.uleb128 0x3b
+ 1111 00d4 0B       		.uleb128 0xb
+ 1112 00d5 49       		.uleb128 0x49
+ 1113 00d6 13       		.uleb128 0x13
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 27
+
+
+ 1114 00d7 02       		.uleb128 0x2
+ 1115 00d8 18       		.uleb128 0x18
+ 1116 00d9 00       		.byte	0
+ 1117 00da 00       		.byte	0
+ 1118 00db 0E       		.uleb128 0xe
+ 1119 00dc 34       		.uleb128 0x34
+ 1120 00dd 00       		.byte	0
+ 1121 00de 03       		.uleb128 0x3
+ 1122 00df 0E       		.uleb128 0xe
+ 1123 00e0 3A       		.uleb128 0x3a
+ 1124 00e1 0B       		.uleb128 0xb
+ 1125 00e2 3B       		.uleb128 0x3b
+ 1126 00e3 0B       		.uleb128 0xb
+ 1127 00e4 49       		.uleb128 0x49
+ 1128 00e5 13       		.uleb128 0x13
+ 1129 00e6 02       		.uleb128 0x2
+ 1130 00e7 18       		.uleb128 0x18
+ 1131 00e8 00       		.byte	0
+ 1132 00e9 00       		.byte	0
+ 1133 00ea 0F       		.uleb128 0xf
+ 1134 00eb 2E       		.uleb128 0x2e
+ 1135 00ec 01       		.byte	0x1
+ 1136 00ed 3F       		.uleb128 0x3f
+ 1137 00ee 19       		.uleb128 0x19
+ 1138 00ef 03       		.uleb128 0x3
+ 1139 00f0 0E       		.uleb128 0xe
+ 1140 00f1 3A       		.uleb128 0x3a
+ 1141 00f2 0B       		.uleb128 0xb
+ 1142 00f3 3B       		.uleb128 0x3b
+ 1143 00f4 05       		.uleb128 0x5
+ 1144 00f5 27       		.uleb128 0x27
+ 1145 00f6 19       		.uleb128 0x19
+ 1146 00f7 49       		.uleb128 0x49
+ 1147 00f8 13       		.uleb128 0x13
+ 1148 00f9 11       		.uleb128 0x11
+ 1149 00fa 01       		.uleb128 0x1
+ 1150 00fb 12       		.uleb128 0x12
+ 1151 00fc 06       		.uleb128 0x6
+ 1152 00fd 40       		.uleb128 0x40
+ 1153 00fe 18       		.uleb128 0x18
+ 1154 00ff 9742     		.uleb128 0x2117
+ 1155 0101 19       		.uleb128 0x19
+ 1156 0102 01       		.uleb128 0x1
+ 1157 0103 13       		.uleb128 0x13
+ 1158 0104 00       		.byte	0
+ 1159 0105 00       		.byte	0
+ 1160 0106 10       		.uleb128 0x10
+ 1161 0107 05       		.uleb128 0x5
+ 1162 0108 00       		.byte	0
+ 1163 0109 03       		.uleb128 0x3
+ 1164 010a 0E       		.uleb128 0xe
+ 1165 010b 3A       		.uleb128 0x3a
+ 1166 010c 0B       		.uleb128 0xb
+ 1167 010d 3B       		.uleb128 0x3b
+ 1168 010e 05       		.uleb128 0x5
+ 1169 010f 49       		.uleb128 0x49
+ 1170 0110 13       		.uleb128 0x13
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 28
+
+
+ 1171 0111 02       		.uleb128 0x2
+ 1172 0112 17       		.uleb128 0x17
+ 1173 0113 00       		.byte	0
+ 1174 0114 00       		.byte	0
+ 1175 0115 11       		.uleb128 0x11
+ 1176 0116 05       		.uleb128 0x5
+ 1177 0117 00       		.byte	0
+ 1178 0118 03       		.uleb128 0x3
+ 1179 0119 0E       		.uleb128 0xe
+ 1180 011a 3A       		.uleb128 0x3a
+ 1181 011b 0B       		.uleb128 0xb
+ 1182 011c 3B       		.uleb128 0x3b
+ 1183 011d 05       		.uleb128 0x5
+ 1184 011e 49       		.uleb128 0x49
+ 1185 011f 13       		.uleb128 0x13
+ 1186 0120 02       		.uleb128 0x2
+ 1187 0121 18       		.uleb128 0x18
+ 1188 0122 00       		.byte	0
+ 1189 0123 00       		.byte	0
+ 1190 0124 12       		.uleb128 0x12
+ 1191 0125 34       		.uleb128 0x34
+ 1192 0126 00       		.byte	0
+ 1193 0127 03       		.uleb128 0x3
+ 1194 0128 0E       		.uleb128 0xe
+ 1195 0129 3A       		.uleb128 0x3a
+ 1196 012a 0B       		.uleb128 0xb
+ 1197 012b 3B       		.uleb128 0x3b
+ 1198 012c 05       		.uleb128 0x5
+ 1199 012d 49       		.uleb128 0x49
+ 1200 012e 13       		.uleb128 0x13
+ 1201 012f 02       		.uleb128 0x2
+ 1202 0130 17       		.uleb128 0x17
+ 1203 0131 00       		.byte	0
+ 1204 0132 00       		.byte	0
+ 1205 0133 13       		.uleb128 0x13
+ 1206 0134 34       		.uleb128 0x34
+ 1207 0135 00       		.byte	0
+ 1208 0136 03       		.uleb128 0x3
+ 1209 0137 0E       		.uleb128 0xe
+ 1210 0138 3A       		.uleb128 0x3a
+ 1211 0139 0B       		.uleb128 0xb
+ 1212 013a 3B       		.uleb128 0x3b
+ 1213 013b 05       		.uleb128 0x5
+ 1214 013c 49       		.uleb128 0x49
+ 1215 013d 13       		.uleb128 0x13
+ 1216 013e 02       		.uleb128 0x2
+ 1217 013f 18       		.uleb128 0x18
+ 1218 0140 00       		.byte	0
+ 1219 0141 00       		.byte	0
+ 1220 0142 14       		.uleb128 0x14
+ 1221 0143 0F       		.uleb128 0xf
+ 1222 0144 00       		.byte	0
+ 1223 0145 0B       		.uleb128 0xb
+ 1224 0146 0B       		.uleb128 0xb
+ 1225 0147 49       		.uleb128 0x49
+ 1226 0148 13       		.uleb128 0x13
+ 1227 0149 00       		.byte	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 29
+
+
+ 1228 014a 00       		.byte	0
+ 1229 014b 15       		.uleb128 0x15
+ 1230 014c 2E       		.uleb128 0x2e
+ 1231 014d 00       		.byte	0
+ 1232 014e 3F       		.uleb128 0x3f
+ 1233 014f 19       		.uleb128 0x19
+ 1234 0150 03       		.uleb128 0x3
+ 1235 0151 0E       		.uleb128 0xe
+ 1236 0152 3A       		.uleb128 0x3a
+ 1237 0153 0B       		.uleb128 0xb
+ 1238 0154 3B       		.uleb128 0x3b
+ 1239 0155 05       		.uleb128 0x5
+ 1240 0156 27       		.uleb128 0x27
+ 1241 0157 19       		.uleb128 0x19
+ 1242 0158 11       		.uleb128 0x11
+ 1243 0159 01       		.uleb128 0x1
+ 1244 015a 12       		.uleb128 0x12
+ 1245 015b 06       		.uleb128 0x6
+ 1246 015c 40       		.uleb128 0x40
+ 1247 015d 18       		.uleb128 0x18
+ 1248 015e 9742     		.uleb128 0x2117
+ 1249 0160 19       		.uleb128 0x19
+ 1250 0161 00       		.byte	0
+ 1251 0162 00       		.byte	0
+ 1252 0163 16       		.uleb128 0x16
+ 1253 0164 34       		.uleb128 0x34
+ 1254 0165 00       		.byte	0
+ 1255 0166 03       		.uleb128 0x3
+ 1256 0167 0E       		.uleb128 0xe
+ 1257 0168 3A       		.uleb128 0x3a
+ 1258 0169 0B       		.uleb128 0xb
+ 1259 016a 3B       		.uleb128 0x3b
+ 1260 016b 05       		.uleb128 0x5
+ 1261 016c 49       		.uleb128 0x49
+ 1262 016d 13       		.uleb128 0x13
+ 1263 016e 3F       		.uleb128 0x3f
+ 1264 016f 19       		.uleb128 0x19
+ 1265 0170 3C       		.uleb128 0x3c
+ 1266 0171 19       		.uleb128 0x19
+ 1267 0172 00       		.byte	0
+ 1268 0173 00       		.byte	0
+ 1269 0174 17       		.uleb128 0x17
+ 1270 0175 34       		.uleb128 0x34
+ 1271 0176 00       		.byte	0
+ 1272 0177 03       		.uleb128 0x3
+ 1273 0178 0E       		.uleb128 0xe
+ 1274 0179 3A       		.uleb128 0x3a
+ 1275 017a 0B       		.uleb128 0xb
+ 1276 017b 3B       		.uleb128 0x3b
+ 1277 017c 0B       		.uleb128 0xb
+ 1278 017d 49       		.uleb128 0x49
+ 1279 017e 13       		.uleb128 0x13
+ 1280 017f 3F       		.uleb128 0x3f
+ 1281 0180 19       		.uleb128 0x19
+ 1282 0181 02       		.uleb128 0x2
+ 1283 0182 18       		.uleb128 0x18
+ 1284 0183 00       		.byte	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 30
+
+
+ 1285 0184 00       		.byte	0
+ 1286 0185 00       		.byte	0
+ 1287              		.section	.debug_loc,"",%progbits
+ 1288              	.Ldebug_loc0:
+ 1289              	.LLST0:
+ 1290 0000 00000000 		.4byte	.LVL4
+ 1291 0004 0E000000 		.4byte	.LVL6
+ 1292 0008 0100     		.2byte	0x1
+ 1293 000a 50       		.byte	0x50
+ 1294 000b 0E000000 		.4byte	.LVL6
+ 1295 000f 30000000 		.4byte	.LFE69
+ 1296 0013 0400     		.2byte	0x4
+ 1297 0015 F3       		.byte	0xf3
+ 1298 0016 01       		.uleb128 0x1
+ 1299 0017 50       		.byte	0x50
+ 1300 0018 9F       		.byte	0x9f
+ 1301 0019 00000000 		.4byte	0
+ 1302 001d 00000000 		.4byte	0
+ 1303              	.LLST1:
+ 1304 0021 00000000 		.4byte	.LVL4
+ 1305 0025 0A000000 		.4byte	.LVL5
+ 1306 0029 0100     		.2byte	0x1
+ 1307 002b 51       		.byte	0x51
+ 1308 002c 0A000000 		.4byte	.LVL5
+ 1309 0030 30000000 		.4byte	.LFE69
+ 1310 0034 0400     		.2byte	0x4
+ 1311 0036 F3       		.byte	0xf3
+ 1312 0037 01       		.uleb128 0x1
+ 1313 0038 51       		.byte	0x51
+ 1314 0039 9F       		.byte	0x9f
+ 1315 003a 00000000 		.4byte	0
+ 1316 003e 00000000 		.4byte	0
+ 1317              	.LLST2:
+ 1318 0042 00000000 		.4byte	.LVL9
+ 1319 0046 0E000000 		.4byte	.LVL11
+ 1320 004a 0100     		.2byte	0x1
+ 1321 004c 50       		.byte	0x50
+ 1322 004d 0E000000 		.4byte	.LVL11
+ 1323 0051 34000000 		.4byte	.LFE70
+ 1324 0055 0400     		.2byte	0x4
+ 1325 0057 F3       		.byte	0xf3
+ 1326 0058 01       		.uleb128 0x1
+ 1327 0059 50       		.byte	0x50
+ 1328 005a 9F       		.byte	0x9f
+ 1329 005b 00000000 		.4byte	0
+ 1330 005f 00000000 		.4byte	0
+ 1331              	.LLST3:
+ 1332 0063 00000000 		.4byte	.LVL9
+ 1333 0067 0A000000 		.4byte	.LVL10
+ 1334 006b 0100     		.2byte	0x1
+ 1335 006d 51       		.byte	0x51
+ 1336 006e 0A000000 		.4byte	.LVL10
+ 1337 0072 34000000 		.4byte	.LFE70
+ 1338 0076 0400     		.2byte	0x4
+ 1339 0078 F3       		.byte	0xf3
+ 1340 0079 01       		.uleb128 0x1
+ 1341 007a 51       		.byte	0x51
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 31
+
+
+ 1342 007b 9F       		.byte	0x9f
+ 1343 007c 00000000 		.4byte	0
+ 1344 0080 00000000 		.4byte	0
+ 1345              	.LLST4:
+ 1346 0084 16000000 		.4byte	.LVL12
+ 1347 0088 28000000 		.4byte	.LVL14
+ 1348 008c 0100     		.2byte	0x1
+ 1349 008e 50       		.byte	0x50
+ 1350 008f 00000000 		.4byte	0
+ 1351 0093 00000000 		.4byte	0
+ 1352              	.LLST5:
+ 1353 0097 00000000 		.4byte	.LVL15
+ 1354 009b 0E000000 		.4byte	.LVL17
+ 1355 009f 0100     		.2byte	0x1
+ 1356 00a1 50       		.byte	0x50
+ 1357 00a2 0E000000 		.4byte	.LVL17
+ 1358 00a6 5C000000 		.4byte	.LFE71
+ 1359 00aa 0400     		.2byte	0x4
+ 1360 00ac F3       		.byte	0xf3
+ 1361 00ad 01       		.uleb128 0x1
+ 1362 00ae 50       		.byte	0x50
+ 1363 00af 9F       		.byte	0x9f
+ 1364 00b0 00000000 		.4byte	0
+ 1365 00b4 00000000 		.4byte	0
+ 1366              	.LLST6:
+ 1367 00b8 00000000 		.4byte	.LVL15
+ 1368 00bc 0A000000 		.4byte	.LVL16
+ 1369 00c0 0100     		.2byte	0x1
+ 1370 00c2 51       		.byte	0x51
+ 1371 00c3 0A000000 		.4byte	.LVL16
+ 1372 00c7 5C000000 		.4byte	.LFE71
+ 1373 00cb 0400     		.2byte	0x4
+ 1374 00cd F3       		.byte	0xf3
+ 1375 00ce 01       		.uleb128 0x1
+ 1376 00cf 51       		.byte	0x51
+ 1377 00d0 9F       		.byte	0x9f
+ 1378 00d1 00000000 		.4byte	0
+ 1379 00d5 00000000 		.4byte	0
+ 1380              	.LLST7:
+ 1381 00d9 16000000 		.4byte	.LVL18
+ 1382 00dd 42000000 		.4byte	.LVL20
+ 1383 00e1 0100     		.2byte	0x1
+ 1384 00e3 50       		.byte	0x50
+ 1385 00e4 00000000 		.4byte	0
+ 1386 00e8 00000000 		.4byte	0
+ 1387              	.LLST8:
+ 1388 00ec 00000000 		.4byte	.LVL21
+ 1389 00f0 0E000000 		.4byte	.LVL23
+ 1390 00f4 0100     		.2byte	0x1
+ 1391 00f6 50       		.byte	0x50
+ 1392 00f7 0E000000 		.4byte	.LVL23
+ 1393 00fb 5C000000 		.4byte	.LFE72
+ 1394 00ff 0400     		.2byte	0x4
+ 1395 0101 F3       		.byte	0xf3
+ 1396 0102 01       		.uleb128 0x1
+ 1397 0103 50       		.byte	0x50
+ 1398 0104 9F       		.byte	0x9f
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 32
+
+
+ 1399 0105 00000000 		.4byte	0
+ 1400 0109 00000000 		.4byte	0
+ 1401              	.LLST9:
+ 1402 010d 00000000 		.4byte	.LVL21
+ 1403 0111 0A000000 		.4byte	.LVL22
+ 1404 0115 0100     		.2byte	0x1
+ 1405 0117 51       		.byte	0x51
+ 1406 0118 0A000000 		.4byte	.LVL22
+ 1407 011c 5C000000 		.4byte	.LFE72
+ 1408 0120 0400     		.2byte	0x4
+ 1409 0122 F3       		.byte	0xf3
+ 1410 0123 01       		.uleb128 0x1
+ 1411 0124 51       		.byte	0x51
+ 1412 0125 9F       		.byte	0x9f
+ 1413 0126 00000000 		.4byte	0
+ 1414 012a 00000000 		.4byte	0
+ 1415              	.LLST10:
+ 1416 012e 16000000 		.4byte	.LVL24
+ 1417 0132 42000000 		.4byte	.LVL26
+ 1418 0136 0100     		.2byte	0x1
+ 1419 0138 50       		.byte	0x50
+ 1420 0139 00000000 		.4byte	0
+ 1421 013d 00000000 		.4byte	0
+ 1422              		.section	.debug_aranges,"",%progbits
+ 1423 0000 6C000000 		.4byte	0x6c
+ 1424 0004 0200     		.2byte	0x2
+ 1425 0006 00000000 		.4byte	.Ldebug_info0
+ 1426 000a 04       		.byte	0x4
+ 1427 000b 00       		.byte	0
+ 1428 000c 0000     		.2byte	0
+ 1429 000e 0000     		.2byte	0
+ 1430 0010 00000000 		.4byte	.LFB64
+ 1431 0014 10000000 		.4byte	.LFE64-.LFB64
+ 1432 0018 00000000 		.4byte	.LFB66
+ 1433 001c 1C000000 		.4byte	.LFE66-.LFB66
+ 1434 0020 00000000 		.4byte	.LFB67
+ 1435 0024 0C000000 		.4byte	.LFE67-.LFB67
+ 1436 0028 00000000 		.4byte	.LFB68
+ 1437 002c 34000000 		.4byte	.LFE68-.LFB68
+ 1438 0030 00000000 		.4byte	.LFB65
+ 1439 0034 0C000000 		.4byte	.LFE65-.LFB65
+ 1440 0038 00000000 		.4byte	.LFB63
+ 1441 003c 1C000000 		.4byte	.LFE63-.LFB63
+ 1442 0040 00000000 		.4byte	.LFB69
+ 1443 0044 30000000 		.4byte	.LFE69-.LFB69
+ 1444 0048 00000000 		.4byte	.LFB70
+ 1445 004c 34000000 		.4byte	.LFE70-.LFB70
+ 1446 0050 00000000 		.4byte	.LFB71
+ 1447 0054 5C000000 		.4byte	.LFE71-.LFB71
+ 1448 0058 00000000 		.4byte	.LFB72
+ 1449 005c 5C000000 		.4byte	.LFE72-.LFB72
+ 1450 0060 00000000 		.4byte	.LFB73
+ 1451 0064 0C000000 		.4byte	.LFE73-.LFB73
+ 1452 0068 00000000 		.4byte	0
+ 1453 006c 00000000 		.4byte	0
+ 1454              		.section	.debug_ranges,"",%progbits
+ 1455              	.Ldebug_ranges0:
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 33
+
+
+ 1456 0000 00000000 		.4byte	.LFB64
+ 1457 0004 10000000 		.4byte	.LFE64
+ 1458 0008 00000000 		.4byte	.LFB66
+ 1459 000c 1C000000 		.4byte	.LFE66
+ 1460 0010 00000000 		.4byte	.LFB67
+ 1461 0014 0C000000 		.4byte	.LFE67
+ 1462 0018 00000000 		.4byte	.LFB68
+ 1463 001c 34000000 		.4byte	.LFE68
+ 1464 0020 00000000 		.4byte	.LFB65
+ 1465 0024 0C000000 		.4byte	.LFE65
+ 1466 0028 00000000 		.4byte	.LFB63
+ 1467 002c 1C000000 		.4byte	.LFE63
+ 1468 0030 00000000 		.4byte	.LFB69
+ 1469 0034 30000000 		.4byte	.LFE69
+ 1470 0038 00000000 		.4byte	.LFB70
+ 1471 003c 34000000 		.4byte	.LFE70
+ 1472 0040 00000000 		.4byte	.LFB71
+ 1473 0044 5C000000 		.4byte	.LFE71
+ 1474 0048 00000000 		.4byte	.LFB72
+ 1475 004c 5C000000 		.4byte	.LFE72
+ 1476 0050 00000000 		.4byte	.LFB73
+ 1477 0054 0C000000 		.4byte	.LFE73
+ 1478 0058 00000000 		.4byte	0
+ 1479 005c 00000000 		.4byte	0
+ 1480              		.section	.debug_line,"",%progbits
+ 1481              	.Ldebug_line0:
+ 1482 0000 3F020000 		.section	.debug_str,"MS",%progbits,1
+ 1482      02005101 
+ 1482      00000201 
+ 1482      FB0E0D00 
+ 1482      01010101 
+ 1483              	.LASF17:
+ 1484 0000 72656731 		.ascii	"reg16\000"
+ 1484      3600
+ 1485              	.LASF42:
+ 1486 0006 4D44494F 		.ascii	"MDIO_host_2_GetStatus\000"
+ 1486      5F686F73 
+ 1486      745F325F 
+ 1486      47657453 
+ 1486      74617475 
+ 1487              	.LASF28:
+ 1488 001c 73746174 		.ascii	"status_reg\000"
+ 1488      75735F72 
+ 1488      656700
+ 1489              	.LASF9:
+ 1490 0027 5F5F696E 		.ascii	"__int32_t\000"
+ 1490      7433325F 
+ 1490      7400
+ 1491              	.LASF31:
+ 1492 0031 4D44494F 		.ascii	"MDIO_host_2_ReadDataC45\000"
+ 1492      5F686F73 
+ 1492      745F325F 
+ 1492      52656164 
+ 1492      44617461 
+ 1493              	.LASF37:
+ 1494 0049 4D44494F 		.ascii	"MDIO_host_2_data_bits\000"
+ 1494      5F686F73 
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 34
+
+
+ 1494      745F325F 
+ 1494      64617461 
+ 1494      5F626974 
+ 1495              	.LASF30:
+ 1496 005f 4D44494F 		.ascii	"MDIO_host_2_WriteDataC45\000"
+ 1496      5F686F73 
+ 1496      745F325F 
+ 1496      57726974 
+ 1496      65446174 
+ 1497              	.LASF34:
+ 1498 0078 4D44494F 		.ascii	"MDIO_host_2_ClearStatus\000"
+ 1498      5F686F73 
+ 1498      745F325F 
+ 1498      436C6561 
+ 1498      72537461 
+ 1499              	.LASF21:
+ 1500 0090 4D44494F 		.ascii	"MDIO_host_2_ClearInternalFIFOs\000"
+ 1500      5F686F73 
+ 1500      745F325F 
+ 1500      436C6561 
+ 1500      72496E74 
+ 1501              	.LASF33:
+ 1502 00af 4D44494F 		.ascii	"MDIO_host_2_PosReadDataC45\000"
+ 1502      5F686F73 
+ 1502      745F325F 
+ 1502      506F7352 
+ 1502      65616444 
+ 1503              	.LASF41:
+ 1504 00ca 443A5C50 		.ascii	"D:\\PROJECT\\pgm\\Adaptor_CFP_CFP2_Cypress\\cfp_rea"
+ 1504      524F4A45 
+ 1504      43545C70 
+ 1504      676D5C41 
+ 1504      64617074 
+ 1505 00f9 6465725C 		.ascii	"der\\W_cfp_reader\\cfp_reader.cydsn\000"
+ 1505      575F6366 
+ 1505      705F7265 
+ 1505      61646572 
+ 1505      5C636670 
+ 1506              	.LASF38:
+ 1507 011b 4D44494F 		.ascii	"MDIO_host_2_StatusRegister\000"
+ 1507      5F686F73 
+ 1507      745F325F 
+ 1507      53746174 
+ 1507      75735265 
+ 1508              	.LASF13:
+ 1509 0136 666C6F61 		.ascii	"float\000"
+ 1509      7400
+ 1510              	.LASF23:
+ 1511 013c 4D44494F 		.ascii	"MDIO_host_2_Start\000"
+ 1511      5F686F73 
+ 1511      745F325F 
+ 1511      53746172 
+ 1511      7400
+ 1512              	.LASF1:
+ 1513 014e 756E7369 		.ascii	"unsigned char\000"
+ 1513      676E6564 
+ 1513      20636861 
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 35
+
+
+ 1513      7200
+ 1514              	.LASF16:
+ 1515 015c 72656738 		.ascii	"reg8\000"
+ 1515      00
+ 1516              	.LASF5:
+ 1517 0161 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1517      20756E73 
+ 1517      69676E65 
+ 1517      6420696E 
+ 1517      7400
+ 1518              	.LASF3:
+ 1519 0173 73686F72 		.ascii	"short unsigned int\000"
+ 1519      7420756E 
+ 1519      7369676E 
+ 1519      65642069 
+ 1519      6E7400
+ 1520              	.LASF26:
+ 1521 0186 7265675F 		.ascii	"reg_data\000"
+ 1521      64617461 
+ 1521      00
+ 1522              	.LASF14:
+ 1523 018f 646F7562 		.ascii	"double\000"
+ 1523      6C6500
+ 1524              	.LASF12:
+ 1525 0196 75696E74 		.ascii	"uint16\000"
+ 1525      313600
+ 1526              	.LASF40:
+ 1527 019d 47656E65 		.ascii	"Generated_Source\\PSoC5\\MDIO_host_2_my.c\000"
+ 1527      72617465 
+ 1527      645F536F 
+ 1527      75726365 
+ 1527      5C50536F 
+ 1528              	.LASF35:
+ 1529 01c5 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1529      52784275 
+ 1529      66666572 
+ 1529      00
+ 1530              	.LASF39:
+ 1531 01d2 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1531      4320342E 
+ 1531      392E3320 
+ 1531      32303135 
+ 1531      30333033 
+ 1532 0205 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 1532      20726576 
+ 1532      6973696F 
+ 1532      6E203232 
+ 1532      31323230 
+ 1533 0238 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1533      66756E63 
+ 1533      74696F6E 
+ 1533      2D736563 
+ 1533      74696F6E 
+ 1534              	.LASF8:
+ 1535 0260 756E7369 		.ascii	"unsigned int\000"
+ 1535      676E6564 
+ 1535      20696E74 
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 36
+
+
+ 1535      00
+ 1536              	.LASF7:
+ 1537 026d 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1537      206C6F6E 
+ 1537      6720756E 
+ 1537      7369676E 
+ 1537      65642069 
+ 1538              	.LASF32:
+ 1539 0284 72656744 		.ascii	"regData\000"
+ 1539      61746100 
+ 1540              	.LASF20:
+ 1541 028c 4D44494F 		.ascii	"MDIO_host_2_Enable\000"
+ 1541      5F686F73 
+ 1541      745F325F 
+ 1541      456E6162 
+ 1541      6C6500
+ 1542              	.LASF22:
+ 1543 029f 4D44494F 		.ascii	"MDIO_host_2_Init\000"
+ 1543      5F686F73 
+ 1543      745F325F 
+ 1543      496E6974 
+ 1543      00
+ 1544              	.LASF10:
+ 1545 02b0 696E7433 		.ascii	"int32_t\000"
+ 1545      325F7400 
+ 1546              	.LASF18:
+ 1547 02b8 73697A65 		.ascii	"sizetype\000"
+ 1547      74797065 
+ 1547      00
+ 1548              	.LASF6:
+ 1549 02c1 6C6F6E67 		.ascii	"long long int\000"
+ 1549      206C6F6E 
+ 1549      6720696E 
+ 1549      7400
+ 1550              	.LASF15:
+ 1551 02cf 63686172 		.ascii	"char\000"
+ 1551      00
+ 1552              	.LASF36:
+ 1553 02d4 4D44494F 		.ascii	"MDIO_host_2_initVar\000"
+ 1553      5F686F73 
+ 1553      745F325F 
+ 1553      696E6974 
+ 1553      56617200 
+ 1554              	.LASF29:
+ 1555 02e8 4D44494F 		.ascii	"MDIO_host_2_SetAddrC45\000"
+ 1555      5F686F73 
+ 1555      745F325F 
+ 1555      53657441 
+ 1555      64647243 
+ 1556              	.LASF2:
+ 1557 02ff 73686F72 		.ascii	"short int\000"
+ 1557      7420696E 
+ 1557      7400
+ 1558              	.LASF11:
+ 1559 0309 75696E74 		.ascii	"uint8\000"
+ 1559      3800
+ 1560              	.LASF25:
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccyPOBad.s 			page 37
+
+
+ 1561 030f 6465765F 		.ascii	"dev_addr\000"
+ 1561      61646472 
+ 1561      00
+ 1562              	.LASF4:
+ 1563 0318 6C6F6E67 		.ascii	"long int\000"
+ 1563      20696E74 
+ 1563      00
+ 1564              	.LASF24:
+ 1565 0321 7068795F 		.ascii	"phy_addr\000"
+ 1565      61646472 
+ 1565      00
+ 1566              	.LASF27:
+ 1567 032a 636F6E74 		.ascii	"control_bits\000"
+ 1567      726F6C5F 
+ 1567      62697473 
+ 1567      00
+ 1568              	.LASF0:
+ 1569 0337 7369676E 		.ascii	"signed char\000"
+ 1569      65642063 
+ 1569      68617200 
+ 1570              	.LASF19:
+ 1571 0343 4D44494F 		.ascii	"MDIO_host_2_Stop\000"
+ 1571      5F686F73 
+ 1571      745F325F 
+ 1571      53746F70 
+ 1571      00
+ 1572              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

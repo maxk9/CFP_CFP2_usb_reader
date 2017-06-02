@@ -1,0 +1,1816 @@
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cco51iVj.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"cymetadata.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.global	cy_metadata
+  19              		.global	cy_meta_flashprotect
+  20              		.global	cy_meta_wonvl
+  21              		.global	cy_meta_custnvl
+  22              		.global	cy_meta_configecc
+  23              		.section	.cyconfigecc,"a",%progbits
+  24              		.align	2
+  25              		.type	cy_meta_configecc, %object
+  26              		.size	cy_meta_configecc, 1236
+  27              	cy_meta_configecc:
+  28 0000 01       		.byte	1
+  29 0001 45       		.byte	69
+  30 0002 00       		.byte	0
+  31 0003 40       		.byte	64
+  32 0004 06       		.byte	6
+  33 0005 52       		.byte	82
+  34 0006 00       		.byte	0
+  35 0007 40       		.byte	64
+  36 0008 01       		.byte	1
+  37 0009 64       		.byte	100
+  38 000a 00       		.byte	0
+  39 000b 40       		.byte	64
+  40 000c 03       		.byte	3
+  41 000d 01       		.byte	1
+  42 000e 01       		.byte	1
+  43 000f 40       		.byte	64
+  44 0010 02       		.byte	2
+  45 0011 03       		.byte	3
+  46 0012 01       		.byte	1
+  47 0013 40       		.byte	64
+  48 0014 03       		.byte	3
+  49 0015 05       		.byte	5
+  50 0016 01       		.byte	1
+  51 0017 40       		.byte	64
+  52 0018 5E       		.byte	94
+  53 0019 06       		.byte	6
+  54 001a 01       		.byte	1
+  55 001b 40       		.byte	64
+  56 001c 38       		.byte	56
+  57 001d 07       		.byte	7
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cco51iVj.s 			page 2
+
+
+  58 001e 01       		.byte	1
+  59 001f 40       		.byte	64
+  60 0020 01       		.byte	1
+  61 0021 0D       		.byte	13
+  62 0022 01       		.byte	1
+  63 0023 40       		.byte	64
+  64 0024 01       		.byte	1
+  65 0025 0F       		.byte	15
+  66 0026 01       		.byte	1
+  67 0027 40       		.byte	64
+  68 0028 47       		.byte	71
+  69 0029 14       		.byte	20
+  70 002a 01       		.byte	1
+  71 002b 40       		.byte	64
+  72 002c 3E       		.byte	62
+  73 002d 15       		.byte	21
+  74 002e 01       		.byte	1
+  75 002f 40       		.byte	64
+  76 0030 5C       		.byte	92
+  77 0031 16       		.byte	22
+  78 0032 01       		.byte	1
+  79 0033 40       		.byte	64
+  80 0034 4A       		.byte	74
+  81 0035 17       		.byte	23
+  82 0036 01       		.byte	1
+  83 0037 40       		.byte	64
+  84 0038 01       		.byte	1
+  85 0039 19       		.byte	25
+  86 003a 01       		.byte	1
+  87 003b 40       		.byte	64
+  88 003c 06       		.byte	6
+  89 003d 40       		.byte	64
+  90 003e 01       		.byte	1
+  91 003f 40       		.byte	64
+  92 0040 08       		.byte	8
+  93 0041 41       		.byte	65
+  94 0042 01       		.byte	1
+  95 0043 40       		.byte	64
+  96 0044 05       		.byte	5
+  97 0045 42       		.byte	66
+  98 0046 01       		.byte	1
+  99 0047 40       		.byte	64
+ 100 0048 03       		.byte	3
+ 101 0049 43       		.byte	67
+ 102 004a 01       		.byte	1
+ 103 004b 40       		.byte	64
+ 104 004c 01       		.byte	1
+ 105 004d 44       		.byte	68
+ 106 004e 01       		.byte	1
+ 107 004f 40       		.byte	64
+ 108 0050 02       		.byte	2
+ 109 0051 45       		.byte	69
+ 110 0052 01       		.byte	1
+ 111 0053 40       		.byte	64
+ 112 0054 01       		.byte	1
+ 113 0055 46       		.byte	70
+ 114 0056 01       		.byte	1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cco51iVj.s 			page 3
+
+
+ 115 0057 40       		.byte	64
+ 116 0058 05       		.byte	5
+ 117 0059 47       		.byte	71
+ 118 005a 01       		.byte	1
+ 119 005b 40       		.byte	64
+ 120 005c 07       		.byte	7
+ 121 005d 48       		.byte	72
+ 122 005e 01       		.byte	1
+ 123 005f 40       		.byte	64
+ 124 0060 13       		.byte	19
+ 125 0061 49       		.byte	73
+ 126 0062 01       		.byte	1
+ 127 0063 40       		.byte	64
+ 128 0064 01       		.byte	1
+ 129 0065 4C       		.byte	76
+ 130 0066 01       		.byte	1
+ 131 0067 40       		.byte	64
+ 132 0068 04       		.byte	4
+ 133 0069 50       		.byte	80
+ 134 006a 01       		.byte	1
+ 135 006b 40       		.byte	64
+ 136 006c 01       		.byte	1
+ 137 006d 51       		.byte	81
+ 138 006e 01       		.byte	1
+ 139 006f 40       		.byte	64
+ 140 0070 7E       		.byte	126
+ 141 0071 02       		.byte	2
+ 142 0072 00       		.byte	0
+ 143 0073 30       		.byte	48
+ 144 0074 01       		.byte	1
+ 145 0075 90       		.byte	-112
+ 146 0076 0C       		.byte	12
+ 147 0077 40       		.byte	64
+ 148 0078 1C       		.byte	28
+ 149 0079 C0       		.byte	-64
+ 150 007a 60       		.byte	96
+ 151 007b 01       		.byte	1
+ 152 007c 7C       		.byte	124
+ 153 007d 43       		.byte	67
+ 154 007e 87       		.byte	-121
+ 155 007f 3F       		.byte	63
+ 156 0080 8A       		.byte	-118
+ 157 0081 04       		.byte	4
+ 158 0082 E2       		.byte	-30
+ 159 0083 04       		.byte	4
+ 160 0084 E6       		.byte	-26
+ 161 0085 20       		.byte	32
+ 162 0086 96       		.byte	-106
+ 163 0087 04       		.byte	4
+ 164 0088 E2       		.byte	-30
+ 165 0089 08       		.byte	8
+ 166 008a 88       		.byte	-120
+ 167 008b 04       		.byte	4
+ 168 008c 96       		.byte	-106
+ 169 008d 04       		.byte	4
+ 170 008e E2       		.byte	-30
+ 171 008f 20       		.byte	32
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cco51iVj.s 			page 4
+
+
+ 172 0090 03       		.byte	3
+ 173 0091 01       		.byte	1
+ 174 0092 04       		.byte	4
+ 175 0093 04       		.byte	4
+ 176 0094 06       		.byte	6
+ 177 0095 02       		.byte	2
+ 178 0096 0B       		.byte	11
+ 179 0097 01       		.byte	1
+ 180 0098 0C       		.byte	12
+ 181 0099 02       		.byte	2
+ 182 009a 0E       		.byte	14
+ 183 009b 04       		.byte	4
+ 184 009c 18       		.byte	24
+ 185 009d 01       		.byte	1
+ 186 009e 24       		.byte	36
+ 187 009f 01       		.byte	1
+ 188 00a0 28       		.byte	40
+ 189 00a1 01       		.byte	1
+ 190 00a2 32       		.byte	50
+ 191 00a3 01       		.byte	1
+ 192 00a4 34       		.byte	52
+ 193 00a5 06       		.byte	6
+ 194 00a6 37       		.byte	55
+ 195 00a7 01       		.byte	1
+ 196 00a8 38       		.byte	56
+ 197 00a9 08       		.byte	8
+ 198 00aa 3E       		.byte	62
+ 199 00ab 14       		.byte	20
+ 200 00ac 40       		.byte	64
+ 201 00ad 30       		.byte	48
+ 202 00ae 41       		.byte	65
+ 203 00af 06       		.byte	6
+ 204 00b0 45       		.byte	69
+ 205 00b1 10       		.byte	16
+ 206 00b2 46       		.byte	70
+ 207 00b3 20       		.byte	32
+ 208 00b4 48       		.byte	72
+ 209 00b5 0A       		.byte	10
+ 210 00b6 49       		.byte	73
+ 211 00b7 FF       		.byte	-1
+ 212 00b8 4A       		.byte	74
+ 213 00b9 FF       		.byte	-1
+ 214 00ba 4B       		.byte	75
+ 215 00bb FF       		.byte	-1
+ 216 00bc 4D       		.byte	77
+ 217 00bd A0       		.byte	-96
+ 218 00be 4F       		.byte	79
+ 219 00bf 04       		.byte	4
+ 220 00c0 50       		.byte	80
+ 221 00c1 18       		.byte	24
+ 222 00c2 58       		.byte	88
+ 223 00c3 04       		.byte	4
+ 224 00c4 59       		.byte	89
+ 225 00c5 04       		.byte	4
+ 226 00c6 5A       		.byte	90
+ 227 00c7 04       		.byte	4
+ 228 00c8 5C       		.byte	92
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cco51iVj.s 			page 5
+
+
+ 229 00c9 10       		.byte	16
+ 230 00ca 5D       		.byte	93
+ 231 00cb 01       		.byte	1
+ 232 00cc 5F       		.byte	95
+ 233 00cd 01       		.byte	1
+ 234 00ce 60       		.byte	96
+ 235 00cf 40       		.byte	64
+ 236 00d0 62       		.byte	98
+ 237 00d1 C0       		.byte	-64
+ 238 00d2 64       		.byte	100
+ 239 00d3 40       		.byte	64
+ 240 00d4 65       		.byte	101
+ 241 00d5 40       		.byte	64
+ 242 00d6 66       		.byte	102
+ 243 00d7 C0       		.byte	-64
+ 244 00d8 68       		.byte	104
+ 245 00d9 C0       		.byte	-64
+ 246 00da 6A       		.byte	106
+ 247 00db C0       		.byte	-64
+ 248 00dc 6C       		.byte	108
+ 249 00dd C0       		.byte	-64
+ 250 00de 6E       		.byte	110
+ 251 00df C0       		.byte	-64
+ 252 00e0 80       		.byte	-128
+ 253 00e1 01       		.byte	1
+ 254 00e2 84       		.byte	-124
+ 255 00e3 07       		.byte	7
+ 256 00e4 86       		.byte	-122
+ 257 00e5 08       		.byte	8
+ 258 00e6 87       		.byte	-121
+ 259 00e7 02       		.byte	2
+ 260 00e8 88       		.byte	-120
+ 261 00e9 09       		.byte	9
+ 262 00ea 8A       		.byte	-118
+ 263 00eb 06       		.byte	6
+ 264 00ec 8C       		.byte	-116
+ 265 00ed 0C       		.byte	12
+ 266 00ee 92       		.byte	-110
+ 267 00ef 02       		.byte	2
+ 268 00f0 94       		.byte	-108
+ 269 00f1 0C       		.byte	12
+ 270 00f2 95       		.byte	-107
+ 271 00f3 01       		.byte	1
+ 272 00f4 98       		.byte	-104
+ 273 00f5 0B       		.byte	11
+ 274 00f6 99       		.byte	-103
+ 275 00f7 01       		.byte	1
+ 276 00f8 9A       		.byte	-102
+ 277 00f9 04       		.byte	4
+ 278 00fa 9C       		.byte	-100
+ 279 00fb 0C       		.byte	12
+ 280 00fc 9F       		.byte	-97
+ 281 00fd 02       		.byte	2
+ 282 00fe A0       		.byte	-96
+ 283 00ff 0C       		.byte	12
+ 284 0100 A4       		.byte	-92
+ 285 0101 0C       		.byte	12
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cco51iVj.s 			page 6
+
+
+ 286 0102 A5       		.byte	-91
+ 287 0103 01       		.byte	1
+ 288 0104 A8       		.byte	-88
+ 289 0105 0C       		.byte	12
+ 290 0106 AE       		.byte	-82
+ 291 0107 0C       		.byte	12
+ 292 0108 B1       		.byte	-79
+ 293 0109 01       		.byte	1
+ 294 010a B3       		.byte	-77
+ 295 010b 02       		.byte	2
+ 296 010c B4       		.byte	-76
+ 297 010d 0F       		.byte	15
+ 298 010e B5       		.byte	-75
+ 299 010f 01       		.byte	1
+ 300 0110 BF       		.byte	-65
+ 301 0111 11       		.byte	17
+ 302 0112 C0       		.byte	-64
+ 303 0113 30       		.byte	48
+ 304 0114 C1       		.byte	-63
+ 305 0115 02       		.byte	2
+ 306 0116 C5       		.byte	-59
+ 307 0117 10       		.byte	16
+ 308 0118 C6       		.byte	-58
+ 309 0119 20       		.byte	32
+ 310 011a C8       		.byte	-56
+ 311 011b 0A       		.byte	10
+ 312 011c C9       		.byte	-55
+ 313 011d FF       		.byte	-1
+ 314 011e CA       		.byte	-54
+ 315 011f FF       		.byte	-1
+ 316 0120 CB       		.byte	-53
+ 317 0121 FF       		.byte	-1
+ 318 0122 CD       		.byte	-51
+ 319 0123 A0       		.byte	-96
+ 320 0124 CF       		.byte	-49
+ 321 0125 04       		.byte	4
+ 322 0126 D0       		.byte	-48
+ 323 0127 18       		.byte	24
+ 324 0128 D6       		.byte	-42
+ 325 0129 02       		.byte	2
+ 326 012a D7       		.byte	-41
+ 327 012b 3B       		.byte	59
+ 328 012c D8       		.byte	-40
+ 329 012d 04       		.byte	4
+ 330 012e D9       		.byte	-39
+ 331 012f 04       		.byte	4
+ 332 0130 DA       		.byte	-38
+ 333 0131 04       		.byte	4
+ 334 0132 DB       		.byte	-37
+ 335 0133 04       		.byte	4
+ 336 0134 DC       		.byte	-36
+ 337 0135 10       		.byte	16
+ 338 0136 DD       		.byte	-35
+ 339 0137 01       		.byte	1
+ 340 0138 DF       		.byte	-33
+ 341 0139 01       		.byte	1
+ 342 013a E0       		.byte	-32
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cco51iVj.s 			page 7
+
+
+ 343 013b 40       		.byte	64
+ 344 013c E2       		.byte	-30
+ 345 013d C0       		.byte	-64
+ 346 013e E4       		.byte	-28
+ 347 013f 40       		.byte	64
+ 348 0140 E5       		.byte	-27
+ 349 0141 40       		.byte	64
+ 350 0142 E6       		.byte	-26
+ 351 0143 C0       		.byte	-64
+ 352 0144 E8       		.byte	-24
+ 353 0145 C0       		.byte	-64
+ 354 0146 EA       		.byte	-22
+ 355 0147 C0       		.byte	-64
+ 356 0148 EC       		.byte	-20
+ 357 0149 C0       		.byte	-64
+ 358 014a EE       		.byte	-18
+ 359 014b C0       		.byte	-64
+ 360 014c 01       		.byte	1
+ 361 014d 08       		.byte	8
+ 362 014e 02       		.byte	2
+ 363 014f 40       		.byte	64
+ 364 0150 03       		.byte	3
+ 365 0151 05       		.byte	5
+ 366 0152 07       		.byte	7
+ 367 0153 22       		.byte	34
+ 368 0154 09       		.byte	9
+ 369 0155 29       		.byte	41
+ 370 0156 0B       		.byte	11
+ 371 0157 01       		.byte	1
+ 372 0158 0D       		.byte	13
+ 373 0159 20       		.byte	32
+ 374 015a 11       		.byte	17
+ 375 015b 15       		.byte	21
+ 376 015c 12       		.byte	18
+ 377 015d 01       		.byte	1
+ 378 015e 16       		.byte	22
+ 379 015f 08       		.byte	8
+ 380 0160 17       		.byte	23
+ 381 0161 04       		.byte	4
+ 382 0162 19       		.byte	25
+ 383 0163 20       		.byte	32
+ 384 0164 1D       		.byte	29
+ 385 0165 04       		.byte	4
+ 386 0166 1F       		.byte	31
+ 387 0167 20       		.byte	32
+ 388 0168 22       		.byte	34
+ 389 0169 11       		.byte	17
+ 390 016a 23       		.byte	35
+ 391 016b 20       		.byte	32
+ 392 016c 27       		.byte	39
+ 393 016d 02       		.byte	2
+ 394 016e 29       		.byte	41
+ 395 016f 08       		.byte	8
+ 396 0170 2A       		.byte	42
+ 397 0171 08       		.byte	8
+ 398 0172 31       		.byte	49
+ 399 0173 20       		.byte	32
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cco51iVj.s 			page 8
+
+
+ 400 0174 32       		.byte	50
+ 401 0175 80       		.byte	-128
+ 402 0176 33       		.byte	51
+ 403 0177 04       		.byte	4
+ 404 0178 39       		.byte	57
+ 405 0179 08       		.byte	8
+ 406 017a 3E       		.byte	62
+ 407 017b 10       		.byte	16
+ 408 017c 3F       		.byte	63
+ 409 017d 02       		.byte	2
+ 410 017e 40       		.byte	64
+ 411 017f 20       		.byte	32
+ 412 0180 41       		.byte	65
+ 413 0181 14       		.byte	20
+ 414 0182 42       		.byte	66
+ 415 0183 10       		.byte	16
+ 416 0184 44       		.byte	68
+ 417 0185 20       		.byte	32
+ 418 0186 4A       		.byte	74
+ 419 0187 80       		.byte	-128
+ 420 0188 4F       		.byte	79
+ 421 0189 22       		.byte	34
+ 422 018a 51       		.byte	81
+ 423 018b 10       		.byte	16
+ 424 018c 57       		.byte	87
+ 425 018d 10       		.byte	16
+ 426 018e 5A       		.byte	90
+ 427 018f 02       		.byte	2
+ 428 0190 61       		.byte	97
+ 429 0191 04       		.byte	4
+ 430 0192 69       		.byte	105
+ 431 0193 15       		.byte	21
+ 432 0194 6B       		.byte	107
+ 433 0195 01       		.byte	1
+ 434 0196 70       		.byte	112
+ 435 0197 40       		.byte	64
+ 436 0198 71       		.byte	113
+ 437 0199 18       		.byte	24
+ 438 019a 72       		.byte	114
+ 439 019b 20       		.byte	32
+ 440 019c 73       		.byte	115
+ 441 019d 49       		.byte	73
+ 442 019e 81       		.byte	-127
+ 443 019f 21       		.byte	33
+ 444 01a0 82       		.byte	-126
+ 445 01a1 01       		.byte	1
+ 446 01a2 83       		.byte	-125
+ 447 01a3 08       		.byte	8
+ 448 01a4 96       		.byte	-106
+ 449 01a5 04       		.byte	4
+ 450 01a6 A4       		.byte	-92
+ 451 01a7 04       		.byte	4
+ 452 01a8 C0       		.byte	-64
+ 453 01a9 AF       		.byte	-81
+ 454 01aa C2       		.byte	-62
+ 455 01ab 4F       		.byte	79
+ 456 01ac C4       		.byte	-60
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cco51iVj.s 			page 9
+
+
+ 457 01ad 6F       		.byte	111
+ 458 01ae CA       		.byte	-54
+ 459 01af 02       		.byte	2
+ 460 01b0 CC       		.byte	-52
+ 461 01b1 0E       		.byte	14
+ 462 01b2 CE       		.byte	-50
+ 463 01b3 A2       		.byte	-94
+ 464 01b4 D0       		.byte	-48
+ 465 01b5 46       		.byte	70
+ 466 01b6 D2       		.byte	-46
+ 467 01b7 20       		.byte	32
+ 468 01b8 D6       		.byte	-42
+ 469 01b9 01       		.byte	1
+ 470 01ba D8       		.byte	-40
+ 471 01bb 02       		.byte	2
+ 472 01bc E2       		.byte	-30
+ 473 01bd 08       		.byte	8
+ 474 01be E2       		.byte	-30
+ 475 01bf 04       		.byte	4
+ 476 01c0 01       		.byte	1
+ 477 01c1 83       		.byte	-125
+ 478 01c2 02       		.byte	2
+ 479 01c3 01       		.byte	1
+ 480 01c4 04       		.byte	4
+ 481 01c5 01       		.byte	1
+ 482 01c6 05       		.byte	5
+ 483 01c7 83       		.byte	-125
+ 484 01c8 07       		.byte	7
+ 485 01c9 04       		.byte	4
+ 486 01ca 09       		.byte	9
+ 487 01cb 83       		.byte	-125
+ 488 01cc 0A       		.byte	10
+ 489 01cd 01       		.byte	1
+ 490 01ce 0B       		.byte	11
+ 491 01cf 08       		.byte	8
+ 492 01d0 0D       		.byte	13
+ 493 01d1 82       		.byte	-126
+ 494 01d2 0E       		.byte	14
+ 495 01d3 01       		.byte	1
+ 496 01d4 0F       		.byte	15
+ 497 01d5 1C       		.byte	28
+ 498 01d6 11       		.byte	17
+ 499 01d7 83       		.byte	-125
+ 500 01d8 13       		.byte	19
+ 501 01d9 10       		.byte	16
+ 502 01da 14       		.byte	20
+ 503 01db 01       		.byte	1
+ 504 01dc 17       		.byte	23
+ 505 01dd 40       		.byte	64
+ 506 01de 1A       		.byte	26
+ 507 01df 01       		.byte	1
+ 508 01e0 1B       		.byte	27
+ 509 01e1 9E       		.byte	-98
+ 510 01e2 1C       		.byte	28
+ 511 01e3 01       		.byte	1
+ 512 01e4 1D       		.byte	29
+ 513 01e5 20       		.byte	32
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cco51iVj.s 			page 10
+
+
+ 514 01e6 21       		.byte	33
+ 515 01e7 01       		.byte	1
+ 516 01e8 23       		.byte	35
+ 517 01e9 1E       		.byte	30
+ 518 01ea 25       		.byte	37
+ 519 01eb 20       		.byte	32
+ 520 01ec 26       		.byte	38
+ 521 01ed 01       		.byte	1
+ 522 01ee 27       		.byte	39
+ 523 01ef 5F       		.byte	95
+ 524 01f0 29       		.byte	41
+ 525 01f1 81       		.byte	-127
+ 526 01f2 2A       		.byte	42
+ 527 01f3 01       		.byte	1
+ 528 01f4 2D       		.byte	45
+ 529 01f5 20       		.byte	32
+ 530 01f6 2E       		.byte	46
+ 531 01f7 01       		.byte	1
+ 532 01f8 2F       		.byte	47
+ 533 01f9 80       		.byte	-128
+ 534 01fa 32       		.byte	50
+ 535 01fb 01       		.byte	1
+ 536 01fc 35       		.byte	53
+ 537 01fd FF       		.byte	-1
+ 538 01fe 3E       		.byte	62
+ 539 01ff 04       		.byte	4
+ 540 0200 3F       		.byte	63
+ 541 0201 10       		.byte	16
+ 542 0202 58       		.byte	88
+ 543 0203 04       		.byte	4
+ 544 0204 59       		.byte	89
+ 545 0205 04       		.byte	4
+ 546 0206 5F       		.byte	95
+ 547 0207 01       		.byte	1
+ 548 0208 80       		.byte	-128
+ 549 0209 07       		.byte	7
+ 550 020a 84       		.byte	-124
+ 551 020b 0B       		.byte	11
+ 552 020c 85       		.byte	-123
+ 553 020d 08       		.byte	8
+ 554 020e 86       		.byte	-122
+ 555 020f 14       		.byte	20
+ 556 0210 87       		.byte	-121
+ 557 0211 02       		.byte	2
+ 558 0212 88       		.byte	-120
+ 559 0213 18       		.byte	24
+ 560 0214 89       		.byte	-119
+ 561 0215 38       		.byte	56
+ 562 0216 8B       		.byte	-117
+ 563 0217 01       		.byte	1
+ 564 0218 8C       		.byte	-116
+ 565 0219 20       		.byte	32
+ 566 021a 8D       		.byte	-115
+ 567 021b 80       		.byte	-128
+ 568 021c 91       		.byte	-111
+ 569 021d 03       		.byte	3
+ 570 021e 93       		.byte	-109
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cco51iVj.s 			page 11
+
+
+ 571 021f 3C       		.byte	60
+ 572 0220 97       		.byte	-105
+ 573 0221 44       		.byte	68
+ 574 0222 98       		.byte	-104
+ 575 0223 14       		.byte	20
+ 576 0224 99       		.byte	-103
+ 577 0225 7F       		.byte	127
+ 578 0226 9A       		.byte	-102
+ 579 0227 0A       		.byte	10
+ 580 0228 9D       		.byte	-99
+ 581 0229 20       		.byte	32
+ 582 022a A4       		.byte	-92
+ 583 022b 14       		.byte	20
+ 584 022c A5       		.byte	-91
+ 585 022d 44       		.byte	68
+ 586 022e A6       		.byte	-90
+ 587 022f 09       		.byte	9
+ 588 0230 A7       		.byte	-89
+ 589 0231 3B       		.byte	59
+ 590 0232 A9       		.byte	-87
+ 591 0233 7B       		.byte	123
+ 592 0234 AD       		.byte	-83
+ 593 0235 10       		.byte	16
+ 594 0236 AF       		.byte	-81
+ 595 0237 02       		.byte	2
+ 596 0238 B0       		.byte	-80
+ 597 0239 07       		.byte	7
+ 598 023a B4       		.byte	-76
+ 599 023b 20       		.byte	32
+ 600 023c B5       		.byte	-75
+ 601 023d 80       		.byte	-128
+ 602 023e B6       		.byte	-74
+ 603 023f 18       		.byte	24
+ 604 0240 B7       		.byte	-73
+ 605 0241 7F       		.byte	127
+ 606 0242 B8       		.byte	-72
+ 607 0243 80       		.byte	-128
+ 608 0244 BE       		.byte	-66
+ 609 0245 10       		.byte	16
+ 610 0246 BF       		.byte	-65
+ 611 0247 10       		.byte	16
+ 612 0248 D8       		.byte	-40
+ 613 0249 04       		.byte	4
+ 614 024a D9       		.byte	-39
+ 615 024b 04       		.byte	4
+ 616 024c DF       		.byte	-33
+ 617 024d 01       		.byte	1
+ 618 024e 01       		.byte	1
+ 619 024f 49       		.byte	73
+ 620 0250 03       		.byte	3
+ 621 0251 44       		.byte	68
+ 622 0252 04       		.byte	4
+ 623 0253 20       		.byte	32
+ 624 0254 05       		.byte	5
+ 625 0255 09       		.byte	9
+ 626 0256 06       		.byte	6
+ 627 0257 02       		.byte	2
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cco51iVj.s 			page 12
+
+
+ 628 0258 09       		.byte	9
+ 629 0259 24       		.byte	36
+ 630 025a 0A       		.byte	10
+ 631 025b 21       		.byte	33
+ 632 025c 0B       		.byte	11
+ 633 025d 08       		.byte	8
+ 634 025e 0D       		.byte	13
+ 635 025f A0       		.byte	-96
+ 636 0260 0E       		.byte	14
+ 637 0261 02       		.byte	2
+ 638 0262 10       		.byte	16
+ 639 0263 02       		.byte	2
+ 640 0264 11       		.byte	17
+ 641 0265 14       		.byte	20
+ 642 0266 17       		.byte	23
+ 643 0267 04       		.byte	4
+ 644 0268 19       		.byte	25
+ 645 0269 04       		.byte	4
+ 646 026a 1C       		.byte	28
+ 647 026b 08       		.byte	8
+ 648 026c 1D       		.byte	29
+ 649 026d 01       		.byte	1
+ 650 026e 1F       		.byte	31
+ 651 026f 40       		.byte	64
+ 652 0270 22       		.byte	34
+ 653 0271 20       		.byte	32
+ 654 0272 25       		.byte	37
+ 655 0273 80       		.byte	-128
+ 656 0274 27       		.byte	39
+ 657 0275 08       		.byte	8
+ 658 0276 29       		.byte	41
+ 659 0277 09       		.byte	9
+ 660 0278 2A       		.byte	42
+ 661 0279 20       		.byte	32
+ 662 027a 2B       		.byte	43
+ 663 027b 02       		.byte	2
+ 664 027c 2D       		.byte	45
+ 665 027d 48       		.byte	72
+ 666 027e 2F       		.byte	47
+ 667 027f 04       		.byte	4
+ 668 0280 30       		.byte	48
+ 669 0281 02       		.byte	2
+ 670 0282 31       		.byte	49
+ 671 0283 90       		.byte	-112
+ 672 0284 32       		.byte	50
+ 673 0285 10       		.byte	16
+ 674 0286 33       		.byte	51
+ 675 0287 05       		.byte	5
+ 676 0288 35       		.byte	53
+ 677 0289 01       		.byte	1
+ 678 028a 36       		.byte	54
+ 679 028b 20       		.byte	32
+ 680 028c 37       		.byte	55
+ 681 028d 44       		.byte	68
+ 682 028e 38       		.byte	56
+ 683 028f 80       		.byte	-128
+ 684 0290 39       		.byte	57
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cco51iVj.s 			page 13
+
+
+ 685 0291 55       		.byte	85
+ 686 0292 3D       		.byte	61
+ 687 0293 08       		.byte	8
+ 688 0294 3E       		.byte	62
+ 689 0295 20       		.byte	32
+ 690 0296 3F       		.byte	63
+ 691 0297 80       		.byte	-128
+ 692 0298 82       		.byte	-126
+ 693 0299 02       		.byte	2
+ 694 029a 83       		.byte	-125
+ 695 029b 60       		.byte	96
+ 696 029c 87       		.byte	-121
+ 697 029d 50       		.byte	80
+ 698 029e 8D       		.byte	-115
+ 699 029f 01       		.byte	1
+ 700 02a0 90       		.byte	-112
+ 701 02a1 A0       		.byte	-96
+ 702 02a2 91       		.byte	-111
+ 703 02a3 15       		.byte	21
+ 704 02a4 92       		.byte	-110
+ 705 02a5 01       		.byte	1
+ 706 02a6 97       		.byte	-105
+ 707 02a7 20       		.byte	32
+ 708 02a8 99       		.byte	-103
+ 709 02a9 18       		.byte	24
+ 710 02aa 9A       		.byte	-102
+ 711 02ab 20       		.byte	32
+ 712 02ac 9B       		.byte	-101
+ 713 02ad 05       		.byte	5
+ 714 02ae 9D       		.byte	-99
+ 715 02af 04       		.byte	4
+ 716 02b0 9F       		.byte	-97
+ 717 02b1 28       		.byte	40
+ 718 02b2 A1       		.byte	-95
+ 719 02b3 20       		.byte	32
+ 720 02b4 A3       		.byte	-93
+ 721 02b5 02       		.byte	2
+ 722 02b6 A4       		.byte	-92
+ 723 02b7 04       		.byte	4
+ 724 02b8 A6       		.byte	-90
+ 725 02b9 01       		.byte	1
+ 726 02ba AE       		.byte	-82
+ 727 02bb 21       		.byte	33
+ 728 02bc C0       		.byte	-64
+ 729 02bd FF       		.byte	-1
+ 730 02be C2       		.byte	-62
+ 731 02bf 47       		.byte	71
+ 732 02c0 C4       		.byte	-60
+ 733 02c1 27       		.byte	39
+ 734 02c2 CA       		.byte	-54
+ 735 02c3 7F       		.byte	127
+ 736 02c4 CC       		.byte	-52
+ 737 02c5 FF       		.byte	-1
+ 738 02c6 CE       		.byte	-50
+ 739 02c7 7F       		.byte	127
+ 740 02c8 E6       		.byte	-26
+ 741 02c9 40       		.byte	64
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cco51iVj.s 			page 14
+
+
+ 742 02ca 06       		.byte	6
+ 743 02cb 01       		.byte	1
+ 744 02cc 0D       		.byte	13
+ 745 02cd 04       		.byte	4
+ 746 02ce 0F       		.byte	15
+ 747 02cf 10       		.byte	16
+ 748 02d0 15       		.byte	21
+ 749 02d1 10       		.byte	16
+ 750 02d2 17       		.byte	23
+ 751 02d3 06       		.byte	6
+ 752 02d4 19       		.byte	25
+ 753 02d5 10       		.byte	16
+ 754 02d6 1A       		.byte	26
+ 755 02d7 01       		.byte	1
+ 756 02d8 1B       		.byte	27
+ 757 02d9 08       		.byte	8
+ 758 02da 25       		.byte	37
+ 759 02db 01       		.byte	1
+ 760 02dc 26       		.byte	38
+ 761 02dd 01       		.byte	1
+ 762 02de 29       		.byte	41
+ 763 02df 0E       		.byte	14
+ 764 02e0 2B       		.byte	43
+ 765 02e1 10       		.byte	16
+ 766 02e2 2D       		.byte	45
+ 767 02e3 02       		.byte	2
+ 768 02e4 31       		.byte	49
+ 769 02e5 01       		.byte	1
+ 770 02e6 34       		.byte	52
+ 771 02e7 01       		.byte	1
+ 772 02e8 35       		.byte	53
+ 773 02e9 1E       		.byte	30
+ 774 02ea 38       		.byte	56
+ 775 02eb 08       		.byte	8
+ 776 02ec 3E       		.byte	62
+ 777 02ed 10       		.byte	16
+ 778 02ee 3F       		.byte	63
+ 779 02ef 01       		.byte	1
+ 780 02f0 40       		.byte	64
+ 781 02f1 56       		.byte	86
+ 782 02f2 41       		.byte	65
+ 783 02f3 03       		.byte	3
+ 784 02f4 44       		.byte	68
+ 785 02f5 02       		.byte	2
+ 786 02f6 49       		.byte	73
+ 787 02f7 FF       		.byte	-1
+ 788 02f8 4A       		.byte	74
+ 789 02f9 FF       		.byte	-1
+ 790 02fa 4B       		.byte	75
+ 791 02fb FF       		.byte	-1
+ 792 02fc 4C       		.byte	76
+ 793 02fd 02       		.byte	2
+ 794 02fe 4D       		.byte	77
+ 795 02ff 20       		.byte	32
+ 796 0300 4E       		.byte	78
+ 797 0301 70       		.byte	112
+ 798 0302 50       		.byte	80
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cco51iVj.s 			page 15
+
+
+ 799 0303 0C       		.byte	12
+ 800 0304 58       		.byte	88
+ 801 0305 04       		.byte	4
+ 802 0306 59       		.byte	89
+ 803 0307 04       		.byte	4
+ 804 0308 5A       		.byte	90
+ 805 0309 04       		.byte	4
+ 806 030a 5C       		.byte	92
+ 807 030b 01       		.byte	1
+ 808 030c 5F       		.byte	95
+ 809 030d 01       		.byte	1
+ 810 030e 61       		.byte	97
+ 811 030f 08       		.byte	8
+ 812 0310 62       		.byte	98
+ 813 0311 C0       		.byte	-64
+ 814 0312 63       		.byte	99
+ 815 0313 08       		.byte	8
+ 816 0314 64       		.byte	100
+ 817 0315 40       		.byte	64
+ 818 0316 65       		.byte	101
+ 819 0317 09       		.byte	9
+ 820 0318 67       		.byte	103
+ 821 0319 09       		.byte	9
+ 822 031a 69       		.byte	105
+ 823 031b 08       		.byte	8
+ 824 031c 6B       		.byte	107
+ 825 031d 08       		.byte	8
+ 826 031e 6D       		.byte	109
+ 827 031f 08       		.byte	8
+ 828 0320 6F       		.byte	111
+ 829 0321 08       		.byte	8
+ 830 0322 84       		.byte	-124
+ 831 0323 03       		.byte	3
+ 832 0324 86       		.byte	-122
+ 833 0325 04       		.byte	4
+ 834 0326 87       		.byte	-121
+ 835 0327 20       		.byte	32
+ 836 0328 88       		.byte	-120
+ 837 0329 04       		.byte	4
+ 838 032a 8A       		.byte	-118
+ 839 032b 03       		.byte	3
+ 840 032c 8E       		.byte	-114
+ 841 032d 02       		.byte	2
+ 842 032e 8F       		.byte	-113
+ 843 032f 0C       		.byte	12
+ 844 0330 92       		.byte	-110
+ 845 0331 03       		.byte	3
+ 846 0332 95       		.byte	-107
+ 847 0333 09       		.byte	9
+ 848 0334 97       		.byte	-105
+ 849 0335 36       		.byte	54
+ 850 0336 99       		.byte	-103
+ 851 0337 29       		.byte	41
+ 852 0338 9B       		.byte	-101
+ 853 0339 12       		.byte	18
+ 854 033a 9D       		.byte	-99
+ 855 033b 04       		.byte	4
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cco51iVj.s 			page 16
+
+
+ 856 033c A4       		.byte	-92
+ 857 033d 04       		.byte	4
+ 858 033e A5       		.byte	-91
+ 859 033f 27       		.byte	39
+ 860 0340 A6       		.byte	-90
+ 861 0341 01       		.byte	1
+ 862 0342 A7       		.byte	-89
+ 863 0343 08       		.byte	8
+ 864 0344 AD       		.byte	-83
+ 865 0345 11       		.byte	17
+ 866 0346 B2       		.byte	-78
+ 867 0347 07       		.byte	7
+ 868 0348 B3       		.byte	-77
+ 869 0349 20       		.byte	32
+ 870 034a B5       		.byte	-75
+ 871 034b 1F       		.byte	31
+ 872 034c C0       		.byte	-64
+ 873 034d 56       		.byte	86
+ 874 034e C1       		.byte	-63
+ 875 034f 03       		.byte	3
+ 876 0350 C4       		.byte	-60
+ 877 0351 02       		.byte	2
+ 878 0352 C5       		.byte	-59
+ 879 0353 F0       		.byte	-16
+ 880 0354 C6       		.byte	-58
+ 881 0355 BC       		.byte	-68
+ 882 0356 C7       		.byte	-57
+ 883 0357 E0       		.byte	-32
+ 884 0358 C8       		.byte	-56
+ 885 0359 2E       		.byte	46
+ 886 035a C9       		.byte	-55
+ 887 035b FF       		.byte	-1
+ 888 035c CA       		.byte	-54
+ 889 035d FF       		.byte	-1
+ 890 035e CB       		.byte	-53
+ 891 035f FF       		.byte	-1
+ 892 0360 CC       		.byte	-52
+ 893 0361 03       		.byte	3
+ 894 0362 CD       		.byte	-51
+ 895 0363 20       		.byte	32
+ 896 0364 CE       		.byte	-50
+ 897 0365 70       		.byte	112
+ 898 0366 D0       		.byte	-48
+ 899 0367 0C       		.byte	12
+ 900 0368 D2       		.byte	-46
+ 901 0369 01       		.byte	1
+ 902 036a D4       		.byte	-44
+ 903 036b 0F       		.byte	15
+ 904 036c D8       		.byte	-40
+ 905 036d 04       		.byte	4
+ 906 036e D9       		.byte	-39
+ 907 036f 04       		.byte	4
+ 908 0370 DA       		.byte	-38
+ 909 0371 04       		.byte	4
+ 910 0372 DB       		.byte	-37
+ 911 0373 04       		.byte	4
+ 912 0374 DF       		.byte	-33
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cco51iVj.s 			page 17
+
+
+ 913 0375 01       		.byte	1
+ 914 0376 E1       		.byte	-31
+ 915 0377 08       		.byte	8
+ 916 0378 E2       		.byte	-30
+ 917 0379 C0       		.byte	-64
+ 918 037a E3       		.byte	-29
+ 919 037b 08       		.byte	8
+ 920 037c E4       		.byte	-28
+ 921 037d 40       		.byte	64
+ 922 037e E5       		.byte	-27
+ 923 037f 09       		.byte	9
+ 924 0380 E7       		.byte	-25
+ 925 0381 09       		.byte	9
+ 926 0382 01       		.byte	1
+ 927 0383 48       		.byte	72
+ 928 0384 03       		.byte	3
+ 929 0385 04       		.byte	4
+ 930 0386 05       		.byte	5
+ 931 0387 08       		.byte	8
+ 932 0388 0B       		.byte	11
+ 933 0389 40       		.byte	64
+ 934 038a 0D       		.byte	13
+ 935 038b 20       		.byte	32
+ 936 038c 12       		.byte	18
+ 937 038d 20       		.byte	32
+ 938 038e 17       		.byte	23
+ 939 038f 04       		.byte	4
+ 940 0390 19       		.byte	25
+ 941 0391 08       		.byte	8
+ 942 0392 1B       		.byte	27
+ 943 0393 08       		.byte	8
+ 944 0394 1E       		.byte	30
+ 945 0395 14       		.byte	20
+ 946 0396 21       		.byte	33
+ 947 0397 2C       		.byte	44
+ 948 0398 22       		.byte	34
+ 949 0399 20       		.byte	32
+ 950 039a 25       		.byte	37
+ 951 039b 01       		.byte	1
+ 952 039c 27       		.byte	39
+ 953 039d 04       		.byte	4
+ 954 039e 29       		.byte	41
+ 955 039f 08       		.byte	8
+ 956 03a0 2A       		.byte	42
+ 957 03a1 40       		.byte	64
+ 958 03a2 2D       		.byte	45
+ 959 03a3 40       		.byte	64
+ 960 03a4 2F       		.byte	47
+ 961 03a5 18       		.byte	24
+ 962 03a6 31       		.byte	49
+ 963 03a7 20       		.byte	32
+ 964 03a8 32       		.byte	50
+ 965 03a9 40       		.byte	64
+ 966 03aa 33       		.byte	51
+ 967 03ab 04       		.byte	4
+ 968 03ac 36       		.byte	54
+ 969 03ad 20       		.byte	32
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cco51iVj.s 			page 18
+
+
+ 970 03ae 37       		.byte	55
+ 971 03af 04       		.byte	4
+ 972 03b0 39       		.byte	57
+ 973 03b1 08       		.byte	8
+ 974 03b2 3B       		.byte	59
+ 975 03b3 40       		.byte	64
+ 976 03b4 3F       		.byte	63
+ 977 03b5 40       		.byte	64
+ 978 03b6 40       		.byte	64
+ 979 03b7 08       		.byte	8
+ 980 03b8 41       		.byte	65
+ 981 03b9 08       		.byte	8
+ 982 03ba 44       		.byte	68
+ 983 03bb 08       		.byte	8
+ 984 03bc 45       		.byte	69
+ 985 03bd 08       		.byte	8
+ 986 03be 47       		.byte	71
+ 987 03bf 20       		.byte	32
+ 988 03c0 49       		.byte	73
+ 989 03c1 21       		.byte	33
+ 990 03c2 4A       		.byte	74
+ 991 03c3 03       		.byte	3
+ 992 03c4 4D       		.byte	77
+ 993 03c5 20       		.byte	32
+ 994 03c6 4E       		.byte	78
+ 995 03c7 02       		.byte	2
+ 996 03c8 50       		.byte	80
+ 997 03c9 10       		.byte	16
+ 998 03ca 52       		.byte	82
+ 999 03cb 41       		.byte	65
+ 1000 03cc 58       		.byte	88
+ 1001 03cd 80       		.byte	-128
+ 1002 03ce 59       		.byte	89
+ 1003 03cf 05       		.byte	5
+ 1004 03d0 5A       		.byte	90
+ 1005 03d1 20       		.byte	32
+ 1006 03d2 60       		.byte	96
+ 1007 03d3 80       		.byte	-128
+ 1008 03d4 62       		.byte	98
+ 1009 03d5 01       		.byte	1
+ 1010 03d6 69       		.byte	105
+ 1011 03d7 40       		.byte	64
+ 1012 03d8 6A       		.byte	106
+ 1013 03d9 80       		.byte	-128
+ 1014 03da 81       		.byte	-127
+ 1015 03db 20       		.byte	32
+ 1016 03dc 83       		.byte	-125
+ 1017 03dd 02       		.byte	2
+ 1018 03de 8D       		.byte	-115
+ 1019 03df 01       		.byte	1
+ 1020 03e0 8F       		.byte	-113
+ 1021 03e1 08       		.byte	8
+ 1022 03e2 90       		.byte	-112
+ 1023 03e3 80       		.byte	-128
+ 1024 03e4 91       		.byte	-111
+ 1025 03e5 15       		.byte	21
+ 1026 03e6 92       		.byte	-110
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cco51iVj.s 			page 19
+
+
+ 1027 03e7 20       		.byte	32
+ 1028 03e8 93       		.byte	-109
+ 1029 03e9 40       		.byte	64
+ 1030 03ea 96       		.byte	-106
+ 1031 03eb 14       		.byte	20
+ 1032 03ec 99       		.byte	-103
+ 1033 03ed 30       		.byte	48
+ 1034 03ee 9A       		.byte	-102
+ 1035 03ef 20       		.byte	32
+ 1036 03f0 9B       		.byte	-101
+ 1037 03f1 01       		.byte	1
+ 1038 03f2 9D       		.byte	-99
+ 1039 03f3 08       		.byte	8
+ 1040 03f4 9E       		.byte	-98
+ 1041 03f5 40       		.byte	64
+ 1042 03f6 9F       		.byte	-97
+ 1043 03f7 04       		.byte	4
+ 1044 03f8 A4       		.byte	-92
+ 1045 03f9 04       		.byte	4
+ 1046 03fa A5       		.byte	-91
+ 1047 03fb 20       		.byte	32
+ 1048 03fc AF       		.byte	-81
+ 1049 03fd 20       		.byte	32
+ 1050 03fe C0       		.byte	-64
+ 1051 03ff 27       		.byte	39
+ 1052 0400 C2       		.byte	-62
+ 1053 0401 48       		.byte	72
+ 1054 0402 C4       		.byte	-60
+ 1055 0403 24       		.byte	36
+ 1056 0404 CA       		.byte	-54
+ 1057 0405 7A       		.byte	122
+ 1058 0406 CC       		.byte	-52
+ 1059 0407 6E       		.byte	110
+ 1060 0408 CE       		.byte	-50
+ 1061 0409 1A       		.byte	26
+ 1062 040a D0       		.byte	-48
+ 1063 040b 66       		.byte	102
+ 1064 040c D2       		.byte	-46
+ 1065 040d 3C       		.byte	60
+ 1066 040e D6       		.byte	-42
+ 1067 040f 0F       		.byte	15
+ 1068 0410 E2       		.byte	-30
+ 1069 0411 10       		.byte	16
+ 1070 0412 E6       		.byte	-26
+ 1071 0413 40       		.byte	64
+ 1072 0414 EE       		.byte	-18
+ 1073 0415 02       		.byte	2
+ 1074 0416 EE       		.byte	-18
+ 1075 0417 02       		.byte	2
+ 1076 0418 30       		.byte	48
+ 1077 0419 22       		.byte	34
+ 1078 041a 36       		.byte	54
+ 1079 041b 48       		.byte	72
+ 1080 041c 80       		.byte	-128
+ 1081 041d 02       		.byte	2
+ 1082 041e 88       		.byte	-120
+ 1083 041f 20       		.byte	32
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cco51iVj.s 			page 20
+
+
+ 1084 0420 CC       		.byte	-52
+ 1085 0421 F0       		.byte	-16
+ 1086 0422 E2       		.byte	-30
+ 1087 0423 20       		.byte	32
+ 1088 0424 5E       		.byte	94
+ 1089 0425 02       		.byte	2
+ 1090 0426 61       		.byte	97
+ 1091 0427 81       		.byte	-127
+ 1092 0428 67       		.byte	103
+ 1093 0429 08       		.byte	8
+ 1094 042a 86       		.byte	-122
+ 1095 042b 08       		.byte	8
+ 1096 042c A6       		.byte	-90
+ 1097 042d 48       		.byte	72
+ 1098 042e D6       		.byte	-42
+ 1099 042f C0       		.byte	-64
+ 1100 0430 D8       		.byte	-40
+ 1101 0431 C0       		.byte	-64
+ 1102 0432 E2       		.byte	-30
+ 1103 0433 10       		.byte	16
+ 1104 0434 89       		.byte	-119
+ 1105 0435 80       		.byte	-128
+ 1106 0436 97       		.byte	-105
+ 1107 0437 08       		.byte	8
+ 1108 0438 9D       		.byte	-99
+ 1109 0439 01       		.byte	1
+ 1110 043a A5       		.byte	-91
+ 1111 043b 80       		.byte	-128
+ 1112 043c A6       		.byte	-90
+ 1113 043d 41       		.byte	65
+ 1114 043e 97       		.byte	-105
+ 1115 043f 08       		.byte	8
+ 1116 0440 9D       		.byte	-99
+ 1117 0441 01       		.byte	1
+ 1118 0442 A6       		.byte	-90
+ 1119 0443 41       		.byte	65
+ 1120 0444 82       		.byte	-126
+ 1121 0445 40       		.byte	64
+ 1122 0446 86       		.byte	-122
+ 1123 0447 01       		.byte	1
+ 1124 0448 96       		.byte	-106
+ 1125 0449 40       		.byte	64
+ 1126 044a 96       		.byte	-106
+ 1127 044b 41       		.byte	65
+ 1128 044c 0A       		.byte	10
+ 1129 044d 01       		.byte	1
+ 1130 044e 0B       		.byte	11
+ 1131 044f 40       		.byte	64
+ 1132 0450 0E       		.byte	14
+ 1133 0451 40       		.byte	64
+ 1134 0452 96       		.byte	-106
+ 1135 0453 41       		.byte	65
+ 1136 0454 C2       		.byte	-62
+ 1137 0455 0E       		.byte	14
+ 1138 0456 8D       		.byte	-115
+ 1139 0457 01       		.byte	1
+ 1140 0458 8E       		.byte	-114
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cco51iVj.s 			page 21
+
+
+ 1141 0459 01       		.byte	1
+ 1142 045a 9D       		.byte	-99
+ 1143 045b 01       		.byte	1
+ 1144 045c A6       		.byte	-90
+ 1145 045d 01       		.byte	1
+ 1146 045e AE       		.byte	-82
+ 1147 045f 40       		.byte	64
+ 1148 0460 AF       		.byte	-81
+ 1149 0461 04       		.byte	4
+ 1150 0462 EE       		.byte	-18
+ 1151 0463 50       		.byte	80
+ 1152 0464 04       		.byte	4
+ 1153 0465 40       		.byte	64
+ 1154 0466 0A       		.byte	10
+ 1155 0467 40       		.byte	64
+ 1156 0468 0F       		.byte	15
+ 1157 0469 40       		.byte	64
+ 1158 046a 17       		.byte	23
+ 1159 046b 04       		.byte	4
+ 1160 046c 73       		.byte	115
+ 1161 046d 10       		.byte	16
+ 1162 046e 76       		.byte	118
+ 1163 046f 20       		.byte	32
+ 1164 0470 80       		.byte	-128
+ 1165 0471 40       		.byte	64
+ 1166 0472 82       		.byte	-126
+ 1167 0473 40       		.byte	64
+ 1168 0474 83       		.byte	-125
+ 1169 0475 04       		.byte	4
+ 1170 0476 87       		.byte	-121
+ 1171 0477 50       		.byte	80
+ 1172 0478 8E       		.byte	-114
+ 1173 0479 20       		.byte	32
+ 1174 047a C0       		.byte	-64
+ 1175 047b 80       		.byte	-128
+ 1176 047c C2       		.byte	-62
+ 1177 047d 30       		.byte	48
+ 1178 047e C4       		.byte	-60
+ 1179 047f 20       		.byte	32
+ 1180 0480 DC       		.byte	-36
+ 1181 0481 80       		.byte	-128
+ 1182 0482 DE       		.byte	-34
+ 1183 0483 20       		.byte	32
+ 1184 0484 E0       		.byte	-32
+ 1185 0485 A0       		.byte	-96
+ 1186 0486 E2       		.byte	-30
+ 1187 0487 10       		.byte	16
+ 1188 0488 E4       		.byte	-28
+ 1189 0489 60       		.byte	96
+ 1190 048a AF       		.byte	-81
+ 1191 048b 40       		.byte	64
+ 1192 048c 00       		.byte	0
+ 1193 048d 03       		.byte	3
+ 1194 048e 0A       		.byte	10
+ 1195 048f 03       		.byte	3
+ 1196 0490 10       		.byte	16
+ 1197 0491 03       		.byte	3
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cco51iVj.s 			page 22
+
+
+ 1198 0492 1A       		.byte	26
+ 1199 0493 03       		.byte	3
+ 1200 0494 00       		.byte	0
+ 1201 0495 AB       		.byte	-85
+ 1202 0496 00       		.byte	0
+ 1203 0497 00       		.byte	0
+ 1204 0498 00       		.byte	0
+ 1205 0499 00       		.byte	0
+ 1206 049a F0       		.byte	-16
+ 1207 049b 00       		.byte	0
+ 1208 049c F0       		.byte	-16
+ 1209 049d 00       		.byte	0
+ 1210 049e 00       		.byte	0
+ 1211 049f 00       		.byte	0
+ 1212 04a0 03       		.byte	3
+ 1213 04a1 00       		.byte	0
+ 1214 04a2 00       		.byte	0
+ 1215 04a3 00       		.byte	0
+ 1216 04a4 03       		.byte	3
+ 1217 04a5 00       		.byte	0
+ 1218 04a6 03       		.byte	3
+ 1219 04a7 00       		.byte	0
+ 1220 04a8 01       		.byte	1
+ 1221 04a9 00       		.byte	0
+ 1222 04aa 00       		.byte	0
+ 1223 04ab 00       		.byte	0
+ 1224 04ac 00       		.byte	0
+ 1225 04ad 00       		.byte	0
+ 1226 04ae 00       		.byte	0
+ 1227 04af 00       		.byte	0
+ 1228 04b0 01       		.byte	1
+ 1229 04b1 00       		.byte	0
+ 1230 04b2 00       		.byte	0
+ 1231 04b3 00       		.byte	0
+ 1232 04b4 43       		.byte	67
+ 1233 04b5 00       		.byte	0
+ 1234 04b6 00       		.byte	0
+ 1235 04b7 00       		.byte	0
+ 1236 04b8 03       		.byte	3
+ 1237 04b9 00       		.byte	0
+ 1238 04ba 00       		.byte	0
+ 1239 04bb 00       		.byte	0
+ 1240 04bc C0       		.byte	-64
+ 1241 04bd 00       		.byte	0
+ 1242 04be 00       		.byte	0
+ 1243 04bf 00       		.byte	0
+ 1244 04c0 80       		.byte	-128
+ 1245 04c1 00       		.byte	0
+ 1246 04c2 40       		.byte	64
+ 1247 04c3 8B       		.byte	-117
+ 1248 04c4 8B       		.byte	-117
+ 1249 04c5 00       		.byte	0
+ 1250 04c6 00       		.byte	0
+ 1251 04c7 00       		.byte	0
+ 1252 04c8 00       		.byte	0
+ 1253 04c9 00       		.byte	0
+ 1254 04ca 00       		.byte	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cco51iVj.s 			page 23
+
+
+ 1255 04cb 00       		.byte	0
+ 1256 04cc F8       		.byte	-8
+ 1257 04cd 3F       		.byte	63
+ 1258 04ce 07       		.byte	7
+ 1259 04cf 00       		.byte	0
+ 1260 04d0 00       		.byte	0
+ 1261 04d1 00       		.byte	0
+ 1262 04d2 00       		.byte	0
+ 1263 04d3 00       		.byte	0
+ 1264              		.section	.cywolatch,"a",%progbits
+ 1265              		.align	2
+ 1266              		.type	cy_meta_wonvl, %object
+ 1267              		.size	cy_meta_wonvl, 4
+ 1268              	cy_meta_wonvl:
+ 1269 0000 BC       		.byte	-68
+ 1270 0001 90       		.byte	-112
+ 1271 0002 AC       		.byte	-84
+ 1272 0003 AF       		.byte	-81
+ 1273              		.section	.cycustnvl,"a",%progbits
+ 1274              		.align	2
+ 1275              		.type	cy_meta_custnvl, %object
+ 1276              		.size	cy_meta_custnvl, 4
+ 1277              	cy_meta_custnvl:
+ 1278 0000 00       		.byte	0
+ 1279 0001 00       		.byte	0
+ 1280 0002 40       		.byte	64
+ 1281 0003 05       		.byte	5
+ 1282              		.section	.cymeta,"a",%progbits
+ 1283              		.align	2
+ 1284              		.type	cy_metadata, %object
+ 1285              		.size	cy_metadata, 12
+ 1286              	cy_metadata:
+ 1287 0000 00       		.byte	0
+ 1288 0001 01       		.byte	1
+ 1289 0002 2E       		.byte	46
+ 1290 0003 11       		.byte	17
+ 1291 0004 A0       		.byte	-96
+ 1292 0005 69       		.byte	105
+ 1293 0006 00       		.byte	0
+ 1294 0007 01       		.byte	1
+ 1295 0008 00       		.byte	0
+ 1296 0009 00       		.byte	0
+ 1297 000a 00       		.byte	0
+ 1298 000b 00       		.byte	0
+ 1299              		.section	.cyflashprotect,"a",%progbits
+ 1300              		.align	2
+ 1301              		.type	cy_meta_flashprotect, %object
+ 1302              		.size	cy_meta_flashprotect, 256
+ 1303              	cy_meta_flashprotect:
+ 1304 0000 00000000 		.space	256
+ 1304      00000000 
+ 1304      00000000 
+ 1304      00000000 
+ 1304      00000000 
+ 1305              		.text
+ 1306              	.Letext0:
+ 1307              		.file 1 "Generated_Source\\PSoC5\\cymetadata.c"
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cco51iVj.s 			page 24
+
+
+ 1308              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 1309              		.section	.debug_info,"",%progbits
+ 1310              	.Ldebug_info0:
+ 1311 0000 38010000 		.4byte	0x138
+ 1312 0004 0400     		.2byte	0x4
+ 1313 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 1314 000a 04       		.byte	0x4
+ 1315 000b 01       		.uleb128 0x1
+ 1316 000c BF000000 		.4byte	.LASF18
+ 1317 0010 01       		.byte	0x1
+ 1318 0011 D5010000 		.4byte	.LASF19
+ 1319 0015 0C000000 		.4byte	.LASF20
+ 1320 0019 00000000 		.4byte	.Ldebug_line0
+ 1321 001d 02       		.uleb128 0x2
+ 1322 001e 01       		.byte	0x1
+ 1323 001f 06       		.byte	0x6
+ 1324 0020 C9010000 		.4byte	.LASF0
+ 1325 0024 02       		.uleb128 0x2
+ 1326 0025 01       		.byte	0x1
+ 1327 0026 08       		.byte	0x8
+ 1328 0027 63000000 		.4byte	.LASF1
+ 1329 002b 02       		.uleb128 0x2
+ 1330 002c 02       		.byte	0x2
+ 1331 002d 05       		.byte	0x5
+ 1332 002e B0010000 		.4byte	.LASF2
+ 1333 0032 02       		.uleb128 0x2
+ 1334 0033 02       		.byte	0x2
+ 1335 0034 07       		.byte	0x7
+ 1336 0035 83000000 		.4byte	.LASF3
+ 1337 0039 02       		.uleb128 0x2
+ 1338 003a 04       		.byte	0x4
+ 1339 003b 05       		.byte	0x5
+ 1340 003c C0010000 		.4byte	.LASF4
+ 1341 0040 02       		.uleb128 0x2
+ 1342 0041 04       		.byte	0x4
+ 1343 0042 07       		.byte	0x7
+ 1344 0043 71000000 		.4byte	.LASF5
+ 1345 0047 02       		.uleb128 0x2
+ 1346 0048 08       		.byte	0x8
+ 1347 0049 05       		.byte	0x5
+ 1348 004a 9D010000 		.4byte	.LASF6
+ 1349 004e 02       		.uleb128 0x2
+ 1350 004f 08       		.byte	0x8
+ 1351 0050 07       		.byte	0x7
+ 1352 0051 5A010000 		.4byte	.LASF7
+ 1353 0055 03       		.uleb128 0x3
+ 1354 0056 04       		.byte	0x4
+ 1355 0057 05       		.byte	0x5
+ 1356 0058 696E7400 		.ascii	"int\000"
+ 1357 005c 02       		.uleb128 0x2
+ 1358 005d 04       		.byte	0x4
+ 1359 005e 07       		.byte	0x7
+ 1360 005f 4D010000 		.4byte	.LASF8
+ 1361 0063 04       		.uleb128 0x4
+ 1362 0064 BA010000 		.4byte	.LASF21
+ 1363 0068 02       		.byte	0x2
+ 1364 0069 9201     		.2byte	0x192
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cco51iVj.s 			page 25
+
+
+ 1365 006b 24000000 		.4byte	0x24
+ 1366 006f 02       		.uleb128 0x2
+ 1367 0070 04       		.byte	0x4
+ 1368 0071 04       		.byte	0x4
+ 1369 0072 5D000000 		.4byte	.LASF9
+ 1370 0076 02       		.uleb128 0x2
+ 1371 0077 08       		.byte	0x8
+ 1372 0078 04       		.byte	0x4
+ 1373 0079 96000000 		.4byte	.LASF10
+ 1374 007d 02       		.uleb128 0x2
+ 1375 007e 01       		.byte	0x1
+ 1376 007f 08       		.byte	0x8
+ 1377 0080 AB010000 		.4byte	.LASF11
+ 1378 0084 05       		.uleb128 0x5
+ 1379 0085 63000000 		.4byte	0x63
+ 1380 0089 95000000 		.4byte	0x95
+ 1381 008d 06       		.uleb128 0x6
+ 1382 008e 95000000 		.4byte	0x95
+ 1383 0092 D304     		.2byte	0x4d3
+ 1384 0094 00       		.byte	0
+ 1385 0095 02       		.uleb128 0x2
+ 1386 0096 04       		.byte	0x4
+ 1387 0097 07       		.byte	0x7
+ 1388 0098 94010000 		.4byte	.LASF12
+ 1389 009c 07       		.uleb128 0x7
+ 1390 009d AD000000 		.4byte	.LASF13
+ 1391 00a1 01       		.byte	0x1
+ 1392 00a2 1F       		.byte	0x1f
+ 1393 00a3 AD000000 		.4byte	0xad
+ 1394 00a7 05       		.uleb128 0x5
+ 1395 00a8 03       		.byte	0x3
+ 1396 00a9 00000000 		.4byte	cy_meta_configecc
+ 1397 00ad 08       		.uleb128 0x8
+ 1398 00ae 84000000 		.4byte	0x84
+ 1399 00b2 05       		.uleb128 0x5
+ 1400 00b3 63000000 		.4byte	0x63
+ 1401 00b7 C2000000 		.4byte	0xc2
+ 1402 00bb 09       		.uleb128 0x9
+ 1403 00bc 95000000 		.4byte	0x95
+ 1404 00c0 03       		.byte	0x3
+ 1405 00c1 00       		.byte	0
+ 1406 00c2 07       		.uleb128 0x7
+ 1407 00c3 9D000000 		.4byte	.LASF14
+ 1408 00c7 01       		.byte	0x1
+ 1409 00c8 C7       		.byte	0xc7
+ 1410 00c9 D3000000 		.4byte	0xd3
+ 1411 00cd 05       		.uleb128 0x5
+ 1412 00ce 03       		.byte	0x3
+ 1413 00cf 00000000 		.4byte	cy_meta_custnvl
+ 1414 00d3 08       		.uleb128 0x8
+ 1415 00d4 B2000000 		.4byte	0xb2
+ 1416 00d8 07       		.uleb128 0x7
+ 1417 00d9 86010000 		.4byte	.LASF15
+ 1418 00dd 01       		.byte	0x1
+ 1419 00de D5       		.byte	0xd5
+ 1420 00df E9000000 		.4byte	0xe9
+ 1421 00e3 05       		.uleb128 0x5
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cco51iVj.s 			page 26
+
+
+ 1422 00e4 03       		.byte	0x3
+ 1423 00e5 00000000 		.4byte	cy_meta_wonvl
+ 1424 00e9 08       		.uleb128 0x8
+ 1425 00ea B2000000 		.4byte	0xb2
+ 1426 00ee 05       		.uleb128 0x5
+ 1427 00ef 63000000 		.4byte	0x63
+ 1428 00f3 FE000000 		.4byte	0xfe
+ 1429 00f7 09       		.uleb128 0x9
+ 1430 00f8 95000000 		.4byte	0x95
+ 1431 00fc FF       		.byte	0xff
+ 1432 00fd 00       		.byte	0
+ 1433 00fe 07       		.uleb128 0x7
+ 1434 00ff 71010000 		.4byte	.LASF16
+ 1435 0103 01       		.byte	0x1
+ 1436 0104 E3       		.byte	0xe3
+ 1437 0105 0F010000 		.4byte	0x10f
+ 1438 0109 05       		.uleb128 0x5
+ 1439 010a 03       		.byte	0x3
+ 1440 010b 00000000 		.4byte	cy_meta_flashprotect
+ 1441 010f 08       		.uleb128 0x8
+ 1442 0110 EE000000 		.4byte	0xee
+ 1443 0114 05       		.uleb128 0x5
+ 1444 0115 63000000 		.4byte	0x63
+ 1445 0119 24010000 		.4byte	0x124
+ 1446 011d 09       		.uleb128 0x9
+ 1447 011e 95000000 		.4byte	0x95
+ 1448 0122 0B       		.byte	0xb
+ 1449 0123 00       		.byte	0
+ 1450 0124 0A       		.uleb128 0xa
+ 1451 0125 00000000 		.4byte	.LASF17
+ 1452 0129 01       		.byte	0x1
+ 1453 012a 1001     		.2byte	0x110
+ 1454 012c 36010000 		.4byte	0x136
+ 1455 0130 05       		.uleb128 0x5
+ 1456 0131 03       		.byte	0x3
+ 1457 0132 00000000 		.4byte	cy_metadata
+ 1458 0136 08       		.uleb128 0x8
+ 1459 0137 14010000 		.4byte	0x114
+ 1460 013b 00       		.byte	0
+ 1461              		.section	.debug_abbrev,"",%progbits
+ 1462              	.Ldebug_abbrev0:
+ 1463 0000 01       		.uleb128 0x1
+ 1464 0001 11       		.uleb128 0x11
+ 1465 0002 01       		.byte	0x1
+ 1466 0003 25       		.uleb128 0x25
+ 1467 0004 0E       		.uleb128 0xe
+ 1468 0005 13       		.uleb128 0x13
+ 1469 0006 0B       		.uleb128 0xb
+ 1470 0007 03       		.uleb128 0x3
+ 1471 0008 0E       		.uleb128 0xe
+ 1472 0009 1B       		.uleb128 0x1b
+ 1473 000a 0E       		.uleb128 0xe
+ 1474 000b 10       		.uleb128 0x10
+ 1475 000c 17       		.uleb128 0x17
+ 1476 000d 00       		.byte	0
+ 1477 000e 00       		.byte	0
+ 1478 000f 02       		.uleb128 0x2
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cco51iVj.s 			page 27
+
+
+ 1479 0010 24       		.uleb128 0x24
+ 1480 0011 00       		.byte	0
+ 1481 0012 0B       		.uleb128 0xb
+ 1482 0013 0B       		.uleb128 0xb
+ 1483 0014 3E       		.uleb128 0x3e
+ 1484 0015 0B       		.uleb128 0xb
+ 1485 0016 03       		.uleb128 0x3
+ 1486 0017 0E       		.uleb128 0xe
+ 1487 0018 00       		.byte	0
+ 1488 0019 00       		.byte	0
+ 1489 001a 03       		.uleb128 0x3
+ 1490 001b 24       		.uleb128 0x24
+ 1491 001c 00       		.byte	0
+ 1492 001d 0B       		.uleb128 0xb
+ 1493 001e 0B       		.uleb128 0xb
+ 1494 001f 3E       		.uleb128 0x3e
+ 1495 0020 0B       		.uleb128 0xb
+ 1496 0021 03       		.uleb128 0x3
+ 1497 0022 08       		.uleb128 0x8
+ 1498 0023 00       		.byte	0
+ 1499 0024 00       		.byte	0
+ 1500 0025 04       		.uleb128 0x4
+ 1501 0026 16       		.uleb128 0x16
+ 1502 0027 00       		.byte	0
+ 1503 0028 03       		.uleb128 0x3
+ 1504 0029 0E       		.uleb128 0xe
+ 1505 002a 3A       		.uleb128 0x3a
+ 1506 002b 0B       		.uleb128 0xb
+ 1507 002c 3B       		.uleb128 0x3b
+ 1508 002d 05       		.uleb128 0x5
+ 1509 002e 49       		.uleb128 0x49
+ 1510 002f 13       		.uleb128 0x13
+ 1511 0030 00       		.byte	0
+ 1512 0031 00       		.byte	0
+ 1513 0032 05       		.uleb128 0x5
+ 1514 0033 01       		.uleb128 0x1
+ 1515 0034 01       		.byte	0x1
+ 1516 0035 49       		.uleb128 0x49
+ 1517 0036 13       		.uleb128 0x13
+ 1518 0037 01       		.uleb128 0x1
+ 1519 0038 13       		.uleb128 0x13
+ 1520 0039 00       		.byte	0
+ 1521 003a 00       		.byte	0
+ 1522 003b 06       		.uleb128 0x6
+ 1523 003c 21       		.uleb128 0x21
+ 1524 003d 00       		.byte	0
+ 1525 003e 49       		.uleb128 0x49
+ 1526 003f 13       		.uleb128 0x13
+ 1527 0040 2F       		.uleb128 0x2f
+ 1528 0041 05       		.uleb128 0x5
+ 1529 0042 00       		.byte	0
+ 1530 0043 00       		.byte	0
+ 1531 0044 07       		.uleb128 0x7
+ 1532 0045 34       		.uleb128 0x34
+ 1533 0046 00       		.byte	0
+ 1534 0047 03       		.uleb128 0x3
+ 1535 0048 0E       		.uleb128 0xe
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cco51iVj.s 			page 28
+
+
+ 1536 0049 3A       		.uleb128 0x3a
+ 1537 004a 0B       		.uleb128 0xb
+ 1538 004b 3B       		.uleb128 0x3b
+ 1539 004c 0B       		.uleb128 0xb
+ 1540 004d 49       		.uleb128 0x49
+ 1541 004e 13       		.uleb128 0x13
+ 1542 004f 3F       		.uleb128 0x3f
+ 1543 0050 19       		.uleb128 0x19
+ 1544 0051 02       		.uleb128 0x2
+ 1545 0052 18       		.uleb128 0x18
+ 1546 0053 00       		.byte	0
+ 1547 0054 00       		.byte	0
+ 1548 0055 08       		.uleb128 0x8
+ 1549 0056 26       		.uleb128 0x26
+ 1550 0057 00       		.byte	0
+ 1551 0058 49       		.uleb128 0x49
+ 1552 0059 13       		.uleb128 0x13
+ 1553 005a 00       		.byte	0
+ 1554 005b 00       		.byte	0
+ 1555 005c 09       		.uleb128 0x9
+ 1556 005d 21       		.uleb128 0x21
+ 1557 005e 00       		.byte	0
+ 1558 005f 49       		.uleb128 0x49
+ 1559 0060 13       		.uleb128 0x13
+ 1560 0061 2F       		.uleb128 0x2f
+ 1561 0062 0B       		.uleb128 0xb
+ 1562 0063 00       		.byte	0
+ 1563 0064 00       		.byte	0
+ 1564 0065 0A       		.uleb128 0xa
+ 1565 0066 34       		.uleb128 0x34
+ 1566 0067 00       		.byte	0
+ 1567 0068 03       		.uleb128 0x3
+ 1568 0069 0E       		.uleb128 0xe
+ 1569 006a 3A       		.uleb128 0x3a
+ 1570 006b 0B       		.uleb128 0xb
+ 1571 006c 3B       		.uleb128 0x3b
+ 1572 006d 05       		.uleb128 0x5
+ 1573 006e 49       		.uleb128 0x49
+ 1574 006f 13       		.uleb128 0x13
+ 1575 0070 3F       		.uleb128 0x3f
+ 1576 0071 19       		.uleb128 0x19
+ 1577 0072 02       		.uleb128 0x2
+ 1578 0073 18       		.uleb128 0x18
+ 1579 0074 00       		.byte	0
+ 1580 0075 00       		.byte	0
+ 1581 0076 00       		.byte	0
+ 1582              		.section	.debug_aranges,"",%progbits
+ 1583 0000 14000000 		.4byte	0x14
+ 1584 0004 0200     		.2byte	0x2
+ 1585 0006 00000000 		.4byte	.Ldebug_info0
+ 1586 000a 04       		.byte	0x4
+ 1587 000b 00       		.byte	0
+ 1588 000c 0000     		.2byte	0
+ 1589 000e 0000     		.2byte	0
+ 1590 0010 00000000 		.4byte	0
+ 1591 0014 00000000 		.4byte	0
+ 1592              		.section	.debug_line,"",%progbits
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cco51iVj.s 			page 29
+
+
+ 1593              	.Ldebug_line0:
+ 1594 0000 4D000000 		.section	.debug_str,"MS",%progbits,1
+ 1594      02004700 
+ 1594      00000201 
+ 1594      FB0E0D00 
+ 1594      01010101 
+ 1595              	.LASF17:
+ 1596 0000 63795F6D 		.ascii	"cy_metadata\000"
+ 1596      65746164 
+ 1596      61746100 
+ 1597              	.LASF20:
+ 1598 000c 443A5C50 		.ascii	"D:\\PROJECT\\pgm\\Adaptor_CFP_CFP2_Cypress\\cfp_rea"
+ 1598      524F4A45 
+ 1598      43545C70 
+ 1598      676D5C41 
+ 1598      64617074 
+ 1599 003b 6465725C 		.ascii	"der\\W_cfp_reader\\cfp_reader.cydsn\000"
+ 1599      575F6366 
+ 1599      705F7265 
+ 1599      61646572 
+ 1599      5C636670 
+ 1600              	.LASF9:
+ 1601 005d 666C6F61 		.ascii	"float\000"
+ 1601      7400
+ 1602              	.LASF1:
+ 1603 0063 756E7369 		.ascii	"unsigned char\000"
+ 1603      676E6564 
+ 1603      20636861 
+ 1603      7200
+ 1604              	.LASF5:
+ 1605 0071 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1605      20756E73 
+ 1605      69676E65 
+ 1605      6420696E 
+ 1605      7400
+ 1606              	.LASF3:
+ 1607 0083 73686F72 		.ascii	"short unsigned int\000"
+ 1607      7420756E 
+ 1607      7369676E 
+ 1607      65642069 
+ 1607      6E7400
+ 1608              	.LASF10:
+ 1609 0096 646F7562 		.ascii	"double\000"
+ 1609      6C6500
+ 1610              	.LASF14:
+ 1611 009d 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 1611      6574615F 
+ 1611      63757374 
+ 1611      6E766C00 
+ 1612              	.LASF13:
+ 1613 00ad 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 1613      6574615F 
+ 1613      636F6E66 
+ 1613      69676563 
+ 1613      6300
+ 1614              	.LASF18:
+ 1615 00bf 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cco51iVj.s 			page 30
+
+
+ 1615      4320342E 
+ 1615      392E3320 
+ 1615      32303135 
+ 1615      30333033 
+ 1616 00f2 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 1616      20726576 
+ 1616      6973696F 
+ 1616      6E203232 
+ 1616      31323230 
+ 1617 0125 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1617      66756E63 
+ 1617      74696F6E 
+ 1617      2D736563 
+ 1617      74696F6E 
+ 1618              	.LASF8:
+ 1619 014d 756E7369 		.ascii	"unsigned int\000"
+ 1619      676E6564 
+ 1619      20696E74 
+ 1619      00
+ 1620              	.LASF7:
+ 1621 015a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1621      206C6F6E 
+ 1621      6720756E 
+ 1621      7369676E 
+ 1621      65642069 
+ 1622              	.LASF16:
+ 1623 0171 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 1623      6574615F 
+ 1623      666C6173 
+ 1623      6870726F 
+ 1623      74656374 
+ 1624              	.LASF15:
+ 1625 0186 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 1625      6574615F 
+ 1625      776F6E76 
+ 1625      6C00
+ 1626              	.LASF12:
+ 1627 0194 73697A65 		.ascii	"sizetype\000"
+ 1627      74797065 
+ 1627      00
+ 1628              	.LASF6:
+ 1629 019d 6C6F6E67 		.ascii	"long long int\000"
+ 1629      206C6F6E 
+ 1629      6720696E 
+ 1629      7400
+ 1630              	.LASF11:
+ 1631 01ab 63686172 		.ascii	"char\000"
+ 1631      00
+ 1632              	.LASF2:
+ 1633 01b0 73686F72 		.ascii	"short int\000"
+ 1633      7420696E 
+ 1633      7400
+ 1634              	.LASF21:
+ 1635 01ba 75696E74 		.ascii	"uint8\000"
+ 1635      3800
+ 1636              	.LASF4:
+ 1637 01c0 6C6F6E67 		.ascii	"long int\000"
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cco51iVj.s 			page 31
+
+
+ 1637      20696E74 
+ 1637      00
+ 1638              	.LASF0:
+ 1639 01c9 7369676E 		.ascii	"signed char\000"
+ 1639      65642063 
+ 1639      68617200 
+ 1640              	.LASF19:
+ 1641 01d5 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
+ 1641      72617465 
+ 1641      645F536F 
+ 1641      75726365 
+ 1641      5C50536F 
+ 1642              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

@@ -1,0 +1,8 @@
+Last Modified Date & Time: 01/11/2017 11:24:07
+
+cfp_reader: TopDesign.cysch
+	VRef_1V2 [v2.5] to [v2.20]
+	MDIO_M [v2.5] to [v2.20]
+	MDC_M [v2.5] to [v2.20]
+
+
