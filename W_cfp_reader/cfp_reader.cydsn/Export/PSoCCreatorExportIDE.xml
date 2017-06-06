@@ -138,22 +138,11 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_2_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDIO_host_2_my.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDIO_host_2_my.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ISR.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ISR.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_1.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_1.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LED_3_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LED_3.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LED_3.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDA_1_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDA_1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDA_1.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SCL_1_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SCL_1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SCL_1.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LED_4_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LED_4.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LED_4.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MOD_ABS_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MOD_ABS.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MOD_ABS.h</File>
@@ -172,6 +161,16 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\O_ALM_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\O_ALM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\O_ALM.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LED_4_data_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LED_4_data.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LED_4_data.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Timer_1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Timer_1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Timer_1_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ISR_MDIO.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ISR_MDIO.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ISR_TMR1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ISR_TMR1.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="D:\PROJECT\pgm\Adaptor_CFP_CFP2_Cypress\cfp_reader\W_cfp_reader\cfp_reader.cydsn\MDIO_host_my_v\API">

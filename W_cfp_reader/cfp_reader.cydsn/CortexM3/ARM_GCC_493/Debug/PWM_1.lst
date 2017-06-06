@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccIhsG03.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 1
   29:Generated_Source\PSoC5/PWM_1.c ****          constant 1 for reset. This will prevent the component from operating.
   30:Generated_Source\PSoC5/PWM_1.c **** #endif /* PWM_1_PWMUDB_genblk1_ctrlreg__REMOVED */
   31:Generated_Source\PSoC5/PWM_1.c **** 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 2
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccIhsG03.s 			page 2
 
 
   32:Generated_Source\PSoC5/PWM_1.c **** uint8 PWM_1_initVar = 0u;
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 1
   86:Generated_Source\PSoC5/PWM_1.c ****     #if (PWM_1_UsingFixedFunction || PWM_1_UseControl)
   87:Generated_Source\PSoC5/PWM_1.c ****         uint8 ctrl;
   88:Generated_Source\PSoC5/PWM_1.c ****     #endif /* (PWM_1_UsingFixedFunction || PWM_1_UseControl) */
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 3
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccIhsG03.s 			page 3
 
 
   89:Generated_Source\PSoC5/PWM_1.c **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 1
  143:Generated_Source\PSoC5/PWM_1.c ****         #endif /* (PWM_1_UseOneCompareMode) */
  144:Generated_Source\PSoC5/PWM_1.c **** 
  145:Generated_Source\PSoC5/PWM_1.c ****         #if (PWM_1_KillModeMinTime)
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 4
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccIhsG03.s 			page 4
 
 
  146:Generated_Source\PSoC5/PWM_1.c ****             PWM_1_WriteKillTime(PWM_1_MinimumKillTime);
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 1
  200:Generated_Source\PSoC5/PWM_1.c **** {
   27              		.loc 1 200 0
   28              		.cfi_startproc
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 5
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccIhsG03.s 			page 5
 
 
   29              		@ args = 0, pretend = 0, frame = 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 1
   49 0000 7047     		bx	lr
   50              		.cfi_endproc
   51              	.LFE3:
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 6
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccIhsG03.s 			page 6
 
 
   52              		.size	PWM_1_Stop, .-PWM_1_Stop
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 1
  280:Generated_Source\PSoC5/PWM_1.c **** 
  281:Generated_Source\PSoC5/PWM_1.c ****                 #if(0 != PWM_1_CTRL_CMPMODE1_SHIFT)
  282:Generated_Source\PSoC5/PWM_1.c ****                     uint8 comparemode1masked = ((uint8)((uint8)comparemode << PWM_1_CTRL_CMPMODE1_S
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 7
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccIhsG03.s 			page 7
 
 
  283:Generated_Source\PSoC5/PWM_1.c ****                                                 PWM_1_CTRL_CMPMODE1_MASK;
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 1
  337:Generated_Source\PSoC5/PWM_1.c ****                 PWM_1_CONTROL |= comparemodemasked;
  338:Generated_Source\PSoC5/PWM_1.c ****             #endif /* (PWM_1_UseControl) */
  339:Generated_Source\PSoC5/PWM_1.c ****         }
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 8
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccIhsG03.s 			page 8
 
 
  340:Generated_Source\PSoC5/PWM_1.c ****     #endif /* PWM_1_CompareMode1SW */
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 1
  394:Generated_Source\PSoC5/PWM_1.c ****     *  counter:  The period new period counter value.
  395:Generated_Source\PSoC5/PWM_1.c ****     *
  396:Generated_Source\PSoC5/PWM_1.c ****     * Return:
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 9
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccIhsG03.s 			page 9
 
 
  397:Generated_Source\PSoC5/PWM_1.c ****     *  None
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 1
  426:Generated_Source\PSoC5/PWM_1.c ****     {
   86              		.loc 1 426 0
   87              		.cfi_startproc
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 10
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccIhsG03.s 			page 10
 
 
   88              		@ args = 0, pretend = 0, frame = 0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 1
  454:Generated_Source\PSoC5/PWM_1.c ****         {
  455:Generated_Source\PSoC5/PWM_1.c ****             while(0u != (PWM_1_ReadStatusRegister() & PWM_1_STATUS_FIFONEMPTY))
  456:Generated_Source\PSoC5/PWM_1.c ****             {
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 11
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccIhsG03.s 			page 11
 
 
  457:Generated_Source\PSoC5/PWM_1.c ****                 (void)PWM_1_ReadCapture();
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 1
  138              	PWM_1_WriteCompare:
  139              	.LFB7:
  488:Generated_Source\PSoC5/PWM_1.c ****     #endif /* (PWM_1_UsingFixedFunction) */
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 12
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccIhsG03.s 			page 12
 
 
  489:Generated_Source\PSoC5/PWM_1.c **** }
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 1
  160              		.thumb
  161              		.thumb_func
  162              		.type	PWM_1_Init, %function
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 13
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccIhsG03.s 			page 13
 
 
  163              	PWM_1_Init:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 1
  211              		.cfi_def_cfa_offset 8
  212              		.cfi_offset 3, -8
  213              		.cfi_offset 14, -4
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 14
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccIhsG03.s 			page 14
 
 
   58:Generated_Source\PSoC5/PWM_1.c ****     {
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 1
  546:Generated_Source\PSoC5/PWM_1.c ****     *  equal to the compare register, depending on the mode.
  547:Generated_Source\PSoC5/PWM_1.c ****     *
  548:Generated_Source\PSoC5/PWM_1.c ****     * Parameters:
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 15
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccIhsG03.s 			page 15
 
 
  549:Generated_Source\PSoC5/PWM_1.c ****     *  compare:  New compare value.
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 1
  603:Generated_Source\PSoC5/PWM_1.c ****     *  This function writes the dead-band counts to the corresponding register
  604:Generated_Source\PSoC5/PWM_1.c ****     *
  605:Generated_Source\PSoC5/PWM_1.c ****     * Parameters:
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 16
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccIhsG03.s 			page 16
 
 
  606:Generated_Source\PSoC5/PWM_1.c ****     *  deadtime:  Number of counts for dead time
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 1
  660:Generated_Source\PSoC5/PWM_1.c ****                 return (PWM_1_DEADBAND_COUNT & PWM_1_DEADBAND_COUNT_MASK);
  661:Generated_Source\PSoC5/PWM_1.c ****             #endif /* (PWM_1_DEADBAND_COUNT_SHIFT) */
  662:Generated_Source\PSoC5/PWM_1.c ****         #endif /* (!PWM_1_DeadBand2_4) */
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 17
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccIhsG03.s 			page 17
 
 
  663:Generated_Source\PSoC5/PWM_1.c ****     }
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 1
  717:Generated_Source\PSoC5/PWM_1.c **** 
  718:Generated_Source\PSoC5/PWM_1.c **** 
  719:Generated_Source\PSoC5/PWM_1.c **** #if (PWM_1_UseControl)
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 18
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccIhsG03.s 			page 18
 
 
  720:Generated_Source\PSoC5/PWM_1.c **** 
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 1
  774:Generated_Source\PSoC5/PWM_1.c **** 
  775:Generated_Source\PSoC5/PWM_1.c **** 
  776:Generated_Source\PSoC5/PWM_1.c ****     /*******************************************************************************
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 19
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccIhsG03.s 			page 19
 
 
  777:Generated_Source\PSoC5/PWM_1.c ****     * Function Name: PWM_1_ReadCapture
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 1
  806:Generated_Source\PSoC5/PWM_1.c ****     *  Reads the compare value for the compare output when the PWM Mode parameter is
  807:Generated_Source\PSoC5/PWM_1.c ****     *  set to Dither mode, Center Aligned mode, or One Output mode.
  808:Generated_Source\PSoC5/PWM_1.c ****     *
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 20
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccIhsG03.s 			page 20
 
 
  809:Generated_Source\PSoC5/PWM_1.c ****     * Parameters:
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 1
  838:Generated_Source\PSoC5/PWM_1.c ****     * Return:
  839:Generated_Source\PSoC5/PWM_1.c ****     *  uint8/uint16: Current compare value.
  840:Generated_Source\PSoC5/PWM_1.c ****     *
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 21
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccIhsG03.s 			page 21
 
 
  841:Generated_Source\PSoC5/PWM_1.c ****     *******************************************************************************/
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 1
  297              		.loc 1 889 0
  298 0000 014B     		ldr	r3, .L31
  299 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 22
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccIhsG03.s 			page 22
 
 
  890:Generated_Source\PSoC5/PWM_1.c ****     #endif /* (PWM_1_UsingFixedFunction) */
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 1
  352 0044 52020000 		.4byte	.LASF4
  353 0048 02       		.uleb128 0x2
  354 0049 04       		.byte	0x4
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 23
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccIhsG03.s 			page 23
 
 
  355 004a 07       		.byte	0x7
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 1
  409 00b5 06       		.uleb128 0x6
  410 00b6 47020000 		.4byte	.LASF16
  411 00ba 01       		.byte	0x1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 24
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccIhsG03.s 			page 24
 
 
  412 00bb E9       		.byte	0xe9
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 1
  466 0136 01       		.uleb128 0x1
  467 0137 9C       		.byte	0x9c
  468 0138 4B010000 		.4byte	0x14b
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 25
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccIhsG03.s 			page 25
 
 
  469 013c 08       		.uleb128 0x8
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 1
  523 01a0 00000000 		.4byte	.LFB0
  524 01a4 18000000 		.4byte	.LFE0-.LFB0
  525 01a8 01       		.uleb128 0x1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 26
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccIhsG03.s 			page 26
 
 
  526 01a9 9C       		.byte	0x9c
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 1
  580 000a 0E       		.uleb128 0xe
  581 000b 55       		.uleb128 0x55
  582 000c 17       		.uleb128 0x17
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 27
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccIhsG03.s 			page 27
 
 
  583 000d 11       		.uleb128 0x11
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 1
  637 0043 0E       		.uleb128 0xe
  638 0044 3A       		.uleb128 0x3a
  639 0045 0B       		.uleb128 0xb
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 28
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccIhsG03.s 			page 28
 
 
  640 0046 3B       		.uleb128 0x3b
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 1
  694 007e 09       		.uleb128 0x9
  695 007f 2E       		.uleb128 0x2e
  696 0080 00       		.byte	0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 29
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccIhsG03.s 			page 29
 
 
  697 0081 3F       		.uleb128 0x3f
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 1
  751 00bb 01       		.uleb128 0x1
  752 00bc 13       		.uleb128 0x13
  753 00bd 00       		.byte	0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 30
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccIhsG03.s 			page 30
 
 
  754 00be 00       		.byte	0
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 1
  808 0010 00000000 		.4byte	.LFB2
  809 0014 02000000 		.4byte	.LFE2-.LFB2
  810 0018 00000000 		.4byte	.LFB3
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 31
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccIhsG03.s 			page 31
 
 
  811 001c 02000000 		.4byte	.LFE3-.LFB3
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 1
  861              	.LASF15:
  862 0000 50574D5F 		.ascii	"PWM_1_Enable\000"
  862      315F456E 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 32
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccIhsG03.s 			page 32
 
 
  862      61626C65 
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 1
  884              	.LASF12:
  885 00cf 75696E74 		.ascii	"uint8\000"
  885      3800
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 33
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccIhsG03.s 			page 33
 
 
  886              	.LASF27:
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 1
  905      65642069 
  906              	.LASF30:
  907 01d5 47656E65 		.ascii	"Generated_Source\\PSoC5\\PWM_1.c\000"
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccNfABqW.s 			page 34
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccIhsG03.s 			page 34
 
 
  907      72617465 

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7oUR2s.s 			page 1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccQ3MOki.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7oUR2s.s 			page 1
   29:Generated_Source\PSoC5/O_ALM.c **** * \brief Writes the value to the physical port (data output register), masking
   30:Generated_Source\PSoC5/O_ALM.c **** *  and shifting the bits appropriately. 
   31:Generated_Source\PSoC5/O_ALM.c **** *
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7oUR2s.s 			page 2
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccQ3MOki.s 			page 2
 
 
   32:Generated_Source\PSoC5/O_ALM.c **** * The data output register controls the signal applied to the physical pin in 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7oUR2s.s 			page 1
   52              		.section	.text.O_ALM_SetDriveMode,"ax",%progbits
   53              		.align	2
   54              		.global	O_ALM_SetDriveMode
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7oUR2s.s 			page 3
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccQ3MOki.s 			page 3
 
 
   55              		.thumb
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7oUR2s.s 			page 1
   76 0012 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
   77 0014 03F0F103 		and	r3, r3, #241
   78 0018 0343     		orrs	r3, r3, r0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7oUR2s.s 			page 4
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccQ3MOki.s 			page 4
 
 
   79 001a 1370     		strb	r3, [r2]
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7oUR2s.s 			page 1
  109 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
  118:Generated_Source\PSoC5/O_ALM.c **** }
  110              		.loc 1 118 0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7oUR2s.s 			page 5
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccQ3MOki.s 			page 5
 
 
  111 0004 C0F3C200 		ubfx	r0, r0, #3, #3
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7oUR2s.s 			page 1
  137 0004 C0F3C200 		ubfx	r0, r0, #3, #3
  138 0008 7047     		bx	lr
  139              	.L12:
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7oUR2s.s 			page 6
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccQ3MOki.s 			page 6
 
 
  140 000a 00BF     		.align	2
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7oUR2s.s 			page 1
  194 0059 73010000 		.4byte	.LASF7
  195 005d 03       		.uleb128 0x3
  196 005e 04       		.byte	0x4
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7oUR2s.s 			page 7
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccQ3MOki.s 			page 7
 
 
  197 005f 05       		.byte	0x5
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7oUR2s.s 			page 1
  251 00d0 00000000 		.4byte	.LASF15
  252 00d4 01       		.byte	0x1
  253 00d5 5A       		.byte	0x5a
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7oUR2s.s 			page 8
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccQ3MOki.s 			page 8
 
 
  254 00d6 00000000 		.4byte	.LFB1
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7oUR2s.s 			page 1
  308 0015 00       		.byte	0
  309 0016 0B       		.uleb128 0xb
  310 0017 0B       		.uleb128 0xb
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7oUR2s.s 			page 9
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccQ3MOki.s 			page 9
 
 
  311 0018 3E       		.uleb128 0x3e
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7oUR2s.s 			page 1
  365 004e 40       		.uleb128 0x40
  366 004f 18       		.uleb128 0x18
  367 0050 9742     		.uleb128 0x2117
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7oUR2s.s 			page 10
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccQ3MOki.s 			page 10
 
 
  368 0052 19       		.uleb128 0x19
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7oUR2s.s 			page 1
  422 0088 40       		.uleb128 0x40
  423 0089 18       		.uleb128 0x18
  424 008a 9742     		.uleb128 0x2117
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7oUR2s.s 			page 11
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccQ3MOki.s 			page 11
 
 
  425 008c 19       		.uleb128 0x19
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7oUR2s.s 			page 1
  479 0000 00000000 		.4byte	.LFB0
  480 0004 18000000 		.4byte	.LFE0
  481 0008 00000000 		.4byte	.LFB1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7oUR2s.s 			page 12
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccQ3MOki.s 			page 12
 
 
  482 000c 30000000 		.4byte	.LFE1
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7oUR2s.s 			page 1
  508      20636861 
  508      7200
  509              	.LASF13:
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7oUR2s.s 			page 13
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccQ3MOki.s 			page 13
 
 
  510 00a7 72656738 		.ascii	"reg8\000"
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7oUR2s.s 			page 1
  530      645F536F 
  530      75726365 
  530      5C50536F 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7oUR2s.s 			page 14
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccQ3MOki.s 			page 14
 
 
  531              	.LASF6:

@@ -1,11 +1,11 @@
 /* ========================================
  *
- * Copyright YOUR COMPANY, THE YEAR
+ * Copyright FiberTreid, 2016
  * All Rights Reserved
  * UNPUBLISHED, LICENSED SOFTWARE.
  *
  * CONFIDENTIAL AND PROPRIETARY INFORMATION
- * WHICH IS THE PROPERTY OF your company.
+ * WHICH IS THE PROPERTY OF FiberTreid.
  *
  * ========================================
 */
@@ -32,11 +32,6 @@
 #define USBUART_BUFFER_SIZE (64u)
 #define LINE_STR_LENGTH     (20u)
 
-volatile uint16 myAddress = 0;          /* Current address variable */
-         uint16 myData = 0;             /* Register value in current address */
-volatile uint8 dataFlag = 0;           /* Internal data flag for ISR*/
-volatile uint8 corFlag = 0;            /* Internal COR flag for ISR */
-static   uint8 status = 0;                 /* Status of API calls */
 
 uint16 cur_psw[2];//,read_MDIO[133];
 
@@ -49,13 +44,12 @@ uint16 HostData       = 0x0000;               /* Read data for the MDIO frames *
 #define STATE_WRITE 0
 #define STATE_READ  1
 
-//static   uint16 myCounter = 0;          /* Global counter incremented in main loop */
-//static   uint8  myState = STATE_READ;  /* State variable. Default state is WRITE */
+
 /* Device Address of MDIO Interface (constant) */
 static uint8  MdioDevAddr = 0x01; //PMA/PMD
 static uint8  MdioPhyAddr = 0x00;
+
 /* Local prototypes */
-//void fillUpReadOnlyRegisters(void);
 uint8_t analiz_rx_data(uint8_t *rx_buffer);
 
 
@@ -68,11 +62,8 @@ uint16 read_MDIO_data=0;
 
 
 /* Interrupt Prototypes */
-CY_ISR_PROTO(DAT_ISR_Handler);
-CY_ISR_PROTO(ADDR_ISR_Handler);
-CY_ISR_PROTO(COR_ISR_Handler);
-
-
+CY_ISR_PROTO(ISR_TMR1);
+CY_ISR_PROTO(ISR_MDIO);
 
 int main(void)
 {
@@ -102,62 +93,22 @@ int main(void)
     PWM_1_Start();
     PWM_2_Start();
 
-     ISR_Start();
+         ISR_MDIO_Start();
+    ISR_TMR1_Start();
+    
+        /* Start ISRs */
+    ISR_TMR1_StartEx (ISR_TMR1);
+    ISR_MDIO_StartEx (ISR_MDIO);
 
-
-LED_1_Write(1);
-LED_2_Write(1);
-LED_3_Write(1);
-LED_4_Write(1);
-
+    LED_1_Write(1);
+    LED_2_Write(1);
+    LED_3_Write(1);
+    LED_4_data_Write(1);
+    
+    Timer_1_Start();
     
     for(;;)
-    {
-         /* Get data from current address */
-  //      status = MDIO_Interface_GetData(myAddress, &myData, 1);
-    
-        if (status)
-        {   /* Invalid data or address not supported */
-            myData = 0x0000;
-        }     
-    
-        /* Print info on LCD [REG: XXXX] */
-//        LCD_Position(1,2);
-//        LCD_PrintInt16(myData);     
-//    
-        /* Print info about access type [T:(XXX)] */
-//        LCD_Position(0,11);
-//        
-//        
-//        /* CFP NVR/Vendor NVR Register Space */
-//        if ((myAddress & ~(MDIO_Interface_REG_PAGE_1_SIZE-1)) == MDIO_Interface_CFP_NVR_START ||
-//            (myAddress & ~(MDIO_Interface_REG_PAGE_2_SIZE-1)) == MDIO_Interface_VENDOR_NVR_START)
-//        {
-//            LCD_PrintString("RO) ");
-//        }
-//        /* Other Register spaces */
-//        else if ((myAddress & ~(MDIO_Interface_REG_PAGE_3_SIZE-1)) == MDIO_Interface_USER_NVR_START ||
-//                 (myAddress & ~(MDIO_Interface_REG_PAGE_4_SIZE-1)) == MDIO_Interface_CFP_MODULE_VR_START ||
-//                 (myAddress & ~(MDIO_Interface_REG_PAGE_5_SIZE-1)) == MDIO_Interface_NETWORK_LANE_VR_START ||
-//                 (myAddress & ~(MDIO_Interface_REG_PAGE_6_SIZE-1)) == MDIO_Interface_HOST_LANE_VR_START)
-//        {
-//            /* Special COR case */
-//            if (myAddress == SPECIAL_COR_REGISTER)
-//            {
-//                LCD_PrintString("COR)");
-//            }
-//            else
-//            {
-//                LCD_PrintString("R/W)");
-//            }
-//        }
-//        else /* Not Available Register */
-//        {
-//            LCD_PrintString("N/A)");
-//        }
-        
-        
-        
+    {      
         /* Host can send double SET_INTERFACE request. */
         if (0u != USBUART_1_IsConfigurationChanged())
         {
@@ -192,6 +143,7 @@ LED_4_Write(1);
                     if(count_rx>2)
                     {
                         count_rx=0;
+                        LED_4_data_Write(0);
                         /* Send data back to host. */
                         analiz_rx_data(buffer);
                     }
@@ -243,75 +195,10 @@ LED_4_Write(1);
                 }
             }
         }
-        /******* ISR Flags instructions ********/
-
-        /* If flag set, update special COR register */
-//        if (dataFlag)
-//        {
-//            /* Clear flag */
-//            dataFlag = 0;          
-//            
-//            /* Add condition to set special COR register */
-//            if (myAddress == SPECIAL_COR_MODIFIER)
-//            {
-//                /* Get data from current address */
-//                status = MDIO_Interface_GetData(myAddress, &myData, 1);
-//            
-//                /* Write in special COR register with current data */
-//                MDIO_Interface_SetBits(SPECIAL_COR_REGISTER, myData);
-//            }
-//        }
-          
-        /* If COR is detected, wait a moment to update value on LCD */
-        if (corFlag)
-        {
-            /* Clear Flag */
-            corFlag = 0;
-
-            CyDelay(250);
-        }
-                    
-        /* Print current address */
-//        LCD_Position(0,2);
-//        LCD_PrintInt16(myAddress);
+        //        CyDelayUs(10);
     }
 }
 
-/*******************************************************************************
-* Function Name: fillUpReadOnlyRegisters
-********************************************************************************
-* Summary:
-*  Fill all the the read only registers from the CFP Register Allocation table.
-*  The values are generated based on the initial RANDOM_CONST
-* 
-* Parameters:
-*  None
-*
-* Return:
-*  None
-*
-********************************************************************************/
-//void fillUpReadOnlyRegisters(void)
-//{
-//    uint16 index;
-//    uint16 randomData = RANDOM_CONST;
-//    
-//    /* Fill up CFP NVR Register set */
-//    for (index=0; index < (MDIO_Interface_REG_PAGE_1_SIZE-1); index++)
-//    {
-//        MDIO_Interface_SetData(MDIO_Interface_CFP_NVR_START+index, &index, 1);    
-//       // randomData = randomData + index;
-//        CyDelayUs(10);
-//    }
-//    
-//    /* Fill up Vendor NVR Register set */
-//    for (index=0; index < (MDIO_Interface_REG_PAGE_2_SIZE-1); index+=2)
-//    {
-//        MDIO_Interface_SetData(MDIO_Interface_VENDOR_NVR_START+index, &randomData, 1);    
-//        randomData = randomData + index;
-//        CyDelayUs(10);
-//    }   
-//}
 /*******************************************************************************
 * Function Name: analiz_rx_data
 ********************************************************************************
@@ -335,19 +222,19 @@ uint8_t analiz_rx_data(uint8_t *rx_buffer)
     
     switch(rx_buffer[0])
     {
-        case 'D'://set MdioDevAddr
-         //    Debug_MDIO_1_Write(1);
-            MdioDevAddr = rx_buffer[2];
-            USBUART_1_PutString("DOK");
-           //  Debug_MDIO_1_Write(0);
-            break;
-        
-        case 'H'://set MdioPhyAddr
-          //  Debug_MDIO_1_Write(1);
-            MdioPhyAddr = rx_buffer[2];
-            USBUART_1_PutString("HOK");
-            //Debug_MDIO_1_Write(0);
-            break;
+//        case 'D'://set MdioDevAddr
+//         //    Debug_MDIO_1_Write(1);
+//            MdioDevAddr = rx_buffer[2];
+//            USBUART_1_PutString("DOK");
+//           //  Debug_MDIO_1_Write(0);
+//            break;
+//        
+//        case 'H'://set MdioPhyAddr
+//          //  Debug_MDIO_1_Write(1);
+//            MdioPhyAddr = rx_buffer[2];
+//            USBUART_1_PutString("HOK");
+//            //Debug_MDIO_1_Write(0);
+//            break;
             
         case 'A'://set addr reg
            // Debug_MDIO_1_Write(1);
@@ -364,8 +251,6 @@ uint8_t analiz_rx_data(uint8_t *rx_buffer)
              break;
             
         case 'R'://read one word
-                HostAddress = (rx_buffer[1]<<8)|rx_buffer[2];
-                MDIO_host_2_SetAddrC45( MdioPhyAddr, MdioDevAddr, HostAddress );
                 MDIO_host_2_ReadDataC45( MdioPhyAddr, MdioDevAddr, &read_MDIO_data );
                 tx_data[0]=(read_MDIO_data>>8)&0xFF;
                 tx_data[1]=(read_MDIO_data)&0xFF;
@@ -397,11 +282,6 @@ uint8_t analiz_rx_data(uint8_t *rx_buffer)
                     {
                         is_word = 1;
                     }
-                    
-                     //sprintf((char *)strk,"%d 0x%04X\n\r",count_byte,read_MDIO_data);
-                     //USBUART_1_PutString((const char *)strk);
-                    
-                   
                 }
             break;
                 
@@ -424,9 +304,21 @@ uint8_t analiz_rx_data(uint8_t *rx_buffer)
                 }
             break;
             
-        case 'P'://set paswd
+        case 'P'://reset mod
+                MOD_RST_Write(0);
+                CyDelay(100);
+                MOD_RST_Write(1);
+                USBUART_1_PutString("POK");
             break;
-            
+                
+        case 'S'://mod abs
+                if(MOD_ABS_Read())
+                    USBUART_1_PutString("S00");
+                else
+                    USBUART_1_PutString("S01");
+            break;
+                
+                
         default:
             USBUART_1_PutString("RX:unknown data");
              return 0;
@@ -470,60 +362,16 @@ uint8_t analiz_rx_data(uint8_t *rx_buffer)
     return 1;
 }
 
-
-/*******************************************************************************
-* Function Name: DAT_ISR_Handler
-********************************************************************************
-* Summary:
-*  The interrupt handler for DAT_ISR. It only sets an internal data flag.
-* 
-* Parameters:
-*  None
-*
-* Return:
-*  None
-*
-********************************************************************************/
-CY_ISR(DAT_ISR_Handler)
+CY_ISR(ISR_TMR1)    //200ms
 {
-    dataFlag = 1;
+     /*200 ms*/
+    LED_4_data_Write(1);
 }
 
-/*******************************************************************************
-* Function Name: ADR_ISR_Handler
-********************************************************************************
-* Summary:
-*  The interrupt handler for ADR_ISR. It updates the current address.
-* 
-* Parameters:
-*  None
-*
-* Return:
-*  None
-*
-********************************************************************************/
-//CY_ISR(ADDR_ISR_Handler)
-//{
-//    /* Get Current address */
-//    myAddress = MDIO_Interface_GetAddress(); 
-//}
 
-/*******************************************************************************
-* Function Name: COR_ISR_Handler
-********************************************************************************
-* Summary:
-*  Interrupt handler for COR_ISR. It only sets an internal COR flag.
-* 
-* Parameters:
-*  None
-*
-* Return:
-*  None
-*
-********************************************************************************/
-CY_ISR(COR_ISR_Handler)
+CY_ISR(ISR_MDIO)
 {
-    corFlag = 1;
+   MDIO_host_2_StatusRegister=1; 
 }
 
 

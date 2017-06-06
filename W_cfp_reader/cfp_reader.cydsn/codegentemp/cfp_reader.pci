@@ -1,5 +1,5 @@
 # cfp_reader
-# 2017-05-26 08:12:48Z
+# 2017-06-05 10:21:28Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0
@@ -21,16 +21,14 @@ set_io "LED_1(0)" iocell 0 4
 set_io "\USBUART_1:Dm(0)\" iocell 15 7
 set_io "\USBUART_1:Dp(0)\" iocell 15 6
 set_io "MOD_ABS(0)" iocell 1 6
-set_io "LED_3(0)" iocell 0 6
+set_io "LED_3(0)" iocell 0 7
 set_io "MOD_RST(0)" iocell 1 7
-set_io "LED_4(0)" iocell 0 7
+set_io "LED_4_data(0)" iocell 0 6
 set_io "MOD_GALM(0)" iocell 3 7
 set_io "MOD_RX_LOS(0)" iocell 3 6
 set_io "I_PRG_CNTL(0)" iocell 3 0
 set_io "I_PRG_CNTL(1)" iocell 3 1
 set_io "I_PRG_CNTL(2)" iocell 3 2
-set_io "SDA_1(0)" iocell 15 1
-set_io "SCL_1(0)" iocell 15 0
 set_io "O_ALM(0)" iocell 3 3
 set_io "O_ALM(1)" iocell 3 4
 set_io "O_ALM(2)" iocell 3 5

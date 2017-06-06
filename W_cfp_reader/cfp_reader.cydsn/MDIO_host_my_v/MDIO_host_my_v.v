@@ -72,7 +72,8 @@ module MDIO_host_my_v (
 	localparam MDIO_STATE_START 	= 3'd1;
 	localparam MDIO_STATE_SEND_PRMB = 3'd2;
 	localparam MDIO_STATE_SEND_DATA = 3'd3;
-    localparam MDIO_STATE_READ_DATA	= 4'd4;
+    localparam MDIO_STATE_READ_DATA	= 3'd4;
+	//localparam MDIO_STATE_PRE_STOP = 3'd5;
 	localparam MDIO_STATE_STOP 	= 3'd7;  
     
     /**************************************************************************/
@@ -123,10 +124,16 @@ module MDIO_host_my_v (
 
     wire mdio_rw = control[0];	   	/* Read = 1, Write = 0 */
     
+	
+	/**************************************************************************/
+    /* Interrupt generation logic                                             */
+    /**************************************************************************/
+	assign Interrupt = (State == MDIO_STATE_STOP);
+	
 	/**************************************************************************/
     /* Count7 block used to count bits on the MDIO frame                      */
     /**************************************************************************/
-    cy_psoc3_count7 #(.cy_period(7'd63),.cy_route_ld(`TRUE),.cy_route_en(`TRUE),.cy_alt_mode(`FALSE)) MdioCounter
+    cy_psoc3_count7 #(.cy_period(7'd127),.cy_route_ld(`TRUE),.cy_route_en(`TRUE),.cy_alt_mode(`FALSE)) MdioCounter
     (
         /*  input          */  .clock(synced_clock),
         /*  input          */  .reset(1'b0),
@@ -137,7 +144,7 @@ module MDIO_host_my_v (
     );
 
 	assign ld_count = (State == MDIO_STATE_IDLE);	// Load the counter
-	assign en_count = ~(State == MDIO_STATE_IDLE);	// enable the counter
+	assign en_count = 1'b1;	// enable the counter
 	
 	/* Datapath Configuration addresses */
 	localparam MDIO_CONFIG_IDLE   	= 3'd0;		/* IDLE */
@@ -145,13 +152,9 @@ module MDIO_host_my_v (
 	localparam MDIO_CONFIG_SHIFT 	= 3'd2;		/* Shift a bit out (also used when idle) */
 	localparam MDIO_CONFIG_READ 	= 3'd3;		/* Shift a bit in (also used when idle) */
 	
-	assign debug = ((counter < 7'd49) ? 1'b1 : 1'b0);
-	
-	
-	/**************************************************************************/
-    /* Interrupt generation logic                                             */
-    /**************************************************************************/
-	assign Interrupt = (State == MDIO_STATE_STOP);
+	//assign debug = ((counter == 7'd0) ? 1'b1 : 1'b0);
+	//32 - 16 clk
+	assign debug = (counter < 7'd33);
 	
 	always @(posedge synced_clock) 
 	begin
@@ -174,7 +177,7 @@ module MDIO_host_my_v (
 				
 			MDIO_STATE_SEND_PRMB: 
 				begin
-					if(tc)	//32 bits
+					if(counter == 7'd64)	//32 bits
 					begin
 						State <= (mdio_rw == 0) ? MDIO_STATE_SEND_DATA : MDIO_STATE_READ_DATA;
 					end
@@ -182,32 +185,42 @@ module MDIO_host_my_v (
 				
 			MDIO_STATE_SEND_DATA: /* write to slave*/
 				begin
-					if( counter == 7'd32 )
-						cfg <= MDIO_CONFIG_LOAD;
+					if( counter == 7'd33 )
+						cfg <= MDIO_CONFIG_LOAD;//34 - 48 clk
 					else
 						begin
-							cfg <= ( mdc )? MDIO_CONFIG_SHIFT : MDIO_CONFIG_IDLE;
+							cfg <= ( counter[0] )? MDIO_CONFIG_SHIFT : MDIO_CONFIG_IDLE;
 						end
 					
-					if(tc)//32 bits
+					if(counter == 7'd0)//32 bits
 						State <= MDIO_STATE_STOP;
+						//State <= MDIO_STATE_PRE_STOP;
 				end		
 			
 			MDIO_STATE_READ_DATA: /* read to slave*/
 			begin
-			if(counter == 7'd32)
+				if(counter == 7'd33)
 					cfg <= MDIO_CONFIG_LOAD;
 				else
 					begin
-						if(counter < 7'd49)
-							cfg <= ( mdc )? MDIO_CONFIG_SHIFT : MDIO_CONFIG_IDLE;
-						else
-							cfg <= ( mdc )? MDIO_CONFIG_IDLE : MDIO_CONFIG_SHIFT;
+						cfg <= ( counter[0] )? MDIO_CONFIG_SHIFT : MDIO_CONFIG_IDLE;
+						// if(counter > 7'd33)
+							// cfg <= ( counter[0] )? MDIO_CONFIG_SHIFT : MDIO_CONFIG_IDLE;
+						// else
+							// cfg <= ( counter[0] )? MDIO_CONFIG_IDLE : MDIO_CONFIG_SHIFT;
 					end
-				if(tc)	//32 bits
+					
+				if(counter == 7'd0)	//32 bits
 					State <= MDIO_STATE_STOP;
+					//State <= MDIO_STATE_PRE_STOP;
 			end
-				
+			
+			// MDIO_STATE_PRE_STOP:
+			// begin
+				// State <= MDIO_STATE_STOP;
+				// cfg <= ( counter[0] )? MDIO_CONFIG_IDLE : MDIO_CONFIG_SHIFT;
+			// end
+			
 			MDIO_STATE_STOP:
 				begin
 					cfg <= MDIO_CONFIG_IDLE;
@@ -235,7 +248,7 @@ module MDIO_host_my_v (
 			MDIO_STATE_STOP: 
 				begin
 					mdio_out <= 1'b1;
-					mdc <= 1'b0;
+					mdc <= 1'b1;
 				end
 				
 			MDIO_STATE_START,
@@ -246,6 +259,7 @@ module MDIO_host_my_v (
 				end
 			
 			MDIO_STATE_READ_DATA,
+			//MDIO_STATE_PRE_STOP,
 			MDIO_STATE_SEND_DATA:
 				begin
 					mdio_out <= so; 
@@ -255,7 +269,7 @@ module MDIO_host_my_v (
 			default: 
 				begin
 					mdio_out <= 1'b1;
-					mdc <= 1'b0;
+					mdc <= 1'b1;
 				end
 		endcase
 	end

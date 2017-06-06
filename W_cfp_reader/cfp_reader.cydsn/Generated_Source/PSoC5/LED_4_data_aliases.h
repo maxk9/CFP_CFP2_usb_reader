@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: SDA_1.h  
+* File Name: LED_4_data.h  
 * Version 2.20
 *
 * Description:
@@ -15,8 +15,8 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#if !defined(CY_PINS_SDA_1_ALIASES_H) /* Pins SDA_1_ALIASES_H */
-#define CY_PINS_SDA_1_ALIASES_H
+#if !defined(CY_PINS_LED_4_data_ALIASES_H) /* Pins LED_4_data_ALIASES_H */
+#define CY_PINS_LED_4_data_ALIASES_H
 
 #include "cytypes.h"
 #include "cyfitter.h"
@@ -25,12 +25,12 @@
 /***************************************
 *              Constants        
 ***************************************/
-#define SDA_1_0			(SDA_1__0__PC)
-#define SDA_1_0_INTR	((uint16)((uint16)0x0001u << SDA_1__0__SHIFT))
+#define LED_4_data_0			(LED_4_data__0__PC)
+#define LED_4_data_0_INTR	((uint16)((uint16)0x0001u << LED_4_data__0__SHIFT))
 
-#define SDA_1_INTR_ALL	 ((uint16)(SDA_1_0_INTR))
+#define LED_4_data_INTR_ALL	 ((uint16)(LED_4_data_0_INTR))
 
-#endif /* End Pins SDA_1_ALIASES_H */
+#endif /* End Pins LED_4_data_ALIASES_H */
 
 
 /* [] END OF FILE */

@@ -3550,12 +3550,12 @@
     </Group>
     <Group key="d8144652-653d-4c54-880a-c93ec1ffe84e">
       <Group key="0">
-        <Data key="Port Format" value="0,6" />
+        <Data key="Port Format" value="0,7" />
       </Group>
     </Group>
     <Group key="db22e86d-277d-4d65-b1bd-1104894db3b0">
       <Group key="0">
-        <Data key="Port Format" value="0,7" />
+        <Data key="Port Format" value="0,6" />
       </Group>
     </Group>
     <Group key="e330ad8c-7cec-408a-be41-c01a11cd4261">
